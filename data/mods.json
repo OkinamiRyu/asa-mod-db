@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T22:28:23.989Z",
+  "updatedAt": "2026-11-23T22:47:59.967Z",
   "installedMods": [
     {
       "name": "Super Spyglass Plus",
@@ -146,6 +146,7 @@
     {
       "id": "MuchStuffPack",
       "name": "MuchStuffPack",
+      "sheetType": "item",
       "itemCount": 396,
       "items": [
         {
@@ -6885,6 +6886,7 @@
     {
       "id": "Super Spyglass Plus",
       "name": "Super Spyglass Plus",
+      "sheetType": "item",
       "itemCount": 3,
       "items": [
         {
@@ -6943,6 +6945,7 @@
     {
       "id": "ArkNav",
       "name": "ArkNav",
+      "sheetType": "item",
       "itemCount": 1,
       "items": [
         {
@@ -6967,6 +6970,7 @@
     {
       "id": "ArklasAnimals",
       "name": "ArklasAnimals",
+      "sheetType": "item",
       "itemCount": 13,
       "items": [
         {
@@ -7195,6 +7199,7 @@
     {
       "id": "GliderCostumes",
       "name": "GliderCostumes",
+      "sheetType": "item",
       "itemCount": 7,
       "items": [
         {
@@ -7321,6 +7326,7 @@
     {
       "id": "MOUSHIWAKE GOZAIMASEN COS",
       "name": "MOUSHIWAKE GOZAIMASEN COS",
+      "sheetType": "item",
       "itemCount": 1,
       "items": [
         {
@@ -7345,6 +7351,7 @@
     {
       "id": "DaniTech Concrete Style Structure Skin",
       "name": "DaniTech Concrete Style Structure Skin",
+      "sheetType": "item",
       "itemCount": 5,
       "items": [
         {
@@ -7437,6 +7444,7 @@
     {
       "id": "Showcase Storage Skins",
       "name": "Showcase Storage Skins",
+      "sheetType": "item",
       "itemCount": 16,
       "items": [
         {
@@ -7716,6 +7724,7 @@
     {
       "id": "Modern Structure Skin Compendium",
       "name": "Modern Structure Skin Compendium",
+      "sheetType": "item",
       "itemCount": 31,
       "items": [
         {
@@ -8250,6 +8259,7 @@
     {
       "id": "Pulse Arcana - Roleplay Classes and Magic Mod",
       "name": "Pulse Arcana - Roleplay Classes and Magic Mod",
+      "sheetType": "item",
       "itemCount": 39,
       "items": [
         {
@@ -8920,6 +8930,7 @@
     {
       "id": "Wall'n'Floor Decor",
       "name": "Wall'n'Floor Decor",
+      "sheetType": "item",
       "itemCount": 969,
       "items": [
         {
