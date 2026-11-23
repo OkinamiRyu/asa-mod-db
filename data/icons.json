@@ -2,7 +2,8 @@
   "ArklasAnimals": {
     "cat_character_bp_arklastt": "icons/ArklasAnimals/Cat_Character_BP_ArklasTT.png",
     "chicken_character_bp_arklastt": "icons/ArklasAnimals/Chicken_Character_BP_ArklasTT.png",
-    "parrot_character_bp_arklastt": "icons/ArklasAnimals/Parrot_Character_BP_ArklasTT.png"
+    "parrot_character_bp_arklastt": "icons/ArklasAnimals/Parrot_Character_BP_ArklasTT.png",
+    "penguin_character_bp_arklastt": "icons/ArklasAnimals/Penguin_Character_BP_ArklasTT.png"
   },
   "DaniTech Concrete Style Structure Skin": {
     "primalitemstructureskin_danitech_concrete_01": "icons/DaniTech Concrete Style Structure Skin/PrimalItemStructureSkin_DaniTech_Concrete_01.png",
