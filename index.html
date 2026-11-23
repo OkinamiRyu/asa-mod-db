@@ -62,13 +62,13 @@
             </select>
           </div>
           <div class="filter-group">
-            <label for="filterObtain" class="filter-label">入手方法</label>
+            <label for="filterObtain" id="filterObtainLabel" class="filter-label">入手方法</label>
             <select id="filterObtain" class="filter-select">
               <option value="">すべて</option>
             </select>
           </div>
           <div class="filter-group">
-            <label for="filterStation" class="filter-label">作る場所</label>
+            <label for="filterStation" id="filterStationLabel" class="filter-label">作る場所</label>
             <select id="filterStation" class="filter-select">
               <option value="">すべて</option>
             </select>
@@ -94,7 +94,7 @@
 
         <div class="result-bar">
           <span id="resultCount" class="result-count"></span>
-          <span class="result-hint">アイテムをクリックすると詳細（必要素材・英語原文・備考など）を表示します</span>
+          <span class="result-hint">アイテムをクリックすると詳細を表示します（素材・設備リンクからサブ画面やWikiも開けます）</span>
         </div>
       </div>
 
@@ -136,24 +136,50 @@
     </section>
   </main>
 
-  <!-- アイテム詳細モーダル -->
+  <!-- アイテム詳細モーダル（サブ画面並べて表示対応） -->
   <div id="detailModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <div class="modal-title-wrap">
-          <div id="modalIconWrap" class="modal-icon-wrap"></div>
-          <div>
-            <div class="modal-mod-tag" id="modalModTag"></div>
-            <h2 id="modalTitle" class="modal-title"></h2>
-            <div class="modal-en-row">
-              <span id="modalEnName" class="modal-en-name"></span>
-              <button type="button" id="copyEnBtn" class="copy-btn" title="英語名をコピー">コピー</button>
+    <div id="modalStage" class="modal-stage">
+      <div class="modal-dialog modal-main">
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <div id="modalIconWrap" class="modal-icon-wrap"></div>
+            <div>
+              <div class="modal-mod-tag" id="modalModTag"></div>
+              <h2 id="modalTitle" class="modal-title"></h2>
+              <div class="modal-en-row">
+                <span id="modalEnName" class="modal-en-name"></span>
+                <button type="button" id="copyEnBtn" class="copy-btn" title="英語名をコピー">コピー</button>
+              </div>
+            </div>
+          </div>
+          <button type="button" id="modalCloseBtn" class="modal-close" aria-label="閉じる">×</button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+      </div>
+
+      <div id="subModalDialog" class="modal-dialog modal-sub hidden" aria-label="関連アイテム詳細">
+        <div class="sub-banner">
+          <div class="sub-banner-left">
+            <button type="button" id="subBackBtn" class="sub-nav-btn hidden">← 戻る</button>
+            <span id="subBannerLabel" class="sub-banner-label">関連MODアイテム詳細</span>
+          </div>
+          <button type="button" id="subCloseBtn" class="sub-close-btn" aria-label="サブ画面を閉じる">サブ画面を閉じる ×</button>
+        </div>
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <div id="subIconWrap" class="modal-icon-wrap"></div>
+            <div>
+              <div class="modal-mod-tag" id="subModTag"></div>
+              <h3 id="subTitle" class="modal-title"></h3>
+              <div class="modal-en-row">
+                <span id="subEnName" class="modal-en-name"></span>
+                <button type="button" id="subCopyEnBtn" class="copy-btn" title="英語名をコピー">コピー</button>
+              </div>
             </div>
           </div>
         </div>
-        <button type="button" id="modalCloseBtn" class="modal-close" aria-label="閉じる">×</button>
+        <div class="modal-body" id="subModalBody"></div>
       </div>
-      <div class="modal-body" id="modalBody"></div>
     </div>
   </div>
 

@@ -119,13 +119,14 @@ function buildDatabaseJson_() {
       continue;
     }
 
-    const items = parseModItemSheet_(sheet);
-    if (items.length > 0) {
+    const parsed = parseModItemSheet_(sheet);
+    if (parsed.items.length > 0) {
       modSheets.push({
         id: name,
         name: name,
-        itemCount: items.length,
-        items: items,
+        sheetType: parsed.sheetType,
+        itemCount: parsed.items.length,
+        items: parsed.items,
       });
     }
   }
@@ -167,11 +168,11 @@ function parseInstalledModsSheet_(sheet) {
 }
 
 /**
- * 各MODシートをヘッダー名ベースで柔軟にパース
+ * 各MODシートをヘッダー名ベースで柔軟にパース（アイテム / 生物 / コスメティックの3タイプ対応）
  */
 function parseModItemSheet_(sheet) {
   const values = sheet.getDataRange().getDisplayValues();
-  if (values.length < 2) return [];
+  if (values.length < 2) return { sheetType: 'item', items: [] };
 
   const headers = values[0].map((h) => String(h || '').trim());
   const findCol = (candidates) => {
@@ -183,22 +184,44 @@ function parseModItemSheet_(sheet) {
     return -1;
   };
 
+  // 共通列
   const cImg = findCol(['画像']);
   const cEn = findCol(['英語名']);
   const cJa = findCol(['日本語名']);
   const cDesc = findCol(['説明（日本語）', '説明']);
   const cCat = findCol(['分類', 'カテゴリ']);
+  const cOrig = findCol(['英語原文']);
+  const cNote = findCol(['備考']);
+
+  // アイテム系
   const cObt = findCol(['入手方法']);
   const cDino = findCol(['恐竜名']);
   const cStat = findCol(['作る場所', 'クラフト']);
   const cTool = findCol(['使う道具']);
   const cHarv = findCol(['採取元']);
   const cMat = findCol(['必要素材', '素材']);
-  const cOrig = findCol(['英語原文']);
-  const cNote = findCol(['備考']);
+
+  // 生物系
+  const cTaming = findCol(['テイム方法']);
+  const cFood = findCol(['好物', '餌']);
+  const cHabitat = findCol(['生息地', 'スポーン']);
+  const cSaddle = findCol(['サドル', '騎乗']);
+  const cAbility = findCol(['特殊能力', '用途']);
+
+  // コスメティック系
+  const cApplyTarget = findCol(['適用対象']);
+  const cApplyMethod = findCol(['適用方法']);
 
   // 英語名も日本語名もヘッダーに無ければMODアイテムシートではないとみなす
-  if (cEn === -1 && cJa === -1) return [];
+  if (cEn === -1 && cJa === -1) return { sheetType: 'item', items: [] };
+
+  // シート種別を自動判定
+  let sheetType = 'item';
+  if (cTaming !== -1 || cFood !== -1 || cHabitat !== -1 || cSaddle !== -1) {
+    sheetType = 'creature';
+  } else if (cApplyTarget !== -1 || cApplyMethod !== -1) {
+    sheetType = 'cosmetic';
+  }
 
   const items = [];
   for (let r = 1; r < values.length; r++) {
@@ -212,7 +235,7 @@ function parseModItemSheet_(sheet) {
     const notes = gc(cNote);
     const assetMatch = notes.match(/([A-Za-z0-9_]+)\.uasset/);
 
-    items.push({
+    const entry = {
       index: items.length + 1,
       image: gc(cImg),
       enName: enName,
@@ -228,10 +251,29 @@ function parseModItemSheet_(sheet) {
       enOriginal: gc(cOrig),
       notes: notes,
       assetName: assetMatch ? assetMatch[1] : '',
-    });
+    };
+
+    // 生物系・コスメティック系項目は値がある場合のみ付与（JSON軽量化）
+    const tamingMethod = gc(cTaming);
+    const favoriteFood = gc(cFood);
+    const habitat = gc(cHabitat);
+    const saddleRide = gc(cSaddle);
+    const specialAbility = gc(cAbility);
+    const applyTarget = gc(cApplyTarget);
+    const applyMethod = gc(cApplyMethod);
+
+    if (tamingMethod) entry.tamingMethod = tamingMethod;
+    if (favoriteFood) entry.favoriteFood = favoriteFood;
+    if (habitat) entry.habitat = habitat;
+    if (saddleRide) entry.saddleRide = saddleRide;
+    if (specialAbility) entry.specialAbility = specialAbility;
+    if (applyTarget) entry.applyTarget = applyTarget;
+    if (applyMethod) entry.applyMethod = applyMethod;
+
+    items.push(entry);
   }
 
-  return items;
+  return { sheetType, items };
 }
 
 /**

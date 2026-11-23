@@ -9,13 +9,18 @@
     activeTab: '', // 'ALL' | 'INSTALLED' | <modSheet.id>
     searchQuery: '',
     category: '',
-    obtainMethod: '',
-    craftStation: '',
+    filter2: '',
+    filter3: '',
     sortBy: 'index',
     viewMode: 'card', // 'card' | 'table'
     visibleLimit: PAGE_SIZE,
     modSearchQuery: '',
     filteredItems: [],
+    allItemsByGlobalIndex: new Map(),
+    lookupByEn: new Map(),
+    lookupByJa: new Map(),
+    mainItem: null,
+    subStack: [],
   };
 
   const els = {
@@ -27,7 +32,9 @@
     itemSearchInput: document.getElementById('itemSearchInput'),
     clearSearchBtn: document.getElementById('clearSearchBtn'),
     filterCategory: document.getElementById('filterCategory'),
+    filterObtainLabel: document.getElementById('filterObtainLabel'),
     filterObtain: document.getElementById('filterObtain'),
+    filterStationLabel: document.getElementById('filterStationLabel'),
     filterStation: document.getElementById('filterStation'),
     sortSelect: document.getElementById('sortSelect'),
     resetFiltersBtn: document.getElementById('resetFiltersBtn'),
@@ -44,6 +51,7 @@
     modResultCount: document.getElementById('modResultCount'),
     modsGrid: document.getElementById('modsGrid'),
     detailModal: document.getElementById('detailModal'),
+    modalStage: document.getElementById('modalStage'),
     modalIconWrap: document.getElementById('modalIconWrap'),
     modalModTag: document.getElementById('modalModTag'),
     modalTitle: document.getElementById('modalTitle'),
@@ -51,6 +59,16 @@
     copyEnBtn: document.getElementById('copyEnBtn'),
     modalCloseBtn: document.getElementById('modalCloseBtn'),
     modalBody: document.getElementById('modalBody'),
+    subModalDialog: document.getElementById('subModalDialog'),
+    subBackBtn: document.getElementById('subBackBtn'),
+    subBannerLabel: document.getElementById('subBannerLabel'),
+    subCloseBtn: document.getElementById('subCloseBtn'),
+    subIconWrap: document.getElementById('subIconWrap'),
+    subModTag: document.getElementById('subModTag'),
+    subTitle: document.getElementById('subTitle'),
+    subEnName: document.getElementById('subEnName'),
+    subCopyEnBtn: document.getElementById('subCopyEnBtn'),
+    subModalBody: document.getElementById('subModalBody'),
     toast: document.getElementById('toast'),
   };
 
@@ -71,7 +89,13 @@
     return String(str)
       .normalize('NFKC')
       .toLowerCase()
+      .replace(/\s+/g, ' ')
+      .trim()
       .replace(/[\u30a1-\u30f6]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) - 0x60));
+  }
+
+  function normalizeKey(str) {
+    return normalizeText(str).replace(/\s+/g, ' ').trim();
   }
 
   function showToast(msg) {
@@ -112,7 +136,6 @@
   }
 
   function resolveIconUrl(item) {
-    // Explicit safe image URL (non-Google Drive) or local path
     if (item.image && /^(\.?\/?icons\/|https?:\/\/)/i.test(item.image)) {
       if (!/drive\.google\.com/i.test(item.image)) {
         return item.image;
@@ -133,6 +156,46 @@
     }
     const label = (item.category || item._modName || 'ITEM').slice(0, 4);
     return `<span class="item-thumb-placeholder ${sizeClass || ''}">${escapeHtml(label)}</span>`;
+  }
+
+  function getActiveSheetType() {
+    if (!state.data || state.activeTab === 'ALL' || state.activeTab === 'INSTALLED') {
+      return 'item';
+    }
+    const sheet = (state.data.modSheets || []).find((s) => s.id === state.activeTab);
+    if (!sheet) return 'item';
+    if (sheet.sheetType) return sheet.sheetType;
+    // Fallback inference for older mods.json without sheetType
+    const sample = sheet.items || [];
+    if (sample.some((i) => i.tamingMethod || i.favoriteFood || i.habitat)) return 'creature';
+    if (sample.some((i) => i.applyTarget || i.applyMethod)) return 'cosmetic';
+    return 'item';
+  }
+
+  function getFilterConfig() {
+    const st = getActiveSheetType();
+    if (st === 'creature') {
+      return {
+        f2Label: 'テイム方法',
+        f2Prop: 'tamingMethod',
+        f3Label: '生息地・スポーン',
+        f3Prop: 'habitat',
+      };
+    }
+    if (st === 'cosmetic') {
+      return {
+        f2Label: '適用対象',
+        f2Prop: 'applyTarget',
+        f3Label: '適用方法',
+        f3Prop: 'applyMethod',
+      };
+    }
+    return {
+      f2Label: '入手方法',
+      f2Prop: 'obtainMethod',
+      f3Label: '作る場所',
+      f3Prop: 'craftStation',
+    };
   }
 
   function getActiveSourceItems() {
@@ -201,6 +264,11 @@
 
   function rebuildFilterOptions() {
     const items = getActiveSourceItems();
+    const cfg = getFilterConfig();
+
+    els.filterObtainLabel.textContent = cfg.f2Label;
+    els.filterStationLabel.textContent = cfg.f3Label;
+
     populateSelect(
       els.filterCategory,
       items.map((i) => i.category),
@@ -210,29 +278,30 @@
 
     populateSelect(
       els.filterObtain,
-      items.map((i) => i.obtainMethod),
-      state.obtainMethod
+      items.map((i) => i[cfg.f2Prop]),
+      state.filter2
     );
-    state.obtainMethod = els.filterObtain.value;
+    state.filter2 = els.filterObtain.value;
 
     populateSelect(
       els.filterStation,
-      items.map((i) => i.craftStation),
-      state.craftStation
+      items.map((i) => i[cfg.f3Prop]),
+      state.filter3
     );
-    state.craftStation = els.filterStation.value;
+    state.filter3 = els.filterStation.value;
   }
 
   function applyFiltersAndRender() {
     const sourceItems = getActiveSourceItems();
+    const cfg = getFilterConfig();
     const tokens = normalizeText(state.searchQuery)
       .split(/\s+/)
       .filter(Boolean);
 
     let list = sourceItems.filter((item) => {
       if (state.category && item.category !== state.category) return false;
-      if (state.obtainMethod && item.obtainMethod !== state.obtainMethod) return false;
-      if (state.craftStation && item.craftStation !== state.craftStation) return false;
+      if (state.filter2 && item[cfg.f2Prop] !== state.filter2) return false;
+      if (state.filter3 && item[cfg.f3Prop] !== state.filter3) return false;
       if (tokens.length > 0) {
         for (const tk of tokens) {
           if (!item._searchBlob.includes(tk)) return false;
@@ -257,7 +326,7 @@
     state.filteredItems = list;
 
     const hasActiveFilter = Boolean(
-      state.searchQuery.trim() || state.category || state.obtainMethod || state.craftStation
+      state.searchQuery.trim() || state.category || state.filter2 || state.filter3
     );
     els.resetFiltersBtn.classList.toggle('hidden', !hasActiveFilter);
     els.clearSearchBtn.classList.toggle('hidden', !state.searchQuery);
@@ -279,6 +348,7 @@
     const list = state.filteredItems;
     const shown = list.slice(0, state.visibleLimit);
     const showModBadge = state.activeTab === 'ALL';
+    const sheetType = getActiveSheetType();
 
     if (state.viewMode === 'card') {
       els.itemsContainer.className = 'items-grid';
@@ -288,7 +358,10 @@
           if (showModBadge) tags.push(`<span class="tag tag-mod">${escapeHtml(item._modName)}</span>`);
           if (item.category) tags.push(`<span class="tag tag-cat">${escapeHtml(item.category)}</span>`);
           if (item.craftStation) tags.push(`<span class="tag tag-station">${escapeHtml(item.craftStation)}</span>`);
+          if (item.applyTarget) tags.push(`<span class="tag tag-station">${escapeHtml(item.applyTarget)}</span>`);
+          if (item.tamingMethod) tags.push(`<span class="tag tag-station">${escapeHtml(item.tamingMethod)}</span>`);
           if (item.obtainMethod) tags.push(`<span class="tag">${escapeHtml(item.obtainMethod)}</span>`);
+          if (item.habitat) tags.push(`<span class="tag">${escapeHtml(item.habitat)}</span>`);
 
           return `
             <article class="item-card" data-global-index="${item._globalIndex}" tabindex="0">
@@ -313,23 +386,40 @@
         .join('');
     } else {
       els.itemsContainer.className = 'items-table-wrap';
+      const col4Header =
+        sheetType === 'creature' ? 'テイム方法' : sheetType === 'cosmetic' ? '適用対象' : '作る場所';
+      const col5Header =
+        sheetType === 'creature' ? '好物・餌' : sheetType === 'cosmetic' ? '適用方法' : '必要素材';
+
       els.itemsContainer.innerHTML = `
         <table class="items-table">
           <thead>
             <tr>
               <th>画像</th>
-              <th>アイテム名（日本語 / 英語）</th>
+              <th>名称（日本語 / 英語）</th>
               ${showModBadge ? '<th>MOD</th>' : ''}
               <th>分類</th>
-              <th>作る場所</th>
-              <th>必要素材</th>
+              <th>${col4Header}</th>
+              <th>${col5Header}</th>
               <th>説明</th>
             </tr>
           </thead>
           <tbody>
             ${shown
-              .map(
-                (item) => `
+              .map((item) => {
+                const col4Val =
+                  sheetType === 'creature'
+                    ? item.tamingMethod || '-'
+                    : sheetType === 'cosmetic'
+                    ? item.applyTarget || '-'
+                    : item.craftStation || '-';
+                const col5Val =
+                  sheetType === 'creature'
+                    ? item.favoriteFood || '-'
+                    : sheetType === 'cosmetic'
+                    ? item.applyMethod || '-'
+                    : item.materials || '-';
+                return `
               <tr data-global-index="${item._globalIndex}">
                 <td><div class="table-thumb">${renderIconHtml(item)}</div></td>
                 <td>
@@ -338,11 +428,11 @@
                 </td>
                 ${showModBadge ? `<td><span class="tag tag-mod">${escapeHtml(item._modName)}</span></td>` : ''}
                 <td>${item.category ? `<span class="tag tag-cat">${escapeHtml(item.category)}</span>` : ''}</td>
-                <td>${escapeHtml(item.craftStation || '-')}</td>
-                <td>${escapeHtml(item.materials || '-')}</td>
+                <td>${escapeHtml(col4Val)}</td>
+                <td>${escapeHtml(col5Val)}</td>
                 <td>${escapeHtml(item.description || '')}</td>
-              </tr>`
-              )
+              </tr>`;
+              })
               .join('')}
           </tbody>
         </table>`;
@@ -388,7 +478,7 @@
             <div class="mod-card-actions">
               ${
                 matchedSheet
-                  ? `<button type="button" class="btn btn-primary jump-mod-btn" data-jump-tab="${escapeHtml(matchedSheet.id)}">アイテム一覧を見る（${matchedSheet.items.length}件）→</button>`
+                  ? `<button type="button" class="btn btn-primary jump-mod-btn" data-jump-tab="${escapeHtml(matchedSheet.id)}">一覧を見る（${matchedSheet.items.length}件）→</button>`
                   : ''
               }
               ${
@@ -410,22 +500,125 @@
       .join('');
   }
 
-  function openDetailModal(item) {
-    els.modalIconWrap.innerHTML = renderIconHtml(item);
-    els.modalModTag.textContent = item._modName;
-    els.modalTitle.textContent = item.jaName || item.enName;
-    els.modalEnName.textContent = item.enName || '';
-    els.copyEnBtn.classList.toggle('hidden', !item.enName);
-    els.copyEnBtn.dataset.copy = item.enName || '';
+  // --- Reference linking (MOD sub-panel & Vanilla ASA Wiki) ---
 
+  function splitRespectingParens(text) {
+    const result = [];
+    let current = '';
+    let depth = 0;
+    for (let i = 0; i < text.length; i++) {
+      const ch = text[i];
+      if (ch === '(' || ch === '（') depth++;
+      else if ((ch === ')' || ch === '）') && depth > 0) depth--;
+
+      if (depth === 0 && (ch === '、' || ch === ',' || ch === '\n' || ch === '／')) {
+        if (current.trim()) result.push(current.trim());
+        current = '';
+      } else {
+        current += ch;
+      }
+    }
+    if (current.trim()) result.push(current.trim());
+    return result;
+  }
+
+  function pickPreferredItem(candidates, preferredModId, excludeGlobalIndex) {
+    if (!candidates || candidates.length === 0) return null;
+    const filtered = candidates.filter((c) => c._globalIndex !== excludeGlobalIndex);
+    if (filtered.length === 0) return null;
+    const sameMod = filtered.find((c) => c._modId === preferredModId);
+    return sameMod || filtered[0];
+  }
+
+  function findReferencedModItem(rawSegment, preferredModId, excludeGlobalIndex) {
+    // Strip trailing quantity like ×150, x 1, ×1個
+    const cleaned = rawSegment.replace(/\s*[×xX]\s*\d+[^\s]*$/u, '').trim();
+    if (!cleaned) return null;
+
+    // Extract parenthesized English/alias name if present: "トゲ（Spine）" -> ja="トゲ", inner="Spine"
+    const parenMatch = cleaned.match(/^(.+?)\s*[（(]([^）)]+)[）)]$/);
+    const outerPart = parenMatch ? parenMatch[1].trim() : cleaned;
+    const innerPart = parenMatch ? parenMatch[2].trim() : '';
+
+    // 1. Try matching inner English name first (most precise)
+    if (innerPart) {
+      const kInner = normalizeKey(innerPart);
+      const hitEn = pickPreferredItem(state.lookupByEn.get(kInner), preferredModId, excludeGlobalIndex);
+      if (hitEn) return hitEn;
+    }
+
+    // 2. Try matching full cleaned string against jaName or enName
+    const kFull = normalizeKey(cleaned);
+    let hit =
+      pickPreferredItem(state.lookupByEn.get(kFull), preferredModId, excludeGlobalIndex) ||
+      pickPreferredItem(state.lookupByJa.get(kFull), preferredModId, excludeGlobalIndex);
+    if (hit) return hit;
+
+    // 3. Try matching outer Japanese name
+    if (outerPart && outerPart !== cleaned) {
+      const kOuter = normalizeKey(outerPart);
+      hit =
+        pickPreferredItem(state.lookupByJa.get(kOuter), preferredModId, excludeGlobalIndex) ||
+        pickPreferredItem(state.lookupByEn.get(kOuter), preferredModId, excludeGlobalIndex);
+      if (hit) return hit;
+    }
+
+    return null;
+  }
+
+  function isNonLinkablePhrase(rawSegment) {
+    const s = rawSegment.trim();
+    return /^(インベントリ|なし|-|ー|不明|作成|採取|コスメティック|エングラム|スポーン|クラス切替|アビリティ)/.test(s);
+  }
+
+  function buildWikiSearchUrl(rawSegment) {
+    const cleaned = rawSegment
+      .replace(/\s*[×xX]\s*\d+[^\s]*$/u, '')
+      .replace(/\s*[（(][^）)]+[）)]/g, '')
+      .replace(/等$/u, '')
+      .trim();
+    const query = cleaned || rawSegment.trim();
+    return `https://ark.wiki.gg/ja/wiki/Special:Search?search=${encodeURIComponent(query)}&go=Go`;
+  }
+
+  function renderReferenceChipsHtml(rawText, item) {
+    const segments = splitRespectingParens(rawText);
+    if (segments.length === 0) return escapeHtml(rawText);
+
+    return `<div class="ref-chips">${segments
+      .map((seg) => {
+        const modMatch = findReferencedModItem(seg, item._modId, item._globalIndex);
+        if (modMatch) {
+          return `<button type="button" class="ref-chip ref-chip-mod" data-open-sub="${modMatch._globalIndex}" title="${escapeHtml(modMatch.jaName || modMatch.enName)} をサブ画面で開く"><span>${escapeHtml(seg)}</span><span class="ref-badge">MOD詳細</span></button>`;
+        }
+        if (isNonLinkablePhrase(seg)) {
+          return `<span class="ref-chip ref-chip-plain">${escapeHtml(seg)}</span>`;
+        }
+        const wikiUrl = buildWikiSearchUrl(seg);
+        return `<a class="ref-chip ref-chip-wiki" href="${escapeHtml(wikiUrl)}" target="_blank" rel="noopener noreferrer" title="ARK日本語Wikiで開く"><span>${escapeHtml(seg)}</span><span class="ref-badge">Wiki ↗</span></a>`;
+      })
+      .join('')}</div>`;
+  }
+
+  function buildDetailBodyHtml(item) {
+    // [label, value, isFullWidth, enableRefLinks]
     const fields = [
-      ['分類', item.category],
-      ['入手方法', item.obtainMethod],
-      ['作る場所', item.craftStation],
-      ['使う道具', item.toolUsed],
-      ['採取元（木・石など）', item.harvestSource],
-      ['恐竜名', item.dinoName],
-      ['必要素材', item.materials, true],
+      ['分類', item.category, false, false],
+      ['入手方法', item.obtainMethod, false, false],
+      ['作る場所', item.craftStation, false, true],
+      ['使う道具', item.toolUsed, false, true],
+      ['採取元（木・石など）', item.harvestSource, false, false],
+      ['恐竜名', item.dinoName, false, true],
+      ['必要素材', item.materials, true, true],
+      // 生物系
+      ['テイム方法', item.tamingMethod, false, false],
+      ['好物・餌', item.favoriteFood, false, true],
+      ['生息地・スポーン', item.habitat, false, false],
+      ['サドル・騎乗', item.saddleRide, false, true],
+      ['特殊能力・用途', item.specialAbility, true, false],
+      // コスメティック系
+      ['適用対象', item.applyTarget, false, true],
+      ['適用方法', item.applyMethod, false, false],
     ].filter(([, val]) => Boolean(val));
 
     let bodyHtml = '';
@@ -434,13 +627,14 @@
     }
     if (fields.length) {
       bodyHtml += `<div class="detail-grid">${fields
-        .map(
-          ([label, val, full]) => `
+        .map(([label, val, full, linkable]) => {
+          const valHtml = linkable ? renderReferenceChipsHtml(val, item) : escapeHtml(val);
+          return `
           <div class="detail-field ${full ? 'detail-field-full' : ''}">
             <div class="detail-label">${escapeHtml(label)}</div>
-            <div class="detail-value">${escapeHtml(val)}</div>
-          </div>`
-        )
+            <div class="detail-value">${valHtml}</div>
+          </div>`;
+        })
         .join('')}</div>`;
     }
     if (item.enOriginal || item.notes) {
@@ -453,13 +647,78 @@
           </div>
         </details>`;
     }
+    return bodyHtml;
+  }
 
-    els.modalBody.innerHTML = bodyHtml;
+  function openDetailModal(item) {
+    state.mainItem = item;
+    state.subStack = [];
+    renderSubPanel();
+
+    els.modalIconWrap.innerHTML = renderIconHtml(item);
+    els.modalModTag.textContent = item._modName;
+    els.modalTitle.textContent = item.jaName || item.enName;
+    els.modalEnName.textContent = item.enName || '';
+    els.copyEnBtn.classList.toggle('hidden', !item.enName);
+    els.copyEnBtn.dataset.copy = item.enName || '';
+    els.modalBody.innerHTML = buildDetailBodyHtml(item);
+
     els.detailModal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
   }
 
+  function openSubItem(item, pushHistory) {
+    if (!item) return;
+    if (pushHistory && state.subStack.length > 0) {
+      const top = state.subStack[state.subStack.length - 1];
+      if (top._globalIndex === item._globalIndex) return;
+      state.subStack.push(item);
+    } else {
+      state.subStack = [item];
+    }
+    renderSubPanel();
+    if (window.innerWidth <= 960) {
+      els.subModalDialog.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function renderSubPanel() {
+    if (state.subStack.length === 0) {
+      els.subModalDialog.classList.add('hidden');
+      els.modalStage.classList.remove('has-sub');
+      return;
+    }
+
+    const item = state.subStack[state.subStack.length - 1];
+    els.modalStage.classList.add('has-sub');
+    els.subModalDialog.classList.remove('hidden');
+
+    els.subBackBtn.classList.toggle('hidden', state.subStack.length <= 1);
+    const parentName = state.mainItem ? state.mainItem.jaName || state.mainItem.enName : '';
+    els.subBannerLabel.textContent =
+      state.subStack.length > 1
+        ? `関連詳細（階層 ${state.subStack.length}）`
+        : `「${parentName}」の関連MODアイテム`;
+
+    els.subIconWrap.innerHTML = renderIconHtml(item);
+    els.subModTag.textContent = item._modName;
+    els.subTitle.textContent = item.jaName || item.enName;
+    els.subEnName.textContent = item.enName || '';
+    els.subCopyEnBtn.classList.toggle('hidden', !item.enName);
+    els.subCopyEnBtn.dataset.copy = item.enName || '';
+    els.subModalBody.innerHTML = buildDetailBodyHtml(item);
+    els.subModalBody.scrollTop = 0;
+  }
+
+  function closeSubPanel() {
+    state.subStack = [];
+    renderSubPanel();
+  }
+
   function closeDetailModal() {
+    state.mainItem = null;
+    state.subStack = [];
+    renderSubPanel();
     els.detailModal.classList.add('hidden');
     document.body.style.overflow = '';
   }
@@ -467,6 +726,8 @@
   function switchTab(tabId) {
     state.activeTab = tabId;
     state.visibleLimit = PAGE_SIZE;
+    state.filter2 = '';
+    state.filter3 = '';
     buildTabs();
 
     const isInstalled = tabId === 'INSTALLED';
@@ -484,8 +745,8 @@
   function resetItemFilters() {
     state.searchQuery = '';
     state.category = '';
-    state.obtainMethod = '';
-    state.craftStation = '';
+    state.filter2 = '';
+    state.filter3 = '';
     state.visibleLimit = PAGE_SIZE;
     els.itemSearchInput.value = '';
     els.filterCategory.value = '';
@@ -522,13 +783,13 @@
     });
 
     els.filterObtain.addEventListener('change', (e) => {
-      state.obtainMethod = e.target.value;
+      state.filter2 = e.target.value;
       state.visibleLimit = PAGE_SIZE;
       applyFiltersAndRender();
     });
 
     els.filterStation.addEventListener('change', (e) => {
-      state.craftStation = e.target.value;
+      state.filter3 = e.target.value;
       state.visibleLimit = PAGE_SIZE;
       applyFiltersAndRender();
     });
@@ -604,14 +865,48 @@
       copyText(els.copyEnBtn.dataset.copy);
     });
 
+    els.subCopyEnBtn.addEventListener('click', () => {
+      copyText(els.subCopyEnBtn.dataset.copy);
+    });
+
+    // Open sub-panel from main modal body
+    els.modalBody.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-open-sub]');
+      if (!btn) return;
+      const item = state.allItemsByGlobalIndex.get(Number(btn.dataset.openSub));
+      if (item) openSubItem(item, false);
+    });
+
+    // Navigate deeper inside sub-panel
+    els.subModalBody.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-open-sub]');
+      if (!btn) return;
+      const item = state.allItemsByGlobalIndex.get(Number(btn.dataset.openSub));
+      if (item) openSubItem(item, true);
+    });
+
+    els.subBackBtn.addEventListener('click', () => {
+      if (state.subStack.length > 1) {
+        state.subStack.pop();
+        renderSubPanel();
+      }
+    });
+
+    els.subCloseBtn.addEventListener('click', closeSubPanel);
     els.modalCloseBtn.addEventListener('click', closeDetailModal);
     els.detailModal.addEventListener('click', (e) => {
-      if (e.target === els.detailModal) closeDetailModal();
+      if (e.target === els.detailModal || e.target === els.modalStage) {
+        closeDetailModal();
+      }
     });
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && !els.detailModal.classList.contains('hidden')) {
-        closeDetailModal();
+        if (state.subStack.length > 0) {
+          closeSubPanel();
+        } else {
+          closeDetailModal();
+        }
       } else if (
         e.key === '/' &&
         document.activeElement.tagName !== 'INPUT' &&
@@ -626,6 +921,14 @@
         }
       }
     });
+  }
+
+  function addLookup(map, rawKey, item) {
+    const k = normalizeKey(rawKey);
+    if (!k) return;
+    if (!map.has(k)) map.set(k, []);
+    const arr = map.get(k);
+    if (!arr.includes(item)) arr.push(item);
   }
 
   async function init() {
@@ -644,9 +947,11 @@
       const data = await modsRes.json();
       const icons = iconsRes && iconsRes.ok ? await iconsRes.json() : {};
 
-      // Pre-index all items for fast searching
       const allMap = new Map();
+      const byEn = new Map();
+      const byJa = new Map();
       let gIdx = 0;
+
       for (const sheet of data.modSheets || []) {
         for (const item of sheet.items || []) {
           item._modId = sheet.id;
@@ -664,22 +969,42 @@
               item.toolUsed,
               item.harvestSource,
               item.materials,
+              item.tamingMethod,
+              item.favoriteFood,
+              item.habitat,
+              item.saddleRide,
+              item.specialAbility,
+              item.applyTarget,
+              item.applyMethod,
               item.enOriginal,
               item.notes,
               sheet.name,
             ].join(' ')
           );
           allMap.set(item._globalIndex, item);
+
+          // Index for MOD reference linking
+          if (item.enName) addLookup(byEn, item.enName, item);
+          if (item.jaName) {
+            addLookup(byJa, item.jaName, item);
+            const m = item.jaName.match(/^(.+?)\s*[（(]([^）)]+)[）)]$/);
+            if (m) {
+              addLookup(byJa, m[1], item);
+              addLookup(byEn, m[2], item);
+            }
+          }
         }
       }
 
       state.data = data;
       state.icons = icons;
       state.allItemsByGlobalIndex = allMap;
+      state.lookupByEn = byEn;
+      state.lookupByJa = byJa;
 
       const modCount = (data.installedMods || []).length;
       const itemCount = allMap.size;
-      els.statBadge.textContent = `導入MOD ${modCount}件 / 収録アイテム ${itemCount}件`;
+      els.statBadge.textContent = `導入MOD ${modCount}件 / 収録 ${itemCount}件`;
       els.updatedBadge.textContent = formatDate(data.updatedAt);
 
       buildTabs();
