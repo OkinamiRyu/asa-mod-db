@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASA_MOD_データベース</title>
+  <meta name="description" content="ARK: Survival Ascended (ASA) 導入MOD・アイテム日本語検索データベース" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">DB</div>
+        <div>
+          <h1 class="brand-title">ASA_MOD_データベース</h1>
+          <p class="brand-subtitle">ARK: Survival Ascended 導入MOD 日本語リファレンス</p>
+        </div>
+      </div>
+      <div class="header-meta">
+        <span id="statBadge" class="meta-pill">読み込み中...</span>
+        <span id="updatedBadge" class="meta-date"></span>
+      </div>
+    </div>
+    <nav class="tab-bar" aria-label="表示切替">
+      <div class="container tab-list" id="tabList" role="tablist"></div>
+    </nav>
+  </header>
+
+  <main class="container main-content">
+    <!-- アイテム検索ビュー -->
+    <section id="itemsSection" class="view-section">
+      <div class="controls-card">
+        <div class="search-row">
+          <div class="search-input-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="search"
+              id="itemSearchInput"
+              class="search-input"
+              placeholder="日本語名・英語名・説明・作る場所・必要素材などで検索（スペース区切りでAND検索 / ショートカット: /）"
+              autocomplete="off"
+            />
+            <button type="button" id="clearSearchBtn" class="clear-btn hidden" aria-label="検索をクリア">×</button>
+          </div>
+        </div>
+
+        <div class="filter-row">
+          <div class="filter-group">
+            <label for="filterCategory" class="filter-label">分類</label>
+            <select id="filterCategory" class="filter-select">
+              <option value="">すべて</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filterObtain" class="filter-label">入手方法</label>
+            <select id="filterObtain" class="filter-select">
+              <option value="">すべて</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filterStation" class="filter-label">作る場所</label>
+            <select id="filterStation" class="filter-select">
+              <option value="">すべて</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="sortSelect" class="filter-label">並び替え</label>
+            <select id="sortSelect" class="filter-select">
+              <option value="index">登録順</option>
+              <option value="jaName">日本語名順</option>
+              <option value="enName">英語名順</option>
+              <option value="category">分類順</option>
+            </select>
+          </div>
+
+          <div class="filter-actions">
+            <button type="button" id="resetFiltersBtn" class="btn btn-ghost hidden">条件をリセット</button>
+            <div class="view-toggle" role="group" aria-label="表示形式">
+              <button type="button" id="viewCardBtn" class="toggle-btn active" title="カード表示">カード</button>
+              <button type="button" id="viewTableBtn" class="toggle-btn" title="リスト表示">リスト</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-bar">
+          <span id="resultCount" class="result-count"></span>
+          <span class="result-hint">アイテムをクリックすると詳細（必要素材・英語原文・備考など）を表示します</span>
+        </div>
+      </div>
+
+      <div id="itemsContainer" class="items-grid"></div>
+      <div id="loadMoreWrap" class="load-more-wrap hidden">
+        <button type="button" id="loadMoreBtn" class="btn btn-secondary">さらに表示</button>
+        <button type="button" id="showAllBtn" class="btn btn-ghost">すべて表示</button>
+      </div>
+      <div id="emptyState" class="empty-state hidden">
+        <p class="empty-title">該当するアイテムが見つかりませんでした</p>
+        <p class="empty-desc">検索キーワードや絞り込み条件を変更してみてください。</p>
+        <button type="button" id="emptyResetBtn" class="btn btn-primary">絞り込みをリセット</button>
+      </div>
+    </section>
+
+    <!-- 導入中MOD一覧ビュー -->
+    <section id="modsSection" class="view-section hidden">
+      <div class="controls-card">
+        <div class="search-row">
+          <div class="search-input-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="search"
+              id="modSearchInput"
+              class="search-input"
+              placeholder="MOD名・説明・CurseForge IDで検索..."
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <div class="result-bar">
+          <span id="modResultCount" class="result-count"></span>
+        </div>
+      </div>
+      <div id="modsGrid" class="mods-grid"></div>
+    </section>
+  </main>
+
+  <!-- アイテム詳細モーダル -->
+  <div id="detailModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div id="modalIconWrap" class="modal-icon-wrap"></div>
+          <div>
+            <div class="modal-mod-tag" id="modalModTag"></div>
+            <h2 id="modalTitle" class="modal-title"></h2>
+            <div class="modal-en-row">
+              <span id="modalEnName" class="modal-en-name"></span>
+              <button type="button" id="copyEnBtn" class="copy-btn" title="英語名をコピー">コピー</button>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="modalCloseBtn" class="modal-close" aria-label="閉じる">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>ASA_MOD_データベース</span>
+      <span>キーボードの <kbd>/</kbd> キーで検索欄にすぐ移動できます</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
