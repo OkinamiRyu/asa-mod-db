@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T23:47:24Z",
+  "updatedAt": "2026-11-23T23:54:03Z",
   "installedMods": [
     {
       "name": "Super Spyglass Plus",
@@ -123,21 +123,21 @@
     {
       "name": "Modern Structure Skin Compendium",
       "description": "建築物用のモダン系カスタムコスメティック・ストラクチャースキン集（Modern Structure Skin Compendium）を追加します。\n漆喰(Plaster)、花崗岩(Granite)、大理石(Marble)、レンガ(Brick)、ガラス(Glass)、パーケット(Parquet)、木板(Plank)、壁紙(Wallpaper)、ドア(Doors)、ゲート(Gates)など多数の建築タイルセットスキンが含まれています。",
-      "curseForgeId": "1020402.0",
+      "curseForgeId": "1020402",
       "curseForgeUrl": "",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n構成は Manifest_UFSFiles_Win64.txt。\nフォルダ: 1020402_9416100"
     },
     {
       "name": "DaniTech Concrete Style Structure Skin",
       "description": "コンクリート調のモダンな建築用カスタムコスメティック・ストラクチャースキン（DaniTech Concrete Style Structure Skin）を5種類追加します。",
-      "curseForgeId": "1287264.0",
+      "curseForgeId": "1287264",
       "curseForgeUrl": "",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n構成は Manifest_UFSFiles_Win64.txt。\nフォルダ: 1287264_9416157"
     },
     {
       "name": "Showcase Storage Skins",
       "description": "収納設備や制作設備の中身・外観をショーケース風に装飾できるカスタムコスメティック・スキン（Showcase Storage Skins）を追加します。\n低温冷蔵庫(Cryofridge)、金庫(Vault)、TEKストレージ(TEK Storage)、冷蔵庫(Fridge)、食料保存庫(Preserving Bin)、餌箱(Feeding Trough)、作業台(Anvil Bench)、旋盤(Machined Bench)など16種類に対応しています。",
-      "curseForgeId": "1507449.0",
+      "curseForgeId": "1507449",
       "curseForgeUrl": "",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n構成は Manifest_UFSFiles_Win64.txt。\nフォルダ: 1507449_9404806"
     }
@@ -7393,8 +7393,8 @@
       ]
     },
     {
-      "id": "DaniTech Concrete Style Structu",
-      "name": "DaniTech Concrete Style Structu",
+      "id": "DaniTech Concrete Style Structure Skin",
+      "name": "DaniTech Concrete Style Structure Skin",
       "sheetType": "cosmetic",
       "itemCount": 5,
       "items": [
@@ -7808,8 +7808,8 @@
       ]
     },
     {
-      "id": "Modern Structure Skin Compendiu",
-      "name": "Modern Structure Skin Compendiu",
+      "id": "Modern Structure Skin Compendium",
+      "name": "Modern Structure Skin Compendium",
       "sheetType": "cosmetic",
       "itemCount": 31,
       "items": [
@@ -8405,8 +8405,8 @@
       ]
     },
     {
-      "id": "Pulse Arcana - Roleplay Classes",
-      "name": "Pulse Arcana - Roleplay Classes",
+      "id": "Pulse Arcana - Roleplay Classes and Magic Mod",
+      "name": "Pulse Arcana - Roleplay Classes and Magic Mod",
       "sheetType": "item",
       "itemCount": 39,
       "items": [
@@ -9076,8 +9076,8 @@
       ]
     },
     {
-      "id": "WallnFloor Decor",
-      "name": "WallnFloor Decor",
+      "id": "Wall'n'Floor Decor",
+      "name": "Wall'n'Floor Decor",
       "sheetType": "item",
       "itemCount": 969,
       "items": [
