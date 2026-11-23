@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T22:47:59.967Z",
+  "updatedAt": "2026-11-23T23:04:15.326Z",
   "installedMods": [
     {
       "name": "Super Spyglass Plus",
@@ -6970,7 +6970,7 @@
     {
       "id": "ArklasAnimals",
       "name": "ArklasAnimals",
-      "sheetType": "item",
+      "sheetType": "creature",
       "itemCount": 13,
       "items": [
         {
@@ -6980,15 +6980,17 @@
           "jaName": "ネコ(Cat)",
           "description": "MOD(ArklasAnimals)で追加される動物・ネコ(Cat)。",
           "category": "生物",
-          "obtainMethod": "スポーン・テイム",
-          "dinoName": "ネコ(Cat)",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Cat/Cat_Character_BP_ArklasTT.uasset",
-          "assetName": "Cat_Character_BP_ArklasTT"
+          "assetName": "Cat_Character_BP_ArklasTT",
+          "tamingMethod": "野生スポーン・テイム",
+          "habitat": "マップ内スポーン"
         },
         {
           "index": 2,
@@ -6997,15 +6999,18 @@
           "jaName": "ニワトリ(Chicken)",
           "description": "MOD(ArklasAnimals)で追加される動物・ニワトリ(Chicken)。有精卵を産む。",
           "category": "生物",
-          "obtainMethod": "スポーン・テイム",
-          "dinoName": "ニワトリ(Chicken)",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Chicken/Chicken_Character_BP_ArklasTT.uasset",
-          "assetName": "Chicken_Character_BP_ArklasTT"
+          "assetName": "Chicken_Character_BP_ArklasTT",
+          "tamingMethod": "野生スポーン・テイム",
+          "habitat": "マップ内スポーン",
+          "specialAbility": "有精卵の産卵・ブリーディング対応"
         },
         {
           "index": 3,
@@ -7013,16 +7018,18 @@
           "enName": "Fertilized Chicken Egg",
           "jaName": "ニワトリの有精卵(Fertilized Chicken Egg)",
           "description": "ニワトリ(Chicken)の有精卵。孵化させてブリーディングに使用する。",
-          "category": "卵・消耗品",
-          "obtainMethod": "交配・採取",
-          "dinoName": "ニワトリ(Chicken)",
+          "category": "卵・繁殖",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Chicken/PrimalItemConsumable_Egg_Chicken_Fertilized.uasset",
-          "assetName": "PrimalItemConsumable_Egg_Chicken_Fertilized"
+          "assetName": "PrimalItemConsumable_Egg_Chicken_Fertilized",
+          "tamingMethod": "交配・採取",
+          "specialAbility": "孵化・ブリーディング用"
         },
         {
           "index": 4,
@@ -7031,15 +7038,17 @@
           "jaName": "サル(Monkey)",
           "description": "MOD(ArklasAnimals)で追加される動物・サル(Monkey)。",
           "category": "生物",
-          "obtainMethod": "スポーン・テイム",
-          "dinoName": "サル(Monkey)",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Monkey/Monkey_Character_BP_ArklasTT.uasset",
-          "assetName": "Monkey_Character_BP_ArklasTT"
+          "assetName": "Monkey_Character_BP_ArklasTT",
+          "tamingMethod": "野生スポーン・テイム",
+          "habitat": "マップ内スポーン"
         },
         {
           "index": 5,
@@ -7048,15 +7057,18 @@
           "jaName": "オウム(Parrot)",
           "description": "MOD(ArklasAnimals)で追加される動物・オウム(Parrot)。卵および有精卵を産む。",
           "category": "生物",
-          "obtainMethod": "スポーン・テイム",
-          "dinoName": "オウム(Parrot)",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Parrot/Parrot_Character_BP_ArklasTT.uasset",
-          "assetName": "Parrot_Character_BP_ArklasTT"
+          "assetName": "Parrot_Character_BP_ArklasTT",
+          "tamingMethod": "野生スポーン・テイム",
+          "habitat": "マップ内スポーン",
+          "specialAbility": "卵・有精卵の産卵対応"
         },
         {
           "index": 6,
@@ -7064,16 +7076,17 @@
           "enName": "Parrot Egg",
           "jaName": "オウムの卵(Parrot Egg)",
           "description": "オウム(Parrot)の卵。",
-          "category": "卵・消耗品",
-          "obtainMethod": "採取",
-          "dinoName": "オウム(Parrot)",
+          "category": "卵・繁殖",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Parrot/PrimalItemConsumable_Egg_Parrot.uasset",
-          "assetName": "PrimalItemConsumable_Egg_Parrot"
+          "assetName": "PrimalItemConsumable_Egg_Parrot",
+          "tamingMethod": "採取"
         },
         {
           "index": 7,
@@ -7081,16 +7094,18 @@
           "enName": "Fertilized Parrot Egg",
           "jaName": "オウムの有精卵(Fertilized Parrot Egg)",
           "description": "オウム(Parrot)の有精卵。孵化させてブリーディングに使用する。",
-          "category": "卵・消耗品",
-          "obtainMethod": "交配・採取",
-          "dinoName": "オウム(Parrot)",
+          "category": "卵・繁殖",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Parrot/PrimalItemConsumable_Egg_Parrot_Fertilized.uasset",
-          "assetName": "PrimalItemConsumable_Egg_Parrot_Fertilized"
+          "assetName": "PrimalItemConsumable_Egg_Parrot_Fertilized",
+          "tamingMethod": "交配・採取",
+          "specialAbility": "孵化・ブリーディング用"
         },
         {
           "index": 8,
@@ -7099,15 +7114,18 @@
           "jaName": "ペンギン(Penguin)",
           "description": "MOD(ArklasAnimals)で追加される動物・ペンギン(Penguin)。有精卵を産む。",
           "category": "生物",
-          "obtainMethod": "スポーン・テイム",
-          "dinoName": "ペンギン(Penguin)",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Penguin/Penguin_Character_BP_ArklasTT.uasset",
-          "assetName": "Penguin_Character_BP_ArklasTT"
+          "assetName": "Penguin_Character_BP_ArklasTT",
+          "tamingMethod": "野生スポーン・テイム",
+          "habitat": "マップ内スポーン",
+          "specialAbility": "有精卵の産卵・ブリーディング対応"
         },
         {
           "index": 9,
@@ -7115,16 +7133,18 @@
           "enName": "Fertilized Penguin Egg",
           "jaName": "ペンギンの有精卵(Fertilized Penguin Egg)",
           "description": "ペンギン(Penguin)の有精卵。孵化させてブリーディングに使用する。",
-          "category": "卵・消耗品",
-          "obtainMethod": "交配・採取",
-          "dinoName": "ペンギン(Penguin)",
+          "category": "卵・繁殖",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Penguin/PrimalItemConsumable_Egg_Penguin_Fertilized.uasset",
-          "assetName": "PrimalItemConsumable_Egg_Penguin_Fertilized"
+          "assetName": "PrimalItemConsumable_Egg_Penguin_Fertilized",
+          "tamingMethod": "交配・採取",
+          "specialAbility": "孵化・ブリーディング用"
         },
         {
           "index": 10,
@@ -7133,15 +7153,17 @@
           "jaName": "ウサギ(Rabbit)",
           "description": "MOD(ArklasAnimals)で追加される動物・ウサギ(Rabbit)。",
           "category": "生物",
-          "obtainMethod": "スポーン・テイム",
-          "dinoName": "ウサギ(Rabbit)",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Rabbit/Rabbit_Character_BP_ArklasTT.uasset",
-          "assetName": "Rabbit_Character_BP_ArklasTT"
+          "assetName": "Rabbit_Character_BP_ArklasTT",
+          "tamingMethod": "野生スポーン・テイム",
+          "habitat": "マップ内スポーン"
         },
         {
           "index": 11,
@@ -7150,15 +7172,18 @@
           "jaName": "カラス(Raven)",
           "description": "MOD(ArklasAnimals)で追加される動物・カラス(Raven)。卵および有精卵を産む。",
           "category": "生物",
-          "obtainMethod": "スポーン・テイム",
-          "dinoName": "カラス(Raven)",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Crow/Raven_Character_BP_ArklasTT.uasset",
-          "assetName": "Raven_Character_BP_ArklasTT"
+          "assetName": "Raven_Character_BP_ArklasTT",
+          "tamingMethod": "野生スポーン・テイム",
+          "habitat": "マップ内スポーン",
+          "specialAbility": "卵・有精卵の産卵対応"
         },
         {
           "index": 12,
@@ -7166,16 +7191,17 @@
           "enName": "Raven Egg",
           "jaName": "カラスの卵(Raven Egg)",
           "description": "カラス(Raven)の卵。",
-          "category": "卵・消耗品",
-          "obtainMethod": "採取",
-          "dinoName": "カラス(Raven)",
+          "category": "卵・繁殖",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Crow/PrimalItemConsumable_Egg_Raven.uasset",
-          "assetName": "PrimalItemConsumable_Egg_Raven"
+          "assetName": "PrimalItemConsumable_Egg_Raven",
+          "tamingMethod": "採取"
         },
         {
           "index": 13,
@@ -7183,23 +7209,25 @@
           "enName": "Fertilized Raven Egg",
           "jaName": "カラスの有精卵(Fertilized Raven Egg)",
           "description": "カラス(Raven)の有精卵。孵化させてブリーディングに使用する。",
-          "category": "卵・消耗品",
-          "obtainMethod": "交配・採取",
-          "dinoName": "カラス(Raven)",
+          "category": "卵・繁殖",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Crow/PrimalItemConsumable_Egg_Raven_Fertilized.uasset",
-          "assetName": "PrimalItemConsumable_Egg_Raven_Fertilized"
+          "assetName": "PrimalItemConsumable_Egg_Raven_Fertilized",
+          "tamingMethod": "交配・採取",
+          "specialAbility": "孵化・ブリーディング用"
         }
       ]
     },
     {
       "id": "GliderCostumes",
       "name": "GliderCostumes",
-      "sheetType": "item",
+      "sheetType": "cosmetic",
       "itemCount": 7,
       "items": [
         {
@@ -7208,8 +7236,8 @@
           "enName": "Glider Costume - Angel",
           "jaName": "グライダーコスチューム：天使(Glidercos_Angel)",
           "description": "グライダー装着時の見た目を天使の翼モチーフに変える防具用カスタムスキン。",
-          "category": "スキン",
-          "obtainMethod": "コスメティック",
+          "category": "防具スキン",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7217,7 +7245,9 @@
           "materials": "",
           "enOriginal": "GliderSkin Armor",
           "notes": "アセット: Cos/Glidercos_Angel/PrimalItemArmor_Glidercos_Angel_New.uasset",
-          "assetName": "PrimalItemArmor_Glidercos_Angel_New"
+          "assetName": "PrimalItemArmor_Glidercos_Angel_New",
+          "applyTarget": "グライダースーツ(Glider Suit)",
+          "applyMethod": "防具・コスメティックスロットに適用"
         },
         {
           "index": 2,
@@ -7225,8 +7255,8 @@
           "enName": "Glider Costume - Angel (Wing Only)",
           "jaName": "グライダーコスチューム：天使・翼のみ(Glidercos_Angel_WingOnly)",
           "description": "天使モチーフの翼部分のみを表示するグライダー用カスタムスキン。",
-          "category": "スキン",
-          "obtainMethod": "コスメティック",
+          "category": "防具スキン",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7234,7 +7264,9 @@
           "materials": "",
           "enOriginal": "GliderSkin Armor",
           "notes": "アセット: Cos/Glidercos_Angel/PrimalItemArmor_Glidercos_Angel_New_WingOnly.uasset",
-          "assetName": "PrimalItemArmor_Glidercos_Angel_New_WingOnly"
+          "assetName": "PrimalItemArmor_Glidercos_Angel_New_WingOnly",
+          "applyTarget": "グライダースーツ(Glider Suit)",
+          "applyMethod": "防具・コスメティックスロットに適用"
         },
         {
           "index": 3,
@@ -7242,8 +7274,8 @@
           "enName": "Glider Costume - Devil",
           "jaName": "グライダーコスチューム：悪魔(Glidercos_Devil)",
           "description": "グライダー装着時の見た目を悪魔の翼モチーフに変える防具用カスタムスキン。",
-          "category": "スキン",
-          "obtainMethod": "コスメティック",
+          "category": "防具スキン",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7251,7 +7283,9 @@
           "materials": "",
           "enOriginal": "GliderSkin Armor",
           "notes": "アセット: Cos/Glidercos_Devil/PrimalItemArmor_Glidercos_Devil_New.uasset",
-          "assetName": "PrimalItemArmor_Glidercos_Devil_New"
+          "assetName": "PrimalItemArmor_Glidercos_Devil_New",
+          "applyTarget": "グライダースーツ(Glider Suit)",
+          "applyMethod": "防具・コスメティックスロットに適用"
         },
         {
           "index": 4,
@@ -7259,16 +7293,18 @@
           "enName": "Glider Costume - Argentavis",
           "jaName": "グライダーコスチューム：アルゲンタヴィス(Glidercos_Argen)",
           "description": "アルゲンタヴィス(Argentavis)の翼をモチーフにしたグライダー用カスタムスキン。",
-          "category": "スキン",
-          "obtainMethod": "コスメティック",
-          "dinoName": "アルゲンタヴィス(Argentavis)",
+          "category": "防具スキン",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "GliderSkin Armor",
           "notes": "アセット: Cos/Glidercos_Argen/PrimalItemArmor_Glidercos_Argen_New.uasset",
-          "assetName": "PrimalItemArmor_Glidercos_Argen_New"
+          "assetName": "PrimalItemArmor_Glidercos_Argen_New",
+          "applyTarget": "グライダースーツ(Glider Suit)",
+          "applyMethod": "防具・コスメティックスロットに適用"
         },
         {
           "index": 5,
@@ -7276,16 +7312,18 @@
           "enName": "Glider Costume - Wyvern",
           "jaName": "グライダーコスチューム：ワイバーン(Glidercos_Wyvern)",
           "description": "ワイバーン(Wyvern)の翼をモチーフにしたグライダー用カスタムスキン。",
-          "category": "スキン",
-          "obtainMethod": "コスメティック",
-          "dinoName": "ワイバーン(Wyvern)",
+          "category": "防具スキン",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "GliderSkin Armor",
           "notes": "アセット: Cos/Glidercos_Wyvern/PrimalItemArmor_Glidercos_Wyvern_New.uasset",
-          "assetName": "PrimalItemArmor_Glidercos_Wyvern_New"
+          "assetName": "PrimalItemArmor_Glidercos_Wyvern_New",
+          "applyTarget": "グライダースーツ(Glider Suit)",
+          "applyMethod": "防具・コスメティックスロットに適用"
         },
         {
           "index": 6,
@@ -7293,16 +7331,18 @@
           "enName": "Glider Costume - TEK Wyvern",
           "jaName": "グライダーコスチューム：TEKワイバーン(Glidercos_TEKWyvern)",
           "description": "TEKワイバーン(TEK Wyvern)の翼をモチーフにしたグライダー用カスタムスキン。",
-          "category": "スキン",
-          "obtainMethod": "コスメティック",
-          "dinoName": "TEKワイバーン(TEK Wyvern)",
+          "category": "防具スキン",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "GliderSkin Armor",
           "notes": "アセット: Cos/Glidercos_TEKWyvern/PrimalItemArmor_Glidercos_TEKWyvern_New.uasset",
-          "assetName": "PrimalItemArmor_Glidercos_TEKWyvern_New"
+          "assetName": "PrimalItemArmor_Glidercos_TEKWyvern_New",
+          "applyTarget": "グライダースーツ(Glider Suit)",
+          "applyMethod": "防具・コスメティックスロットに適用"
         },
         {
           "index": 7,
@@ -7310,23 +7350,25 @@
           "enName": "Glider Costume - TEK Quetzal",
           "jaName": "グライダーコスチューム：TEKケツァルコアトルス(Glidercos_TEKQuetzal)",
           "description": "TEKケツァルコアトルス(TEK Quetzal)の翼をモチーフにしたグライダー用カスタムスキン。",
-          "category": "スキン",
-          "obtainMethod": "コスメティック",
-          "dinoName": "TEKケツァルコアトルス(TEK Quetzal)",
+          "category": "防具スキン",
+          "obtainMethod": "",
+          "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
           "materials": "",
           "enOriginal": "GliderSkin Armor",
           "notes": "アセット: Cos/Glidercos_TEKQuetzal/PrimalItemArmor_Glidercos_TEKQuetzal_New.uasset",
-          "assetName": "PrimalItemArmor_Glidercos_TEKQuetzal_New"
+          "assetName": "PrimalItemArmor_Glidercos_TEKQuetzal_New",
+          "applyTarget": "グライダースーツ(Glider Suit)",
+          "applyMethod": "防具・コスメティックスロットに適用"
         }
       ]
     },
     {
       "id": "MOUSHIWAKE GOZAIMASEN COS",
       "name": "MOUSHIWAKE GOZAIMASEN COS",
-      "sheetType": "item",
+      "sheetType": "cosmetic",
       "itemCount": 1,
       "items": [
         {
@@ -7335,8 +7377,8 @@
           "enName": "MOUSHIWAKE GOZAIMASEN COS",
           "jaName": "申し訳ございませんコスチューム(MOUSHIWAKE GOZAIMASEN COS)",
           "description": "日本のクリエイター(Pyronoh)がデザインしたキャラクターの姿になれるカスタムコスメティック・スキン。",
-          "category": "スキン",
-          "obtainMethod": "コスメティック",
+          "category": "キャラクタースキン",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7344,14 +7386,16 @@
           "materials": "",
           "enOriginal": "It is a cute CustomCosmeticSkin!You can be a character designed by (Pyronoh), a Japanese creator!",
           "notes": "アセット: COS/PrimalItemSkin_Costume_MOUSHIWAKEGOZAIMASENCOS.uasset",
-          "assetName": "PrimalItemSkin_Costume_MOUSHIWAKEGOZAIMASENCOS"
+          "assetName": "PrimalItemSkin_Costume_MOUSHIWAKEGOZAIMASENCOS",
+          "applyTarget": "サバイバー(Survivor)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         }
       ]
     },
     {
       "id": "DaniTech Concrete Style Structure Skin",
       "name": "DaniTech Concrete Style Structure Skin",
-      "sheetType": "item",
+      "sheetType": "cosmetic",
       "itemCount": 5,
       "items": [
         {
@@ -7361,7 +7405,7 @@
           "jaName": "ダニテック・コンクリート建築スキン 01(DaniTech_Concrete_01)",
           "description": "モダンなコンクリート調の建築物用カスタムコスメティック・スキン（バリエーション01）。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7369,7 +7413,9 @@
           "materials": "",
           "enOriginal": "DaniTech StructureSkin, CustomCosmetics, Concrete, Mordern",
           "notes": "アセット: PrimalItemStructureSkin_DaniTech_Concrete_01.uasset",
-          "assetName": "PrimalItemStructureSkin_DaniTech_Concrete_01"
+          "assetName": "PrimalItemStructureSkin_DaniTech_Concrete_01",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 2,
@@ -7378,7 +7424,7 @@
           "jaName": "ダニテック・コンクリート建築スキン 02(DaniTech_Concrete_02)",
           "description": "モダンなコンクリート調の建築物用カスタムコスメティック・スキン（バリエーション02）。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7386,7 +7432,9 @@
           "materials": "",
           "enOriginal": "DaniTech StructureSkin, CustomCosmetics, Concrete, Mordern",
           "notes": "アセット: PrimalItemStructureSkin_DaniTech_Concrete_02.uasset",
-          "assetName": "PrimalItemStructureSkin_DaniTech_Concrete_02"
+          "assetName": "PrimalItemStructureSkin_DaniTech_Concrete_02",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 3,
@@ -7395,7 +7443,7 @@
           "jaName": "ダニテック・コンクリート建築スキン 03(DaniTech_Concrete_03)",
           "description": "モダンなコンクリート調の建築物用カスタムコスメティック・スキン（バリエーション03）。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7403,7 +7451,9 @@
           "materials": "",
           "enOriginal": "DaniTech StructureSkin, CustomCosmetics, Concrete, Mordern",
           "notes": "アセット: PrimalItemStructureSkin_DaniTech_Concrete_03.uasset",
-          "assetName": "PrimalItemStructureSkin_DaniTech_Concrete_03"
+          "assetName": "PrimalItemStructureSkin_DaniTech_Concrete_03",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 4,
@@ -7412,7 +7462,7 @@
           "jaName": "ダニテック・コンクリート建築スキン 04(DaniTech_Concrete_04)",
           "description": "モダンなコンクリート調の建築物用カスタムコスメティック・スキン（バリエーション04）。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7420,7 +7470,9 @@
           "materials": "",
           "enOriginal": "DaniTech StructureSkin, CustomCosmetics, Concrete, Mordern",
           "notes": "アセット: PrimalItemStructureSkin_DaniTech_Concrete_04.uasset",
-          "assetName": "PrimalItemStructureSkin_DaniTech_Concrete_04"
+          "assetName": "PrimalItemStructureSkin_DaniTech_Concrete_04",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 5,
@@ -7429,7 +7481,7 @@
           "jaName": "ダニテック・コンクリート建築スキン 05(DaniTech_Concrete_05)",
           "description": "モダンなコンクリート調の建築物用カスタムコスメティック・スキン（バリエーション05）。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7437,14 +7489,16 @@
           "materials": "",
           "enOriginal": "DaniTech StructureSkin, CustomCosmetics, Concrete, Mordern",
           "notes": "アセット: PrimalItemStructureSkin_DaniTech_Concrete_05.uasset",
-          "assetName": "PrimalItemStructureSkin_DaniTech_Concrete_05"
+          "assetName": "PrimalItemStructureSkin_DaniTech_Concrete_05",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         }
       ]
     },
     {
       "id": "Showcase Storage Skins",
       "name": "Showcase Storage Skins",
-      "sheetType": "item",
+      "sheetType": "cosmetic",
       "itemCount": 16,
       "items": [
         {
@@ -7454,7 +7508,7 @@
           "jaName": "ショーケース風 低温冷蔵庫スキン(DisplayableCryofridge)",
           "description": "低温冷蔵庫(Cryofridge)の外観をショーケース風に変更するカスタムスキン。",
           "category": "収納スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7462,7 +7516,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableCryofridge/PrimalItemStructure_DisplayableCryofridge.uasset",
-          "assetName": "PrimalItemStructure_DisplayableCryofridge"
+          "assetName": "PrimalItemStructure_DisplayableCryofridge",
+          "applyTarget": "低温冷蔵庫(Cryofridge)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 2,
@@ -7471,7 +7527,7 @@
           "jaName": "ショーケース風 金庫スキン(DisplayableVault)",
           "description": "金庫(Vault)の外観をショーケース風に変更するカスタムスキン。",
           "category": "収納スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7479,7 +7535,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableVault.uasset",
-          "assetName": "PrimalItemStructure_DisplayableVault"
+          "assetName": "PrimalItemStructure_DisplayableVault",
+          "applyTarget": "金庫(Vault)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 3,
@@ -7488,7 +7546,7 @@
           "jaName": "ショーケース風 TEKストレージスキン(DisplayableTEKStorage)",
           "description": "TEKストレージ(TEK Dedicated Storage)の外観をショーケース風に変更するカスタムスキン。",
           "category": "収納スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7496,7 +7554,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableTEKStorage.uasset",
-          "assetName": "PrimalItemStructure_DisplayableTEKStorage"
+          "assetName": "PrimalItemStructure_DisplayableTEKStorage",
+          "applyTarget": "TEKストレージ(TEK Dedicated Storage)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 4,
@@ -7505,7 +7565,7 @@
           "jaName": "ショーケース風 TEKの餌箱スキン(DisplayableTEKTrough)",
           "description": "TEKの餌箱(TEK Trough)の外観をショーケース風に変更するカスタムスキン。",
           "category": "収納スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7513,7 +7573,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableTEKTrough.uasset",
-          "assetName": "PrimalItemStructure_DisplayableTEKTrough"
+          "assetName": "PrimalItemStructure_DisplayableTEKTrough",
+          "applyTarget": "TEKの餌箱(TEK Trough)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 5,
@@ -7522,7 +7584,7 @@
           "jaName": "ショーケース風 TEKレプリケータースキン(DisplayableTekFabricator)",
           "description": "TEKレプリケーター(TEK Replicator)の外観をショーケース風に変更するカスタムスキン。",
           "category": "設備スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7530,7 +7592,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableTekFabricator.uasset",
-          "assetName": "PrimalItemStructure_DisplayableTekFabricator"
+          "assetName": "PrimalItemStructure_DisplayableTekFabricator",
+          "applyTarget": "TEKレプリケーター(TEK Replicator)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 6,
@@ -7539,7 +7603,7 @@
           "jaName": "ショーケース風 収納ボックススキン(DisplayableSmallStorage)",
           "description": "収納ボックス(Storage Box)の外観をショーケース風に変更するカスタムスキン。",
           "category": "収納スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7547,7 +7611,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableSmallStorage.uasset",
-          "assetName": "PrimalItemStructure_DisplayableSmallStorage"
+          "assetName": "PrimalItemStructure_DisplayableSmallStorage",
+          "applyTarget": "収納ボックス(Storage Box)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 7,
@@ -7556,7 +7622,7 @@
           "jaName": "ショーケース風 大型収納ボックススキン(DisplayableLargeStorage)",
           "description": "大型収納ボックス(Large Storage Box)の外観をショーケース風に変更するカスタムスキン。",
           "category": "収納スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7564,7 +7630,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableLargeStorage.uasset",
-          "assetName": "PrimalItemStructure_DisplayableLargeStorage"
+          "assetName": "PrimalItemStructure_DisplayableLargeStorage",
+          "applyTarget": "大型収納ボックス(Large Storage Box)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 8,
@@ -7573,7 +7641,7 @@
           "jaName": "ショーケース風 食料保存庫スキン(DisplayablePreservingBin)",
           "description": "食料保存庫(Preserving Bin)の外観をショーケース風に変更するカスタムスキン。",
           "category": "収納スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7581,7 +7649,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayablePreservingBin.uasset",
-          "assetName": "PrimalItemStructure_DisplayablePreservingBin"
+          "assetName": "PrimalItemStructure_DisplayablePreservingBin",
+          "applyTarget": "食料保存庫(Preserving Bin)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 9,
@@ -7590,7 +7660,7 @@
           "jaName": "ショーケース風 工業用食料保存庫スキン(DisplayableIndustrialPreservingBin)",
           "description": "工業用食料保存庫(Industrial Preserving Bin)向けショーケース風カスタムスキン。",
           "category": "収納スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7598,7 +7668,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableIndustrialPreservingBin.uasset",
-          "assetName": "PrimalItemStructure_DisplayableIndustrialPreservingBin"
+          "assetName": "PrimalItemStructure_DisplayableIndustrialPreservingBin",
+          "applyTarget": "食料保存庫(Preserving Bin)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 10,
@@ -7607,7 +7679,7 @@
           "jaName": "ショーケース風 冷蔵庫スキン(DisplayableFridge)",
           "description": "冷蔵庫(Refrigerator)の外観をショーケース風に変更するカスタムスキン。",
           "category": "収納スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7615,7 +7687,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableFridge.uasset",
-          "assetName": "PrimalItemStructure_DisplayableFridge"
+          "assetName": "PrimalItemStructure_DisplayableFridge",
+          "applyTarget": "冷蔵庫(Refrigerator)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 11,
@@ -7624,7 +7698,7 @@
           "jaName": "ショーケース風 餌箱スキン(DisplayableFeedingTrough)",
           "description": "餌箱(Feeding Trough)の外観をショーケース風に変更するカスタムスキン。",
           "category": "収納スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7632,7 +7706,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableFeedingTrough.uasset",
-          "assetName": "PrimalItemStructure_DisplayableFeedingTrough"
+          "assetName": "PrimalItemStructure_DisplayableFeedingTrough",
+          "applyTarget": "餌箱(Feeding Trough)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 12,
@@ -7641,7 +7717,7 @@
           "jaName": "ショーケース風 本棚スキン(DisplayableBookshelf)",
           "description": "本棚(Bookshelf)の外観をショーケース風に変更するカスタムスキン。",
           "category": "収納スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7649,7 +7725,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableBookshelf.uasset",
-          "assetName": "PrimalItemStructure_DisplayableBookshelf"
+          "assetName": "PrimalItemStructure_DisplayableBookshelf",
+          "applyTarget": "本棚(Bookshelf)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 13,
@@ -7658,7 +7736,7 @@
           "jaName": "ショーケース風 ライブラリー収納スキン(DisplayableLibraryStorage)",
           "description": "ライブラリー収納(Library Storage)の外観をショーケース風に変更するカスタムスキン。",
           "category": "収納スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7666,7 +7744,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableLibraryStorage.uasset",
-          "assetName": "PrimalItemStructure_DisplayableLibraryStorage"
+          "assetName": "PrimalItemStructure_DisplayableLibraryStorage",
+          "applyTarget": "本棚(Bookshelf)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 14,
@@ -7675,7 +7755,7 @@
           "jaName": "ショーケース風 樽スキン(DisplayableBarrel)",
           "description": "樽(Barrel)の外観をショーケース風に変更するカスタムスキン。",
           "category": "収納スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7683,7 +7763,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableBarrel.uasset",
-          "assetName": "PrimalItemStructure_DisplayableBarrel"
+          "assetName": "PrimalItemStructure_DisplayableBarrel",
+          "applyTarget": "樽(Barrel)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 15,
@@ -7692,7 +7774,7 @@
           "jaName": "ショーケース風 作業台スキン(DisplayableAnvilBench)",
           "description": "作業台(Smithy)の外観をショーケース風に変更するカスタムスキン。",
           "category": "設備スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7700,7 +7782,9 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableAnvilBench.uasset",
-          "assetName": "PrimalItemStructure_DisplayableAnvilBench"
+          "assetName": "PrimalItemStructure_DisplayableAnvilBench",
+          "applyTarget": "作業台(Smithy)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 16,
@@ -7709,7 +7793,7 @@
           "jaName": "ショーケース風 旋盤スキン(DisplayableMachinedBench)",
           "description": "旋盤(Fabricator)の外観をショーケース風に変更するカスタムスキン。",
           "category": "設備スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7717,14 +7801,16 @@
           "materials": "",
           "enOriginal": "Showcase Storage Custom Cosmetics",
           "notes": "アセット: DisplayableStorage/PrimalItemStructure_DisplayableMachinedBench.uasset",
-          "assetName": "PrimalItemStructure_DisplayableMachinedBench"
+          "assetName": "PrimalItemStructure_DisplayableMachinedBench",
+          "applyTarget": "旋盤(Fabricator)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         }
       ]
     },
     {
       "id": "Modern Structure Skin Compendium",
       "name": "Modern Structure Skin Compendium",
-      "sheetType": "item",
+      "sheetType": "cosmetic",
       "itemCount": 31,
       "items": [
         {
@@ -7734,7 +7820,7 @@
           "jaName": "漆喰タイルセット(Tileset_Plaster)",
           "description": "建築物の外観を漆喰(Plaster)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7742,7 +7828,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Plaster/PrimalItemStructureSkin_Tileset_Plaster.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Plaster"
+          "assetName": "PrimalItemStructureSkin_Tileset_Plaster",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 2,
@@ -7751,7 +7839,7 @@
           "jaName": "花崗岩タイルセット(Tileset_Granite)",
           "description": "建築物の外観を花崗岩(Granite)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7759,7 +7847,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Plaster/PrimalItemStructureSkin_Tileset_Granite.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Granite"
+          "assetName": "PrimalItemStructureSkin_Tileset_Granite",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 3,
@@ -7768,7 +7858,7 @@
           "jaName": "シチリア風タイルセット(Tileset_Sicilian)",
           "description": "建築物の外観をシチリア風(Sicilian)に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7776,7 +7866,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Sicilian/PrimalItemStructureSkin_Tileset_Sicilian.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Sicilian"
+          "assetName": "PrimalItemStructureSkin_Tileset_Sicilian",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 4,
@@ -7785,7 +7877,7 @@
           "jaName": "白大理石タイルセット(Tileset_WhiteMarble)",
           "description": "建築物の外観を白大理石(White Marble)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7793,7 +7885,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/WhiteMarble/PrimalItemStructureSkin_Tileset_WhiteMarble.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_WhiteMarble"
+          "assetName": "PrimalItemStructureSkin_Tileset_WhiteMarble",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 5,
@@ -7802,7 +7896,7 @@
           "jaName": "白青大理石タイルセット(Tileset_WhiteBlue_Marble)",
           "description": "建築物の外観を白青大理石(White Blue Marble)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7810,7 +7904,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Plaster/PrimalItemStructureSkin_Tileset_WhiteBlue_Marble.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_WhiteBlue_Marble"
+          "assetName": "PrimalItemStructureSkin_Tileset_WhiteBlue_Marble",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 6,
@@ -7819,7 +7915,7 @@
           "jaName": "水色大理石タイルセット(Tileset_Marble_LightBlue)",
           "description": "建築物の外観を水色大理石(Light Blue Marble)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7827,7 +7923,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Marble_Blue/PrimalItemStructureSkin_Tileset_Marble_LightBlue.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Marble_LightBlue"
+          "assetName": "PrimalItemStructureSkin_Tileset_Marble_LightBlue",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 7,
@@ -7836,7 +7934,7 @@
           "jaName": "黒大理石タイルセット(Tileset_DarkMarble)",
           "description": "建築物の外観を黒大理石(Dark Marble)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7844,7 +7942,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/DarkMarble/PrimalItemStructureSkin_Tileset_DarkMarble.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_DarkMarble"
+          "assetName": "PrimalItemStructureSkin_Tileset_DarkMarble",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 8,
@@ -7853,7 +7953,7 @@
           "jaName": "黒大理石タイルセット2(Tileset_DarkMarble_2)",
           "description": "建築物の外観を黒大理石(Dark Marble 2)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7861,7 +7961,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/DarkMarble/PrimalItemStructureSkin_Tileset_DarkMarble_2.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_DarkMarble_2"
+          "assetName": "PrimalItemStructureSkin_Tileset_DarkMarble_2",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 9,
@@ -7870,7 +7972,7 @@
           "jaName": "新・黒大理石タイルセット(Tileset_Marble_Dark_New)",
           "description": "建築物の外観を新デザインの黒大理石(Marble Dark New)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7878,7 +7980,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Marble_Dark/PrimalItemStructureSkin_Tileset_Marble_Dark_New.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Marble_Dark_New"
+          "assetName": "PrimalItemStructureSkin_Tileset_Marble_Dark_New",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 10,
@@ -7887,7 +7991,7 @@
           "jaName": "大理石床タイルセット(Tileset_MarbleFloor)",
           "description": "床などの外観を大理石フロア(Marble Floor)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7895,7 +7999,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Marble_Floor/PrimalItemStructureSkin_Tileset_MarbleFloor.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_MarbleFloor"
+          "assetName": "PrimalItemStructureSkin_Tileset_MarbleFloor",
+          "applyTarget": "床・土台",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 11,
@@ -7904,7 +8010,7 @@
           "jaName": "グレーウォッシュ大理石タイルセット(Tileset_Marble_GreyWash)",
           "description": "建築物の外観をグレーウォッシュ大理石(Marble GreyWash)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7912,7 +8018,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Wood_Set/Grey_Light/PrimalItemStructureSkin_Tileset_Marble_GreyWash.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Marble_GreyWash"
+          "assetName": "PrimalItemStructureSkin_Tileset_Marble_GreyWash",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 12,
@@ -7921,7 +8029,7 @@
           "jaName": "プレキャストコンクリート・タイルセット(Tileset_Precast)",
           "description": "建築物の外観をプレキャストコンクリート(Precast)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7929,7 +8037,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Precast/PrimalItemStructureSkin_Tileset_Precast.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Precast"
+          "assetName": "PrimalItemStructureSkin_Tileset_Precast",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 13,
@@ -7938,7 +8048,7 @@
           "jaName": "マットホワイト・タイルセット(Tileset_MatteWhite)",
           "description": "建築物の外観を艶消し白(Matte White)に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7946,7 +8056,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Matte/PrimalItemStructureSkin_Tileset_MatteWhite.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_MatteWhite"
+          "assetName": "PrimalItemStructureSkin_Tileset_MatteWhite",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 14,
@@ -7955,7 +8067,7 @@
           "jaName": "マットブラック・タイルセット(Tileset_MatteBlack)",
           "description": "建築物の外観を艶消し黒(Matte Black)に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7963,7 +8075,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Matte/PrimalItemStructureSkin_Tileset_MatteBlack.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_MatteBlack"
+          "assetName": "PrimalItemStructureSkin_Tileset_MatteBlack",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 15,
@@ -7972,7 +8086,7 @@
           "jaName": "レンガ・タイルセット(Tileset_Brick)",
           "description": "建築物の外観をレンガ(Brick)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7980,7 +8094,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Brick/PrimalItemStructureSkin_Tileset_Brick.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Brick"
+          "assetName": "PrimalItemStructureSkin_Tileset_Brick",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 16,
@@ -7989,7 +8105,7 @@
           "jaName": "ガラス・タイルセット(Tileset_Glass)",
           "description": "建築物の外観をモダンガラス(Glass)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -7997,7 +8113,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Glass/PrimalItemStructureSkin_Tileset_Glass.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Glass"
+          "assetName": "PrimalItemStructureSkin_Tileset_Glass",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 17,
@@ -8006,7 +8124,7 @@
           "jaName": "シームレスガラス・タイルセット(Tileset_Seemless)",
           "description": "継ぎ目のないガラス(Seamless Glass)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8014,7 +8132,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Seamlessglass/PrimalItemStructureSkin_Tileset_Seemless.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Seemless"
+          "assetName": "PrimalItemStructureSkin_Tileset_Seemless",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 18,
@@ -8023,7 +8143,7 @@
           "jaName": "木板タイルセット(Tileset_Plank)",
           "description": "建築物の外観を木板(Plank)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8031,7 +8151,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Plank/PrimalItemStructureSkin_Tileset_Plank.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Plank"
+          "assetName": "PrimalItemStructureSkin_Tileset_Plank",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 19,
@@ -8040,7 +8162,7 @@
           "jaName": "明るい木板タイルセット(Tileset_PlankLight)",
           "description": "建築物の外観を明るい木板(Plank Light)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8048,7 +8170,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Wood_Set/Plank_Light/PrimalItemStructureSkin_Tileset_PlankLight.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_PlankLight"
+          "assetName": "PrimalItemStructureSkin_Tileset_PlankLight",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 20,
@@ -8057,7 +8181,7 @@
           "jaName": "ダークウッド・タイルセット(Tileset_Darkwood)",
           "description": "建築物の外観をダークウッド(Darkwood)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8065,7 +8189,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Wood_Set/Dark_Wood/PrimalItemStructureSkin_Tileset_Darkwood.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Darkwood"
+          "assetName": "PrimalItemStructureSkin_Tileset_Darkwood",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 21,
@@ -8074,7 +8200,7 @@
           "jaName": "レッドウッド・タイルセット(Tileset_Redwood)",
           "description": "建築物の外観をレッドウッド(Redwood)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8082,7 +8208,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Wood_Set/RedWood/PrimalItemStructureSkin_Tileset_Redwood.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Redwood"
+          "assetName": "PrimalItemStructureSkin_Tileset_Redwood",
+          "applyTarget": "建築物全般",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 22,
@@ -8091,7 +8219,7 @@
           "jaName": "寄木張り床タイルセット(Tileset_Parquet)",
           "description": "床などの外観を寄木張り(Parquet)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8099,7 +8227,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Parquet/PrimalItemStructureSkin_Tileset_Parquet.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Parquet"
+          "assetName": "PrimalItemStructureSkin_Tileset_Parquet",
+          "applyTarget": "床・土台",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 23,
@@ -8108,7 +8238,7 @@
           "jaName": "壁紙タイルセット(Tileset_Wallpaper)",
           "description": "壁の外観を壁紙(Wallpaper)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8116,7 +8246,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Plaster/PrimalItemStructureSkin_Tileset_Wallpaper.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Wallpaper"
+          "assetName": "PrimalItemStructureSkin_Tileset_Wallpaper",
+          "applyTarget": "壁",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 24,
@@ -8125,7 +8257,7 @@
           "jaName": "壁紙タイルセット1(Tileset_Wallpaper1)",
           "description": "壁の外観を壁紙(Wallpaper1)調に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8133,7 +8265,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/PrimalItemStructureSkin_Tileset_Wallpaper1.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Wallpaper1"
+          "assetName": "PrimalItemStructureSkin_Tileset_Wallpaper1",
+          "applyTarget": "壁",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 25,
@@ -8142,7 +8276,7 @@
           "jaName": "プール水面天井タイルセット(Tileset_Poolwaterceiling)",
           "description": "天井等をプール水面(Pool Water Ceiling)風に見せる建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8150,7 +8284,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Petal/PrimalItemStructureSkin_Tileset_Poolwaterceiling.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Poolwaterceiling"
+          "assetName": "PrimalItemStructureSkin_Tileset_Poolwaterceiling",
+          "applyTarget": "天井",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 26,
@@ -8159,7 +8295,7 @@
           "jaName": "梁・柱タイルセット(Tileset_Beam)",
           "description": "梁・柱(Beam)向けのモダン建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8167,7 +8303,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Beam/PrimalItemStructureSkin_Tileset_Beam.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Beam"
+          "assetName": "PrimalItemStructureSkin_Tileset_Beam",
+          "applyTarget": "柱・梁",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 27,
@@ -8176,7 +8314,7 @@
           "jaName": "ドア・タイルセット(Tileset_Doors)",
           "description": "ドア(Doors)の外観をモダン風に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8184,7 +8322,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/_Doors/PrimalItemStructureSkin_Tileset_Doors.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Doors"
+          "assetName": "PrimalItemStructureSkin_Tileset_Doors",
+          "applyTarget": "ドア(Doors)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 28,
@@ -8193,7 +8333,7 @@
           "jaName": "ドア・タイルセット2(Tileset_Doors_2)",
           "description": "ドア(Doors 2)の外観を変更するモダン建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8201,7 +8341,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/_Doors/PrimalItemStructureSkin_Tileset_Doors_2.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Doors_2"
+          "assetName": "PrimalItemStructureSkin_Tileset_Doors_2",
+          "applyTarget": "ドア(Doors)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 29,
@@ -8210,7 +8352,7 @@
           "jaName": "ゲート・タイルセット(Tileset_Gates)",
           "description": "ゲート(Gates)の外観をモダン風に変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8218,7 +8360,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/Gates/PrimalItemStructureSkin_Tileset_Gates.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Gates"
+          "assetName": "PrimalItemStructureSkin_Tileset_Gates",
+          "applyTarget": "ゲート(Gates)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 30,
@@ -8227,7 +8371,7 @@
           "jaName": "崖プラットフォーム・タイルセット(Tileset_CliffPlatform)",
           "description": "崖プラットフォーム(Cliff Platform)の外観を変更する建築スキン。",
           "category": "建築スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8235,7 +8379,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: _Base/CliffPlatform/PrimalItemStructureSkin_Tileset_CliffPlatform.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_CliffPlatform"
+          "assetName": "PrimalItemStructureSkin_Tileset_CliffPlatform",
+          "applyTarget": "崖プラットフォーム(Cliff Platform)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         },
         {
           "index": 31,
@@ -8244,7 +8390,7 @@
           "jaName": "家具デコレーション・タイルセット(Tileset_Furniture_Decor)",
           "description": "家具・装飾品(Furniture Decor)向けのモダンカスタムスキン。",
           "category": "家具スキン",
-          "obtainMethod": "コスメティック",
+          "obtainMethod": "",
           "dinoName": "",
           "craftStation": "",
           "toolUsed": "",
@@ -8252,7 +8398,9 @@
           "materials": "",
           "enOriginal": "",
           "notes": "アセット: Furniture/PrimalItemStructureSkin_Tileset_Furniture_Decor.uasset",
-          "assetName": "PrimalItemStructureSkin_Tileset_Furniture_Decor"
+          "assetName": "PrimalItemStructureSkin_Tileset_Furniture_Decor",
+          "applyTarget": "家具・装飾",
+          "applyMethod": "カスタムコスメティック画面から適用"
         }
       ]
     },
