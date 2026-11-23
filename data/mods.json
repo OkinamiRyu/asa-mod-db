@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T23:04:15.326Z",
+  "updatedAt": "2026-11-23T23:47:24Z",
   "installedMods": [
     {
       "name": "Super Spyglass Plus",
@@ -123,21 +123,21 @@
     {
       "name": "Modern Structure Skin Compendium",
       "description": "建築物用のモダン系カスタムコスメティック・ストラクチャースキン集（Modern Structure Skin Compendium）を追加します。\n漆喰(Plaster)、花崗岩(Granite)、大理石(Marble)、レンガ(Brick)、ガラス(Glass)、パーケット(Parquet)、木板(Plank)、壁紙(Wallpaper)、ドア(Doors)、ゲート(Gates)など多数の建築タイルセットスキンが含まれています。",
-      "curseForgeId": "1020402",
+      "curseForgeId": "1020402.0",
       "curseForgeUrl": "",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n構成は Manifest_UFSFiles_Win64.txt。\nフォルダ: 1020402_9416100"
     },
     {
       "name": "DaniTech Concrete Style Structure Skin",
       "description": "コンクリート調のモダンな建築用カスタムコスメティック・ストラクチャースキン（DaniTech Concrete Style Structure Skin）を5種類追加します。",
-      "curseForgeId": "1287264",
+      "curseForgeId": "1287264.0",
       "curseForgeUrl": "",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n構成は Manifest_UFSFiles_Win64.txt。\nフォルダ: 1287264_9416157"
     },
     {
       "name": "Showcase Storage Skins",
       "description": "収納設備や制作設備の中身・外観をショーケース風に装飾できるカスタムコスメティック・スキン（Showcase Storage Skins）を追加します。\n低温冷蔵庫(Cryofridge)、金庫(Vault)、TEKストレージ(TEK Storage)、冷蔵庫(Fridge)、食料保存庫(Preserving Bin)、餌箱(Feeding Trough)、作業台(Anvil Bench)、旋盤(Machined Bench)など16種類に対応しています。",
-      "curseForgeId": "1507449",
+      "curseForgeId": "1507449.0",
       "curseForgeUrl": "",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n構成は Manifest_UFSFiles_Win64.txt。\nフォルダ: 1507449_9404806"
     }
@@ -6990,7 +6990,7 @@
           "notes": "アセット: Cat/Cat_Character_BP_ArklasTT.uasset",
           "assetName": "Cat_Character_BP_ArklasTT",
           "tamingMethod": "野生スポーン・テイム",
-          "habitat": "マップ内スポーン"
+          "habitat": "海岸・ビーチ / 草原 / 森林・ジャングル（各マップの海岸・草原系スポーン）"
         },
         {
           "index": 2,
@@ -7009,7 +7009,7 @@
           "notes": "アセット: Chicken/Chicken_Character_BP_ArklasTT.uasset",
           "assetName": "Chicken_Character_BP_ArklasTT",
           "tamingMethod": "野生スポーン・テイム",
-          "habitat": "マップ内スポーン",
+          "habitat": "海岸・ビーチ / 草原 / 森林（各マップの海岸・草原系スポーン）",
           "specialAbility": "有精卵の産卵・ブリーディング対応"
         },
         {
@@ -7048,7 +7048,7 @@
           "notes": "アセット: Monkey/Monkey_Character_BP_ArklasTT.uasset",
           "assetName": "Monkey_Character_BP_ArklasTT",
           "tamingMethod": "野生スポーン・テイム",
-          "habitat": "マップ内スポーン"
+          "habitat": "ジャングル / 森林 / 湿地林（各マップのジャングル・森林系スポーン）"
         },
         {
           "index": 5,
@@ -7067,7 +7067,7 @@
           "notes": "アセット: Parrot/Parrot_Character_BP_ArklasTT.uasset",
           "assetName": "Parrot_Character_BP_ArklasTT",
           "tamingMethod": "野生スポーン・テイム",
-          "habitat": "マップ内スポーン",
+          "habitat": "ジャングル / 森林 / 海岸・島（各マップのジャングル・海岸系スポーン）",
           "specialAbility": "卵・有精卵の産卵対応"
         },
         {
@@ -7124,7 +7124,7 @@
           "notes": "アセット: Penguin/Penguin_Character_BP_ArklasTT.uasset",
           "assetName": "Penguin_Character_BP_ArklasTT",
           "tamingMethod": "野生スポーン・テイム",
-          "habitat": "マップ内スポーン",
+          "habitat": "雪原・氷山・寒冷地の水辺（カイルクペンギン生息域 / Extinction雪ドーム / 氷水辺スポーン）",
           "specialAbility": "有精卵の産卵・ブリーディング対応"
         },
         {
@@ -7163,7 +7163,7 @@
           "notes": "アセット: Rabbit/Rabbit_Character_BP_ArklasTT.uasset",
           "assetName": "Rabbit_Character_BP_ArklasTT",
           "tamingMethod": "野生スポーン・テイム",
-          "habitat": "マップ内スポーン"
+          "habitat": "草原 / 海岸・ビーチ / 森林（各マップの草原・海岸系スポーン）"
         },
         {
           "index": 11,
@@ -7182,7 +7182,7 @@
           "notes": "アセット: Crow/Raven_Character_BP_ArklasTT.uasset",
           "assetName": "Raven_Character_BP_ArklasTT",
           "tamingMethod": "野生スポーン・テイム",
-          "habitat": "マップ内スポーン",
+          "habitat": "草原 / 森林 / 海岸・ビーチ（各マップの草原・森林系スポーン）",
           "specialAbility": "卵・有精卵の産卵対応"
         },
         {
@@ -7393,8 +7393,8 @@
       ]
     },
     {
-      "id": "DaniTech Concrete Style Structure Skin",
-      "name": "DaniTech Concrete Style Structure Skin",
+      "id": "DaniTech Concrete Style Structu",
+      "name": "DaniTech Concrete Style Structu",
       "sheetType": "cosmetic",
       "itemCount": 5,
       "items": [
@@ -7808,8 +7808,8 @@
       ]
     },
     {
-      "id": "Modern Structure Skin Compendium",
-      "name": "Modern Structure Skin Compendium",
+      "id": "Modern Structure Skin Compendiu",
+      "name": "Modern Structure Skin Compendiu",
       "sheetType": "cosmetic",
       "itemCount": 31,
       "items": [
@@ -8405,8 +8405,8 @@
       ]
     },
     {
-      "id": "Pulse Arcana - Roleplay Classes and Magic Mod",
-      "name": "Pulse Arcana - Roleplay Classes and Magic Mod",
+      "id": "Pulse Arcana - Roleplay Classes",
+      "name": "Pulse Arcana - Roleplay Classes",
       "sheetType": "item",
       "itemCount": 39,
       "items": [
@@ -9076,8 +9076,8 @@
       ]
     },
     {
-      "id": "Wall'n'Floor Decor",
-      "name": "Wall'n'Floor Decor",
+      "id": "WallnFloor Decor",
+      "name": "WallnFloor Decor",
       "sheetType": "item",
       "itemCount": 969,
       "items": [
