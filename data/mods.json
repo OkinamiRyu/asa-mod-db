@@ -1,13 +1,6 @@
 {
-  "updatedAt": "2026-11-23T15:54:06.443Z",
+  "updatedAt": "2026-11-23T16:25:44.345Z",
   "installedMods": [
-    {
-      "name": "Fall Damage Shield",
-      "description": "プレイヤーとテイムした恐竜に、落下ダメージを防ぐ効果が自動で付きます。\n.uplugin の説明と、CurseForge の公式説明は同じ内容です。\nCurseForge の公式説明では、導入するだけで使え、設定は不要とされています。\n公式説明にある細かい設定用の画面は、今後の予定と書かれています。",
-      "curseForgeId": "928565",
-      "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/fall-damage-shield",
-      "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n説明は .uplugin の Description と CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/fall-damage-shield\nフォルダ: 928565_9419871\n作者（.uplugin CreatedBy）: Gaia"
-    },
     {
       "name": "Super Spyglass Plus",
       "description": "高性能なスパイグラスを追加します。\nファイルには、武器・スキン・消耗品の3種類と、恐竜情報・卵・妊娠・GPS・遺伝子特性・バフなどを示す画面部品が入っています。\nCurseForge の公式説明では、対象の詳細ステータスや突然変異、テイムに必要な餌、体色とリージョン、補給ドロップや構造物の情報、夜間視力・プレデタービジョン・アウトライン表示、表示位置や色の設定があるとされています。\n公式説明では、通常のスパイグラスのように使う方法、頭防具に付けるスキン、切り替えで使う方法の3通りがあるとされています。",
