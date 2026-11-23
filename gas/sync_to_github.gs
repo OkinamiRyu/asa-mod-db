@@ -17,7 +17,7 @@
 const CONFIG = {
   INSTALLED_MODS_SHEET: '導入中mod一覧',
   // DBサイトに含めない管理用シート名（先頭が「_」または「下書き」のシートも自動除外されます）
-  EXCLUDED_SHEETS: ['導入中mod一覧', 'アイテム一覧', '情報源'],
+  EXCLUDED_SHEETS: ['AIへの指示', '導入中mod一覧', 'アイテム一覧', '情報源'],
   TARGET_FILE_PATH: 'data/mods.json',
 };
 
