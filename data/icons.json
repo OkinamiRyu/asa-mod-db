@@ -5,6 +5,12 @@
     "parrot_character_bp_arklastt": "icons/ArklasAnimals/Parrot_Character_BP_ArklasTT.png",
     "penguin_character_bp_arklastt": "icons/ArklasAnimals/Penguin_Character_BP_ArklasTT.png"
   },
+  "Brachiosaurus Costume SKIN": {
+    "primalitemskin_costume_brachiosauruscostumeskin": "icons/Brachiosaurus Costume SKIN/PrimalItemSkin_Costume_BrachiosaurusCostumeSkin.png"
+  },
+  "Cartoon Crow": {
+    "primalitemskin_costume_cartooncrow": "icons/Cartoon Crow/PrimalItemSkin_Costume_CartoonCrow.png"
+  },
   "DaniTech Concrete Style Structure Skin": {
     "primalitemstructureskin_danitech_concrete_01": "icons/DaniTech Concrete Style Structure Skin/PrimalItemStructureSkin_DaniTech_Concrete_01.png",
     "primalitemstructureskin_danitech_concrete_02": "icons/DaniTech Concrete Style Structure Skin/PrimalItemStructureSkin_DaniTech_Concrete_02.png",
@@ -384,6 +390,9 @@
     "primalitem_weaponcarbontool": "icons/MuchStuffPack/PrimalItem_WeaponCarbonTool.png",
     "primalitem_weaponepochsword": "icons/MuchStuffPack/PrimalItem_WeaponEpochSword.png"
   },
+  "Procoptodon cosutume skin": {
+    "primalitemskin_costume_prococostumeskin": "icons/Procoptodon cosutume skin/PrimalItemSkin_Costume_ProcoCostumeSkin.png"
+  },
   "Pulse Arcana - Roleplay Classes and Magic Mod": {
     "primalitemability_buff_burden": "icons/Pulse Arcana - Roleplay Classes and Magic Mod/PrimalItemAbility_Buff_Burden.png",
     "primalitemability_buff_enemyinvisible": "icons/Pulse Arcana - Roleplay Classes and Magic Mod/PrimalItemAbility_Buff_EnemyInvisible.png",
@@ -424,6 +433,9 @@
     "primalitem_weaponhighdamagetorch": "icons/Pulse Arcana - Roleplay Classes and Magic Mod/PrimalItem_WeaponHighDamageTorch.png",
     "primalitem_weaponwickedoiljar": "icons/Pulse Arcana - Roleplay Classes and Magic Mod/PrimalItem_WeaponWickedOilJar.png"
   },
+  "Reaper CostumeSkin": {
+    "primalitemskin_costume_reapercostumeskin": "icons/Reaper CostumeSkin/PrimalItemSkin_Costume_ReaperCostumeSkin.png"
+  },
   "Showcase Storage Skins": {
     "primalitemstructure_displayableanvilbench": "icons/Showcase Storage Skins/PrimalItemStructure_DisplayableAnvilBench.png",
     "primalitemstructure_displayablebarrel": "icons/Showcase Storage Skins/PrimalItemStructure_DisplayableBarrel.png",
@@ -442,10 +454,16 @@
     "primalitemstructure_displayabletekfabricator": "icons/Showcase Storage Skins/PrimalItemStructure_DisplayableTekFabricator.png",
     "primalitemstructure_displayablevault": "icons/Showcase Storage Skins/PrimalItemStructure_DisplayableVault.png"
   },
+  "Spino costume skin": {
+    "primalitemskin_costume_spinocostumeskin": "icons/Spino costume skin/PrimalItemSkin_Costume_SpinoCostumeSkin.png"
+  },
   "Super Spyglass Plus": {
     "primalitemskin_ssp": "icons/Super Spyglass Plus/PrimalItemSkin_SSP.png",
     "primalitemweapon_superspyglassplus": "icons/Super Spyglass Plus/PrimalItemWeapon_SuperSpyglassPlus.png",
     "primalitem_ssp_consumable": "icons/Super Spyglass Plus/PrimalItem_SSP_Consumable.png"
+  },
+  "TORANEKO MOD": {
+    "primalitemskin_costume_toranekocostumeskin": "icons/TORANEKO MOD/PrimalItemSkin_Costume_ToranekoCostumeSkin.png"
   },
   "Wall'n'Floor Decor": {
     "primalitemconsumableeatable_sushi_asa_waf": "icons/Wall'n'Floor Decor/PrimalItemConsumableEatable_Sushi_ASA_WAF.png",

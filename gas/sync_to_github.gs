@@ -16,8 +16,9 @@
 
 const CONFIG = {
   INSTALLED_MODS_SHEET: '導入中mod一覧',
+  SERVER_RULES_SHEET: '鯖ルール・設定',
   // DBサイトに含めない管理用シート名（先頭が「_」または「下書き」のシートも自動除外されます）
-  EXCLUDED_SHEETS: ['AIへの指示', '導入中mod一覧', 'アイテム一覧', '情報源'],
+  EXCLUDED_SHEETS: ['AIへの指示', '導入中mod一覧', '鯖ルール・設定', 'アイテム一覧', '情報源'],
   TARGET_FILE_PATH: 'data/mods.json',
 };
 
@@ -42,6 +43,7 @@ function syncToGitHubManual() {
       '更新完了',
       `GitHub への反映が完了しました！\n\n` +
         `・導入中MOD: ${summary.installedCount} 件\n` +
+        `・鯖ルール・設定: ${summary.rulesCount} 件\n` +
         `・MODシート: ${summary.sheetSummary}\n` +
         `・合計アイテム: ${summary.totalItems} 件\n\n` +
         `※ GitHub Pages への反映には通常 30秒〜1分ほどかかります。`,
@@ -88,6 +90,7 @@ function syncToGitHub() {
 
   return {
     installedCount: payloadData.installedMods.length,
+    rulesCount: payloadData.serverRules.length,
     totalItems,
     sheetSummary: sheetSummary || 'なし',
   };
@@ -101,6 +104,7 @@ function buildDatabaseJson_() {
   const sheets = ss.getSheets();
 
   let installedMods = [];
+  let serverRules = [];
   const modSheets = [];
 
   for (const sheet of sheets) {
@@ -108,6 +112,11 @@ function buildDatabaseJson_() {
 
     if (name === CONFIG.INSTALLED_MODS_SHEET) {
       installedMods = parseInstalledModsSheet_(sheet);
+      continue;
+    }
+
+    if (name === CONFIG.SERVER_RULES_SHEET) {
+      serverRules = parseServerRulesSheet_(sheet);
       continue;
     }
 
@@ -134,8 +143,29 @@ function buildDatabaseJson_() {
   return {
     updatedAt: new Date().toISOString(),
     installedMods: installedMods,
+    serverRules: serverRules,
     modSheets: modSheets,
   };
+}
+
+/**
+ * 「鯖ルール・設定」シートをパース
+ */
+function parseServerRulesSheet_(sheet) {
+  const values = sheet.getDataRange().getDisplayValues();
+  if (values.length < 2) return [];
+
+  const result = [];
+  for (let i = 1; i < values.length; i++) {
+    const row = values[i];
+    const category = (row[0] || '').trim() || 'その他';
+    const item = (row[1] || '').trim();
+    const value = (row[2] || '').trim();
+    const note = (row[3] || '').trim();
+    if (!item && !value) continue;
+    result.push({ category, item, value, note });
+  }
+  return result;
 }
 
 /**

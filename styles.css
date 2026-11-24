@@ -1270,6 +1270,81 @@ kbd {
   text-align: center;
 }
 
+/* Server Rules Section */
+.rules-heading {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.rules-subtext {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.rules-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rules-group {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.rules-group-title {
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--accent-border);
+}
+
+.rules-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.rule-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 220px) 1fr;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+
+.rule-row:last-child {
+  border-bottom: none;
+}
+
+.rule-key {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.rule-val {
+  font-size: 0.9rem;
+  color: var(--text);
+  white-space: pre-line;
+}
+
+.rule-note {
+  margin-top: 3px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: pre-line;
+}
+
 @media (max-width: 960px) {
   .modal-backdrop {
     align-items: flex-start;
@@ -1313,5 +1388,9 @@ kbd {
   .modal-icon-wrap {
     width: 60px;
     height: 60px;
+  }
+  .rule-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 }

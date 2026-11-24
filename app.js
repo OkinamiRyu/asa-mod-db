@@ -31,6 +31,8 @@
     tabList: document.getElementById('tabList'),
     itemsSection: document.getElementById('itemsSection'),
     modsSection: document.getElementById('modsSection'),
+    rulesSection: document.getElementById('rulesSection'),
+    rulesContainer: document.getElementById('rulesContainer'),
     typeTipBanner: document.getElementById('typeTipBanner'),
     itemSearchInput: document.getElementById('itemSearchInput'),
     clearSearchBtn: document.getElementById('clearSearchBtn'),
@@ -233,16 +235,20 @@
   function buildTabs() {
     const sheets = state.data.modSheets || [];
     const installedCount = (state.data.installedMods || []).length;
+    const rulesCount = (state.data.serverRules || []).length;
     const totalItems = sheets.reduce((sum, s) => sum + s.items.length, 0);
 
     const tabs = [];
     if (sheets.length >= 2) {
       tabs.push({ id: 'ALL', label: '🔍 全MOD横断', count: totalItems });
     }
+    if (rulesCount > 0) {
+      tabs.push({ id: 'RULES', label: '📜 鯖ルール・設定', count: rulesCount });
+    }
+    tabs.push({ id: 'INSTALLED', label: '📋 導入中MOD一覧', count: installedCount });
     for (const sheet of sheets) {
       tabs.push({ id: sheet.id, label: `${getSheetIcon(sheet)}${sheet.name}`, count: sheet.items.length });
     }
-    tabs.push({ id: 'INSTALLED', label: '📋 導入中MOD一覧', count: installedCount });
 
     if (!state.activeTab || !tabs.some((t) => t.id === state.activeTab)) {
       state.activeTab = tabs[0] ? tabs[0].id : 'INSTALLED';
@@ -847,6 +853,39 @@
     openDetailModal(item);
   }
 
+  function renderServerRules() {
+    const rules = state.data.serverRules || [];
+    const groups = new Map();
+    for (const r of rules) {
+      const cat = r.category || 'その他';
+      if (!groups.has(cat)) groups.set(cat, []);
+      groups.get(cat).push(r);
+    }
+
+    els.rulesContainer.innerHTML = [...groups.entries()]
+      .map(
+        ([cat, rows]) => `
+        <div class="rules-group">
+          <h3 class="rules-group-title">${escapeHtml(cat)}</h3>
+          <div class="rules-list">
+            ${rows
+              .map(
+                (r) => `
+              <div class="rule-row">
+                <div class="rule-key">${escapeHtml(r.item)}</div>
+                <div>
+                  <div class="rule-val">${escapeHtml(r.value)}</div>
+                  ${r.note ? `<div class="rule-note">${escapeHtml(r.note)}</div>` : ''}
+                </div>
+              </div>`
+              )
+              .join('')}
+          </div>
+        </div>`
+      )
+      .join('');
+  }
+
   function switchTab(tabId) {
     state.activeTab = tabId;
     state.visibleLimit = PAGE_SIZE;
@@ -856,12 +895,17 @@
     buildTabs();
 
     const isInstalled = tabId === 'INSTALLED';
-    els.itemsSection.classList.toggle('hidden', isInstalled);
+    const isRules = tabId === 'RULES';
+    els.itemsSection.classList.toggle('hidden', isInstalled || isRules);
     els.modsSection.classList.toggle('hidden', !isInstalled);
+    els.rulesSection.classList.toggle('hidden', !isRules);
 
     if (isInstalled) {
       els.typeTipBanner.classList.add('hidden');
       renderInstalledMods();
+    } else if (isRules) {
+      els.typeTipBanner.classList.add('hidden');
+      renderServerRules();
     } else {
       updateTypeTipBanner();
       renderQuickFilters();

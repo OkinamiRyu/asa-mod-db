@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T23:54:03Z",
+  "updatedAt": "2026-11-24T01:33:15Z",
   "installedMods": [
     {
       "name": "Super Spyglass Plus",
@@ -140,6 +140,68 @@
       "curseForgeId": "1507449",
       "curseForgeUrl": "",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n構成は Manifest_UFSFiles_Win64.txt。\nフォルダ: 1507449_9404806"
+    }
+  ],
+  "serverRules": [
+    {
+      "category": "サーバー基本情報",
+      "item": "マップ",
+      "value": "（ここにマップ名を記入）",
+      "note": "例：The Island / Ragnarok 等"
+    },
+    {
+      "category": "サーバー基本情報",
+      "item": "PvE / PvP 区分",
+      "value": "PvE（協力プレイ）",
+      "note": "必要に応じて書き換えてください"
+    },
+    {
+      "category": "サーバー倍率",
+      "item": "経験値倍率",
+      "value": "（例：2倍）",
+      "note": "レベルアップ速度"
+    },
+    {
+      "category": "サーバー倍率",
+      "item": "テイム倍率",
+      "value": "（例：5倍）",
+      "note": "恐竜テイム速度"
+    },
+    {
+      "category": "サーバー倍率",
+      "item": "採取倍率",
+      "value": "（例：3倍）",
+      "note": "木材・石・金属などの採取量"
+    },
+    {
+      "category": "サーバー倍率",
+      "item": "孵化・成長倍率",
+      "value": "（例：10倍）",
+      "note": "ブリーディング速度"
+    },
+    {
+      "category": "サーバー倍率",
+      "item": "野生恐竜の最大レベル",
+      "value": "（例：150）",
+      "note": ""
+    },
+    {
+      "category": "プレイ上のルール",
+      "item": "建築マナー",
+      "value": "資源の湧き潰し・他人の拠点すぐ近くへの建築は控えましょう",
+      "note": "迷ったら管理者・Discord で相談"
+    },
+    {
+      "category": "プレイ上のルール",
+      "item": "困ったときの連絡先",
+      "value": "サーバーの Discord チャンネルへ連絡してください",
+      "note": "MODの不具合やスタック時もこちらへ"
+    },
+    {
+      "category": "初心者向け案内",
+      "item": "まずはここから",
+      "value": "「導入中MOD一覧」や「🛠 作業台・設備」から、気になるMODをチェックしてみてください",
+      "note": "英語名は「コピー」ボタンでゲーム内検索に貼れます"
     }
   ],
   "modSheets": [
@@ -25553,6 +25615,195 @@
           "enOriginal": "",
           "notes": "アセット: WallDecor/TrophyMountWood/PrimalItemStructure_TrophyMount_Wood.uasset",
           "assetName": "PrimalItemStructure_TrophyMount_Wood"
+        }
+      ]
+    },
+    {
+      "id": "Spino costume skin",
+      "name": "Spino costume skin",
+      "sheetType": "cosmetic",
+      "itemCount": 1,
+      "items": [
+        {
+          "index": 1,
+          "image": "",
+          "enName": "Spino Costume Skin",
+          "jaName": "スピノサウルス・コスチュームスキン(SpinoCostumeSkin)",
+          "description": "スピノサウルス(Spinosaurus)風の姿になれるカスタムコスメティック・スキン。",
+          "category": "キャラクタースキン",
+          "obtainMethod": "",
+          "dinoName": "",
+          "craftStation": "",
+          "toolUsed": "",
+          "harvestSource": "",
+          "materials": "",
+          "enOriginal": "",
+          "notes": "アセット: COS/PrimalItemSkin_Costume_SpinoCostumeSkin.uasset",
+          "assetName": "PrimalItemSkin_Costume_SpinoCostumeSkin",
+          "applyTarget": "サバイバー(Survivor)",
+          "applyMethod": "カスタムコスメティック画面から適用"
+        }
+      ]
+    },
+    {
+      "id": "Cartoon Crow",
+      "name": "Cartoon Crow",
+      "sheetType": "cosmetic",
+      "itemCount": 1,
+      "items": [
+        {
+          "index": 1,
+          "image": "",
+          "enName": "Cartoon Crow",
+          "jaName": "カートゥーン・カラススキン(CartoonCrow)",
+          "description": "カートゥーン風のカラスキャラクターになれるカスタムコスメティック・スキン。",
+          "category": "キャラクタースキン",
+          "obtainMethod": "",
+          "dinoName": "",
+          "craftStation": "",
+          "toolUsed": "",
+          "harvestSource": "",
+          "materials": "",
+          "enOriginal": "",
+          "notes": "アセット: COS/PrimalItemSkin_Costume_CartoonCrow.uasset",
+          "assetName": "PrimalItemSkin_Costume_CartoonCrow",
+          "applyTarget": "サバイバー(Survivor)",
+          "applyMethod": "カスタムコスメティック画面から適用"
+        }
+      ]
+    },
+    {
+      "id": "Procoptodon cosutume skin",
+      "name": "Procoptodon cosutume skin",
+      "sheetType": "cosmetic",
+      "itemCount": 1,
+      "items": [
+        {
+          "index": 1,
+          "image": "",
+          "enName": "Procoptodon Costume Skin",
+          "jaName": "プロコプトドン・コスチュームスキン(ProcoCostumeSkin)",
+          "description": "プロコプトドン(Procoptodon)風の姿になれるカスタムコスメティック・スキン。",
+          "category": "キャラクタースキン",
+          "obtainMethod": "",
+          "dinoName": "",
+          "craftStation": "",
+          "toolUsed": "",
+          "harvestSource": "",
+          "materials": "",
+          "enOriginal": "",
+          "notes": "アセット: COS/PrimalItemSkin_Costume_ProcoCostumeSkin.uasset",
+          "assetName": "PrimalItemSkin_Costume_ProcoCostumeSkin",
+          "applyTarget": "サバイバー(Survivor)",
+          "applyMethod": "カスタムコスメティック画面から適用"
+        }
+      ]
+    },
+    {
+      "id": "TORANEKO MOD",
+      "name": "TORANEKO MOD",
+      "sheetType": "cosmetic",
+      "itemCount": 1,
+      "items": [
+        {
+          "index": 1,
+          "image": "",
+          "enName": "Toraneko Costume Skin",
+          "jaName": "トラネコ・コスチュームスキン(ToranekoCostumeSkin)",
+          "description": "トラネコ風のキャラクターになれるカスタムコスメティック・スキン。",
+          "category": "キャラクタースキン",
+          "obtainMethod": "",
+          "dinoName": "",
+          "craftStation": "",
+          "toolUsed": "",
+          "harvestSource": "",
+          "materials": "",
+          "enOriginal": "",
+          "notes": "アセット: COS/PrimalItemSkin_Costume_ToranekoCostumeSkin.uasset",
+          "assetName": "PrimalItemSkin_Costume_ToranekoCostumeSkin",
+          "applyTarget": "サバイバー(Survivor)",
+          "applyMethod": "カスタムコスメティック画面から適用"
+        }
+      ]
+    },
+    {
+      "id": "Reaper CostumeSkin",
+      "name": "Reaper CostumeSkin",
+      "sheetType": "cosmetic",
+      "itemCount": 1,
+      "items": [
+        {
+          "index": 1,
+          "image": "",
+          "enName": "Reaper Costume Skin",
+          "jaName": "リーパー・コスチュームスキン(ReaperCostumeSkin)",
+          "description": "リーパー(Reaper)風の姿になれるカスタムコスメティック・スキン。",
+          "category": "キャラクタースキン",
+          "obtainMethod": "",
+          "dinoName": "",
+          "craftStation": "",
+          "toolUsed": "",
+          "harvestSource": "",
+          "materials": "",
+          "enOriginal": "",
+          "notes": "アセット: COS/PrimalItemSkin_Costume_ReaperCostumeSkin.uasset",
+          "assetName": "PrimalItemSkin_Costume_ReaperCostumeSkin",
+          "applyTarget": "サバイバー(Survivor)",
+          "applyMethod": "カスタムコスメティック画面から適用"
+        }
+      ]
+    },
+    {
+      "id": "Brachiosaurus Costume SKIN",
+      "name": "Brachiosaurus Costume SKIN",
+      "sheetType": "cosmetic",
+      "itemCount": 1,
+      "items": [
+        {
+          "index": 1,
+          "image": "",
+          "enName": "Brachiosaurus Costume Skin",
+          "jaName": "ブラキオサウルス・コスチュームスキン(BrachiosaurusCostumeSkin)",
+          "description": "ブラキオサウルス(Brachiosaurus)風の姿になれるカスタムコスメティック・スキン。",
+          "category": "キャラクタースキン",
+          "obtainMethod": "",
+          "dinoName": "",
+          "craftStation": "",
+          "toolUsed": "",
+          "harvestSource": "",
+          "materials": "",
+          "enOriginal": "",
+          "notes": "アセット: Cos/PrimalItemSkin_Costume_BrachiosaurusCostumeSkin.uasset",
+          "assetName": "PrimalItemSkin_Costume_BrachiosaurusCostumeSkin",
+          "applyTarget": "サバイバー(Survivor)",
+          "applyMethod": "カスタムコスメティック画面から適用"
+        }
+      ]
+    },
+    {
+      "id": "Bear Skin",
+      "name": "Bear Skin",
+      "sheetType": "cosmetic",
+      "itemCount": 1,
+      "items": [
+        {
+          "index": 1,
+          "image": "",
+          "enName": "Bear Skin",
+          "jaName": "クマ・コスチュームスキン(BearSkin)",
+          "description": "クマ風のキャラクターになれるカスタムコスメティック・スキン。",
+          "category": "キャラクタースキン",
+          "obtainMethod": "",
+          "dinoName": "",
+          "craftStation": "",
+          "toolUsed": "",
+          "harvestSource": "",
+          "materials": "",
+          "enOriginal": "",
+          "notes": "アセット: Cos/PrimalItemSkin_Costume_BearSkin.uasset",
+          "assetName": "PrimalItemSkin_Costume_BearSkin",
+          "applyTarget": "サバイバー(Survivor)",
+          "applyMethod": "カスタムコスメティック画面から適用"
         }
       ]
     }
