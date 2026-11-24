@@ -38,6 +38,7 @@
   };
 
   const els = {
+    brandHomeLink: document.getElementById('brandHomeLink'),
     statBadge: document.getElementById('statBadge'),
     updatedBadge: document.getElementById('updatedBadge'),
     tabList: document.getElementById('tabList'),
@@ -1119,6 +1120,32 @@
   }
 
   function bindEvents() {
+    if (els.brandHomeLink) {
+      els.brandHomeLink.addEventListener('click', (e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+        e.preventDefault();
+        if (!els.detailModal.classList.contains('hidden')) {
+          closeDetailModal();
+        }
+        state.searchQuery = '';
+        els.itemSearchInput.value = '';
+        state.category = '';
+        state.filter2 = '';
+        state.filter3 = '';
+        state.quickFilter = '';
+        state.sortBy = 'index';
+        els.sortSelect.value = 'index';
+        state.modSearchQuery = '';
+        els.modSearchInput.value = '';
+        state.visibleLimit = PAGE_SIZE;
+        switchTab('ALL');
+        if (window.location.hash) {
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
     els.tabList.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-tab-id]');
       if (!btn) return;
