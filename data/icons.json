@@ -1474,11 +1474,6 @@
     "primalitemstructure_coralnode": "icons/Oceania Content/PrimalItemStructure_CoralNode.png",
     "primalitemconsumable_meatcake": "icons/Oceania Content/PrimalItemConsumable_MeatCake.png"
   },
-  "Shiba Inu Companion": {
-    "shibainucompanion_character_bp": "icons/Shiba Inu Companion/ShibaInuCompanion_Character_BP.png",
-    "primalitemarmor_shibainucompanioncollar": "icons/Shiba Inu Companion/PrimalItemArmor_ShibaInuCompanionCollar.png",
-    "primalitemconsumable_shibainucompaniontreat": "icons/Shiba Inu Companion/PrimalItemConsumable_ShibaInuCompanionTreat.png"
-  },
   "The Sunken World Additions": {
     "stethtsw_character_bp": "icons/The Sunken World Additions/StethTSW_Character_BP.png",
     "henodustsw_character_bp": "icons/The Sunken World Additions/HenodusTSW_Character_BP.png",

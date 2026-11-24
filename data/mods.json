@@ -184,13 +184,6 @@
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。CurseForge名は「More Otters (Crossplay)」。8種のクラス名は同梱アセットより確認。フォルダ: 976436_9440324\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/more-otter-variations"
     },
     {
-      "name": "Shiba Inu Companion",
-      "description": "可愛い柴犬のお供ペットを追加します。肩乗せで移動速度バフや騎乗解除防止の補助をしてくれるほか、放浪させると資源を掘り出してくれます。\n専用の首輪（防具）とおやつ（攻撃バフ・コンパニオンレベル上昇）もクラフトできます。",
-      "curseForgeId": "977652",
-      "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/shiba-inu-companion",
-      "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。テイム・能力・アイテムは同梱アセットおよびCurseForge公式ページより確認。フォルダ: 977652_9194730\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/shiba-inu-companion"
-    },
-    {
       "name": "The Sunken World Additions",
       "description": "多数の古生代・中生代の海洋生物（アノマロカリス・ステタカントゥス・ヘノドゥス・マンボウ・アンブロケトゥス・スフィルナ等）と水中装備・水中拠点設備を追加する大型海洋拡張MODです。\n序盤向けの水中装備や水上浮き足場、多彩な海産料理レシピも収録しています。",
       "curseForgeId": "978862",
@@ -31575,78 +31568,6 @@
           "saddleRide": "肩乗せ可能（騎乗不可）",
           "specialAbility": "バニラカワウソ準拠：肩乗せで強力な耐寒・耐暑バフ、アーティファクト複数持ち、魚から真珠・黒真珠を採取",
           "usageType": "生物・繁殖"
-        }
-      ]
-    },
-    {
-      "id": "Shiba Inu Companion",
-      "name": "Shiba Inu Companion",
-      "sheetType": "creature",
-      "itemCount": 3,
-      "items": [
-        {
-          "index": 1,
-          "image": "",
-          "enName": "Shiba Inu",
-          "jaName": "柴犬(Shiba Inu)",
-          "description": "可愛い柴犬のお供ペット。肩に乗せて連れ歩けるほか、放浪させると役立つアイテムを掘り出してくれる。",
-          "category": "生物",
-          "obtainMethod": "",
-          "dinoName": "",
-          "craftStation": "",
-          "toolUsed": "",
-          "harvestSource": "",
-          "materials": "",
-          "enOriginal": "Shoulder mount, can attack from shoulder, assists in preventing dismounts, movement speed buff via Companion Level, digs up items on wander.",
-          "notes": "アセット: ShibaInuCompanion_Character_BP.uasset",
-          "assetName": "ShibaInuCompanion_Character_BP",
-          "tamingMethod": "昏睡テイム",
-          "favoriteFood": "柴犬のおやつ(Shiba Inu Treat)（Lv35解放）、簡易キブル(Simple Kibble)、肉類・ベリー類",
-          "habitat": "ヒエノドンと同じ生息域（草原・山麓・レッドウッド周辺など）",
-          "saddleRide": "肩乗せ可能・専用首輪(Collar)装備可（騎乗不可）",
-          "specialAbility": "①肩に乗せたまま攻撃可能＋騎乗解除防止の補助 ②コンパニオンレベル（0〜100）に応じて肩乗せ時の移動速度バフ ③放浪時に毎分10%の確率でセメント・アンコウのジェル・黒真珠・電子基板・原油・樹液などを発掘",
-          "usageType": "生物・繁殖"
-        },
-        {
-          "index": 2,
-          "image": "",
-          "enName": "Shiba Inu Collar",
-          "jaName": "柴犬の首輪(Shiba Inu Collar)",
-          "description": "柴犬のサドル枠に装着できる防具（Lv10で解放）。",
-          "category": "装備・サドル",
-          "obtainMethod": "",
-          "dinoName": "",
-          "craftStation": "",
-          "toolUsed": "",
-          "harvestSource": "",
-          "materials": "",
-          "enOriginal": "Provides protection for your Shiba Inu (craftable at level 10).",
-          "notes": "アセット: PrimalItemArmor_ShibaInuCompanionCollar.uasset",
-          "assetName": "PrimalItemArmor_ShibaInuCompanionCollar",
-          "saddleRide": "柴犬のサドル枠に装着",
-          "specialAbility": "柴犬に防御力を付与",
-          "usageType": "生物・繁殖",
-          "habitat": ""
-        },
-        {
-          "index": 3,
-          "image": "",
-          "enName": "Shiba Inu Treat",
-          "jaName": "柴犬のおやつ(Shiba Inu Treat)",
-          "description": "柴犬のテイム用最良エサ兼バフアイテム（Lv35で解放）。",
-          "category": "消費アイテム",
-          "obtainMethod": "",
-          "dinoName": "",
-          "craftStation": "",
-          "toolUsed": "",
-          "harvestSource": "",
-          "materials": "",
-          "enOriginal": "A perfect treat for your Shiba Inu. Provides an attack boost (15 min) and increases companion level.",
-          "notes": "アセット: PrimalItemConsumable_ShibaInuCompanionTreat.uasset",
-          "assetName": "PrimalItemConsumable_ShibaInuCompanionTreat",
-          "specialAbility": "与えると15分間攻撃力アップ＋コンパニオンレベル上昇（テイム用にも最適）",
-          "usageType": "生物・繁殖",
-          "habitat": ""
         }
       ]
     },
