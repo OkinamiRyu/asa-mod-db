@@ -412,13 +412,13 @@
                     ? item.tamingMethod || '-'
                     : sheetType === 'cosmetic'
                     ? item.applyTarget || '-'
-                    : item.craftStation || '-';
+                    : item.craftStation || item.tamingMethod || item.applyTarget || '-';
                 const col5Val =
                   sheetType === 'creature'
                     ? item.favoriteFood || '-'
                     : sheetType === 'cosmetic'
                     ? item.applyMethod || '-'
-                    : item.materials || '-';
+                    : item.materials || item.favoriteFood || item.applyMethod || '-';
                 return `
               <tr data-global-index="${item._globalIndex}">
                 <td><div class="table-thumb">${renderIconHtml(item)}</div></td>
