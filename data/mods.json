@@ -28275,7 +28275,7 @@
           "enOriginal": "Test version of Brachyura. Warning: Any brachyura from the test version will be deleted on full release.",
           "notes": "アセット: Brachyura.uasset",
           "assetName": "Brachyura",
-          "tamingMethod": "テスト版（コマンド出現推奨：cheat SDF brachyura 1 0 1）",
+          "tamingMethod": "テスト実装（通常スポーンなし）",
           "favoriteFood": "—",
           "habitat": "テスト実装（コマンド出現）",
           "saddleRide": "騎乗可能（各種砲台サドルあり）",

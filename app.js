@@ -814,8 +814,6 @@
       ['生息地・スポーン', item.habitat, false, false],
       ['サドル・騎乗', item.saddleRide, false, true],
       ['特殊能力・用途', item.specialAbility, true, false],
-      ['野生出現コマンド', item.wildSpawnCommand, true, false],
-      ['テイム済み出現コマンド（Lv150）', item.tamedSpawnCommand, true, false],
       // コスメティック系
       ['適用対象', item.applyTarget, false, true],
       ['適用方法', item.applyMethod, false, false],
