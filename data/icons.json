@@ -1430,5 +1430,68 @@
     "primalitemtrophy_unicornhead": "icons/Wall'n'Floor Decor/PrimalItemTrophy_UnicornHead.png",
     "primalitemtrophy_yutyhead": "icons/Wall'n'Floor Decor/PrimalItemTrophy_YutyHead.png",
     "primalitemtrophy_yutyhead_x": "icons/Wall'n'Floor Decor/PrimalItemTrophy_YutyHead_X.png"
+  },
+  "Hatzegopteryx Kukulkan": {
+    "hatzeg_character_bp": "icons/Hatzegopteryx Kukulkan/Hatzeg_Character_BP.png",
+    "hatzeg_character_bp_aberrant": "icons/Hatzegopteryx Kukulkan/Hatzeg_Character_BP_Aberrant.png",
+    "hatzeg_character_bp_angel": "icons/Hatzegopteryx Kukulkan/Hatzeg_Character_BP_Angel.png",
+    "hatzeg_character_bp_devil": "icons/Hatzegopteryx Kukulkan/Hatzeg_Character_BP_Devil.png",
+    "primalitemarmor_hatzsaddle": "icons/Hatzegopteryx Kukulkan/PrimalItemArmor_HatzSaddle.png",
+    "primalitemarmor_hatzsaddle_platform": "icons/Hatzegopteryx Kukulkan/PrimalItemArmor_HatzSaddle_Platform.png",
+    "primalitemarmor_hatzsaddle_battle": "icons/Hatzegopteryx Kukulkan/PrimalItemArmor_HatzSaddle_Battle.png",
+    "primalitemtrophy_hatzeg": "icons/Hatzegopteryx Kukulkan/PrimalItemTrophy_Hatzeg.png",
+    "primalitemconsumable_crackedalphakarkinosclaw": "icons/Hatzegopteryx Kukulkan/PrimalItemConsumable_CrackedAlphaKarkinosClaw.png"
+  },
+  "Cyrus's Critters: Redpanda": {
+    "primalitemarmor_pandascarf": "icons/Cyrus's Critters Redpanda/PrimalItemArmor_PandaScarf.png"
+  },
+  "Feras Fauna: Foxes": {
+    "arcticfox_character_bp": "icons/Feras Fauna Foxes/ArcticFox_Character_BP.png",
+    "greatarcticfox_character_bp": "icons/Feras Fauna Foxes/GreatArcticfox_Character_BP.png",
+    "primalitemarmor_arcticfoxsaddle": "icons/Feras Fauna Foxes/PrimalItemArmor_ArcticfoxSaddle.png",
+    "primalitemcostume_bonegreaterarcticfox": "icons/Feras Fauna Foxes/PrimalItemCostume_BoneGreaterArcticFox.png"
+  },
+  "Oceania Content": {
+    "bubblefish": "icons/Oceania Content/Bubblefish.png",
+    "archelon": "icons/Oceania Content/Archelon.png",
+    "baculite": "icons/Oceania Content/Baculite.png",
+    "brachyura": "icons/Oceania Content/Brachyura.png",
+    "krono": "icons/Oceania Content/Krono.png",
+    "primalitemstructure_coralcampfire": "icons/Oceania Content/PrimalItemStructure_CoralCampfire.png",
+    "primalitemstructure_coralwaterbed": "icons/Oceania Content/PrimalItemStructure_CoralWaterBed.png",
+    "primalitemstructure_preservingbarrel": "icons/Oceania Content/PrimalItemStructure_PreservingBarrel.png",
+    "primalitemstructure_wallscarekron": "icons/Oceania Content/PrimalItemStructure_WallScarekron.png"
+  },
+  "Shiba Inu Companion": {
+    "shibainucompanion_character_bp": "icons/Shiba Inu Companion/ShibaInuCompanion_Character_BP.png",
+    "primalitemarmor_shibainucompanioncollar": "icons/Shiba Inu Companion/PrimalItemArmor_ShibaInuCompanionCollar.png",
+    "primalitemconsumable_shibainucompaniontreat": "icons/Shiba Inu Companion/PrimalItemConsumable_ShibaInuCompanionTreat.png"
+  },
+  "The Sunken World Additions": {
+    "stethtsw_character_bp": "icons/The Sunken World Additions/StethTSW_Character_BP.png",
+    "henodustsw_character_bp": "icons/The Sunken World Additions/HenodusTSW_Character_BP.png",
+    "anomatsw_character_bp": "icons/The Sunken World Additions/AnomaTSW_Character_BP.png",
+    "prototsw_character_bp": "icons/The Sunken World Additions/ProtoTSW_Character_BP.png",
+    "ambulocetustsw_character_bp": "icons/The Sunken World Additions/AmbulocetusTSW_Character_BP.png",
+    "acrophysetertsw_character_bp": "icons/The Sunken World Additions/AcrophyseterTSW_Character_BP.png",
+    "sunfishtsw_character_bp": "icons/The Sunken World Additions/SunfishTSW_Character_BP.png",
+    "materpiscistsw_character_bp": "icons/The Sunken World Additions/MaterpiscisTSW_Character_BP.png",
+    "sphyrnatsw_character_bp": "icons/The Sunken World Additions/SphyrnaTSW_Character_BP.png",
+    "edestustsw_character_bp": "icons/The Sunken World Additions/EdestusTSW_Character_BP.png",
+    "urchintsw_character_bp": "icons/The Sunken World Additions/UrchinTSW_Character_BP.png",
+    "bothritsw_character_bp": "icons/The Sunken World Additions/BothriTSW_Character_BP.png",
+    "lepitsw_character_bp": "icons/The Sunken World Additions/LepiTSW_Character_BP.png",
+    "saurictsw_character_bp": "icons/The Sunken World Additions/SauricTSW_Character_BP.png",
+    "altispinaxtsw_character_bp": "icons/The Sunken World Additions/AltispinaxTSW_Character_BP.png",
+    "primalitemarmor_seascaleshirt": "icons/The Sunken World Additions/PrimalItemArmor_SeaScaleShirt.png",
+    "primalitemweapon_divingknife": "icons/The Sunken World Additions/PrimalItemWeapon_DivingKnife.png",
+    "primalitemstructure_floatingweavefoundation": "icons/The Sunken World Additions/PrimalItemStructure_FloatingWeaveFoundation.png",
+    "primalitemstructure_rotisserie": "icons/The Sunken World Additions/PrimalItemStructure_Rotisserie.png",
+    "primalitemstructure_cropplot_aquatic": "icons/The Sunken World Additions/PrimalItemStructure_CropPlot_Aquatic.png",
+    "primalitemconsumable_sharkrepellanttsw": "icons/The Sunken World Additions/PrimalItemConsumable_SharkRepellantTSW.png",
+    "primalitemconsumable_unigunkan": "icons/The Sunken World Additions/PrimalItemConsumable_UniGunkan.png",
+    "primalitemconsumable_seafoodgourmet": "icons/The Sunken World Additions/PrimalItemConsumable_SeafoodGourmet.png",
+    "primalitemconsumable_tropicalsmoothie": "icons/The Sunken World Additions/PrimalItemConsumable_TropicalSmoothie.png",
+    "primalitemconsumable_antitoxin": "icons/The Sunken World Additions/PrimalItemConsumable_Antitoxin.png"
   }
 }
