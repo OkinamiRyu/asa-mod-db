@@ -1103,6 +1103,171 @@ kbd {
   font-family: ui-monospace, monospace;
 }
 
+/* Beginner Guide */
+.guide-card {
+  background: var(--surface);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.guide-summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 11px 16px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.guide-summary::-webkit-details-marker {
+  display: none;
+}
+
+.guide-toggle-hint {
+  font-size: 0.74rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  padding: 14px 16px;
+  border-top: 1px solid var(--accent-border);
+}
+
+.guide-step {
+  background: var(--surface-subtle);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.guide-step-title {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.guide-step-text {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.guide-chip-mod {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 5px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+}
+
+.guide-chip-wiki {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 5px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  border: 1px solid #bfdbfe;
+}
+
+/* Type Tip Banner */
+.type-tip-banner {
+  background: var(--amber-soft);
+  border: 1px solid #fde68a;
+  color: var(--amber-text);
+  border-radius: var(--radius-sm);
+  padding: 9px 14px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* Quick Filter Bar */
+.quick-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.quick-chip {
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.quick-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.quick-chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+/* Share URL Button */
+.share-btn {
+  font: inherit;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid #bfdbfe;
+  background: var(--blue-soft);
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.share-btn:hover {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+/* Mobile Filter Toggle */
+.mobile-filter-toggle {
+  display: none;
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: center;
+}
+
 @media (max-width: 960px) {
   .modal-backdrop {
     align-items: flex-start;
@@ -1126,6 +1291,15 @@ kbd {
   .items-grid,
   .mods-grid {
     grid-template-columns: 1fr;
+  }
+  .mobile-filter-toggle {
+    display: block;
+  }
+  .filter-row {
+    display: none;
+  }
+  .filter-row.mobile-open {
+    display: flex;
   }
   .filter-group {
     max-width: none;

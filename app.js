@@ -11,6 +11,8 @@
     category: '',
     filter2: '',
     filter3: '',
+    quickFilter: '', // '' | 'stations' | 'item' | 'creature' | 'cosmetic'
+    mobileFiltersOpen: false,
     sortBy: 'index',
     viewMode: 'card', // 'card' | 'table'
     visibleLimit: PAGE_SIZE,
@@ -29,8 +31,13 @@
     tabList: document.getElementById('tabList'),
     itemsSection: document.getElementById('itemsSection'),
     modsSection: document.getElementById('modsSection'),
+    typeTipBanner: document.getElementById('typeTipBanner'),
     itemSearchInput: document.getElementById('itemSearchInput'),
     clearSearchBtn: document.getElementById('clearSearchBtn'),
+    quickFilterBar: document.getElementById('quickFilterBar'),
+    mobileFilterToggle: document.getElementById('mobileFilterToggle'),
+    mobileFilterToggleText: document.getElementById('mobileFilterToggleText'),
+    filterRow: document.getElementById('filterRow'),
     filterCategory: document.getElementById('filterCategory'),
     filterObtainLabel: document.getElementById('filterObtainLabel'),
     filterObtain: document.getElementById('filterObtain'),
@@ -57,6 +64,7 @@
     modalTitle: document.getElementById('modalTitle'),
     modalEnName: document.getElementById('modalEnName'),
     copyEnBtn: document.getElementById('copyEnBtn'),
+    shareItemBtn: document.getElementById('shareItemBtn'),
     modalCloseBtn: document.getElementById('modalCloseBtn'),
     modalBody: document.getElementById('modalBody'),
     subModalDialog: document.getElementById('subModalDialog'),
@@ -68,6 +76,7 @@
     subTitle: document.getElementById('subTitle'),
     subEnName: document.getElementById('subEnName'),
     subCopyEnBtn: document.getElementById('subCopyEnBtn'),
+    subShareItemBtn: document.getElementById('subShareItemBtn'),
     subModalBody: document.getElementById('subModalBody'),
     toast: document.getElementById('toast'),
   };
@@ -208,6 +217,19 @@
     return sheet ? sheet.items : [];
   }
 
+  function isCraftingStation(item) {
+    const cat = item.category || '';
+    if (cat.includes('スキン')) return false;
+    return /(制作設備|調理設備|作業台)/.test(cat);
+  }
+
+  function getSheetIcon(sheet) {
+    const st = sheet.sheetType || 'item';
+    if (st === 'creature') return '🐾 ';
+    if (st === 'cosmetic') return '✨ ';
+    return '📦 ';
+  }
+
   function buildTabs() {
     const sheets = state.data.modSheets || [];
     const installedCount = (state.data.installedMods || []).length;
@@ -215,12 +237,12 @@
 
     const tabs = [];
     if (sheets.length >= 2) {
-      tabs.push({ id: 'ALL', label: '全MOD横断', count: totalItems });
+      tabs.push({ id: 'ALL', label: '🔍 全MOD横断', count: totalItems });
     }
     for (const sheet of sheets) {
-      tabs.push({ id: sheet.id, label: sheet.name, count: sheet.items.length });
+      tabs.push({ id: sheet.id, label: `${getSheetIcon(sheet)}${sheet.name}`, count: sheet.items.length });
     }
-    tabs.push({ id: 'INSTALLED', label: '導入中MOD一覧', count: installedCount });
+    tabs.push({ id: 'INSTALLED', label: '📋 導入中MOD一覧', count: installedCount });
 
     if (!state.activeTab || !tabs.some((t) => t.id === state.activeTab)) {
       state.activeTab = tabs[0] ? tabs[0].id : 'INSTALLED';
@@ -241,6 +263,69 @@
         </button>`
       )
       .join('');
+  }
+
+  function renderQuickFilters() {
+    const sourceItems = getActiveSourceItems();
+    const stationCount = sourceItems.filter(isCraftingStation).length;
+    const chips = [];
+
+    if (state.activeTab === 'ALL') {
+      chips.push({ id: '', label: 'すべて' });
+      if (stationCount > 0) chips.push({ id: 'stations', label: `🛠 作業台・設備 (${stationCount})` });
+      chips.push({ id: 'item', label: '📦 アイテム系' });
+      chips.push({ id: 'creature', label: '🐾 生物系' });
+      chips.push({ id: 'cosmetic', label: '✨ スキン系' });
+    } else if (stationCount > 0) {
+      chips.push({ id: '', label: 'すべて' });
+      chips.push({ id: 'stations', label: `🛠 作業台・設備だけ見る (${stationCount})` });
+    }
+
+    if (chips.length === 0) {
+      els.quickFilterBar.classList.add('hidden');
+      els.quickFilterBar.innerHTML = '';
+      state.quickFilter = '';
+      return;
+    }
+
+    if (!chips.some((c) => c.id === state.quickFilter)) {
+      state.quickFilter = '';
+    }
+
+    els.quickFilterBar.classList.remove('hidden');
+    els.quickFilterBar.innerHTML = chips
+      .map(
+        (c) =>
+          `<button type="button" class="quick-chip ${c.id === state.quickFilter ? 'active' : ''}" data-quick="${escapeHtml(c.id)}">${escapeHtml(c.label)}</button>`
+      )
+      .join('');
+  }
+
+  function updateTypeTipBanner() {
+    if (state.activeTab === 'ALL' || state.activeTab === 'INSTALLED') {
+      els.typeTipBanner.classList.add('hidden');
+      return;
+    }
+    const st = getActiveSheetType();
+    let msg = '';
+    if (st === 'cosmetic') {
+      msg = '💡 スキンの使い方：インベントリ画面の「コスメティック」タブから対象の建築物・収納・防具に適用できます（素材消費なしで見た目変更）。';
+    } else if (st === 'creature') {
+      msg = '💡 生物MODについて：野生スポーンするバイオームや特徴は、各カードをクリックした詳細画面「生息地・スポーン」で確認できます。';
+    } else {
+      msg = '💡 作り方のコツ：詳細画面の「英語名コピー」を押してゲーム内のエングラム検索欄に貼り付けるとすぐ見つかります。';
+    }
+    els.typeTipBanner.textContent = msg;
+    els.typeTipBanner.classList.remove('hidden');
+  }
+
+  function updateMobileFilterToggle() {
+    const activeCount = [state.category, state.filter2, state.filter3].filter(Boolean).length;
+    const arrow = state.mobileFiltersOpen ? '▲' : '▼';
+    const badge = activeCount > 0 ? `（${activeCount}件適用中）` : '';
+    els.mobileFilterToggleText.textContent = `詳細絞り込み・並び替え${badge} ${arrow}`;
+    els.mobileFilterToggle.setAttribute('aria-expanded', String(state.mobileFiltersOpen));
+    els.filterRow.classList.toggle('mobile-open', state.mobileFiltersOpen);
   }
 
   function populateSelect(selectEl, values, currentValue) {
@@ -299,6 +384,13 @@
       .filter(Boolean);
 
     let list = sourceItems.filter((item) => {
+      if (state.quickFilter === 'stations' && !isCraftingStation(item)) return false;
+      if (
+        (state.quickFilter === 'item' || state.quickFilter === 'creature' || state.quickFilter === 'cosmetic') &&
+        item._sheetType !== state.quickFilter
+      ) {
+        return false;
+      }
       if (state.category && item.category !== state.category) return false;
       if (state.filter2 && item[cfg.f2Prop] !== state.filter2) return false;
       if (state.filter3 && item[cfg.f3Prop] !== state.filter3) return false;
@@ -326,10 +418,11 @@
     state.filteredItems = list;
 
     const hasActiveFilter = Boolean(
-      state.searchQuery.trim() || state.category || state.filter2 || state.filter3
+      state.searchQuery.trim() || state.category || state.filter2 || state.filter3 || state.quickFilter
     );
     els.resetFiltersBtn.classList.toggle('hidden', !hasActiveFilter);
     els.clearSearchBtn.classList.toggle('hidden', !state.searchQuery);
+    updateMobileFilterToggle();
 
     els.resultCount.textContent = `${sourceItems.length} 件中 ${list.length} 件を表示`;
 
@@ -723,11 +816,36 @@
     document.body.style.overflow = '';
   }
 
+  function buildShareUrl(item) {
+    const key = item.assetName || String(item.index);
+    const hash = `#item=${encodeURIComponent(item._modId)}/${encodeURIComponent(key)}`;
+    return `${window.location.origin}${window.location.pathname}${hash}`;
+  }
+
+  function openItemFromHash() {
+    const hash = window.location.hash || '';
+    if (!hash.startsWith('#item=')) return;
+    const raw = hash.slice(6);
+    const slashIdx = raw.indexOf('/');
+    if (slashIdx === -1) return;
+    const modId = decodeURIComponent(raw.slice(0, slashIdx));
+    const key = decodeURIComponent(raw.slice(slashIdx + 1));
+    const sheet = (state.data.modSheets || []).find((s) => s.id === modId);
+    if (!sheet) return;
+    const item = sheet.items.find(
+      (i) => (i.assetName && i.assetName.toLowerCase() === key.toLowerCase()) || String(i.index) === key
+    );
+    if (!item) return;
+    switchTab(sheet.id);
+    openDetailModal(item);
+  }
+
   function switchTab(tabId) {
     state.activeTab = tabId;
     state.visibleLimit = PAGE_SIZE;
     state.filter2 = '';
     state.filter3 = '';
+    state.quickFilter = '';
     buildTabs();
 
     const isInstalled = tabId === 'INSTALLED';
@@ -735,8 +853,11 @@
     els.modsSection.classList.toggle('hidden', !isInstalled);
 
     if (isInstalled) {
+      els.typeTipBanner.classList.add('hidden');
       renderInstalledMods();
     } else {
+      updateTypeTipBanner();
+      renderQuickFilters();
       rebuildFilterOptions();
       applyFiltersAndRender();
     }
@@ -747,11 +868,13 @@
     state.category = '';
     state.filter2 = '';
     state.filter3 = '';
+    state.quickFilter = '';
     state.visibleLimit = PAGE_SIZE;
     els.itemSearchInput.value = '';
     els.filterCategory.value = '';
     els.filterObtain.value = '';
     els.filterStation.value = '';
+    renderQuickFilters();
     applyFiltersAndRender();
   }
 
@@ -760,6 +883,20 @@
       const btn = e.target.closest('[data-tab-id]');
       if (!btn) return;
       switchTab(btn.dataset.tabId);
+    });
+
+    els.quickFilterBar.addEventListener('click', (e) => {
+      const chip = e.target.closest('[data-quick]');
+      if (!chip) return;
+      state.quickFilter = chip.dataset.quick;
+      state.visibleLimit = PAGE_SIZE;
+      renderQuickFilters();
+      applyFiltersAndRender();
+    });
+
+    els.mobileFilterToggle.addEventListener('click', () => {
+      state.mobileFiltersOpen = !state.mobileFiltersOpen;
+      updateMobileFilterToggle();
     });
 
     els.itemSearchInput.addEventListener('input', (e) => {
@@ -869,6 +1006,19 @@
       copyText(els.subCopyEnBtn.dataset.copy);
     });
 
+    els.shareItemBtn.addEventListener('click', () => {
+      if (!state.mainItem) return;
+      copyText(buildShareUrl(state.mainItem));
+      showToast('このアイテムの共有URLをコピーしました');
+    });
+
+    els.subShareItemBtn.addEventListener('click', () => {
+      if (state.subStack.length === 0) return;
+      const item = state.subStack[state.subStack.length - 1];
+      copyText(buildShareUrl(item));
+      showToast('関連アイテムの共有URLをコピーしました');
+    });
+
     // Open sub-panel from main modal body
     els.modalBody.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-open-sub]');
@@ -953,9 +1103,11 @@
       let gIdx = 0;
 
       for (const sheet of data.modSheets || []) {
+        const sType = sheet.sheetType || 'item';
         for (const item of sheet.items || []) {
           item._modId = sheet.id;
           item._modName = sheet.name;
+          item._sheetType = sType;
           item._globalIndex = gIdx++;
           item._searchBlob = normalizeText(
             [
@@ -983,7 +1135,6 @@
           );
           allMap.set(item._globalIndex, item);
 
-          // Index for MOD reference linking
           if (item.enName) addLookup(byEn, item.enName, item);
           if (item.jaName) {
             addLookup(byJa, item.jaName, item);
@@ -1009,6 +1160,7 @@
 
       buildTabs();
       switchTab(state.activeTab);
+      openItemFromHash();
     } catch (err) {
       els.statBadge.textContent = '読み込みエラー';
       els.itemsContainer.innerHTML = `<div class="empty-state"><p class="empty-title">データを読み込めませんでした</p><p class="empty-desc">${escapeHtml(err.message)}</p></div>`;

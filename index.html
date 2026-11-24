@@ -34,8 +34,33 @@
   </header>
 
   <main class="container main-content">
+    <!-- 初心者向け使い方ガイド（折りたたみ可） -->
+    <details class="guide-card" id="beginnerGuide">
+      <summary class="guide-summary">
+        <span>💡 はじめての方へ：このサイトの使い方・見方</span>
+        <span class="guide-toggle-hint">クリックで開閉</span>
+      </summary>
+      <div class="guide-grid">
+        <div class="guide-step">
+          <div class="guide-step-title">① 英語名・日本語どちらでも検索OK</div>
+          <p class="guide-step-text">ゲーム内で見かけた英語名や「キッチン」「照明」などの日本語で検索できます。詳細画面の <strong>コピー</strong> で英語名をコピーし、ゲーム内のエングラム検索に貼るとすぐ作れます。</p>
+        </div>
+        <div class="guide-step">
+          <div class="guide-step-title">② 緑ボタン・青ボタンの見方</div>
+          <p class="guide-step-text">詳細画面の素材や作る場所にある <span class="guide-chip-mod">MOD詳細</span> を押すと、今の画面を閉じずに<strong>横にサブ画面</strong>が開きます。<span class="guide-chip-wiki">Wiki ↗</span> は ARK 公式日本語 Wiki が開きます。</p>
+        </div>
+        <div class="guide-step">
+          <div class="guide-step-title">③ タブのアイコンの見方</div>
+          <p class="guide-step-text"><strong>📦</strong>＝アイテム・家具追加 ／ <strong>🐾</strong>＝生物追加 ／ <strong>✨</strong>＝見た目変更スキン ／ <strong>📋</strong>＝導入中MOD一覧。迷ったらまず <strong>🛠 作業台・設備</strong> から見るのがおすすめです。</p>
+        </div>
+      </div>
+    </details>
+
     <!-- アイテム検索ビュー -->
     <section id="itemsSection" class="view-section">
+      <!-- タイプ別の初心者ワンポイント案内 -->
+      <div id="typeTipBanner" class="type-tip-banner hidden"></div>
+
       <div class="controls-card">
         <div class="search-row">
           <div class="search-input-wrap">
@@ -47,14 +72,22 @@
               type="search"
               id="itemSearchInput"
               class="search-input"
-              placeholder="日本語名・英語名・説明・作る場所・必要素材などで検索（スペース区切りでAND検索 / ショートカット: /）"
+              placeholder="日本語名・英語名・説明・作る場所・必要素材などで検索（スペース区切りでAND検索）"
               autocomplete="off"
             />
             <button type="button" id="clearSearchBtn" class="clear-btn hidden" aria-label="検索をクリア">×</button>
           </div>
         </div>
 
-        <div class="filter-row">
+        <!-- クイック絞り込みチップ -->
+        <div id="quickFilterBar" class="quick-filter-bar hidden" role="group" aria-label="クイック絞り込み"></div>
+
+        <!-- スマホ用：詳細絞り込み折りたたみボタン -->
+        <button type="button" id="mobileFilterToggle" class="mobile-filter-toggle" aria-expanded="false">
+          <span id="mobileFilterToggleText">詳細絞り込み・並び替え ▼</span>
+        </button>
+
+        <div id="filterRow" class="filter-row">
           <div class="filter-group">
             <label for="filterCategory" class="filter-label">分類</label>
             <select id="filterCategory" class="filter-select">
@@ -148,7 +181,8 @@
               <h2 id="modalTitle" class="modal-title"></h2>
               <div class="modal-en-row">
                 <span id="modalEnName" class="modal-en-name"></span>
-                <button type="button" id="copyEnBtn" class="copy-btn" title="英語名をコピー">コピー</button>
+                <button type="button" id="copyEnBtn" class="copy-btn" title="英語名をコピー">英語名コピー</button>
+                <button type="button" id="shareItemBtn" class="share-btn" title="このアイテムのURLをコピー">🔗 共有URL</button>
               </div>
             </div>
           </div>
@@ -173,7 +207,8 @@
               <h3 id="subTitle" class="modal-title"></h3>
               <div class="modal-en-row">
                 <span id="subEnName" class="modal-en-name"></span>
-                <button type="button" id="subCopyEnBtn" class="copy-btn" title="英語名をコピー">コピー</button>
+                <button type="button" id="subCopyEnBtn" class="copy-btn" title="英語名をコピー">英語名コピー</button>
+                <button type="button" id="subShareItemBtn" class="share-btn" title="このアイテムのURLをコピー">🔗 共有URL</button>
               </div>
             </div>
           </div>
