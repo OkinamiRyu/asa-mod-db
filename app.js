@@ -21,6 +21,8 @@
     allItemsByGlobalIndex: new Map(),
     lookupByEn: new Map(),
     lookupByJa: new Map(),
+    producedByMap: new Map(),
+    usedInMap: new Map(),
     mainItem: null,
     subStack: [],
   };
@@ -641,26 +643,26 @@
     const cleaned = rawSegment.replace(/\s*[×xX]\s*\d+[^\s]*$/u, '').trim();
     if (!cleaned) return null;
 
-    // Extract parenthesized English/alias name if present: "トゲ（Spine）" -> ja="トゲ", inner="Spine"
-    const parenMatch = cleaned.match(/^(.+?)\s*[（(]([^）)]+)[）)]$/);
-    const outerPart = parenMatch ? parenMatch[1].trim() : cleaned;
-    const innerPart = parenMatch ? parenMatch[2].trim() : '';
-
-    // 1. Try matching inner English name first (most precise)
-    if (innerPart) {
-      const kInner = normalizeKey(innerPart);
-      const hitEn = pickPreferredItem(state.lookupByEn.get(kInner), preferredModId, excludeGlobalIndex);
-      if (hitEn) return hitEn;
+    // 1. Try matching ALL parenthesized substrings first (e.g., "通常の炭鉱（Coal Mine）（ファイル説明）")
+    for (const m of cleaned.matchAll(/[（(]([^）)]+)[）)]/g)) {
+      const inner = m[1].trim();
+      if (!inner) continue;
+      const kInner = normalizeKey(inner);
+      const hitInner =
+        pickPreferredItem(state.lookupByEn.get(kInner), preferredModId, excludeGlobalIndex) ||
+        pickPreferredItem(state.lookupByJa.get(kInner), preferredModId, excludeGlobalIndex);
+      if (hitInner) return hitInner;
     }
 
-    // 2. Try matching full cleaned string against jaName or enName
+    // 2. Try matching full cleaned string against enName or jaName
     const kFull = normalizeKey(cleaned);
     let hit =
       pickPreferredItem(state.lookupByEn.get(kFull), preferredModId, excludeGlobalIndex) ||
       pickPreferredItem(state.lookupByJa.get(kFull), preferredModId, excludeGlobalIndex);
     if (hit) return hit;
 
-    // 3. Try matching outer Japanese name
+    // 3. Try matching outer text before first parenthesis
+    const outerPart = cleaned.replace(/\s*[（(][^）)]+[）)]/g, '').trim();
     if (outerPart && outerPart !== cleaned) {
       const kOuter = normalizeKey(outerPart);
       hit =
@@ -713,6 +715,16 @@
       .join('')}</div>`;
   }
 
+  function renderModItemChips(items, limit) {
+    const shown = limit ? items.slice(0, limit) : items;
+    return `<div class="ref-chips">${shown
+      .map(
+        (it) =>
+          `<button type="button" class="ref-chip ref-chip-mod" data-open-sub="${it._globalIndex}" title="${escapeHtml(it.jaName || it.enName)} をサブ画面で開く"><span>${escapeHtml(it.jaName || it.enName)}</span><span class="ref-badge">MOD詳細</span></button>`
+      )
+      .join('')}</div>`;
+  }
+
   function buildDetailBodyHtml(item) {
     // [label, value, isFullWidth, enableRefLinks]
     const fields = [
@@ -720,7 +732,7 @@
       ['入手方法', item.obtainMethod, false, false],
       ['作る場所', item.craftStation, false, true],
       ['使う道具', item.toolUsed, false, true],
-      ['採取元（木・石など）', item.harvestSource, false, false],
+      ['採取元（木・石など）', item.harvestSource, false, true],
       ['恐竜名', item.dinoName, false, true],
       ['必要素材', item.materials, true, true],
       // 生物系
@@ -750,6 +762,48 @@
         })
         .join('')}</div>`;
     }
+
+    // 逆引き①：この設備・対象で作れる／得られるもの
+    const produced = state.producedByMap.get(item._globalIndex) || [];
+    if (produced.length > 0) {
+      const previewMax = 12;
+      const extraMax = 80;
+      const previewHtml = renderModItemChips(produced, previewMax);
+      let extraHtml = '';
+      if (produced.length > previewMax) {
+        const rest = produced.slice(previewMax, previewMax + extraMax);
+        const overflow = produced.length - previewMax - rest.length;
+        extraHtml = `
+          <details class="detail-sub-box" style="margin-top:8px;padding-top:8px;">
+            <summary>残り ${produced.length - previewMax} 件を表示</summary>
+            <div style="margin-top:8px;">
+              ${renderModItemChips(rest)}
+              ${overflow > 0 ? `<p class="rule-note" style="margin-top:8px;">※ほか ${overflow} 件あります。一覧の「作る場所」絞り込みから全件確認できます。</p>` : ''}
+            </div>
+          </details>`;
+      }
+      bodyHtml += `
+        <div class="detail-field detail-field-full">
+          <div class="detail-label">この設備・対象で作れる／得られるもの（${produced.length}件）</div>
+          <div class="detail-value">${previewHtml}${extraHtml}</div>
+        </div>`;
+    }
+
+    // 逆引き②：この素材を使うアイテム
+    const usedIn = state.usedInMap.get(item._globalIndex) || [];
+    if (usedIn.length > 0) {
+      const maxShow = 40;
+      const overflow = usedIn.length - maxShow;
+      bodyHtml += `
+        <details class="detail-sub-box">
+          <summary>この素材を使うアイテム（${usedIn.length}件）</summary>
+          <div style="margin-top:8px;">
+            ${renderModItemChips(usedIn, maxShow)}
+            ${overflow > 0 ? `<p class="rule-note" style="margin-top:8px;">※ほか ${overflow} 件あります。検索欄に「${escapeHtml(item.jaName || item.enName)}」と入力すると全件見られます。</p>` : ''}
+          </div>
+        </details>`;
+    }
+
     if (item.enOriginal || item.notes) {
       bodyHtml += `
         <details class="detail-sub-box" open>
@@ -1214,6 +1268,34 @@
       state.allItemsByGlobalIndex = allMap;
       state.lookupByEn = byEn;
       state.lookupByJa = byJa;
+
+      // Build reverse-lookup maps: station/source -> produced items, material -> items using it
+      const producedBy = new Map();
+      const usedIn = new Map();
+      const pushUnique = (map, targetId, srcItem) => {
+        if (!map.has(targetId)) map.set(targetId, []);
+        const arr = map.get(targetId);
+        if (!arr.includes(srcItem)) arr.push(srcItem);
+      };
+
+      for (const item of allMap.values()) {
+        for (const srcText of [item.craftStation, item.harvestSource]) {
+          if (!srcText) continue;
+          for (const seg of splitRespectingParens(srcText)) {
+            const station = findReferencedModItem(seg, item._modId, item._globalIndex);
+            if (station) pushUnique(producedBy, station._globalIndex, item);
+          }
+        }
+        if (item.materials) {
+          for (const seg of splitRespectingParens(item.materials)) {
+            const mat = findReferencedModItem(seg, item._modId, item._globalIndex);
+            if (mat) pushUnique(usedIn, mat._globalIndex, item);
+          }
+        }
+      }
+
+      state.producedByMap = producedBy;
+      state.usedInMap = usedIn;
 
       const modCount = (data.installedMods || []).length;
       const itemCount = allMap.size;
