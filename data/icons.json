@@ -1537,5 +1537,16 @@
     "z_aberrant_otter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_Aberrant_Otter_Character_BP_ASA.png",
     "z_spottedotter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_SpottedOtter_Character_BP_ASA.png",
     "z_ferretotter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_FerretOtter_Character_BP_ASA.png"
+  },
+  "Forgotten Fauna Continued: Monolophosaurus": {
+    "mono_character_bp": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP.png",
+    "mono_character_bp_cave": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP_Cave.png",
+    "mono_character_bp_scorched": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP_Scorched.png",
+    "mono_character_bp_aberrant": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP_Aberrant.png",
+    "mono_character_bp_alpha": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP_Alpha.png",
+    "primalitemarmor_monosaddle": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemArmor_MonoSaddle.png",
+    "primalitemarmor_monosaddleblade": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemArmor_MonoSaddleBlade.png",
+    "primalitemarmor_monosaddleshield": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemArmor_MonoSaddleShield.png",
+    "primalitemconsumable_monolophobile": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemConsumable_MonolophoBile.png"
   }
 }
