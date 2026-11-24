@@ -639,7 +639,7 @@
 
     const filtered = mods.filter((m) => {
       if (tokens.length === 0) return true;
-      const blob = normalizeText(`${m.name} ${m.description} ${m.curseForgeId} ${m.notes}`);
+      const blob = normalizeText(`${m.name} ${m.description} ${m.curseForgeId}`);
       return tokens.every((tk) => blob.includes(tk));
     });
 
@@ -667,14 +667,6 @@
                   : ''
               }
             </div>
-            ${
-              m.notes
-                ? `<details class="mod-notes-details">
-                    <summary>備考・詳細情報</summary>
-                    <p class="mod-notes-text">${escapeHtml(formatSentenceBreaks(m.notes))}</p>
-                  </details>`
-                : ''
-            }
           </article>`;
       })
       .join('');
@@ -691,7 +683,7 @@
       if (ch === '(' || ch === '（') depth++;
       else if ((ch === ')' || ch === '）') && depth > 0) depth--;
 
-      if (depth === 0 && (ch === '、' || ch === ',' || ch === '\n' || ch === '／')) {
+      if (depth === 0 && (ch === '、' || ch === ',' || ch === '\n' || ch === '／' || ch === '/')) {
         if (current.trim()) result.push(current.trim());
         current = '';
       } else {
@@ -748,11 +740,11 @@
 
   function isNonLinkablePhrase(rawSegment) {
     const s = rawSegment.trim();
-    if (/^(インベントリ|なし|-|ー|不明|作成|採取|コスメティック|エングラム|スポーン|クラス切替|アビリティ|および|または|そのほか|その他)/.test(s)) {
+    if (/^(インベントリ|なし|-|ー|—|不明|不要|作成|採取|コスメティック|エングラム|スポーン|クラス切替|アビリティ|および|または|そのほか|その他|肉食|草食|雑食|肩乗せ|騎乗|サドルなし|小型|大型|水中|水産|資源|プレイヤー防具|防具|チビペット)/.test(s)) {
       return true;
     }
     const base = s.replace(/\s*[（(][^）)]+[）)]/g, '').trim();
-    if (base.length > 22 || /(攻撃|ダメージ|コンポーネント|ファイル|参照|使用)/.test(base)) {
+    if (base.length > 22 || /(攻撃|ダメージ|コンポーネント|ファイル|参照|使用|装着|装備|可能|不可|ペット|対応|テスト|→)/.test(base)) {
       return true;
     }
     return false;
@@ -885,13 +877,12 @@
         </details>`;
     }
 
-    if (item.enOriginal || item.notes) {
+    if (item.enOriginal) {
       bodyHtml += `
-        <details class="detail-sub-box" open>
-          <summary>英語原文・備考</summary>
+        <details class="detail-sub-box">
+          <summary>英語原文（ゲーム内表記）を見る</summary>
           <div class="detail-sub-content">
-            ${item.enOriginal ? `<div><strong>英語原文:</strong>\n${escapeHtml(item.enOriginal)}</div>` : ''}
-            ${item.notes ? `<div><strong>備考:</strong>\n${escapeHtml(formatSentenceBreaks(item.notes))}</div>` : ''}
+            <div>${escapeHtml(item.enOriginal)}</div>
           </div>
         </details>`;
     }
@@ -1379,6 +1370,29 @@
       const data = await modsRes.json();
       const icons = iconsRes && iconsRes.ok ? await iconsRes.json() : {};
 
+      const HIDDEN_PUBLIC_ASSETS = new Set([
+        'primalitem_admintool',
+        'primalitemstructure_wafabox',
+        'primalitemconsumable_shibainucompanionconversiontreat',
+        'brachyura',
+      ]);
+      const USAGE_TYPE_VALUES = new Set([
+        '実用（機能あり）',
+        '装飾・観賞用',
+        '見た目変更（スキン）',
+        '生物・繁殖',
+      ]);
+
+      // Hide template-only serverRules until real server values are filled in
+      if (Array.isArray(data.serverRules)) {
+        const hasOnlyTemplates = data.serverRules.every(
+          (r) => !r.value || /[（(](ここに|例：)/.test(r.value) || r.category === '初心者向け案内' || r.category === 'プレイ上のルール'
+        );
+        if (hasOnlyTemplates && data.serverRules.some((r) => /[（(](ここに|例：)/.test(r.value || ''))) {
+          data.serverRules = [];
+        }
+      }
+
       const allMap = new Map();
       const byEn = new Map();
       const byJa = new Map();
@@ -1386,10 +1400,25 @@
 
       for (const sheet of data.modSheets || []) {
         const sType = sheet.sheetType || 'item';
-        for (const item of sheet.items || []) {
+        sheet.items = (sheet.items || []).filter((item) => {
+          const an = (item.assetName || '').trim().toLowerCase();
+          return !HIDDEN_PUBLIC_ASSETS.has(an);
+        });
+        sheet.itemCount = sheet.items.length;
+
+        for (const item of sheet.items) {
           item._modId = sheet.id;
           item._modName = sheet.name;
           item._sheetType = sType;
+          // Recover usageType if GAS mapped 用途タイプ into specialAbility
+          if (!item.usageType && item.specialAbility && USAGE_TYPE_VALUES.has(item.specialAbility)) {
+            item.usageType = item.specialAbility;
+            item.specialAbility = '';
+          }
+          if (!item.usageType) {
+            if (sType === 'creature') item.usageType = '生物・繁殖';
+            else if (sType === 'cosmetic') item.usageType = '見た目変更（スキン）';
+          }
           item._isVanillaRef =
             !item.assetName && VANILLA_REF_EN_NAMES.has((item.enName || '').trim().toLowerCase());
           item._globalIndex = gIdx++;
@@ -1414,7 +1443,6 @@
               item.applyTarget,
               item.applyMethod,
               item.enOriginal,
-              item.notes,
               sheet.name,
             ].join(' ')
           );

@@ -1306,6 +1306,12 @@ h3 {
   flex-wrap: wrap;
 }
 
+@media (max-width: 720px) {
+  .footer-inner span:nth-child(2) {
+    display: none;
+  }
+}
+
 kbd {
   background: var(--surface-subtle);
   border: 1px solid var(--border-strong);

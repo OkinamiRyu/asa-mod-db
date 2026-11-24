@@ -237,7 +237,7 @@ function parseModItemSheet_(sheet) {
   const cFood = findCol(['好物', '餌']);
   const cHabitat = findCol(['生息地', 'スポーン']);
   const cSaddle = findCol(['サドル', '騎乗']);
-  const cAbility = findCol(['特殊能力', '用途']);
+  const cAbility = findCol(['特殊能力']);
 
   // コスメティック系
   const cApplyTarget = findCol(['適用対象']);
