@@ -505,8 +505,9 @@ body {
   margin: 0;
   font-size: 0.84rem;
   color: var(--text-secondary);
+  white-space: pre-line;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1061,6 +1062,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  white-space: pre-line;
+  word-break: break-word;
 }
 
 /* Toast */
@@ -1392,5 +1395,8 @@ kbd {
   .rule-row {
     grid-template-columns: 1fr;
     gap: 4px;
+  }
+  .brand-subtitle {
+    font-size: 0.72rem;
   }
 }

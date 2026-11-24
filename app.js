@@ -95,6 +95,13 @@
       .replace(/'/g, '&#39;');
   }
 
+  function formatSentenceBreaks(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/\r\n/g, '\n')
+      .replace(/。(?!\s*(?:\n|$|[）」』】]))\s*/g, '。\n');
+  }
+
   function normalizeText(str) {
     if (!str) return '';
     return String(str)
@@ -478,7 +485,7 @@
                   </div>
                 </div>
               </div>
-              ${item.description ? `<p class="item-desc">${escapeHtml(item.description)}</p>` : ''}
+              ${item.description ? `<p class="item-desc">${escapeHtml(formatSentenceBreaks(item.description))}</p>` : ''}
               ${tags.length ? `<div class="item-tags">${tags.join('')}</div>` : ''}
             </article>`;
         })
@@ -529,7 +536,7 @@
                 <td>${item.category ? `<span class="tag tag-cat">${escapeHtml(item.category)}</span>` : ''}</td>
                 <td>${escapeHtml(col4Val)}</td>
                 <td>${escapeHtml(col5Val)}</td>
-                <td>${escapeHtml(item.description || '')}</td>
+                <td>${escapeHtml(formatSentenceBreaks(item.description || ''))}</td>
               </tr>`;
               })
               .join('')}
@@ -573,7 +580,7 @@
               <h3 class="mod-card-title">${escapeHtml(m.name)}</h3>
               ${m.curseForgeId ? `<span class="cf-badge">ID: ${escapeHtml(m.curseForgeId)}</span>` : ''}
             </div>
-            ${m.description ? `<p class="mod-card-desc">${escapeHtml(m.description)}</p>` : ''}
+            ${m.description ? `<p class="mod-card-desc">${escapeHtml(formatSentenceBreaks(m.description))}</p>` : ''}
             <div class="mod-card-actions">
               ${
                 matchedSheet
@@ -590,7 +597,7 @@
               m.notes
                 ? `<details class="mod-notes-details">
                     <summary>備考・詳細情報</summary>
-                    <p class="mod-notes-text">${escapeHtml(m.notes)}</p>
+                    <p class="mod-notes-text">${escapeHtml(formatSentenceBreaks(m.notes))}</p>
                   </details>`
                 : ''
             }
@@ -729,12 +736,12 @@
 
     let bodyHtml = '';
     if (item.description) {
-      bodyHtml += `<div class="detail-desc-box">${escapeHtml(item.description)}</div>`;
+      bodyHtml += `<div class="detail-desc-box">${escapeHtml(formatSentenceBreaks(item.description))}</div>`;
     }
     if (fields.length) {
       bodyHtml += `<div class="detail-grid">${fields
         .map(([label, val, full, linkable]) => {
-          const valHtml = linkable ? renderReferenceChipsHtml(val, item) : escapeHtml(val);
+          const valHtml = linkable ? renderReferenceChipsHtml(val, item) : escapeHtml(formatSentenceBreaks(val));
           return `
           <div class="detail-field ${full ? 'detail-field-full' : ''}">
             <div class="detail-label">${escapeHtml(label)}</div>
@@ -748,8 +755,8 @@
         <details class="detail-sub-box" open>
           <summary>英語原文・備考</summary>
           <div class="detail-sub-content">
-            ${item.enOriginal ? `<div><strong>英語原文:</strong> ${escapeHtml(item.enOriginal)}</div>` : ''}
-            ${item.notes ? `<div><strong>備考:</strong> ${escapeHtml(item.notes)}</div>` : ''}
+            ${item.enOriginal ? `<div><strong>英語原文:</strong>\n${escapeHtml(item.enOriginal)}</div>` : ''}
+            ${item.notes ? `<div><strong>備考:</strong>\n${escapeHtml(formatSentenceBreaks(item.notes))}</div>` : ''}
           </div>
         </details>`;
     }
@@ -874,8 +881,8 @@
               <div class="rule-row">
                 <div class="rule-key">${escapeHtml(r.item)}</div>
                 <div>
-                  <div class="rule-val">${escapeHtml(r.value)}</div>
-                  ${r.note ? `<div class="rule-note">${escapeHtml(r.note)}</div>` : ''}
+                  <div class="rule-val">${escapeHtml(formatSentenceBreaks(r.value))}</div>
+                  ${r.note ? `<div class="rule-note">${escapeHtml(formatSentenceBreaks(r.note))}</div>` : ''}
                 </div>
               </div>`
               )
