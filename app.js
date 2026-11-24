@@ -540,7 +540,27 @@
           if (item.category) tags.push(`<span class="tag tag-cat">${escapeHtml(item.category)}</span>`);
           if (item.craftStation) tags.push(`<span class="tag tag-station">${escapeHtml(item.craftStation)}</span>`);
           if (item.applyTarget) tags.push(`<span class="tag tag-station">${escapeHtml(item.applyTarget)}</span>`);
-          if (item.tamingMethod) tags.push(`<span class="tag tag-station">${escapeHtml(item.tamingMethod)}</span>`);
+          if (item.tamingMethod) {
+            const tempMatch = item.tamingMethod.match(/【野生の性格】([^\n]+)/);
+            if (tempMatch) {
+              const tv = tempMatch[1].trim();
+              if (tv.startsWith('攻撃的')) {
+                tags.push('<span class="tag tag-temp-aggro">野生：攻撃的</span>');
+              } else if (tv.startsWith('中立')) {
+                tags.push('<span class="tag tag-temp-neutral">野生：中立</span>');
+              } else if (tv.startsWith('臆病')) {
+                tags.push('<span class="tag tag-temp-skittish">野生：臆病</span>');
+              } else if (tv.startsWith('非攻撃的')) {
+                tags.push('<span class="tag tag-temp-passive">野生：非攻撃的</span>');
+              }
+            }
+            const tamingFirstLine = item.tamingMethod
+              .split('\n')
+              .find((l) => l.trim() && !l.trim().startsWith('【ボーラ】') && !l.trim().startsWith('【野生の性格】'));
+            if (tamingFirstLine) {
+              tags.push(`<span class="tag tag-station">${escapeHtml(tamingFirstLine.trim())}</span>`);
+            }
+          }
           if (item.obtainMethod) tags.push(`<span class="tag">${escapeHtml(item.obtainMethod)}</span>`);
           if (item.habitat) tags.push(`<span class="tag">${escapeHtml(item.habitat)}</span>`);
 

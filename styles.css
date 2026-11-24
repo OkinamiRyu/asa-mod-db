@@ -655,6 +655,34 @@ h3 {
   border-color: #bfdbfe;
 }
 
+.tag-temp-aggro {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-color: #fecaca;
+  font-weight: 600;
+}
+
+.tag-temp-neutral {
+  background: #fffbeb;
+  color: #b45309;
+  border-color: #fde68a;
+  font-weight: 600;
+}
+
+.tag-temp-skittish {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+  font-weight: 600;
+}
+
+.tag-temp-passive {
+  background: #ecfdf5;
+  color: #047857;
+  border-color: #a7f3d0;
+  font-weight: 600;
+}
+
 .tag-mod {
   background: var(--amber-soft);
   color: var(--amber-text);
