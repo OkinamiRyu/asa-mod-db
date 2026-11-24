@@ -1440,16 +1440,25 @@
     "primalitemarmor_hatzsaddle_platform": "icons/Hatzegopteryx Kukulkan/PrimalItemArmor_HatzSaddle_Platform.png",
     "primalitemarmor_hatzsaddle_battle": "icons/Hatzegopteryx Kukulkan/PrimalItemArmor_HatzSaddle_Battle.png",
     "primalitemtrophy_hatzeg": "icons/Hatzegopteryx Kukulkan/PrimalItemTrophy_Hatzeg.png",
-    "primalitemconsumable_crackedalphakarkinosclaw": "icons/Hatzegopteryx Kukulkan/PrimalItemConsumable_CrackedAlphaKarkinosClaw.png"
+    "primalitemconsumable_crackedalphakarkinosclaw": "icons/Hatzegopteryx Kukulkan/PrimalItemConsumable_CrackedAlphaKarkinosClaw.png",
+    "primalitemskin_chibidino_hatzeg": "icons/Hatzegopteryx Kukulkan/PrimalItemSkin_ChibiDino_Hatzeg.png"
   },
   "Cyrus's Critters: Redpanda": {
-    "primalitemarmor_pandascarf": "icons/Cyrus's Critters Redpanda/PrimalItemArmor_PandaScarf.png"
+    "primalitemarmor_pandascarf": "icons/Cyrus's Critters Redpanda/PrimalItemArmor_PandaScarf.png",
+    "redpanda_character_bp": "icons/Cyrus's Critters Redpanda/RedPanda_Character_BP.png",
+    "snowredpanda_character_bp": "icons/Cyrus's Critters Redpanda/SnowRedPanda_Character_BP.png",
+    "jungleredpanda_character_bp": "icons/Cyrus's Critters Redpanda/JungleRedPanda_Character_BP.png",
+    "primalitemskin_chibidino_redpanda": "icons/Cyrus's Critters Redpanda/PrimalItemSkin_ChibiDino_Redpanda.png",
+    "primalitemconsumable_redpandaplatter": "icons/Cyrus's Critters Redpanda/PrimalItemConsumable_RedpandaPlatter.png"
   },
   "Feras Fauna: Foxes": {
     "arcticfox_character_bp": "icons/Feras Fauna Foxes/ArcticFox_Character_BP.png",
     "greatarcticfox_character_bp": "icons/Feras Fauna Foxes/GreatArcticfox_Character_BP.png",
     "primalitemarmor_arcticfoxsaddle": "icons/Feras Fauna Foxes/PrimalItemArmor_ArcticfoxSaddle.png",
-    "primalitemcostume_bonegreaterarcticfox": "icons/Feras Fauna Foxes/PrimalItemCostume_BoneGreaterArcticFox.png"
+    "primalitemcostume_bonegreaterarcticfox": "icons/Feras Fauna Foxes/PrimalItemCostume_BoneGreaterArcticFox.png",
+    "greaterredfox_character_bp": "icons/Feras Fauna Foxes/GreaterRedfox_Character_BP.png",
+    "megagreatarcticfox_character_bp": "icons/Feras Fauna Foxes/MegaGreatArcticfox_Character_BP.png",
+    "bonegreatarcticfox_character_bp": "icons/Feras Fauna Foxes/BoneGreatArcticfox_Character_BP.png"
   },
   "Oceania Content": {
     "bubblefish": "icons/Oceania Content/Bubblefish.png",
@@ -1460,7 +1469,10 @@
     "primalitemstructure_coralcampfire": "icons/Oceania Content/PrimalItemStructure_CoralCampfire.png",
     "primalitemstructure_coralwaterbed": "icons/Oceania Content/PrimalItemStructure_CoralWaterBed.png",
     "primalitemstructure_preservingbarrel": "icons/Oceania Content/PrimalItemStructure_PreservingBarrel.png",
-    "primalitemstructure_wallscarekron": "icons/Oceania Content/PrimalItemStructure_WallScarekron.png"
+    "primalitemstructure_wallscarekron": "icons/Oceania Content/PrimalItemStructure_WallScarekron.png",
+    "dugong": "icons/Oceania Content/Dugong.png",
+    "primalitemstructure_coralnode": "icons/Oceania Content/PrimalItemStructure_CoralNode.png",
+    "primalitemconsumable_meatcake": "icons/Oceania Content/PrimalItemConsumable_MeatCake.png"
   },
   "Shiba Inu Companion": {
     "shibainucompanion_character_bp": "icons/Shiba Inu Companion/ShibaInuCompanion_Character_BP.png",
@@ -1492,6 +1504,38 @@
     "primalitemconsumable_unigunkan": "icons/The Sunken World Additions/PrimalItemConsumable_UniGunkan.png",
     "primalitemconsumable_seafoodgourmet": "icons/The Sunken World Additions/PrimalItemConsumable_SeafoodGourmet.png",
     "primalitemconsumable_tropicalsmoothie": "icons/The Sunken World Additions/PrimalItemConsumable_TropicalSmoothie.png",
-    "primalitemconsumable_antitoxin": "icons/The Sunken World Additions/PrimalItemConsumable_Antitoxin.png"
+    "primalitemconsumable_antitoxin": "icons/The Sunken World Additions/PrimalItemConsumable_Antitoxin.png",
+    "primalitemweapon_trident": "icons/The Sunken World Additions/PrimalItemWeapon_Trident.png",
+    "primalitemarmor_coralshirt": "icons/The Sunken World Additions/PrimalItemArmor_CoralShirt.png"
+  },
+  "Wyvern Pets": {
+    "wyvern_pet_fire_character_bp": "icons/Wyvern Pets/Wyvern_Pet_Fire_Character_BP.png",
+    "wyvern_pet_ice_character_bp": "icons/Wyvern Pets/Wyvern_Pet_Ice_Character_BP.png",
+    "wyvern_pet_lightning_character_bp": "icons/Wyvern Pets/Wyvern_Pet_Lightning_Character_BP.png",
+    "wyvern_pet_poison_character_bp": "icons/Wyvern Pets/Wyvern_Pet_Poison_Character_BP.png",
+    "wyvern_pet_tek_character_bp": "icons/Wyvern Pets/Wyvern_Pet_Tek_Character_BP.png",
+    "wyvern_pet_dodo_character_bp": "icons/Wyvern Pets/Wyvern_Pet_Dodo_Character_BP.png",
+    "wyvern_pet_bone_character_bp": "icons/Wyvern Pets/Wyvern_Pet_Bone_Character_BP.png",
+    "dragon_pet_fire_character_bp": "icons/Wyvern Pets/Dragon_Pet_Fire_Character_BP.png",
+    "wyvern_pet_blood_character_bp": "icons/Wyvern Pets/Wyvern_Pet_Blood_Character_BP.png",
+    "primalitemarmor_saddle_wyvern_pet": "icons/Wyvern Pets/PrimalItemArmor_Saddle_Wyvern_Pet.png"
+  },
+  "Scorched Resources": {
+    "primalitem_scorchedresources_silk": "icons/Scorched Resources/PrimalItem_ScorchedResources_Silk.png",
+    "primalitem_scorchedresources_cactussap": "icons/Scorched Resources/PrimalItem_ScorchedResources_CactusSap.png",
+    "primalitem_scorchedresources_clay": "icons/Scorched Resources/PrimalItem_ScorchedResources_Clay.png",
+    "primalitem_scorchedresources_sand": "icons/Scorched Resources/PrimalItem_ScorchedResources_Sand.png",
+    "primalitem_scorchedresources_sulfur": "icons/Scorched Resources/PrimalItem_ScorchedResources_Sulfur.png",
+    "primalitem_scorchedresources_rawsalt": "icons/Scorched Resources/PrimalItem_ScorchedResources_RawSalt.png"
+  },
+  "Z-Variants Otter Additions (Crossplay)": {
+    "z_pandaotter_character_bp": "icons/Z-Variants Otter Additions (Crossplay)/Z_PandaOtter_Character_BP.png",
+    "z_redpandaotter_character_bp": "icons/Z-Variants Otter Additions (Crossplay)/Z_RedPandaOtter_Character_BP.png",
+    "z_cupidotter_character_bp": "icons/Z-Variants Otter Additions (Crossplay)/Z_CupidOtter_Character_BP.png",
+    "z_tigerotter_character_bp": "icons/Z-Variants Otter Additions (Crossplay)/Z_TigerOtter_Character_BP.png",
+    "z_otter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_Otter_Character_BP_ASA.png",
+    "z_aberrant_otter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_Aberrant_Otter_Character_BP_ASA.png",
+    "z_spottedotter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_SpottedOtter_Character_BP_ASA.png",
+    "z_ferretotter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_FerretOtter_Character_BP_ASA.png"
   }
 }
