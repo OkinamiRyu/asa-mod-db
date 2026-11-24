@@ -37,6 +37,8 @@
     rulesSection: document.getElementById('rulesSection'),
     rulesContainer: document.getElementById('rulesContainer'),
     typeTipBanner: document.getElementById('typeTipBanner'),
+    modSelect: document.getElementById('modSelect'),
+    resetModBtn: document.getElementById('resetModBtn'),
     itemSearchInput: document.getElementById('itemSearchInput'),
     clearSearchBtn: document.getElementById('clearSearchBtn'),
     quickFilterBar: document.getElementById('quickFilterBar'),
@@ -258,30 +260,25 @@
     const rulesCount = (state.data.serverRules || []).length;
     const totalItems = sheets.reduce((sum, s) => sum + s.items.length, 0);
 
-    const tabs = [];
-    if (sheets.length >= 2) {
-      tabs.push({ id: 'ALL', label: '🔍 全MOD横断', count: totalItems });
-    }
+    const tabs = [
+      { id: 'SEARCH', label: '🔍 アイテム検索', count: totalItems },
+      { id: 'INSTALLED', label: '📋 導入中MOD一覧', count: installedCount },
+    ];
     if (rulesCount > 0) {
       tabs.push({ id: 'RULES', label: '📜 鯖ルール・設定', count: rulesCount });
     }
-    tabs.push({ id: 'INSTALLED', label: '📋 導入中MOD一覧', count: installedCount });
-    for (const sheet of sheets) {
-      tabs.push({ id: sheet.id, label: `${getSheetIcon(sheet)}${sheet.name}`, count: sheet.items.length });
-    }
 
-    if (!state.activeTab || !tabs.some((t) => t.id === state.activeTab)) {
-      state.activeTab = tabs[0] ? tabs[0].id : 'INSTALLED';
-    }
+    const activeTop =
+      state.activeTab === 'INSTALLED' || state.activeTab === 'RULES' ? state.activeTab : 'SEARCH';
 
     els.tabList.innerHTML = tabs
       .map(
         (t) => `
         <button
           type="button"
-          class="tab-btn ${t.id === state.activeTab ? 'active' : ''}"
+          class="tab-btn ${t.id === activeTop ? 'active' : ''}"
           role="tab"
-          aria-selected="${t.id === state.activeTab}"
+          aria-selected="${t.id === activeTop}"
           data-tab-id="${escapeHtml(t.id)}"
         >
           <span>${escapeHtml(t.label)}</span>
@@ -289,6 +286,41 @@
         </button>`
       )
       .join('');
+  }
+
+  function buildModSelector() {
+    const sheets = state.data.modSheets || [];
+    const totalItems = sheets.reduce((sum, s) => sum + s.items.length, 0);
+
+    const groups = {
+      item: { label: '📦 アイテム・家具追加MOD', list: [] },
+      creature: { label: '🐾 生物追加MOD', list: [] },
+      cosmetic: { label: '✨ スキン・コスチュームMOD', list: [] },
+    };
+
+    for (const sheet of sheets) {
+      const st = sheet.sheetType || 'item';
+      (groups[st] || groups.item).list.push(sheet);
+    }
+
+    let html = `<option value="ALL">🔍 すべてのMOD（全 ${totalItems} 件）</option>`;
+    for (const key of ['item', 'creature', 'cosmetic']) {
+      const grp = groups[key];
+      if (grp.list.length === 0) continue;
+      html += `<optgroup label="${escapeHtml(grp.label)}">`;
+      for (const sheet of grp.list) {
+        html += `<option value="${escapeHtml(sheet.id)}">${escapeHtml(sheet.name)}（${sheet.items.length}件）</option>`;
+      }
+      html += '</optgroup>';
+    }
+
+    els.modSelect.innerHTML = html;
+    const currentVal =
+      state.activeTab === 'INSTALLED' || state.activeTab === 'RULES' || !state.activeTab
+        ? 'ALL'
+        : state.activeTab;
+    els.modSelect.value = currentVal;
+    els.resetModBtn.classList.toggle('hidden', currentVal === 'ALL');
   }
 
   function renderQuickFilters() {
@@ -1022,15 +1054,23 @@
   }
 
   function switchTab(tabId) {
-    state.activeTab = tabId;
+    let target = tabId;
+    if (target === 'SEARCH') {
+      target = state.lastModTab || 'ALL';
+    }
+    if (target !== 'INSTALLED' && target !== 'RULES') {
+      state.lastModTab = target;
+    }
+
+    state.activeTab = target;
     state.visibleLimit = PAGE_SIZE;
     state.filter2 = '';
     state.filter3 = '';
     state.quickFilter = '';
     buildTabs();
 
-    const isInstalled = tabId === 'INSTALLED';
-    const isRules = tabId === 'RULES';
+    const isInstalled = target === 'INSTALLED';
+    const isRules = target === 'RULES';
     els.itemsSection.classList.toggle('hidden', isInstalled || isRules);
     els.modsSection.classList.toggle('hidden', !isInstalled);
     els.rulesSection.classList.toggle('hidden', !isRules);
@@ -1042,6 +1082,8 @@
       els.typeTipBanner.classList.add('hidden');
       renderServerRules();
     } else {
+      els.modSelect.value = target;
+      els.resetModBtn.classList.toggle('hidden', target === 'ALL');
       updateTypeTipBanner();
       renderQuickFilters();
       rebuildFilterOptions();
@@ -1069,6 +1111,14 @@
       const btn = e.target.closest('[data-tab-id]');
       if (!btn) return;
       switchTab(btn.dataset.tabId);
+    });
+
+    els.modSelect.addEventListener('change', (e) => {
+      switchTab(e.target.value);
+    });
+
+    els.resetModBtn.addEventListener('click', () => {
+      switchTab('ALL');
     });
 
     els.quickFilterBar.addEventListener('click', (e) => {
@@ -1399,7 +1449,8 @@
       els.updatedBadge.textContent = formatDate(data.updatedAt);
 
       buildTabs();
-      switchTab(state.activeTab);
+      buildModSelector();
+      switchTab('ALL');
       openItemFromHash();
     } catch (err) {
       els.statBadge.textContent = '読み込みエラー';
