@@ -1,25 +1,37 @@
 :root {
-  --bg: #f6f8fa;
+  --bg: #f8fafc;
   --surface: #ffffff;
   --surface-subtle: #f1f5f9;
-  --border: #e2e8f0;
-  --border-strong: #cbd5e1;
+  --border: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.14);
   --text: #0f172a;
   --text-secondary: #475569;
   --text-muted: #64748b;
   --accent: #0f766e;
   --accent-hover: #0d5f59;
   --accent-soft: #f0fdfa;
-  --accent-border: #99f6e4;
+  --accent-border: rgba(15, 118, 110, 0.22);
   --blue: #2563eb;
   --blue-soft: #eff6ff;
+  --blue-border: rgba(37, 99, 235, 0.2);
   --amber-soft: #fffbeb;
   --amber-text: #92400e;
+  --shadow-border:
+    0 0 0 1px rgba(15, 23, 42, 0.06),
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 2px 6px rgba(15, 23, 42, 0.02);
+  --shadow-card-hover:
+    0 0 0 1px rgba(15, 118, 110, 0.26),
+    0 8px 20px -6px rgba(15, 23, 42, 0.1),
+    0 2px 6px -1px rgba(15, 23, 42, 0.04);
   --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 18px 40px rgba(15, 23, 42, 0.16);
-  --radius: 12px;
-  --radius-sm: 8px;
+  --shadow-md: 0 6px 16px -4px rgba(15, 23, 42, 0.09);
+  --shadow-lg:
+    0 0 0 1px rgba(15, 23, 42, 0.06),
+    0 24px 48px -12px rgba(15, 23, 42, 0.2);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --radius: 16px;
+  --radius-sm: 10px;
 }
 
 *,
@@ -31,6 +43,8 @@
 html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -38,10 +52,17 @@ body {
   font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic UI', 'Meiryo', system-ui, -apple-system, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  letter-spacing: -0.015em;
 }
 
 .hidden {
@@ -57,12 +78,13 @@ body {
 
 /* Header */
 .site-header {
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 40;
-  box-shadow: var(--shadow-sm);
 }
 
 .header-inner {
@@ -84,14 +106,14 @@ body {
 .brand-icon {
   width: 48px;
   height: 48px;
-  border-radius: 10px;
+  border-radius: 12px;
   background: #000000;
   padding: 0;
   display: grid;
   place-items: center;
   flex-shrink: 0;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.12), 0 2px 6px rgba(15, 23, 42, 0.12);
 }
 
 .brand-logo {
@@ -103,7 +125,7 @@ body {
 
 .brand-title {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   font-weight: 700;
   line-height: 1.25;
   color: var(--text);
@@ -123,33 +145,39 @@ body {
 }
 
 .meta-pill {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
+  font-variant-numeric: tabular-nums;
   color: var(--accent);
   background: var(--accent-soft);
-  border: 1px solid var(--accent-border);
-  padding: 4px 10px;
+  box-shadow: inset 0 0 0 1px var(--accent-border);
+  padding: 4px 11px;
   border-radius: 999px;
 }
 
 .meta-date {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
   color: var(--text-muted);
 }
 
 /* Tabs */
 .tab-bar {
   border-top: 1px solid var(--border);
-  background: var(--surface);
+  background: transparent;
 }
 
 .tab-list {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   overflow-x: auto;
-  scrollbar-width: thin;
+  scrollbar-width: none;
   padding-top: 2px;
+}
+
+.tab-list::-webkit-scrollbar {
+  display: none;
 }
 
 .tab-btn {
@@ -158,21 +186,21 @@ body {
   background: transparent;
   color: var(--text-secondary);
   font: inherit;
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 600;
-  padding: 10px 14px;
+  padding: 10px 13px;
   cursor: pointer;
   border-bottom: 2px solid transparent;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+  transition: color 150ms var(--ease-out), border-color 150ms var(--ease-out), background-color 150ms var(--ease-out);
 }
 
 .tab-btn:hover {
   color: var(--text);
-  background: var(--surface-subtle);
+  background: rgba(15, 23, 42, 0.035);
 }
 
 .tab-btn.active {
@@ -181,8 +209,9 @@ body {
 }
 
 .tab-count {
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 600;
+  font-variant-numeric: tabular-nums;
   padding: 1px 7px;
   border-radius: 999px;
   background: var(--surface-subtle);
@@ -197,17 +226,17 @@ body {
 /* Main */
 .main-content {
   flex: 1;
-  padding-top: 20px;
+  padding-top: 18px;
   padding-bottom: 48px;
 }
 
 /* Controls */
 .controls-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius);
   padding: 16px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-border);
   margin-bottom: 18px;
 }
 
@@ -349,6 +378,7 @@ body {
 
 .result-count {
   font-weight: 600;
+  font-variant-numeric: tabular-nums;
   color: var(--text);
 }
 
@@ -365,7 +395,17 @@ body {
   border-radius: var(--radius-sm);
   cursor: pointer;
   border: 1px solid transparent;
-  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+  transition: background-color 150ms var(--ease-out), border-color 150ms var(--ease-out), color 150ms var(--ease-out), transform 120ms var(--ease-out);
+}
+
+.btn:active,
+.quick-chip:active,
+.ref-chip-mod:active,
+.ref-chip-wiki:active,
+.copy-btn:active,
+.share-btn:active,
+.mini-copy-btn:active {
+  transform: scale(0.97);
 }
 
 .btn-primary {
@@ -379,7 +419,7 @@ body {
 
 .btn-secondary {
   background: var(--surface);
-  border-color: var(--border-strong);
+  box-shadow: var(--shadow-border);
   color: var(--text);
 }
 
@@ -406,21 +446,24 @@ body {
 
 .item-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius);
   padding: 14px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   cursor: pointer;
-  transition: transform 0.12s ease, box-shadow 0.15s ease, border-color 0.15s ease;
-  box-shadow: var(--shadow-sm);
+  transition: transform 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
+  box-shadow: var(--shadow-border);
 }
 
 .item-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--accent-border);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.item-card:active {
+  transform: translateY(0) scale(0.99);
 }
 
 .item-card-top {
@@ -434,7 +477,7 @@ body {
   height: 64px;
   border-radius: 10px;
   background: var(--surface-subtle);
-  border: 1px solid var(--border);
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.06);
   flex-shrink: 0;
   display: grid;
   place-items: center;
@@ -493,6 +536,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   flex-shrink: 0;
+  transition: background-color 140ms var(--ease-out), border-color 140ms var(--ease-out), color 140ms var(--ease-out), transform 120ms var(--ease-out);
 }
 
 .mini-copy-btn:hover {
@@ -506,6 +550,7 @@ body {
   font-size: 0.84rem;
   color: var(--text-secondary);
   white-space: pre-line;
+  text-wrap: pretty;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -758,9 +803,20 @@ body {
   max-width: 1220px;
 }
 
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .modal-dialog {
   background: var(--surface);
-  border-radius: 16px;
+  border-radius: 20px;
   width: 100%;
   max-width: 680px;
   max-height: 88vh;
@@ -768,6 +824,18 @@ body {
   flex-direction: column;
   box-shadow: var(--shadow-lg);
   overflow: hidden;
+  animation: modalEnter 180ms var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-dialog {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .modal-stage.has-sub .modal-main {
