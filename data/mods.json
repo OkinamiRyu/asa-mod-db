@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T03:26:52Z",
+  "updatedAt": "2026-11-24T04:36:40Z",
   "installedMods": [
     {
       "name": "Super Spyglass Plus",
@@ -21,13 +21,6 @@
       "curseForgeId": "933975",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/arknav",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nHUD の概要は .uplugin の Description。\n部品の内訳は Manifest_UFSFiles。\npreview_description.txt と CurseForge 公式ページも参照。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/arknav\nフォルダ: 933975_9419090"
-    },
-    {
-      "name": "Der Dino Finder",
-      "description": "インベントリの地図（ミニマップ）に、恐竜を探すためのボタンを追加します。\nファイルには、種族・レベル・性別などのフィルターや、地図上のマーカー、特性の表示用部品が入っています。\nCurseForge の公式説明では、種族・性別・年齢・レベルで絞り込め、検索すると地図にマーカーが付き、マーカーをクリックすると追跡できるとされています。\n公式説明では、シングルプレイで正しく動かすには起動引数 -preventHibernation が必要とも書かれています。",
-      "curseForgeId": "935408",
-      "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/der-dino-finder",
-      "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nボタン追加の概要は .uplugin の Description と preview_description.txt。\nフィルター類は Manifest_UFSFiles。\n絞り込みと追跡、起動引数の注意は CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/der-dino-finder\nフォルダ: 935408_9416257"
     },
     {
       "name": "Wall'n'Floor Decor",
