@@ -842,9 +842,24 @@ h3 {
   max-width: 580px;
 }
 
+.modal-stage.has-sub2 {
+  max-width: 1480px;
+  gap: 12px;
+}
+
+.modal-stage.has-sub2 .modal-dialog {
+  max-width: 480px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
 .modal-sub {
   max-width: 580px;
   border: 2px solid var(--accent-border);
+}
+
+.modal-sub2 {
+  border: 2px solid var(--blue-border);
 }
 
 .sub-banner {
@@ -855,6 +870,27 @@ h3 {
   padding: 8px 14px;
   background: var(--accent-soft);
   border-bottom: 1px solid var(--accent-border);
+}
+
+.sub-banner-2 {
+  background: var(--blue-soft);
+  border-bottom-color: var(--blue-border);
+}
+
+.sub-banner-label-2 {
+  color: var(--blue);
+}
+
+.sub-nav-btn-2,
+.sub-close-btn-2 {
+  border-color: var(--blue-border);
+  color: var(--blue);
+}
+
+.sub-nav-btn-2:hover,
+.sub-close-btn-2:hover {
+  background: var(--blue);
+  color: #ffffff;
 }
 
 .sub-banner-left {
@@ -1414,6 +1450,18 @@ kbd {
   font-size: 0.78rem;
   color: var(--text-muted);
   white-space: pre-line;
+}
+
+@media (max-width: 1120px) {
+  .modal-stage.has-sub2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .modal-stage.has-sub2 .modal-dialog {
+    max-width: 680px;
+    max-height: none;
+    flex: none;
+  }
 }
 
 @media (max-width: 960px) {

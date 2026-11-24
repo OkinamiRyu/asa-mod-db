@@ -202,13 +202,12 @@
         <div class="modal-body" id="modalBody"></div>
       </div>
 
-      <div id="subModalDialog" class="modal-dialog modal-sub hidden" aria-label="関連アイテム詳細">
+      <div id="subModalDialog" class="modal-dialog modal-sub hidden" aria-label="関連アイテム詳細1">
         <div class="sub-banner">
           <div class="sub-banner-left">
-            <button type="button" id="subBackBtn" class="sub-nav-btn hidden">← 戻る</button>
-            <span id="subBannerLabel" class="sub-banner-label">関連MODアイテム詳細</span>
+            <span id="subBannerLabel" class="sub-banner-label">サブ画面①</span>
           </div>
-          <button type="button" id="subCloseBtn" class="sub-close-btn" aria-label="サブ画面を閉じる">サブ画面を閉じる ×</button>
+          <button type="button" id="subCloseBtn" class="sub-close-btn" aria-label="サブ画面1を閉じる">閉じる ×</button>
         </div>
         <div class="modal-header">
           <div class="modal-title-wrap">
@@ -225,6 +224,31 @@
           </div>
         </div>
         <div class="modal-body" id="subModalBody"></div>
+      </div>
+
+      <div id="subModalDialog2" class="modal-dialog modal-sub modal-sub2 hidden" aria-label="関連アイテム詳細2">
+        <div class="sub-banner sub-banner-2">
+          <div class="sub-banner-left">
+            <button type="button" id="sub2BackBtn" class="sub-nav-btn sub-nav-btn-2 hidden">← 戻る</button>
+            <span id="sub2BannerLabel" class="sub-banner-label sub-banner-label-2">サブ画面②</span>
+          </div>
+          <button type="button" id="sub2CloseBtn" class="sub-close-btn sub-close-btn-2" aria-label="サブ画面2を閉じる">閉じる ×</button>
+        </div>
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <div id="sub2IconWrap" class="modal-icon-wrap"></div>
+            <div>
+              <div class="modal-mod-tag" id="sub2ModTag"></div>
+              <h3 id="sub2Title" class="modal-title"></h3>
+              <div class="modal-en-row">
+                <span id="sub2EnName" class="modal-en-name"></span>
+                <button type="button" id="sub2CopyEnBtn" class="copy-btn" title="英語名をコピー">英語名コピー</button>
+                <button type="button" id="sub2ShareItemBtn" class="share-btn" title="このアイテムのURLをコピー">🔗 共有URL</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body" id="sub2ModalBody"></div>
       </div>
     </div>
   </div>

@@ -24,7 +24,8 @@
     producedByMap: new Map(),
     usedInMap: new Map(),
     mainItem: null,
-    subStack: [],
+    sub1Item: null,
+    sub2Stack: [],
   };
 
   const els = {
@@ -72,7 +73,6 @@
     modalCloseBtn: document.getElementById('modalCloseBtn'),
     modalBody: document.getElementById('modalBody'),
     subModalDialog: document.getElementById('subModalDialog'),
-    subBackBtn: document.getElementById('subBackBtn'),
     subBannerLabel: document.getElementById('subBannerLabel'),
     subCloseBtn: document.getElementById('subCloseBtn'),
     subIconWrap: document.getElementById('subIconWrap'),
@@ -82,6 +82,17 @@
     subCopyEnBtn: document.getElementById('subCopyEnBtn'),
     subShareItemBtn: document.getElementById('subShareItemBtn'),
     subModalBody: document.getElementById('subModalBody'),
+    subModalDialog2: document.getElementById('subModalDialog2'),
+    sub2BackBtn: document.getElementById('sub2BackBtn'),
+    sub2BannerLabel: document.getElementById('sub2BannerLabel'),
+    sub2CloseBtn: document.getElementById('sub2CloseBtn'),
+    sub2IconWrap: document.getElementById('sub2IconWrap'),
+    sub2ModTag: document.getElementById('sub2ModTag'),
+    sub2Title: document.getElementById('sub2Title'),
+    sub2EnName: document.getElementById('sub2EnName'),
+    sub2CopyEnBtn: document.getElementById('sub2CopyEnBtn'),
+    sub2ShareItemBtn: document.getElementById('sub2ShareItemBtn'),
+    sub2ModalBody: document.getElementById('sub2ModalBody'),
     toast: document.getElementById('toast'),
   };
 
@@ -819,8 +830,9 @@
 
   function openDetailModal(item) {
     state.mainItem = item;
-    state.subStack = [];
-    renderSubPanel();
+    state.sub1Item = null;
+    state.sub2Stack = [];
+    renderSubPanels();
 
     els.modalIconWrap.innerHTML = renderIconHtml(item);
     els.modalModTag.textContent = item._modName;
@@ -834,58 +846,103 @@
     document.body.style.overflow = 'hidden';
   }
 
-  function openSubItem(item, pushHistory) {
+  function openSub1(item) {
     if (!item) return;
-    if (pushHistory && state.subStack.length > 0) {
-      const top = state.subStack[state.subStack.length - 1];
-      if (top._globalIndex === item._globalIndex) return;
-      state.subStack.push(item);
-    } else {
-      state.subStack = [item];
-    }
-    renderSubPanel();
-    if (window.innerWidth <= 960) {
+    state.sub1Item = item;
+    state.sub2Stack = [];
+    renderSubPanels();
+    if (window.innerWidth <= 1120) {
       els.subModalDialog.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
-  function renderSubPanel() {
-    if (state.subStack.length === 0) {
+  function openSub2(item, pushHistory) {
+    if (!item) return;
+    if (pushHistory && state.sub2Stack.length > 0) {
+      const top = state.sub2Stack[state.sub2Stack.length - 1];
+      if (top._globalIndex === item._globalIndex) return;
+      state.sub2Stack.push(item);
+    } else {
+      state.sub2Stack = [item];
+    }
+    renderSubPanels();
+    if (window.innerWidth <= 1120) {
+      els.subModalDialog2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function renderSubPanels() {
+    const hasSub1 = Boolean(state.sub1Item);
+    const hasSub2 = hasSub1 && state.sub2Stack.length > 0;
+
+    els.modalStage.classList.toggle('has-sub', hasSub1 && !hasSub2);
+    els.modalStage.classList.toggle('has-sub2', hasSub2);
+
+    if (!hasSub1) {
       els.subModalDialog.classList.add('hidden');
-      els.modalStage.classList.remove('has-sub');
+      els.subModalDialog2.classList.add('hidden');
       return;
     }
 
-    const item = state.subStack[state.subStack.length - 1];
-    els.modalStage.classList.add('has-sub');
+    // Render Sub1
+    const s1 = state.sub1Item;
     els.subModalDialog.classList.remove('hidden');
-
-    els.subBackBtn.classList.toggle('hidden', state.subStack.length <= 1);
-    const parentName = state.mainItem ? state.mainItem.jaName || state.mainItem.enName : '';
-    els.subBannerLabel.textContent =
-      state.subStack.length > 1
-        ? `関連詳細（階層 ${state.subStack.length}）`
-        : `「${parentName}」の関連MODアイテム`;
-
-    els.subIconWrap.innerHTML = renderIconHtml(item);
-    els.subModTag.textContent = item._modName;
-    els.subTitle.textContent = item.jaName || item.enName;
-    els.subEnName.textContent = item.enName || '';
-    els.subCopyEnBtn.classList.toggle('hidden', !item.enName);
-    els.subCopyEnBtn.dataset.copy = item.enName || '';
-    els.subModalBody.innerHTML = buildDetailBodyHtml(item);
+    const mainName = state.mainItem ? state.mainItem.jaName || state.mainItem.enName : '';
+    els.subBannerLabel.textContent = `サブ画面①（「${mainName}」の関連）`;
+    els.subIconWrap.innerHTML = renderIconHtml(s1);
+    els.subModTag.textContent = s1._modName;
+    els.subTitle.textContent = s1.jaName || s1.enName;
+    els.subEnName.textContent = s1.enName || '';
+    els.subCopyEnBtn.classList.toggle('hidden', !s1.enName);
+    els.subCopyEnBtn.dataset.copy = s1.enName || '';
+    els.subModalBody.innerHTML = buildDetailBodyHtml(s1);
     els.subModalBody.scrollTop = 0;
+
+    // Render Sub2
+    if (!hasSub2) {
+      els.subModalDialog2.classList.add('hidden');
+      return;
+    }
+
+    const s2 = state.sub2Stack[state.sub2Stack.length - 1];
+    els.subModalDialog2.classList.remove('hidden');
+    els.sub2BackBtn.classList.toggle('hidden', state.sub2Stack.length <= 1);
+    const sub1Name = s1.jaName || s1.enName;
+    els.sub2BannerLabel.textContent =
+      state.sub2Stack.length > 1
+        ? `サブ画面②（階層 ${state.sub2Stack.length + 1}）`
+        : `サブ画面②（「${sub1Name}」の関連）`;
+    els.sub2IconWrap.innerHTML = renderIconHtml(s2);
+    els.sub2ModTag.textContent = s2._modName;
+    els.sub2Title.textContent = s2.jaName || s2.enName;
+    els.sub2EnName.textContent = s2.enName || '';
+    els.sub2CopyEnBtn.classList.toggle('hidden', !s2.enName);
+    els.sub2CopyEnBtn.dataset.copy = s2.enName || '';
+    els.sub2ModalBody.innerHTML = buildDetailBodyHtml(s2);
+    els.sub2ModalBody.scrollTop = 0;
   }
 
-  function closeSubPanel() {
-    state.subStack = [];
-    renderSubPanel();
+  function closeSub1() {
+    if (state.sub2Stack.length > 0) {
+      // Promote Sub2 into Sub1 so user doesn't lose Sub2
+      state.sub1Item = state.sub2Stack[state.sub2Stack.length - 1];
+      state.sub2Stack = [];
+    } else {
+      state.sub1Item = null;
+    }
+    renderSubPanels();
+  }
+
+  function closeSub2() {
+    state.sub2Stack = [];
+    renderSubPanels();
   }
 
   function closeDetailModal() {
     state.mainItem = null;
-    state.subStack = [];
-    renderSubPanel();
+    state.sub1Item = null;
+    state.sub2Stack = [];
+    renderSubPanels();
     els.detailModal.classList.add('hidden');
     document.body.style.overflow = '';
   }
@@ -1118,6 +1175,10 @@
       copyText(els.subCopyEnBtn.dataset.copy);
     });
 
+    els.sub2CopyEnBtn.addEventListener('click', () => {
+      copyText(els.sub2CopyEnBtn.dataset.copy);
+    });
+
     els.shareItemBtn.addEventListener('click', () => {
       if (!state.mainItem) return;
       copyText(buildShareUrl(state.mainItem));
@@ -1125,36 +1186,51 @@
     });
 
     els.subShareItemBtn.addEventListener('click', () => {
-      if (state.subStack.length === 0) return;
-      const item = state.subStack[state.subStack.length - 1];
-      copyText(buildShareUrl(item));
-      showToast('関連アイテムの共有URLをコピーしました');
+      if (!state.sub1Item) return;
+      copyText(buildShareUrl(state.sub1Item));
+      showToast('サブ画面①の共有URLをコピーしました');
     });
 
-    // Open sub-panel from main modal body
+    els.sub2ShareItemBtn.addEventListener('click', () => {
+      if (state.sub2Stack.length === 0) return;
+      const item = state.sub2Stack[state.sub2Stack.length - 1];
+      copyText(buildShareUrl(item));
+      showToast('サブ画面②の共有URLをコピーしました');
+    });
+
+    // Open Sub1 from Main
     els.modalBody.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-open-sub]');
       if (!btn) return;
       const item = state.allItemsByGlobalIndex.get(Number(btn.dataset.openSub));
-      if (item) openSubItem(item, false);
+      if (item) openSub1(item);
     });
 
-    // Navigate deeper inside sub-panel
+    // Open Sub2 from Sub1 (keeping Main & Sub1 open!)
     els.subModalBody.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-open-sub]');
       if (!btn) return;
       const item = state.allItemsByGlobalIndex.get(Number(btn.dataset.openSub));
-      if (item) openSubItem(item, true);
+      if (item) openSub2(item, false);
     });
 
-    els.subBackBtn.addEventListener('click', () => {
-      if (state.subStack.length > 1) {
-        state.subStack.pop();
-        renderSubPanel();
+    // Navigate deeper inside Sub2 (with history stack)
+    els.sub2ModalBody.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-open-sub]');
+      if (!btn) return;
+      const item = state.allItemsByGlobalIndex.get(Number(btn.dataset.openSub));
+      if (item) openSub2(item, true);
+    });
+
+    els.sub2BackBtn.addEventListener('click', () => {
+      if (state.sub2Stack.length > 1) {
+        state.sub2Stack.pop();
+        renderSubPanels();
       }
     });
 
-    els.subCloseBtn.addEventListener('click', closeSubPanel);
+    els.subCloseBtn.addEventListener('click', closeSub1);
+    els.sub2CloseBtn.addEventListener('click', closeSub2);
     els.modalCloseBtn.addEventListener('click', closeDetailModal);
     els.detailModal.addEventListener('click', (e) => {
       if (e.target === els.detailModal || e.target === els.modalStage) {
@@ -1168,8 +1244,10 @@
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && !els.detailModal.classList.contains('hidden')) {
-        if (state.subStack.length > 0) {
-          closeSubPanel();
+        if (state.sub2Stack.length > 0) {
+          closeSub2();
+        } else if (state.sub1Item) {
+          closeSub1();
         } else {
           closeDetailModal();
         }
