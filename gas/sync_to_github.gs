@@ -220,6 +220,7 @@ function parseModItemSheet_(sheet) {
   const cJa = findCol(['日本語名']);
   const cDesc = findCol(['説明（日本語）', '説明']);
   const cCat = findCol(['分類', 'カテゴリ']);
+  const cUsage = findCol(['用途タイプ', '実用区分']);
   const cOrig = findCol(['英語原文']);
   const cNote = findCol(['備考']);
 
@@ -282,6 +283,9 @@ function parseModItemSheet_(sheet) {
       notes: notes,
       assetName: assetMatch ? assetMatch[1] : '',
     };
+
+    const usageType = gc(cUsage);
+    if (usageType) entry.usageType = usageType;
 
     // 生物系・コスメティック系項目は値がある場合のみ付与（JSON軽量化）
     const tamingMethod = gc(cTaming);

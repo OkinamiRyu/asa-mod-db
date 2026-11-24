@@ -592,6 +592,18 @@ h3 {
   border-color: #fde68a;
 }
 
+.tag-practical {
+  background: #ecfdf5;
+  color: #047857;
+  border-color: rgba(4, 120, 87, 0.22);
+}
+
+.tag-decor {
+  background: #fdf2f8;
+  color: #be185d;
+  border-color: rgba(190, 24, 93, 0.2);
+}
+
 /* Table / List view */
 .items-table-wrap {
   background: var(--surface);

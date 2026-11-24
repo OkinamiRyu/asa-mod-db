@@ -294,17 +294,26 @@
   function renderQuickFilters() {
     const sourceItems = getActiveSourceItems();
     const stationCount = sourceItems.filter(isCraftingStation).length;
+    const practicalCount = sourceItems.filter((i) => i.usageType === '実用（機能あり）').length;
+    const decorCount = sourceItems.filter((i) => i.usageType === '装飾・観賞用').length;
     const chips = [];
 
     if (state.activeTab === 'ALL') {
       chips.push({ id: '', label: 'すべて' });
+      if (practicalCount > 0) chips.push({ id: 'practical', label: `⚙ 実用のみ (${practicalCount})` });
+      if (decorCount > 0) chips.push({ id: 'decor', label: `🎨 装飾・観賞用 (${decorCount})` });
       if (stationCount > 0) chips.push({ id: 'stations', label: `🛠 作業台・設備 (${stationCount})` });
-      chips.push({ id: 'item', label: '📦 アイテム系' });
       chips.push({ id: 'creature', label: '🐾 生物系' });
       chips.push({ id: 'cosmetic', label: '✨ スキン系' });
-    } else if (stationCount > 0) {
+    } else if (stationCount > 0 || (practicalCount > 0 && decorCount > 0)) {
       chips.push({ id: '', label: 'すべて' });
-      chips.push({ id: 'stations', label: `🛠 作業台・設備だけ見る (${stationCount})` });
+      if (practicalCount > 0 && decorCount > 0) {
+        chips.push({ id: 'practical', label: `⚙ 実用のみ (${practicalCount})` });
+        chips.push({ id: 'decor', label: `🎨 装飾・観賞用 (${decorCount})` });
+      }
+      if (stationCount > 0) {
+        chips.push({ id: 'stations', label: `🛠 作業台・設備 (${stationCount})` });
+      }
     }
 
     if (chips.length === 0) {
@@ -411,6 +420,8 @@
 
     let list = sourceItems.filter((item) => {
       if (state.quickFilter === 'stations' && !isCraftingStation(item)) return false;
+      if (state.quickFilter === 'practical' && item.usageType !== '実用（機能あり）') return false;
+      if (state.quickFilter === 'decor' && item.usageType !== '装飾・観賞用') return false;
       if (
         (state.quickFilter === 'item' || state.quickFilter === 'creature' || state.quickFilter === 'cosmetic') &&
         item._sheetType !== state.quickFilter
@@ -475,6 +486,11 @@
         .map((item) => {
           const tags = [];
           if (showModBadge) tags.push(`<span class="tag tag-mod">${escapeHtml(item._modName)}</span>`);
+          if (item.usageType === '実用（機能あり）') {
+            tags.push('<span class="tag tag-practical">⚙ 実用</span>');
+          } else if (item.usageType === '装飾・観賞用') {
+            tags.push('<span class="tag tag-decor">🎨 装飾・観賞用</span>');
+          }
           if (item.category) tags.push(`<span class="tag tag-cat">${escapeHtml(item.category)}</span>`);
           if (item.craftStation) tags.push(`<span class="tag tag-station">${escapeHtml(item.craftStation)}</span>`);
           if (item.applyTarget) tags.push(`<span class="tag tag-station">${escapeHtml(item.applyTarget)}</span>`);
@@ -739,6 +755,7 @@
   function buildDetailBodyHtml(item) {
     // [label, value, isFullWidth, enableRefLinks]
     const fields = [
+      ['用途タイプ', item.usageType, false, false],
       ['分類', item.category, false, false],
       ['入手方法', item.obtainMethod, false, false],
       ['作る場所', item.craftStation, false, true],
@@ -1309,6 +1326,7 @@
               item.enName,
               item.description,
               item.category,
+              item.usageType,
               item.obtainMethod,
               item.dinoName,
               item.craftStation,
