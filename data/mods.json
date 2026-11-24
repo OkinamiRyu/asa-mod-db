@@ -30997,7 +30997,7 @@
           "favoriteFood": "肉類全般・基本キブル(Basic Kibble)",
           "habitat": "全マップの雪原バイオーム（1%の確率でアルファ個体が出現）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "【Eキー長押しメニュー】\n・Pet It（なでる）：周囲の味方恐竜に経験値+20%バフを付与する\n・Treasure Hunt Tracking Types：探知・追跡するお宝の種類を切り替えられる\n【パッシブ・特徴】\n・肩乗せ時（Thick Fur）：防寒（低体温耐性）バフを付与。キツネの近接攻撃力が高いほど防寒効果が上がる",
+          "specialAbility": "【Eキー長押しメニュー】\n・Pet It（なでる）：周囲の味方恐竜に経験値+20%バフを付与する\n・Enable / Disable Treasure Hunter（お宝探知のON/OFF）：肩乗せ中に周囲のレア回収物などを探知する機能（ASAのトレジャーハンター機能ベース）をON/OFF\n・Treasure Hunt Tracking Types（探知対象の切替）：探知する「お宝」の種類を個別にON/OFFできる（補給物資ビーコン［Supply Drops］・洞窟クレート［Cave Loot］など、マップ上のレア回収物や対象を絞り込める）\n・Treasure Hunt Distance（探知距離の切替）：探知する範囲を3段階（近・中・遠）から切り替えられる\n【パッシブ・特徴】\n・肩乗せ時（Thick Fur）：防寒（低体温耐性）バフを付与。キツネの近接攻撃力が高いほど防寒効果が上がる",
           "usageType": "生物・繁殖"
         },
         {
