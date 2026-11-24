@@ -1472,7 +1472,8 @@
     "primalitemstructure_wallscarekron": "icons/Oceania Content/PrimalItemStructure_WallScarekron.png",
     "dugong": "icons/Oceania Content/Dugong.png",
     "primalitemstructure_coralnode": "icons/Oceania Content/PrimalItemStructure_CoralNode.png",
-    "primalitemconsumable_meatcake": "icons/Oceania Content/PrimalItemConsumable_MeatCake.png"
+    "primalitemconsumable_meatcake": "icons/Oceania Content/PrimalItemConsumable_MeatCake.png",
+    "primalitem_weapontrappingnet": "icons/Oceania Content/PrimalItem_WeaponTrappingNet.png"
   },
   "The Sunken World Additions": {
     "stethtsw_character_bp": "icons/The Sunken World Additions/StethTSW_Character_BP.png",
