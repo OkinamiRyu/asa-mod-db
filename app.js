@@ -3,6 +3,15 @@
 
   const PAGE_SIZE = 80;
 
+  const VANILLA_REF_EN_NAMES = new Set([
+    'wood', 'thatch', 'fiber', 'stone', 'flint', 'hide', 'raw meat', 'spoiled meat',
+    'metal', 'metal ingot', 'crystal', 'oil', 'obsidian', 'sap', 'rare flower',
+    'azulberry', 'rockarrot', 'cementing paste', 'electronics', 'polymer',
+    'organic polymer', 'sparkpowder', 'charcoal', 'narcotic', 'soap',
+    'stone arrow', 'campfire', 'blood extractor', 'chitin or keratin', 'feces',
+    'water container', 'primalitemconsumableseed',
+  ]);
+
   const state = {
     data: null,
     icons: {},
@@ -517,7 +526,11 @@
       els.itemsContainer.innerHTML = shown
         .map((item) => {
           const tags = [];
-          if (showModBadge) tags.push(`<span class="tag tag-mod">${escapeHtml(item._modName)}</span>`);
+          if (item._isVanillaRef) {
+            tags.push('<span class="tag tag-vanilla">バニラ基本素材</span>');
+          } else if (showModBadge) {
+            tags.push(`<span class="tag tag-mod">${escapeHtml(item._modName)}</span>`);
+          }
           if (item.usageType === '実用（機能あり）') {
             tags.push('<span class="tag tag-practical">⚙ 実用</span>');
           } else if (item.usageType === '装飾・観賞用') {
@@ -807,6 +820,14 @@
     ].filter(([, val]) => Boolean(val));
 
     let bodyHtml = '';
+    if (item._isVanillaRef) {
+      const wikiUrl = buildWikiSearchUrl(item.jaName || item.enName);
+      bodyHtml += `
+        <div class="vanilla-notice">
+          <span>ℹ️ ARK本体の基本素材です（MOD専用アイテムではありません）</span>
+          <a class="vanilla-notice-link" href="${escapeHtml(wikiUrl)}" target="_blank" rel="noopener noreferrer">ARK日本語Wikiで見る ↗</a>
+        </div>`;
+    }
     if (item.description) {
       bodyHtml += `<div class="detail-desc-box">${escapeHtml(formatSentenceBreaks(item.description))}</div>`;
     }
@@ -1369,6 +1390,8 @@
           item._modId = sheet.id;
           item._modName = sheet.name;
           item._sheetType = sType;
+          item._isVanillaRef =
+            !item.assetName && VANILLA_REF_EN_NAMES.has((item.enName || '').trim().toLowerCase());
           item._globalIndex = gIdx++;
           item._searchBlob = normalizeText(
             [
@@ -1397,13 +1420,15 @@
           );
           allMap.set(item._globalIndex, item);
 
-          if (item.enName) addLookup(byEn, item.enName, item);
-          if (item.jaName) {
-            addLookup(byJa, item.jaName, item);
-            const m = item.jaName.match(/^(.+?)\s*[（(]([^）)]+)[）)]$/);
-            if (m) {
-              addLookup(byJa, m[1], item);
-              addLookup(byEn, m[2], item);
+          if (!item._isVanillaRef) {
+            if (item.enName) addLookup(byEn, item.enName, item);
+            if (item.jaName) {
+              addLookup(byJa, item.jaName, item);
+              const m = item.jaName.match(/^(.+?)\s*[（(]([^）)]+)[）)]$/);
+              if (m) {
+                addLookup(byJa, m[1], item);
+                addLookup(byEn, m[2], item);
+              }
             }
           }
         }

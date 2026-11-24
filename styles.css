@@ -654,6 +654,47 @@ h3 {
   border-color: rgba(190, 24, 93, 0.2);
 }
 
+.tag-vanilla {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: rgba(29, 78, 216, 0.2);
+}
+
+.vanilla-notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border-radius: var(--radius-sm);
+  background: #eff6ff;
+  border: 1px solid rgba(29, 78, 216, 0.18);
+  color: #1e40af;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.vanilla-notice-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #1d4ed8;
+  border: 1px solid rgba(29, 78, 216, 0.25);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.vanilla-notice-link:hover {
+  background: #dbeafe;
+}
+
 /* Table / List view */
 .items-table-wrap {
   background: var(--surface);

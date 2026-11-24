@@ -1,135 +1,135 @@
 {
-  "updatedAt": "2026-11-24T04:36:40Z",
+  "updatedAt": "2026-11-24T06:18:51Z",
   "installedMods": [
     {
       "name": "Super Spyglass Plus",
-      "description": "高性能なスパイグラスを追加します。\nファイルには、武器・スキン・消耗品の3種類と、恐竜情報・卵・妊娠・GPS・遺伝子特性・バフなどを示す画面部品が入っています。\nCurseForge の公式説明では、対象の詳細ステータスや突然変異、テイムに必要な餌、体色とリージョン、補給ドロップや構造物の情報、夜間視力・プレデタービジョン・アウトライン表示、表示位置や色の設定があるとされています。\n公式説明では、通常のスパイグラスのように使う方法、頭防具に付けるスキン、切り替えで使う方法の3通りがあるとされています。",
+      "description": "高性能なスパイグラス（望遠鏡）を追加します。\n恐竜の詳細ステータス・突然変異・テイムに必要な餌・体色リージョン・補給ドロップや建築物の情報を画面上に表示できます。\n通常装備・頭防具スキン・切替式の3通りで使え、夜間視力やアウトライン表示にも対応しています。",
       "curseForgeId": "929420",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/super-spyglass-plus",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n追加物の概要は .uplugin の Description。\n種類と画面部品は Manifest_UFSFiles。\n詳細機能は CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/super-spyglass-plus\nフォルダ: 929420_9416249"
     },
     {
       "name": "MuchStuffPack",
-      "description": "家具、収納、制作設備、素材、食料、建築パーツなど、多くのアイテムと設備を追加します。\nこのPCのファイルから取り出したアイテムは325件で、同じスプレッドシートの「全アイテム」タブに一覧があります。\nファイル内のエングラム名は328件、アイテム名（PrimalItem）は644件ありました（色違いや関連データも含みます）。\nCurseForge の公式説明では、エングラム300以上、新しい建築ティア、クラフト設備、交易用の店などがあるとされています。",
+      "description": "家具、収納、制作設備、独自素材、料理、建築パーツなど、生活と拠点を豊かにする300種以上のアイテムを追加します。\n実用的な作業台や調理設備・収納から、部屋を彩る装飾家具まで幅広く収録されています。",
       "curseForgeId": "933785",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/muchstuffpack",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n325件の内訳は、以前同じファイルから抽出して「全アイテム」タブに載せた結果。\nエングラム名と PrimalItem 件数は Manifest_UFSFiles。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/muchstuffpack\nフォルダ: 933785_9442351"
     },
     {
       "name": "ArkNav",
-      "description": "GPS・コンパス・地図のナビゲーション用 HUD を追加します。\nファイルには、緯度経度、コンパス、地図、マーカー、トライブメンバー表示、設定画面、設定用アイテム（ArkNav Configurator）が入っています。\npreview の説明では、設定ができ、コントローラーにも対応すると書かれています。\nCurseForge の公式説明では、HUD の移動・サイズ変更・非表示ができ、Alt+N で HUD のオンオフ、Alt+M で大きな地図とメニューを開くとされています。",
+      "description": "GPS・コンパス・ミニマップのナビゲーション用 HUD を画面に追加します。\n緯度経度・マーカー・トライブメンバーの位置確認ができ、Alt+N でHUDの表示切替、Alt+M で大きな地図と設定メニューを開けます。",
       "curseForgeId": "933975",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/arknav",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nHUD の概要は .uplugin の Description。\n部品の内訳は Manifest_UFSFiles。\npreview_description.txt と CurseForge 公式ページも参照。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/arknav\nフォルダ: 933975_9419090"
     },
     {
       "name": "Wall'n'Floor Decor",
-      "description": "壁と床に置く装飾を多く追加する MOD です。\nファイルのフォルダ構成では、家具、像、ステンドグラス、トロフィー、額縁、旗、探検家のノート、エレベーター、台座、イベント用装飾（キャンドル、ジンジャーブレッド）などが見えます。\nマニフェスト上のアイテム・エングラム名は990件でした（構造物、染料、トロフィーなど。色違いも含みます）。\nCurseForge の公式説明では、恐竜の像、家具、壁飾り、テーマ別の部屋用セット、収納、イベント装飾、ガラス建築などがあるとされています。",
+      "description": "壁と床を中心に拠点を装飾できるアイテムを960種以上追加します。\n恐竜の像・家具・ステンドグラス・額縁・旗・トロフィー・ガラス建築・イベント装飾など、建築の見た目づくりに活躍します。",
       "curseForgeId": "940786",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/wallnfloor-decor",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nカテゴリと件数は Manifest_UFSFiles。\nテーマ別セットなどの補足は CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/wallnfloor-decor\nフォルダ: 940786_9615809"
     },
     {
       "name": "Pulse Arcana - Roleplay Classes and Magic Mod",
-      "description": "ロールプレイ用のクラスと魔法を追加する MOD です。\nファイルから確認できたクラスは、Warrior、Warlock、Rogue、Ranger、Mage、Druid、Gamesmith、Cavalier の8種です。\nマナ、スペル用の画面、能力アイテム（Fireball、Ice Blast、Lightning、Rockskin、Healing Lotion など）も入っています。\nCurseForge の公式説明では、クラスごとに作れるアイテムや使える能力が分かれ、サーバー管理者が Google スプレッドシートで定義を変えられるとされています。\n公式説明では、プレイヤー本体（playerPawn）を上書きするため、MOD リストの先頭に置く必要があるとも書かれています。",
+      "description": "ロールプレイ用の8クラス（Warrior / Warlock / Rogue / Ranger / Mage / Druid / Gamesmith / Cavalier）と魔法・アビリティを追加します。\n選んだクラスごとに専用の魔法（ファイアボールや回復など）やクラフトアイテムが使えるようになります。",
       "curseForgeId": "962940",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/pulse-arcana-roleplay-classes-and-magic",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nクラス名と能力名は Manifest_UFSFiles。\nクラス制限や管理者向け定義、MOD 順の注意は CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/pulse-arcana-roleplay-classes-and-magic\nフォルダ: 962940_9462619\nPreview/dependencies.txt には TheCenter とだけ書いてあった。\nこれがマップ依存なのか、他の意味かは、このファイルだけでは確定できなかった。"
     },
     {
       "name": "TORANEKO MOD",
-      "description": "猫の全身コスチューム（スキン）を追加します。\nファイルには、コスチューム用スキン1種と、その見た目のデータが入っています。\nCurseForge の公式説明では、他のスキンを上書きする全身コスチュームで、胴体の防具に付けるとされています。",
+      "description": "かわいい猫（トラネコ）の全身コスチュームスキンを追加します。\n胴体の防具に適用して見た目を変えられるカスタムコスメティックです。",
       "curseForgeId": "1149254",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/toraneko-mod",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nコスチューム追加の概要は .uplugin の Description。\nスキン数は Manifest_UFSFiles。\n装着位置の説明は CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/toraneko-mod\nフォルダ: 1149254_9418470"
     },
     {
       "name": "Reaper CostumeSkin",
-      "description": "リーパー（Reaper）の全身コスチューム（スキン）を追加します。\nファイルには、コスチューム用スキン1種と、その見た目のデータが入っています。\nCurseForge の公式説明では、他のスキンを上書きする全身コスチュームで、胴体の防具に付けるとされています。\n公式説明には、どの部位の防具にも付けられる、とも書かれています。",
+      "description": "リーパー（Reaper）の全身コスチュームスキンを追加します。\n防具に適用して見た目を変えられるカスタムコスメティックです。",
       "curseForgeId": "1152655",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/reaper-costumeskin",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nコスチューム追加の概要は .uplugin の Description。\nスキン数は Manifest_UFSFiles。\n装着位置の説明は CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/reaper-costumeskin\nフォルダ: 1152655_9417753"
     },
     {
       "name": "ASACD",
-      "description": "既存のアイテムのスタック数と重量を変えるスタック用 MOD です。\nファイルには、バニラの資源・食料・制作設備などを差し替える子アイテムが多数入っています（PrimalItem 系は192件）。\n.uplugin の Description は「Add your summary here」のままで、中身の説明にはなっていません。\nCurseForge 上の名前は「TG STACKINGMOD 100000-90」です。\n公式説明では、アイテムの最大スタックを +100,000 にし、重量を 90% 減らすとされています。\nこの数値は公式説明とプロジェクト名からのもので、今回バイナリから独自には確認していません。\n公式説明では、MOD リストのできるだけ上に置くこと、導入後は一部レシピの再習得や制作設備の作り直しが必要なこと、導入前の古い資源は重ならないこと、この MOD を外すとこの MOD 経由の資源が消えること、が注意として書かれています。",
+      "description": "資源や食料などの最大スタック数を大幅に増やし（最大10万）、重量を90%軽減する便利系スタックMODです（CurseForge名：TG STACKINGMOD 100000-90）。\n拠点の収納管理や採取の持ち運びがぐっと快適になります。",
       "curseForgeId": "1536245",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/tg-stackingmod-100000-90",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nCurseForge 上の名前は「TG STACKINGMOD 100000-90」で、ゲーム内名とは違う。\n子アイテムの件数は Manifest_UFSFiles。\nスタック数・重量の数値と導入時の注意は CurseForge 公式ページ（バイナリ未確認）。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/tg-stackingmod-100000-90\nフォルダ: 1536245_9487427"
     },
     {
       "name": "ArklasAnimals",
-      "description": "Atlas 由来の生き物を追加します。\nファイルから確認できたのは、Raven（カラス）、Monkey（サル）、Cat（ネコ）、Parrot（オウム）、Rabbit（ウサギ）、Chicken（ニワトリ）、Penguin（ペンギン）の7種です。\n一部の種には卵のアイテムもあります。\n.uplugin の Description は「Add your summary here」のままで、中身の説明にはなっていません。\nCurseForge の公式説明では、おとなしく、バイオームごとに出現する生き物だとされています。",
+      "description": "ATLAS由来の可愛くておとなしい動物7種（ネコ・ニワトリ・サル・オウム・ペンギン・ウサギ・カラス）を追加します。\nそれぞれのバイオームに野生スポーンし、手渡しテイムや昏睡テイムで仲間にして肩乗せや繁殖を楽しめます。",
       "curseForgeId": "1563210",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/arklas-animals",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nCurseForge 上の表示は「Arklas Animals」（空白あり）。\n7種の名前は Manifest_UFSFiles の Character_BP / DinoEntry。\nAtlas 由来でおとなしい、という説明は CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/arklas-animals\nフォルダ: 1563210_9461126"
     },
     {
       "name": "MOUSHIWAKE GOZAIMASEN COS",
-      "description": "カスタムコスメティックスキンを追加します。\nファイルには、コスチューム用スキン1種と、その見た目のデータが入っています。\n.uplugin の説明と、CurseForge の公式説明では、日本の作者（Pyronoh）がデザインしたキャラクターになれる、かわいいスキンだとされています。",
+      "description": "日本の作者（Pyronoh氏）がデザインしたキャラクターになれる、かわいい全身コスチュームスキンを追加します。",
       "curseForgeId": "1078595",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/moushiwake-gozaimasen-cos",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nスキン数は Manifest_UFSFiles。\n概要は .uplugin の Description と CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/moushiwake-gozaimasen-cos\nフォルダ: 1078595_9419859"
     },
     {
       "name": "Spino costume skin",
-      "description": "スピノサウルス（Spino）の全身コスチューム（スキン）を追加します。\nファイルには、コスチューム用スキン1種と、その見た目のデータが入っています。\nCurseForge の公式説明では、他のスキンを上書きする全身コスチュームで、胴体の防具に付けるとされています。",
+      "description": "スピノサウルス（Spino）の全身コスチュームスキンを追加します。\n胴体の防具に適用して見た目を変えられるカスタムコスメティックです。",
       "curseForgeId": "1080126",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/spino-costume-skin",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nコスチューム追加の概要は .uplugin の Description。\nスキン数は Manifest_UFSFiles。\n装着位置の説明は CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/spino-costume-skin\nフォルダ: 1080126_9417609"
     },
     {
       "name": "Cartoon Crow",
-      "description": "カラスのキャラクターのコスチューム（スキン）を追加します。\nファイルには、コスチューム用スキン1種と、その見た目のデータが入っています。\nCurseForge の公式説明では、他のスキンを上書きする全身コスチュームで、胴体の防具に付けるとされています。",
+      "description": "カラスのキャラクターになりきれる全身コスチュームスキンを追加します。\n胴体の防具に適用して見た目を変えられるカスタムコスメティックです。",
       "curseForgeId": "1081141",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/cartoon-crow",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nコスチューム追加の概要は .uplugin の Description。\nスキン数は Manifest_UFSFiles。\n装着位置の説明は CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/cartoon-crow\nフォルダ: 1081141_9419210"
     },
     {
       "name": "Procoptodon cosutume skin",
-      "description": "プロコプトドン（Procoptodon）の全身コスチューム（スキン）を追加します。\nファイルには、コスチューム用スキン1種と、その見た目のデータが入っています。\nCurseForge の公式説明では、他のスキンを上書きする全身コスチュームで、胴体の防具に付けるとされています。",
+      "description": "プロコプトドン（Procoptodon）の全身コスチュームスキンを追加します。\n胴体の防具に適用して見た目を変えられるカスタムコスメティックです。",
       "curseForgeId": "1127860",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/procoptodon-cosutume-skin",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nファイル上の表記は cosutume で、CurseForge 上のタイトルも同じです。\nコスチューム追加の概要は .uplugin の Description。\nスキン数は Manifest_UFSFiles。\n装着位置の説明は CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/procoptodon-cosutume-skin\nフォルダ: 1127860_9419843"
     },
     {
       "name": "Brachiosaurus Costume SKIN",
-      "description": "ブラキオサウルス（Brachiosaurus）の全身コスチューム（スキン）を追加します。\nファイルには、コスチューム用スキン1種と、その見た目のデータが入っています。\nCurseForge の公式説明では、他のスキンを上書きする全身コスチュームで、胴体の防具に付けるとされています。",
+      "description": "ブラキオサウルス（Brachiosaurus）の全身コスチュームスキンを追加します。\n胴体の防具に適用して見た目を変えられるカスタムコスメティックです。",
       "curseForgeId": "1236643",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/brachiosaurus-costume-skin",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nコスチューム追加の概要は .uplugin の Description。\nスキン数は Manifest_UFSFiles。\n装着位置の説明は CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/brachiosaurus-costume-skin\nフォルダ: 1236643_9418232"
     },
     {
       "name": "Bear Skin",
-      "description": "クマ（Bear）の全身コスチューム（スキン）を追加します。\nファイルには、コスチューム用スキン1種と、その見た目のデータが入っています。\nCurseForge の公式説明では、他のスキンを上書きする全身コスチュームで、胴体の防具に付けるとされています。",
+      "description": "クマ（Bear）の全身コスチュームスキンを追加します。\n胴体の防具に適用して見た目を変えられるカスタムコスメティックです。",
       "curseForgeId": "1281289",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/bear-skin",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nコスチューム追加の概要は .uplugin の Description。\nスキン数は Manifest_UFSFiles。\n装着位置の説明は CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/bear-skin\nフォルダ: 1281289_9419895"
     },
     {
       "name": "GliderCostumes",
-      "description": "グライダー用の見た目を変えるコスチューム（防具スキン）を追加します。\nファイルから確認できたアイテムは、Angel、Devil、Argen、Wyvern、TEK Wyvern、TEK Quetzal と、Angel の翼のみ版です（PrimalItemArmor が7件）。\n.uplugin の説明は「GliderSkin Armor」です。\nCurseForge の公式説明では、グライダーのスキンの見た目を変えるコスメティックで、グライダーまたは頭に付けると、胴体に翼が見えるとされています。\n公式説明では、胴体にグライダーを付けていなくても翼は見えるが滑空はできず、滑空中に翼が開くのは胴体に GliderSkin を付けているときだとされています。",
+      "description": "グライダーの見た目を天使・悪魔・アルゲン・ワイバーンなどの翼に変えられる防具スキン（7種）を追加します。\n胴体にグライダーを装備していると滑空時に翼が開きます。",
       "curseForgeId": "1335671",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/glidercostumes",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n種類と件数は Manifest_UFSFiles。\n概要は .uplugin の Description。\n装着部位と滑空の説明は CurseForge 公式ページ。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/glidercostumes\nフォルダ: 1335671_9417990"
     },
     {
       "name": "Modern Structure Skin Compendium",
-      "description": "建築物用のモダン系カスタムコスメティック・ストラクチャースキン集（Modern Structure Skin Compendium）を追加します。\n漆喰(Plaster)、花崗岩(Granite)、大理石(Marble)、レンガ(Brick)、ガラス(Glass)、パーケット(Parquet)、木板(Plank)、壁紙(Wallpaper)、ドア(Doors)、ゲート(Gates)など多数の建築タイルセットスキンが含まれています。",
+      "description": "建築物をモダンなデザインに着せ替えられるストラクチャースキン集（31種）を追加します。\n漆喰・大理石・レンガ・ガラス・木板・壁紙・ドアなど多彩な建材スタイルを素材消費なしで適用できます。",
       "curseForgeId": "1020402",
       "curseForgeUrl": "",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n構成は Manifest_UFSFiles_Win64.txt。\nフォルダ: 1020402_9416100"
     },
     {
       "name": "DaniTech Concrete Style Structure Skin",
-      "description": "コンクリート調のモダンな建築用カスタムコスメティック・ストラクチャースキン（DaniTech Concrete Style Structure Skin）を5種類追加します。",
+      "description": "コンクリート調のモダン建築に着せ替えられるストラクチャースキン（5種）を追加します。\nコスメティックタブから建築物に直接適用できます。",
       "curseForgeId": "1287264",
       "curseForgeUrl": "",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n構成は Manifest_UFSFiles_Win64.txt。\nフォルダ: 1287264_9416157"
     },
     {
       "name": "Showcase Storage Skins",
-      "description": "収納設備や制作設備の中身・外観をショーケース風に装飾できるカスタムコスメティック・スキン（Showcase Storage Skins）を追加します。\n低温冷蔵庫(Cryofridge)、金庫(Vault)、TEKストレージ(TEK Storage)、冷蔵庫(Fridge)、食料保存庫(Preserving Bin)、餌箱(Feeding Trough)、作業台(Anvil Bench)、旋盤(Machined Bench)など16種類に対応しています。",
+      "description": "低温冷蔵庫・金庫・冷蔵庫・作業台など16種類の収納・設備を、中身が見えるショーケース風に着せ替えられるスキンを追加します。",
       "curseForgeId": "1507449",
       "curseForgeUrl": "",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n構成は Manifest_UFSFiles_Win64.txt。\nフォルダ: 1507449_9404806"
@@ -7845,8 +7845,10 @@
           "notes": "アセット: Cat/Cat_Character_BP_ArklasTT.uasset",
           "assetName": "Cat_Character_BP_ArklasTT",
           "usageType": "生物・繁殖",
-          "tamingMethod": "野生スポーン・テイム",
-          "habitat": "海岸・ビーチ / 草原 / 森林・ジャングル（各マップの海岸・草原系スポーン）"
+          "tamingMethod": "手渡しテイム（パッシブテイム）",
+          "habitat": "海岸・ビーチ / 草原 / 森林・ジャングル（各マップの海岸・草原系スポーン）",
+          "favoriteFood": "生肉、霜降り肉、魚肉、キブル（小型）など",
+          "saddleRide": "肩乗せ可能（騎乗不可）"
         },
         {
           "index": 2,
@@ -7865,9 +7867,11 @@
           "notes": "アセット: Chicken/Chicken_Character_BP_ArklasTT.uasset",
           "assetName": "Chicken_Character_BP_ArklasTT",
           "usageType": "生物・繁殖",
-          "tamingMethod": "野生スポーン・テイム",
+          "tamingMethod": "昏睡テイム（ドードー準拠）",
           "habitat": "海岸・ビーチ / 草原 / 森林（各マップの海岸・草原系スポーン）",
-          "specialAbility": "有精卵の産卵・ブリーディング対応"
+          "specialAbility": "有精卵の産卵・ブリーディング対応",
+          "favoriteFood": "ベリー類、キブル（基本）など",
+          "saddleRide": "騎乗不可（抱えて運搬可）"
         },
         {
           "index": 3,
@@ -7906,8 +7910,10 @@
           "notes": "アセット: Monkey/Monkey_Character_BP_ArklasTT.uasset",
           "assetName": "Monkey_Character_BP_ArklasTT",
           "usageType": "生物・繁殖",
-          "tamingMethod": "野生スポーン・テイム",
-          "habitat": "ジャングル / 森林 / 湿地林（各マップのジャングル・森林系スポーン）"
+          "tamingMethod": "手渡しテイム（パッシブテイム）",
+          "habitat": "ジャングル / 森林 / 湿地林（各マップのジャングル・森林系スポーン）",
+          "favoriteFood": "ベリー類、野菜、キブル（基本）など",
+          "saddleRide": "肩乗せ可能（騎乗不可）"
         },
         {
           "index": 5,
@@ -7926,9 +7932,11 @@
           "notes": "アセット: Parrot/Parrot_Character_BP_ArklasTT.uasset",
           "assetName": "Parrot_Character_BP_ArklasTT",
           "usageType": "生物・繁殖",
-          "tamingMethod": "野生スポーン・テイム",
+          "tamingMethod": "手渡しテイム（パッシブテイム）",
           "habitat": "ジャングル / 森林 / 海岸・島（各マップのジャングル・海岸系スポーン）",
-          "specialAbility": "卵・有精卵の産卵対応"
+          "specialAbility": "卵・有精卵の産卵対応",
+          "favoriteFood": "生肉、霜降り肉、魚肉など",
+          "saddleRide": "肩乗せ可能（騎乗不可）"
         },
         {
           "index": 6,
@@ -7986,9 +7994,11 @@
           "notes": "アセット: Penguin/Penguin_Character_BP_ArklasTT.uasset",
           "assetName": "Penguin_Character_BP_ArklasTT",
           "usageType": "生物・繁殖",
-          "tamingMethod": "野生スポーン・テイム",
+          "tamingMethod": "昏睡テイム（カイルクペンギン準拠）",
           "habitat": "雪原・氷山・寒冷地の水辺（カイルクペンギン生息域 / Extinction雪ドーム / 氷水辺スポーン）",
-          "specialAbility": "有精卵の産卵・ブリーディング対応"
+          "specialAbility": "有精卵の産卵・ブリーディング対応",
+          "favoriteFood": "生肉、霜降り肉、魚肉など",
+          "saddleRide": "騎乗不可"
         },
         {
           "index": 9,
@@ -8027,8 +8037,10 @@
           "notes": "アセット: Rabbit/Rabbit_Character_BP_ArklasTT.uasset",
           "assetName": "Rabbit_Character_BP_ArklasTT",
           "usageType": "生物・繁殖",
-          "tamingMethod": "野生スポーン・テイム",
-          "habitat": "草原 / 海岸・ビーチ / 森林（各マップの草原・海岸系スポーン）"
+          "tamingMethod": "手渡しテイム（パッシブテイム）",
+          "habitat": "草原 / 海岸・ビーチ / 森林（各マップの草原・海岸系スポーン）",
+          "favoriteFood": "ニンジン(Rockarrot)等の野菜、ベリー類、スイートベジタブルケーキなど",
+          "saddleRide": "肩乗せ可能（騎乗不可）"
         },
         {
           "index": 11,
@@ -8047,9 +8059,11 @@
           "notes": "アセット: Crow/Raven_Character_BP_ArklasTT.uasset",
           "assetName": "Raven_Character_BP_ArklasTT",
           "usageType": "生物・繁殖",
-          "tamingMethod": "野生スポーン・テイム",
+          "tamingMethod": "手渡しテイム（パッシブテイム）",
           "habitat": "草原 / 森林 / 海岸・ビーチ（各マップの草原・森林系スポーン）",
-          "specialAbility": "卵・有精卵の産卵対応"
+          "specialAbility": "卵・有精卵の産卵対応",
+          "favoriteFood": "生肉、霜降り肉、魚肉など",
+          "saddleRide": "肩乗せ可能（騎乗不可）"
         },
         {
           "index": 12,
