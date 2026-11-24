@@ -8234,7 +8234,7 @@
           "image": "",
           "enName": "Cat",
           "jaName": "ネコ(Cat)",
-          "description": "MOD(ArklasAnimals)で追加される動物・ネコ(Cat)。",
+          "description": "おとなしく人懐っこいペット用のネコ。ASA本体のネコをベースにしており、肩に乗せてお散歩や拠点の癒やしペットとして楽しめる。",
           "category": "生物",
           "obtainMethod": "",
           "dinoName": "",
@@ -8250,14 +8250,14 @@
           "habitat": "海岸・ビーチ / 草原 / 森林・ジャングル（各マップの海岸・草原系スポーン）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
           "usageType": "生物・繁殖",
-          "specialAbility": ""
+          "specialAbility": "【操作・乗り方】\n・テイム後に近づいてEキーで肩に乗せられる（降ろすときはFキーを2回押す）\n【特徴・用途】\n・小型害獣（ペゴマスタクス・イクチオルニスなど）を威嚇して近づきにくくするお供ペット＆拠点の観賞・ブリーディング用"
         },
         {
           "index": 2,
           "image": "",
           "enName": "Chicken",
           "jaName": "ニワトリ(Chicken)",
-          "description": "MOD(ArklasAnimals)で追加される動物・ニワトリ(Chicken)。有精卵を産む。",
+          "description": "おとなしい小型の家禽（ニワトリ）。拠点で飼育して卵や有精卵を産ませられる。",
           "category": "生物",
           "obtainMethod": "",
           "dinoName": "",
@@ -8272,7 +8272,7 @@
           "favoriteFood": "ベリー類、キブル（基本）など",
           "habitat": "海岸・ビーチ / 草原 / 森林（各マップの海岸・草原系スポーン）",
           "saddleRide": "騎乗不可（抱えて運搬可）",
-          "specialAbility": "有精卵の産卵・ブリーディング対応",
+          "specialAbility": "【操作・運び方】\n・騎乗や肩乗せはできないが、近づいて抱え上げて運ぶことができる\n【特徴・用途】\n・オスとメスを揃えて交配させると有精卵を産み、孵化・ブリーディングを楽しめる",
           "usageType": "生物・繁殖"
         },
         {
@@ -8301,7 +8301,7 @@
           "image": "",
           "enName": "Monkey",
           "jaName": "サル(Monkey)",
-          "description": "MOD(ArklasAnimals)で追加される動物・サル(Monkey)。",
+          "description": "ベリーで手渡しテイムできる可愛い小型のサル。肩に乗せて一緒に冒険できる。",
           "category": "生物",
           "obtainMethod": "",
           "dinoName": "",
@@ -8317,14 +8317,14 @@
           "habitat": "ジャングル / 森林 / 湿地林（各マップのジャングル・森林系スポーン）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
           "usageType": "生物・繁殖",
-          "specialAbility": ""
+          "specialAbility": "【操作・乗り方】\n・テイム後に近づいてEキーで肩に乗せられる（降ろすときはFキーを2回押す）\n【特徴・用途】\n・肩に乗せたまま敵にフンを投げて動きを遅くするサポート能力を持つ可愛いお供ペット"
         },
         {
           "index": 5,
           "image": "",
           "enName": "Parrot",
           "jaName": "オウム(Parrot)",
-          "description": "MOD(ArklasAnimals)で追加される動物・オウム(Parrot)。卵および有精卵を産む。",
+          "description": "カラフルな羽を持つおとなしいオウム。肩に乗せて連れ歩けるほか、無精卵・有精卵も産む。",
           "category": "生物",
           "obtainMethod": "",
           "dinoName": "",
@@ -8339,7 +8339,7 @@
           "favoriteFood": "生肉、霜降り肉、魚肉など",
           "habitat": "ジャングル / 森林 / 海岸・島（各マップのジャングル・海岸系スポーン）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "卵・有精卵の産卵対応",
+          "specialAbility": "【操作・乗り方】\n・テイム後に近づいてEキーで肩に乗せられる（降ろすときはFキーを2回押す）\n【特徴・用途】\n・肩乗せのお供ペットとして連れ歩けるほか、拠点で卵（キブル・料理用）や有精卵を産む",
           "usageType": "生物・繁殖"
         },
         {
@@ -8389,7 +8389,7 @@
           "image": "",
           "enName": "Penguin",
           "jaName": "ペンギン(Penguin)",
-          "description": "MOD(ArklasAnimals)で追加される動物・ペンギン(Penguin)。有精卵を産む。",
+          "description": "よちよち歩きが可愛いペンギン。抱えて運ぶことができ、拠点にいると周囲を温めてくれる。",
           "category": "生物",
           "obtainMethod": "",
           "dinoName": "",
@@ -8404,7 +8404,7 @@
           "favoriteFood": "生肉、霜降り肉、魚肉など",
           "habitat": "雪原・氷山・寒冷地の水辺（カイルクペンギン生息域 / Extinction雪ドーム / 氷水辺スポーン）",
           "saddleRide": "騎乗不可",
-          "specialAbility": "有精卵の産卵・ブリーディング対応",
+          "specialAbility": "【操作・運び方】\n・近づいて抱え上げて好きな場所へ運べる\n【特徴・用途】\n・カイルクペンギンと同様に周囲に防寒（保温）効果を与えるため、寒冷地拠点や卵の孵化調整にも役立つ",
           "usageType": "生物・繁殖"
         },
         {
@@ -8433,7 +8433,7 @@
           "image": "",
           "enName": "Rabbit",
           "jaName": "ウサギ(Rabbit)",
-          "description": "MOD(ArklasAnimals)で追加される動物・ウサギ(Rabbit)。",
+          "description": "草原や森を跳ね回る可愛いウサギ。野菜やベリーで手渡しテイムして肩に乗せられる。",
           "category": "生物",
           "obtainMethod": "",
           "dinoName": "",
@@ -8449,14 +8449,14 @@
           "habitat": "草原 / 海岸・ビーチ / 森林（各マップの草原・海岸系スポーン）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
           "usageType": "生物・繁殖",
-          "specialAbility": ""
+          "specialAbility": "【操作・乗り方】\n・テイム後に近づいてEキーで肩に乗せられる（降ろすときはFキーを2回押す）\n【特徴・用途】\n・肩乗せのお供や拠点での飼育・ブリーディングを楽しめる癒やし系ペット"
         },
         {
           "index": 11,
           "image": "",
           "enName": "Raven",
           "jaName": "カラス(Raven)",
-          "description": "MOD(ArklasAnimals)で追加される動物・カラス(Raven)。卵および有精卵を産む。",
+          "description": "黒い羽が印象的なカラス。肩に乗せて連れ歩けるほか、無精卵・有精卵も産む。",
           "category": "生物",
           "obtainMethod": "",
           "dinoName": "",
@@ -8471,7 +8471,7 @@
           "favoriteFood": "生肉、霜降り肉、魚肉など",
           "habitat": "草原 / 森林 / 海岸・ビーチ（各マップの草原・森林系スポーン）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "卵・有精卵の産卵対応",
+          "specialAbility": "【操作・乗り方】\n・テイム後に近づいてEキーで肩に乗せられる（降ろすときはFキーを2回押す）\n【特徴・用途】\n・肩乗せのお供ペットとして連れ歩けるほか、拠点で卵や有精卵を産む",
           "usageType": "生物・繁殖"
         },
         {
@@ -30266,11 +30266,11 @@
           "enOriginal": "Fire Wyvern - Add Heat Resistance / All Wyverns Add Max Health",
           "notes": "アセット: Wyvern_Pet_Fire_Character_BP.uasset",
           "assetName": "Wyvern_Pet_Fire_Character_BP",
-          "tamingMethod": "昏睡テイム（レックスと同様の方式）",
+          "tamingMethod": "昏睡テイム（麻酔矢や麻酔弾で眠らせてインベントリに肉を入れる通常の肉食テイム）",
           "favoriteFood": "肉類（生肉・霜降り肉など）",
           "habitat": "各マップにランダムスポーン",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "肩乗せ時：最大体力アップ＋耐暑アップ（プレイヤーレベルに応じて上昇）",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せるだけでバフが自動発動（降ろすときはFキー2回）\n【肩乗せ効果】プレイヤーの「最大体力アップ（+1〜+300）」＋「耐暑（暑さ耐性）アップ（+10〜+500）」※プレイヤーLvが高いほど効果上昇",
           "usageType": "生物・繁殖"
         },
         {
@@ -30289,11 +30289,11 @@
           "enOriginal": "Ice Wyvern - Add Cold Resistance / All Wyverns Add Max Health",
           "notes": "アセット: Wyvern_Pet_Ice_Character_BP.uasset",
           "assetName": "Wyvern_Pet_Ice_Character_BP",
-          "tamingMethod": "昏睡テイム（レックスと同様の方式）",
+          "tamingMethod": "昏睡テイム（麻酔矢や麻酔弾で眠らせて肉を入れる通常の肉食テイム）",
           "favoriteFood": "肉類（生肉・霜降り肉など）",
           "habitat": "各マップにランダムスポーン",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "肩乗せ時：最大体力アップ＋耐寒アップ（プレイヤーレベルに応じて上昇）",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せるだけでバフが自動発動（降ろすときはFキー2回）\n【肩乗せ効果】プレイヤーの「最大体力アップ（+1〜+300）」＋「耐寒（寒さ耐性）アップ（+10〜+500）」※プレイヤーLvに応じて上昇",
           "usageType": "生物・繁殖"
         },
         {
@@ -30312,11 +30312,11 @@
           "enOriginal": "Lightning Wyvern - Add Damage Increase / All Wyverns Add Max Health",
           "notes": "アセット: Wyvern_Pet_Lightning_Character_BP.uasset",
           "assetName": "Wyvern_Pet_Lightning_Character_BP",
-          "tamingMethod": "昏睡テイム（レックスと同様の方式）",
+          "tamingMethod": "昏睡テイム（麻酔矢や麻酔弾で眠らせて肉を入れる通常の肉食テイム）",
           "favoriteFood": "肉類（生肉・霜降り肉など）",
           "habitat": "各マップにランダムスポーン",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "肩乗せ時：最大体力アップ＋攻撃ダメージ上昇（+1%〜+10%）",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せるだけでバフが自動発動（降ろすときはFキー2回）\n【肩乗せ効果】プレイヤーの「最大体力アップ（+1〜+300）」＋「与えるダメージ上昇（+1%〜+10%）」※プレイヤーLvに応じて上昇",
           "usageType": "生物・繁殖"
         },
         {
@@ -30335,11 +30335,11 @@
           "enOriginal": "Poison Wyvern - Add Poison/Torpidity Protection + Cave",
           "notes": "アセット: Wyvern_Pet_Poison_Character_BP.uasset",
           "assetName": "Wyvern_Pet_Poison_Character_BP",
-          "tamingMethod": "昏睡テイム（レックスと同様の方式）",
+          "tamingMethod": "昏睡テイム（麻酔矢や麻酔弾で眠らせて肉を入れる通常の肉食テイム）",
           "favoriteFood": "肉類（生肉・霜降り肉など）",
           "habitat": "各マップにランダムスポーン",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "肩乗せ時：最大体力アップ＋毒・昏睡耐性（常時有効・洞窟対応）",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せるだけでバフが自動発動（降ろすときはFキー2回）\n【肩乗せ効果】プレイヤーの「最大体力アップ（+1〜+300）」＋「毒・昏睡攻撃を常時無効化（洞窟の毒ガスやムカデ・サソリ対策に便利）」",
           "usageType": "生物・繁殖"
         },
         {
@@ -30358,11 +30358,11 @@
           "enOriginal": "Tek Wyvern - Add Damage Reduction + Radiation Protection",
           "notes": "アセット: Wyvern_Pet_Tek_Character_BP.uasset",
           "assetName": "Wyvern_Pet_Tek_Character_BP",
-          "tamingMethod": "昏睡テイム（レックスと同様の方式）",
+          "tamingMethod": "昏睡テイム（麻酔矢や麻酔弾で眠らせて肉を入れる通常の肉食テイム）",
           "favoriteFood": "肉類（生肉・霜降り肉など）",
           "habitat": "各マップにランダムスポーン",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "肩乗せ時：最大体力アップ＋被ダメージ軽減（1%〜25%）＋放射能耐性（常時有効）",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せるだけでバフが自動発動（降ろすときはFキー2回）\n【肩乗せ効果】プレイヤーの「最大体力アップ（+1〜+300）」＋「受けるダメージ軽減（1%〜25%）」＋「放射能ダメージ常時無効」",
           "usageType": "生物・繁殖"
         },
         {
@@ -30381,11 +30381,11 @@
           "enOriginal": "Dodo Wyvern - Add Max Weight / All Wyverns Add Max Health",
           "notes": "アセット: Wyvern_Pet_Dodo_Character_BP.uasset",
           "assetName": "Wyvern_Pet_Dodo_Character_BP",
-          "tamingMethod": "昏睡テイム（レックスと同様の方式）",
+          "tamingMethod": "昏睡テイム（麻酔矢や麻酔弾で眠らせて肉を入れる通常の肉食テイム）",
           "favoriteFood": "肉類（生肉・霜降り肉など）",
           "habitat": "各マップにランダムスポーン",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "肩乗せ時：最大体力アップ＋最大重量アップ（+10〜+250）",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せるだけでバフが自動発動（降ろすときはFキー2回）\n【肩乗せ効果】プレイヤーの「最大体力アップ（+1〜+300）」＋「最大重量アップ（+10〜+250：荷物持ちや採取時に大活躍）」",
           "usageType": "生物・繁殖"
         },
         {
@@ -30404,11 +30404,11 @@
           "enOriginal": "Bone Wyvern - Add Speed Increase / All Wyverns Add Max Health",
           "notes": "アセット: Wyvern_Pet_Bone_Character_BP.uasset",
           "assetName": "Wyvern_Pet_Bone_Character_BP",
-          "tamingMethod": "昏睡テイム（レックスと同様の方式）",
+          "tamingMethod": "昏睡テイム（麻酔矢や麻酔弾で眠らせて肉を入れる通常の肉食テイム）",
           "favoriteFood": "肉類（生肉・霜降り肉など）",
           "habitat": "各マップにランダムスポーン",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "肩乗せ時：最大体力アップ＋移動速度アップ（+25%〜+100%）",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せるだけでバフが自動発動（降ろすときはFキー2回）\n【肩乗せ効果】プレイヤーの「最大体力アップ（+1〜+300）」＋「移動速度アップ（+25%〜+100%）」",
           "usageType": "生物・繁殖"
         },
         {
@@ -30427,11 +30427,11 @@
           "enOriginal": "Dragon_Pet_Fire_Character_BP",
           "notes": "アセット: Dragon_Pet_Fire_Character_BP.uasset",
           "assetName": "Dragon_Pet_Fire_Character_BP",
-          "tamingMethod": "昏睡テイム（レックスと同様の方式）",
+          "tamingMethod": "昏睡テイム（麻酔矢や麻酔弾で眠らせて肉を入れる通常の肉食テイム）",
           "favoriteFood": "肉類（生肉・霜降り肉など）",
           "habitat": "各マップにランダムスポーン",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "肩乗せペットとして同行・最大体力アップなどのバフを付与",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せるだけでバフが自動発動（降ろすときはFキー2回）\n【肩乗せ効果】ファイアワイバーン系と同様に「最大体力アップ」＋「耐暑アップ」のバフを付与",
           "usageType": "生物・繁殖"
         },
         {
@@ -30450,11 +30450,11 @@
           "enOriginal": "Wyvern_Pet_Blood_Character_BP",
           "notes": "アセット: Wyvern_Pet_Blood_Character_BP.uasset（公式ページ記載外の同梱亜種）",
           "assetName": "Wyvern_Pet_Blood_Character_BP",
-          "tamingMethod": "昏睡テイム（レックスと同様の方式）",
+          "tamingMethod": "昏睡テイム（麻酔矢や麻酔弾で眠らせて肉を入れる通常の肉食テイム）",
           "favoriteFood": "肉類（生肉・霜降り肉など）",
           "habitat": "各マップにランダムスポーン",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "肩乗せペットとして同行",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せて連れ歩ける（降ろすときはFキー2回）\n【肩乗せ効果】他のペットワイバーンと同様にプレイヤーの最大体力アップ等のバフを付与",
           "usageType": "生物・繁殖"
         },
         {
@@ -30462,7 +30462,7 @@
           "image": "",
           "enName": "Wyvern Scales",
           "jaName": "ワイバーンの鱗(Wyvern Scales)",
-          "description": "ペットワイバーン用の自然装甲（サドル枠）。レベルに応じて防御力が上昇（Lv1で25〜Lv120で80）。",
+          "description": "ペットワイバーンが生まれつき持っている鱗の自然装甲（新しく作る必要はなく、テイムすると最初からサドル枠に付いている）。ワイバーンのレベルに応じて防御力が25（Lv1）〜80（Lv120）まで自動成長する。",
           "category": "装備・サドル",
           "obtainMethod": "",
           "dinoName": "",
@@ -30474,7 +30474,7 @@
           "notes": "アセット: PrimalItemArmor_Saddle_Wyvern_Pet.uasset",
           "assetName": "PrimalItemArmor_Saddle_Wyvern_Pet",
           "saddleRide": "ペットワイバーンのサドル枠に装着",
-          "specialAbility": "レベルに応じて防御力25〜80の自然装甲を提供",
+          "specialAbility": "作成不要（ペットワイバーンが最初から装備しており、レベルアップで防御力25〜80まで自動強化される）",
           "usageType": "生物・繁殖",
           "habitat": ""
         }
@@ -30630,7 +30630,7 @@
           "enOriginal": "Lord of the Skies, Hatzegopteryx! With an imposing size and surprising agility, Hatzegopteryx can easily catch and tackle other flyers!",
           "notes": "アセット: Hatzeg_Character_BP.uasset。サーバー設定（GameUserSettings.ini [TweeeHatzeg]）で掴み上限等を調整可能。",
           "assetName": "Hatzeg_Character_BP",
-          "tamingMethod": "特殊テイム（野生個体を倒してHatzegopteryx Trophyを入手し、野生個体の近くに落として戦闘で勝利・騎乗する方式）",
+          "tamingMethod": "決闘テイム（※麻酔で眠らせるテイムではない）：\n①野生のハツェゴプテリクスを1体倒して「ハツェゴプテリクスのトロフィー(Hatzegopteryx Trophy)」を入手する\n②テイムしたい別の野生個体の近くでトロフィーを地面に捨てる（ドロップする）と決闘が始まる\n③攻撃を避けつつ戦って体力を削り、相手が屈服（ダウン）したら近づいて騎乗・要求に応じることでテイム完了",
           "favoriteFood": "肉食（戦闘チャレンジによるテイム）",
           "habitat": "マップ上空・山岳など（リニオグナタ置換設定時は沼地等）",
           "saddleRide": "騎乗可能（通常サドル / プラットフォームサドル / 制空サドル）",
@@ -30657,7 +30657,7 @@
           "favoriteFood": "肉食",
           "habitat": "アベレーション系バイオーム",
           "saddleRide": "騎乗可能（ハツェゴプテリクス各種サドル対応）",
-          "specialAbility": "【騎乗中の操作・Eキー長押し】通常種ハツェゴプテリクスと同様（くちばし攻撃・処刑・掴み運搬・滑空・お座り・ジェットパック切替）\n【変種固有の特徴】\n・くちばしでアルファカルキノスの爪を割って「Cracked Alpha Karkinos Claw」を入手できる",
+          "specialAbility": "【騎乗中の操作・Eキー長押し】\n・通常種ハツェゴプテリクスと同様（左クリック：くちばし＆処刑 / 右クリック：叩きつけ＆飛行中掴み運搬 / Cキー：敵を弱体化させる威圧咆哮 / お座りバフ / ジェットパック切替）\n【変種固有の特殊能力】\n・放射能耐性あり\n・虫（昆虫系生物）を倒すと「対虫怒りバフ（Bug Rage）」が発動し、攻撃性能が強化される\n・アルファ・カルキノスの爪（Alpha Karkinos Claw）をインベントリに入れて割ることで、強力なバフ食料「割れたアルファカルキノスの爪」を作れる",
           "usageType": "生物・繁殖"
         },
         {
@@ -30711,7 +30711,7 @@
           "image": "",
           "enName": "Hatzegopteryx Saddle",
           "jaName": "ハツェゴプテリクス用サドル(Hatzegopteryx Saddle)",
-          "description": "ハツェゴプテリクスに騎乗するための基本サドル。",
+          "description": "ハツェゴプテリクスに騎乗するための基本サドル（Lv92エングラム解放・45ポイント／作業台［Smithy］で作成）。",
           "category": "装備・サドル",
           "obtainMethod": "",
           "dinoName": "",
@@ -30723,7 +30723,7 @@
           "notes": "アセット: PrimalItemArmor_HatzSaddle.uasset",
           "assetName": "PrimalItemArmor_HatzSaddle",
           "saddleRide": "ハツェゴプテリクスに装着して騎乗",
-          "specialAbility": "通常騎乗・掴み運搬に対応",
+          "specialAbility": "【作成場所・解放レベル】Lv92エングラム解放後、作業台(Smithy)で作成\n【効果】ハツェゴプテリクスへの通常騎乗・空中掴み運搬が可能になる",
           "usageType": "生物・繁殖",
           "habitat": ""
         },
@@ -30732,7 +30732,7 @@
           "image": "",
           "enName": "Hatzegopteryx Platform Saddle",
           "jaName": "ハツェゴプテリクス用プラットフォームサドル(Hatzegopteryx Platform Saddle)",
-          "description": "背中に建築物を建てられるプラットフォームサドル。",
+          "description": "ハツェゴプテリクスの背中に建築物を建てて移動拠点にできるプラットフォームサドル（Lv98エングラム解放・20ポイント／作業台［Smithy］で作成）。",
           "category": "装備・サドル",
           "obtainMethod": "",
           "dinoName": "",
@@ -30744,7 +30744,7 @@
           "notes": "アセット: PrimalItemArmor_HatzSaddle_Platform.uasset",
           "assetName": "PrimalItemArmor_HatzSaddle_Platform",
           "saddleRide": "ハツェゴプテリクスに装着して騎乗＋建築",
-          "specialAbility": "背中のプラットフォーム上に設備・建築物を設置可能",
+          "specialAbility": "【作成場所・解放レベル】Lv98エングラム解放後、作業台(Smithy)で作成（素材：基本サドル・金属のインゴット・セメント・シリカ真珠・皮など）\n【効果】背中の土台にベッドや設備を置いて空飛ぶ拠点を作れる",
           "usageType": "生物・繁殖",
           "habitat": ""
         },
@@ -30753,7 +30753,7 @@
           "image": "",
           "enName": "Hatzegopteryx Air Superiority Saddle",
           "jaName": "制空サドル(Hatzegopteryx Air Superiority Saddle)",
-          "description": "エレメント動力のジェットパックを搭載した戦闘用サドル。",
+          "description": "エレメント等で動くジェットパックを搭載した高速戦闘用サドル（Lv98エングラム解放・30ポイント／TEKレプリケーター等で作成、または伝説OSD報酬）。",
           "category": "装備・サドル",
           "obtainMethod": "",
           "dinoName": "",
@@ -30765,7 +30765,7 @@
           "notes": "アセット: PrimalItemArmor_HatzSaddle_Battle.uasset",
           "assetName": "PrimalItemArmor_HatzSaddle_Battle",
           "saddleRide": "ハツェゴプテリクスに装着して騎乗",
-          "specialAbility": "エレメント駆動のジェットパックによる高速飛行モード（初期設定ではジェットパック使用中の掴み無効）",
+          "specialAbility": "【作成場所・解放レベル】Lv98エングラム解放後、TEKレプリケーターで作成\n【効果】ジェットパックによる超高速飛行が可能になる（Eキー長押しで燃料タイプ切替可。ジェットパック使用中は生物の掴み運搬は不可）",
           "usageType": "生物・繁殖",
           "habitat": ""
         },
@@ -30794,7 +30794,7 @@
           "image": "",
           "enName": "Cracked Alpha Karkinos Claw",
           "jaName": "割れたアルファカルキノスの爪(Cracked Alpha Karkinos Claw)",
-          "description": "変種ハツェゴプテリクスのくちばしで割ったアルファカルキノスの爪。",
+          "description": "変種ハツェゴプテリクスのくちばしで「アルファ・カルキノスの爪」を割って作る特別なごちそうアイテム。サバイバー自身も恐竜も食べられる。",
           "category": "アイテム",
           "obtainMethod": "",
           "dinoName": "",
@@ -30805,7 +30805,7 @@
           "enOriginal": "A hefty claw cracked open with the help of an Aberrant Hatzegopteryx's beak.",
           "notes": "アセット: PrimalItemConsumable_CrackedAlphaKarkinosClaw.uasset",
           "assetName": "PrimalItemConsumable_CrackedAlphaKarkinosClaw",
-          "specialAbility": "変種ハツェゴプテリクス関連の特殊消費アイテム",
+          "specialAbility": "【入手方法】アルファ・カルキノスの爪を変種ハツェゴプテリクスで割って入手\n【効果】食べると15分間、耐暑+50・耐寒+50・放射能ダメージ無効の強力なバフが付与される（プレイヤー・恐竜両対応）",
           "usageType": "生物・繁殖",
           "habitat": ""
         },
@@ -30854,7 +30854,7 @@
           "enOriginal": "Default – the classic fiery red. Backpack Buddy (insulation), Auto-Transfer, Sleep Aura (accelerates baby dino growth), Helmet-Ready.",
           "notes": "アセット: RedPanda_Character_BP.uasset。討伐すると尻尾スカーフをドロップ。",
           "assetName": "RedPanda_Character_BP",
-          "tamingMethod": "特殊手渡しテイム（専用エサ「Primal Slop」を与えた後、仰向けになったらお腹をなでる／立ち上がって威嚇したら伏せて怖がるふりをする。伏せ遅れると逃走）",
+          "tamingMethod": "ミニゲーム式の手渡しテイム：\n①Lv15で作れる専用エサ「プライマルスロップ(Primal Slop)」をショートバー右端（0キー）に入れて野生レッサーパンダに手渡す\n②食べた直後、パンダが2パターンのどちらかを行うので素早く合わせる：\n　・仰向けに寝転んだら → 近づいてお腹をなでる（Eキー）\n　・二本足で立ち上がって威嚇したら → すぐに「伏せ（Xキー）」をして怖がるふりをする（※遅れるとテイムがリセットされて逃げるので注意！）",
           "favoriteFood": "専用エサ(Primal Slop)（Lv15で解放）",
           "habitat": "レッドウッド・ジャングル・雪原バイオーム",
           "saddleRide": "肩（背中）乗せ可能・ヘルメット装備可（騎乗不可）",
@@ -30932,7 +30932,7 @@
           "image": "",
           "enName": "Redpanda Tail Scarf",
           "jaName": "レッサーパンダの尻尾スカーフ(Redpanda Tail Scarf)",
-          "description": "寒冷地で体を温めてくれるふわふわの尻尾スカーフ。レッサーパンダ討伐時のドロップ品。",
+          "description": "寒冷地で体を温めてくれるふわふわの尻尾スカーフ。防具スキンとしても使えるほか、作業台(Smithy)等でのクラフトや野生ドロップで入手できる。",
           "category": "装備・防具",
           "obtainMethod": "",
           "dinoName": "",
@@ -30944,7 +30944,7 @@
           "notes": "アセット: PrimalItemArmor_PandaScarf.uasset",
           "assetName": "PrimalItemArmor_PandaScarf",
           "saddleRide": "防具として装備可能",
-          "specialAbility": "軽度の防寒（保温）効果",
+          "specialAbility": "装備すると寒冷地での防寒（保温）効果＋可愛い尻尾スカーフの見た目になる",
           "usageType": "生物・繁殖",
           "habitat": ""
         },
@@ -31097,7 +31097,7 @@
           "image": "",
           "enName": "Greater Arctic Fox Saddle",
           "jaName": "グレーターホッキョクギツネ用サドル(Greater Arctic Fox Saddle)",
-          "description": "グレーターホッキョクギツネの防御力を高める専用サドル（エングラムクラフト／アルファ討伐ドロップ）。",
+          "description": "グレーターホッキョクギツネ／アカギツネの防御力を高める専用サドル（Lv5エングラム解放・0ポイント／インベントリまたは作業台で皮・繊維から作成、またはアルファ個体の討伐ドロップ）。",
           "category": "装備・サドル",
           "obtainMethod": "",
           "dinoName": "",
@@ -31109,7 +31109,7 @@
           "notes": "アセット: PrimalItemArmor_ArcticfoxSaddle.uasset",
           "assetName": "PrimalItemArmor_ArcticfoxSaddle",
           "saddleRide": "グレーターホッキョクギツネに装着",
-          "specialAbility": "騎乗時の防御力付与",
+          "specialAbility": "【入手方法】Lv5エングラム（0ポイント）で皮・繊維から手軽に作成可能（黒化アルファ個体の討伐でもドロップ）\n【効果】サドルなしでも乗れる大型キツネに防御力（アーマー）を付与する",
           "usageType": "生物・繁殖",
           "habitat": ""
         },
@@ -31181,11 +31181,11 @@
           "enOriginal": "A peaceful grazing herbivore, good at harvesting, and able to keep back aggressive predators using a stunning tail whip.",
           "notes": "アセット: Dugong.uasset",
           "assetName": "Dugong",
-          "tamingMethod": "テイム可能（海洋草食）",
+          "tamingMethod": "昏睡テイムまたは手渡しテイム（おとなしい海洋草食動物・Lv16で専用サドル解放）",
           "favoriteFood": "草食系（ベリー・海藻等）",
           "habitat": "海洋バイオーム",
           "saddleRide": "騎乗可能（専用サドルあり）",
-          "specialAbility": "【騎乗中の操作】\n・左クリック：採取・噛みつき（水中資源の採取が得意）\n・右クリック：尻尾攻撃（Tail Whip）— 効果：肉食生物をスタンさせて足止め・逃走させる（超大型生物に対しては減速効果）\n【パッシブ・特徴】\n・おとなしい草食の海洋哺乳類。討伐時はジュゴンステーキをドロップ",
+          "specialAbility": "【騎乗中の操作】（専用サドルはLv16で解放）\n・左クリック：噛みつき・海草採取（繊維やベリー等の採取が得意）\n・右クリック：尻尾ビンタ（Tail Whip）— 敵のサイズに応じた足止め効果が発動：\n　・小型〜中型の肉食生物 → スタン（気絶状態）＋昏睡値上昇で無力化\n　・大型の肉食生物 → 恐怖状態にして強制逃走させる\n　・超大型の海洋生物 → 移動速度を遅くする（スロウ効果）\n【パッシブ・特徴】\n・序盤の海でも安全に逃げ切れる護身用の草食マウント。討伐時は羊肉相当の「生のジュゴンステーキ」をドロップ",
           "usageType": "生物・繁殖"
         },
         {
@@ -31204,11 +31204,11 @@
           "enOriginal": "A giant sea turtle able to consume rare items for healing buffs (biotoxin=self heal, leech blood=ally heal, oil=anti-heal). Harvests ores, stone, flint, and oil well underwater.",
           "notes": "アセット: Archelon.uasset",
           "assetName": "Archelon",
-          "tamingMethod": "テイム可能（海洋雑食）",
+          "tamingMethod": "手渡しまたは昏睡テイム（海洋雑食・Lv26で専用サドル解放）",
           "favoriteFood": "雑食系",
           "habitat": "海洋バイオーム",
           "saddleRide": "騎乗可能（専用サドルあり）",
-          "specialAbility": "【騎乗中の操作】\n・左クリック：強力な噛みつき（水中での金属鉱石・石・火打石・原油の採取が得意）\n・回復アビリティ発動：Eキー長押しで選んだアイテムを消費して、周囲に回復・妨害バフを発動する\n【Eキー長押しメニュー】\n・Select Healing Ability（回復能力の切替）：消費するアイテムごとの効果を切り替えられる（バイオトキシン＝メディケロン自身を回復 / ヒルの血液＝周囲の味方生物を回復 / 原油＝周囲の敵の回復を阻害）\n・Pet Archelon（メディケロンをなでる）",
+          "specialAbility": "【騎乗中の操作】（専用サドルはLv26で解放）\n・左クリック：強力な噛みつき（水中の金属鉱石・石・火打石・原油岩を効率よく採取できる）\n・回復／支援アビリティ発動：Eキー長押しでセットしたインベントリ内アイテムを消費して特殊効果を発動\n【Eキー長押しメニュー】\n・Select Healing Ability（消費アイテムごとの効果切替）：全7種類から選択可能！\n　①バイオトキシン：メディケロン自身の体力を回復\n　②ヒルの血液：周囲の味方恐竜の体力を範囲回復\n　③ハチミツ / アンコウのジェル / アンモナイトの胆汁：各種回復バフを発動\n　④原油：周囲の敵の体力回復を封じるデバフ\n　⑤有機ポリマー / 樹液：周囲に毒ガス雲（範囲攻撃）を発生させる\n・Pet Archelon：メディケロンをなでる",
           "usageType": "生物・繁殖"
         },
         {
@@ -31227,11 +31227,11 @@
           "enOriginal": "An aquatic pack critter akin to an underwater allosaur. Armor-piercing bite, jelly immune, loves biotoxin, metal war saddle grinds items.",
           "notes": "アセット: Krono.uasset（変種 Ab_Krono_C / アルファ Alpha_Orkrono_C も収録）",
           "assetName": "Krono",
-          "tamingMethod": "テイム可能（海洋肉食）",
-          "favoriteFood": "肉類・バイオトキシンが大好物",
+          "tamingMethod": "昏睡テイム（大型海洋肉食・Lv85で破砕機機能付き専用サドル解放）",
+          "favoriteFood": "バイオトキシン（大好物）、大型キブル、霜降り魚肉、生肉など",
           "habitat": "海洋バイオーム",
           "saddleRide": "騎乗可能（専用金属サドルあり）",
-          "specialAbility": "【騎乗中の操作】\n・左クリック：装甲貫通の噛みつき攻撃\n・群れリーダー時：出血噛みつき攻撃＋咆哮が使用可能\n【パッシブ・特徴】\n・クラゲ（クニダリア）の電撃スタン無効、バイオトキシンが大好物\n・専用金属サドル装備時：インベントリ内でアイテムを基本素材に分解（破砕機機能）できる",
+          "specialAbility": "【騎乗中の操作】（専用サドルはLv85・旋盤［Fabricator］で作成）\n・左クリック：装甲貫通の噛みつき攻撃（敵の防具耐久を大きく削りつつダメージを与える）\n・群れリーダー時（複数体で行動中）：出血ダメージを与える噛みつき＋咆哮が使用可能\n【パッシブ・特徴】\n・クラゲ（クニダリア）の電撃スタンを完全に無効化するため深海でも安全\n・専用サドル装着時：サドル（インベントリ）の中で不要な装備やアイテムを素材に分解できる「移動式破砕機（Grinder）」機能がつく",
           "usageType": "生物・繁殖"
         },
         {
@@ -31342,7 +31342,7 @@
           "image": "",
           "enName": "Meatloaf",
           "jaName": "ミートローフ(Meatloaf)",
-          "description": "肉食生物が好んで食べるケーキ系消費アイテム。",
+          "description": "ジュゴンの肉・樹液・ハチミツ・ジャガイモ(Savoroot)などで作る「肉食恐竜版スイートベジタブルケーキ」。人間や草食恐竜は食べられない。",
           "category": "消費アイテム",
           "obtainMethod": "",
           "dinoName": "",
@@ -31353,7 +31353,7 @@
           "enOriginal": "A sappy vegetable cake which Carnivores find delicious.",
           "notes": "アセット: PrimalItemConsumable_MeatCake.uasset",
           "assetName": "PrimalItemConsumable_MeatCake",
-          "specialAbility": "肉食生物用の特殊回復・テイム系食料",
+          "specialAbility": "【効果】肉食恐竜のインベントリに入れておくと、体力が減ったときに自動で食べてHPを回復してくれる（ボス戦や洞窟攻略の回復用に便利）",
           "usageType": "生物・繁殖",
           "habitat": ""
         },
@@ -31362,7 +31362,7 @@
           "image": "",
           "enName": "Scarekron",
           "jaName": "スケアクロン(Scarekron)",
-          "description": "壁掛け式のトロフィー設備。小型の厄介な生物を遠ざける効果を持つ。",
+          "description": "石やセメント（またはアルファ・オクロノサウルス討伐）で入手できる壁掛けトロフィー設備。設置すると周囲に酸素供給＆自己修復も行われる。",
           "category": "設備・トロフィー",
           "obtainMethod": "",
           "dinoName": "",
@@ -31373,7 +31373,7 @@
           "enOriginal": "A terror-inducing wall mounted Trophy that scares off lesser creatures.",
           "notes": "アセット: PrimalItemStructure_WallScarekron.uasset",
           "assetName": "PrimalItemStructure_WallScarekron",
-          "specialAbility": "設置周囲から小型生物を追い払う",
+          "specialAbility": "【効果】拠点の壁に飾ると「Sea Monster Slayer」効果が発生し、拠点周辺の小型で厄介な野生生物が襲ってこなくなる",
           "usageType": "生物・繁殖",
           "habitat": ""
         }
@@ -31401,11 +31401,11 @@
           "enOriginal": "Z-Panda Otter (Panda Otter)",
           "notes": "アセット: Z_PandaOtter_Character_BP.uasset",
           "assetName": "Z_PandaOtter_Character_BP",
-          "tamingMethod": "手渡しテイム（バニラカワウソ同様：倒した魚を運んで手渡し）",
+          "tamingMethod": "手渡しテイム（ピラニア・サーモン・シーラカンス等の魚を倒し、死体をEキー長押し「死体を掴む」で運んで野生カワウソに近づき手渡す）",
           "favoriteFood": "死んだ魚（シーラカンス・セイバートゥースサーモン・ピラニア）",
           "habitat": "河川・湖・水辺（バニラカワウソと同じ生息域）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "バニラカワウソ準拠：肩乗せで強力な耐寒・耐暑バフ、アーティファクト複数持ち、魚から真珠・黒真珠を採取",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せる（降ろすときはFキー2回）。帽子（ヘルメット）も被せられる\n【肩乗せ・便利効果】（バニラカワウソと同じ）\n・強力な防寒＆防暑バフ：カワウソの「近接攻撃力」を上げるほど、寒さ・暑さ耐性がぐんぐん上がる\n・洞窟の「アーティファクト」をカワウソのインベントリに何個でも入れて運べる（人間は1個しか持てない制限を回避できる）\n・魚への攻撃指示を出すと、魚からシリカ真珠や黒真珠を集めてきてくれる",
           "usageType": "生物・繁殖"
         },
         {
@@ -31424,11 +31424,11 @@
           "enOriginal": "Z-Red Panda Otter (Red Panda Otter)",
           "notes": "アセット: Z_RedPandaOtter_Character_BP.uasset",
           "assetName": "Z_RedPandaOtter_Character_BP",
-          "tamingMethod": "手渡しテイム（バニラカワウソ同様：倒した魚を運んで手渡し）",
+          "tamingMethod": "手渡しテイム（ピラニア・サーモン・シーラカンス等の魚を倒し、死体をEキー長押し「死体を掴む」で運んで野生カワウソに近づき手渡す）",
           "favoriteFood": "死んだ魚（シーラカンス・セイバートゥースサーモン・ピラニア）",
           "habitat": "河川・湖・水辺（バニラカワウソと同じ生息域）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "バニラカワウソ準拠：肩乗せで強力な耐寒・耐暑バフ、アーティファクト複数持ち、魚から真珠・黒真珠を採取",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せる（降ろすときはFキー2回）。帽子（ヘルメット）も被せられる\n【肩乗せ・便利効果】（バニラカワウソと同じ）\n・強力な防寒＆防暑バフ：カワウソの「近接攻撃力」を上げるほど、寒さ・暑さ耐性がぐんぐん上がる\n・洞窟の「アーティファクト」をカワウソのインベントリに何個でも入れて運べる（人間は1個しか持てない制限を回避できる）\n・魚への攻撃指示を出すと、魚からシリカ真珠や黒真珠を集めてきてくれる",
           "usageType": "生物・繁殖"
         },
         {
@@ -31447,11 +31447,11 @@
           "enOriginal": "Z-Cupid Otter (Cupid Otter)",
           "notes": "アセット: Z_CupidOtter_Character_BP.uasset",
           "assetName": "Z_CupidOtter_Character_BP",
-          "tamingMethod": "手渡しテイム（バニラカワウソ同様：倒した魚を運んで手渡し）",
+          "tamingMethod": "手渡しテイム（ピラニア・サーモン・シーラカンス等の魚を倒し、死体をEキー長押し「死体を掴む」で運んで野生カワウソに近づき手渡す）",
           "favoriteFood": "死んだ魚（シーラカンス・セイバートゥースサーモン・ピラニア）",
           "habitat": "河川・湖・水辺（バニラカワウソと同じ生息域）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "バニラカワウソ準拠：肩乗せで強力な耐寒・耐暑バフ、アーティファクト複数持ち、魚から真珠・黒真珠を採取",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せる（降ろすときはFキー2回）。帽子（ヘルメット）も被せられる\n【肩乗せ・便利効果】（バニラカワウソと同じ）\n・強力な防寒＆防暑バフ：カワウソの「近接攻撃力」を上げるほど、寒さ・暑さ耐性がぐんぐん上がる\n・洞窟の「アーティファクト」をカワウソのインベントリに何個でも入れて運べる（人間は1個しか持てない制限を回避できる）\n・魚への攻撃指示を出すと、魚からシリカ真珠や黒真珠を集めてきてくれる",
           "usageType": "生物・繁殖"
         },
         {
@@ -31470,11 +31470,11 @@
           "enOriginal": "Z-Tiger Otter (Tiger Otter)",
           "notes": "アセット: Z_TigerOtter_Character_BP.uasset",
           "assetName": "Z_TigerOtter_Character_BP",
-          "tamingMethod": "手渡しテイム（バニラカワウソ同様：倒した魚を運んで手渡し）",
+          "tamingMethod": "手渡しテイム（ピラニア・サーモン・シーラカンス等の魚を倒し、死体をEキー長押し「死体を掴む」で運んで野生カワウソに近づき手渡す）",
           "favoriteFood": "死んだ魚（シーラカンス・セイバートゥースサーモン・ピラニア）",
           "habitat": "河川・湖・水辺（バニラカワウソと同じ生息域）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "バニラカワウソ準拠：肩乗せで強力な耐寒・耐暑バフ、アーティファクト複数持ち、魚から真珠・黒真珠を採取",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せる（降ろすときはFキー2回）。帽子（ヘルメット）も被せられる\n【肩乗せ・便利効果】（バニラカワウソと同じ）\n・強力な防寒＆防暑バフ：カワウソの「近接攻撃力」を上げるほど、寒さ・暑さ耐性がぐんぐん上がる\n・洞窟の「アーティファクト」をカワウソのインベントリに何個でも入れて運べる（人間は1個しか持てない制限を回避できる）\n・魚への攻撃指示を出すと、魚からシリカ真珠や黒真珠を集めてきてくれる",
           "usageType": "生物・繁殖"
         },
         {
@@ -31493,11 +31493,11 @@
           "enOriginal": "Z-Otter (Striped Otter)",
           "notes": "アセット: Z_Otter_Character_BP_ASA.uasset",
           "assetName": "Z_Otter_Character_BP_ASA",
-          "tamingMethod": "手渡しテイム（バニラカワウソ同様：倒した魚を運んで手渡し）",
+          "tamingMethod": "手渡しテイム（ピラニア・サーモン・シーラカンス等の魚を倒し、死体をEキー長押し「死体を掴む」で運んで野生カワウソに近づき手渡す）",
           "favoriteFood": "死んだ魚（シーラカンス・セイバートゥースサーモン・ピラニア）",
           "habitat": "河川・湖・水辺（バニラカワウソと同じ生息域）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "バニラカワウソ準拠：肩乗せで強力な耐寒・耐暑バフ、アーティファクト複数持ち、魚から真珠・黒真珠を採取",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せる（降ろすときはFキー2回）。帽子（ヘルメット）も被せられる\n【肩乗せ・便利効果】（バニラカワウソと同じ）\n・強力な防寒＆防暑バフ：カワウソの「近接攻撃力」を上げるほど、寒さ・暑さ耐性がぐんぐん上がる\n・洞窟の「アーティファクト」をカワウソのインベントリに何個でも入れて運べる（人間は1個しか持てない制限を回避できる）\n・魚への攻撃指示を出すと、魚からシリカ真珠や黒真珠を集めてきてくれる",
           "usageType": "生物・繁殖"
         },
         {
@@ -31516,11 +31516,11 @@
           "enOriginal": "Z-Aberration Otter (Aberrant Striped Otter)",
           "notes": "アセット: Z_Aberrant_Otter_Character_BP_ASA.uasset",
           "assetName": "Z_Aberrant_Otter_Character_BP_ASA",
-          "tamingMethod": "手渡しテイム（バニラカワウソ同様：倒した魚を運んで手渡し）",
+          "tamingMethod": "手渡しテイム（ピラニア・サーモン・シーラカンス等の魚を倒し、死体をEキー長押し「死体を掴む」で運んで野生カワウソに近づき手渡す）",
           "favoriteFood": "死んだ魚（シーラカンス・セイバートゥースサーモン・ピラニア）",
           "habitat": "河川・湖・水辺（バニラカワウソと同じ生息域）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "バニラカワウソ準拠：肩乗せで強力な耐寒・耐暑バフ、アーティファクト複数持ち、魚から真珠・黒真珠を採取",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せる（降ろすときはFキー2回）。帽子（ヘルメット）も被せられる\n【肩乗せ・便利効果】（バニラカワウソと同じ）\n・強力な防寒＆防暑バフ：カワウソの「近接攻撃力」を上げるほど、寒さ・暑さ耐性がぐんぐん上がる\n・洞窟の「アーティファクト」をカワウソのインベントリに何個でも入れて運べる（人間は1個しか持てない制限を回避できる）\n・魚への攻撃指示を出すと、魚からシリカ真珠や黒真珠を集めてきてくれる",
           "usageType": "生物・繁殖"
         },
         {
@@ -31539,11 +31539,11 @@
           "enOriginal": "Z-Spotted Otter (Spotted Otter)",
           "notes": "アセット: Z_SpottedOtter_Character_BP_ASA.uasset",
           "assetName": "Z_SpottedOtter_Character_BP_ASA",
-          "tamingMethod": "手渡しテイム（バニラカワウソ同様：倒した魚を運んで手渡し）",
+          "tamingMethod": "手渡しテイム（ピラニア・サーモン・シーラカンス等の魚を倒し、死体をEキー長押し「死体を掴む」で運んで野生カワウソに近づき手渡す）",
           "favoriteFood": "死んだ魚（シーラカンス・セイバートゥースサーモン・ピラニア）",
           "habitat": "河川・湖・水辺（バニラカワウソと同じ生息域）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "バニラカワウソ準拠：肩乗せで強力な耐寒・耐暑バフ、アーティファクト複数持ち、魚から真珠・黒真珠を採取",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せる（降ろすときはFキー2回）。帽子（ヘルメット）も被せられる\n【肩乗せ・便利効果】（バニラカワウソと同じ）\n・強力な防寒＆防暑バフ：カワウソの「近接攻撃力」を上げるほど、寒さ・暑さ耐性がぐんぐん上がる\n・洞窟の「アーティファクト」をカワウソのインベントリに何個でも入れて運べる（人間は1個しか持てない制限を回避できる）\n・魚への攻撃指示を出すと、魚からシリカ真珠や黒真珠を集めてきてくれる",
           "usageType": "生物・繁殖"
         },
         {
@@ -31562,11 +31562,11 @@
           "enOriginal": "Z-Ferret Otter (Ferret Otter)",
           "notes": "アセット: Z_FerretOtter_Character_BP_ASA.uasset",
           "assetName": "Z_FerretOtter_Character_BP_ASA",
-          "tamingMethod": "手渡しテイム（バニラカワウソ同様：倒した魚を運んで手渡し）",
+          "tamingMethod": "手渡しテイム（ピラニア・サーモン・シーラカンス等の魚を倒し、死体をEキー長押し「死体を掴む」で運んで野生カワウソに近づき手渡す）",
           "favoriteFood": "死んだ魚（シーラカンス・セイバートゥースサーモン・ピラニア）",
           "habitat": "河川・湖・水辺（バニラカワウソと同じ生息域）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "バニラカワウソ準拠：肩乗せで強力な耐寒・耐暑バフ、アーティファクト複数持ち、魚から真珠・黒真珠を採取",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せる（降ろすときはFキー2回）。帽子（ヘルメット）も被せられる\n【肩乗せ・便利効果】（バニラカワウソと同じ）\n・強力な防寒＆防暑バフ：カワウソの「近接攻撃力」を上げるほど、寒さ・暑さ耐性がぐんぐん上がる\n・洞窟の「アーティファクト」をカワウソのインベントリに何個でも入れて運べる（人間は1個しか持てない制限を回避できる）\n・魚への攻撃指示を出すと、魚からシリカ真珠や黒真珠を集めてきてくれる",
           "usageType": "生物・繁殖"
         }
       ]
@@ -31639,11 +31639,11 @@
           "enOriginal": "When tamed they provide you with oxygen when on your shoulder! Attacks have lifesteal and can wear hats.",
           "notes": "アセット: AnomaTSW_Character_BP.uasset",
           "assetName": "AnomaTSW_Character_BP",
-          "tamingMethod": "昏睡テイム（ASA版では通常の昏睡テイム仕様）",
+          "tamingMethod": "昏睡テイム（麻酔矢やハープーン麻酔矢で眠らせ、アンモナイトの胆汁・ヒルの血液・血液パックを入れてテイム）",
           "favoriteFood": "アンモナイトの胆汁、ヒルの血液、血液パック（左ほど好物）",
           "habitat": "海洋バイオーム",
           "saddleRide": "肩乗せ可能・帽子装備可（騎乗不可）",
-          "specialAbility": "①肩乗せ時に酸素供給 ②攻撃時に体力吸収（ライフスティール）効果 ③人間用の帽子を装備可能",
+          "specialAbility": "【使い方】テイム後にEキーで肩に乗せて水中へ潜る（降ろすときはFキー2回）\n【肩乗せ・戦闘効果】\n・水中酸素供給：肩に乗せている間、水中でプレイヤーに酸素を供給してくれる（序盤のスキューバ代わりに最適）\n・吸血攻撃（ライフスティール）：敵を攻撃するとダメージを与えつつ自身の体力を回復する\n・人間用の帽子・ヘルメットを装備させて防御力を上げられる",
           "usageType": "生物・繁殖"
         },
         {
@@ -31665,7 +31665,7 @@
           "tamingMethod": "手渡しテイム（パッシブテイム）",
           "favoriteFood": "ベリー・専用果実（Angelberry / Spinefruit / Crabnut / Curlbean等）",
           "habitat": "海岸・開けた森林",
-          "saddleRide": "小型伴侶・採取ペット",
+          "saddleRide": "騎乗可能（専用サドルはLv10で解放）",
           "specialAbility": "【騎乗中の操作】\n・左クリック：噛みつき（果実・ベリー類を高効率で採取）\n・右クリック：突進（Charge）— 前方へ勢いよく突進して攻撃\n・Cキー：威嚇咆哮（Fear Roar）— 周囲の小型〜中型肉食生物を怖がらせて一定時間逃げ出させる\n・Ctrlキー等：頭突き攻撃（Headbutt）\n【パッシブ・特徴】\n・果実・ベリー類の採取効率が非常に高く、悪天候（異常気象）が近づくと警告してくれる",
           "usageType": "生物・繁殖"
         },
@@ -31688,7 +31688,7 @@
           "tamingMethod": "手渡しテイム（パッシブテイム）",
           "favoriteFood": "肉・魚肉系",
           "habitat": "極地・雪原沿岸",
-          "saddleRide": "騎乗可能",
+          "saddleRide": "騎乗可能（専用サドルはLv23で解放）",
           "specialAbility": "【騎乗中の操作】\n・左クリック：噛みつき攻撃\n・右クリック：尻尾叩き（Tail Slap）\n・Cキー等：メタボリックラッシュ（Metabolic Rush：陸上・水中での移動速度＆攻撃速度が一時的に上昇）／経験値バフ咆哮（XP Bark）\n【Eキー長押しメニュー】\n・Pet It（なでる）：アンブロケトゥスをなでると、一定時間アンブロケトゥス自身の獲得経験値が増えるバフが付与される",
           "usageType": "生物・繁殖"
         },
@@ -31708,7 +31708,7 @@
           "enOriginal": "A playful but fierce cetacean that travels in close knit pods. Detects threats with sonar.",
           "notes": "アセット: AcrophyseterTSW_Character_BP.uasset",
           "assetName": "AcrophyseterTSW_Character_BP",
-          "tamingMethod": "手渡しテイム（パッシブテイム）",
+          "tamingMethod": "特殊手渡しテイム（野生の群れの近くで信頼［Trust］を得ながら魚肉等を手渡す方式／専用サドルはLv59解放）",
           "favoriteFood": "肉・魚肉系",
           "habitat": "外洋・海洋バイオーム",
           "saddleRide": "騎乗可能（専用サドルあり）",
@@ -31780,7 +31780,7 @@
           "tamingMethod": "昏睡テイム",
           "favoriteFood": "肉・魚肉系",
           "habitat": "海洋バイオーム",
-          "saddleRide": "騎乗可能（専用サドルあり）",
+          "saddleRide": "騎乗可能（作業台機能付き専用サドルはLv20で解放）",
           "specialAbility": "【騎乗中の操作】\n・左クリック：噛みつき攻撃\n・右クリック：ハンマーヘッド叩きつけ（Hammer）— 海底の金属鉱石や原油の採取・攻撃に有効\n・Cキー：電気感覚トグル（Metal Detection）— ONにすると海底の金属鉱石・原油などの資源をハイライト探知できる\n【パッシブ・特徴】\n・専用サドルを装備すると、インベントリが移動式の「作業台（Smithy）」として機能する",
           "usageType": "生物・繁殖"
         },
@@ -31803,8 +31803,8 @@
           "tamingMethod": "昏睡テイム",
           "favoriteFood": "テルミット(Thermite)・肉類",
           "habitat": "深海・海洋バイオーム",
-          "saddleRide": "騎乗可能（専用サドルあり）",
-          "specialAbility": "【騎乗中の操作】\n・左クリック：噛みつき（加熱中は炎をまとった強化噛みつきに変化）\n・右クリック：突き攻撃（Jab：加熱中は炎の強化突きに変化）\n・Cキー：串刺し攻撃（Impale）\n【Eキー長押しメニュー】\n・Enable / Disable Auto Refuel（自動燃料補給ON/OFF）：加熱状態を維持するためにインベントリ内の燃料を自動消費する設定を切替\n・Drain Heat（放熱）：溜めた熱ゲージを放出・解除する\n【パッシブ・特徴】\n・インベントリにテルミット・硫黄・発火粉などの燃料素材を入れて加熱すると攻撃力が上昇し、インベントリ内での精錬速度も2倍になる",
+          "saddleRide": "騎乗可能（耐熱保護付き専用サドルはLv70で解放）",
+          "specialAbility": "【騎乗中の操作】（専用サドルはLv70で解放：騎乗者を極端な高温から守る耐熱機能付き）\n・左クリック：噛みつき（加熱中は炎上デバフを与える強化噛みつきに変化）\n・右クリック：ダッシュ突き攻撃（Jab：前方へ踏み込みながら突く）\n・Cキー：串刺し攻撃（Impale：対象を突き刺して炎上ダメージを与える）\n【Eキー長押しメニュー】\n・Enable / Disable Auto Refuel（自動燃料補給ON/OFF）：加熱状態を維持するためにインベントリ内の燃料を自動消費する設定を切替\n・Drain Heat（放熱）：溜めた熱ゲージを放出・解除する\n【パッシブ・特徴】\n・インベントリにテルミット・硫黄・発火粉などの燃料を入れて加熱状態にすると、攻撃時の炎上付与・近接反射ダメージが発生し、さらにインベントリ内での金属等の精錬（製錬炉機能）速度が2倍になる",
           "usageType": "生物・繁殖"
         },
         {
@@ -31823,11 +31823,11 @@
           "enOriginal": "A gigantic sea urchin. Produces spines for harpoon bolts and tasty roe for unique recipes.",
           "notes": "アセット: UrchinTSW_Character_BP.uasset（討伐用ボス個体 King Diadema: MegaUrchinTSW_Character_BP_C）",
           "assetName": "UrchinTSW_Character_BP",
-          "tamingMethod": "手渡しテイム（パッシブテイム）",
+          "tamingMethod": "手渡しテイム（ケルプ［Kelp］などの海藻をショートバー右端に入れて海底のウニに近づき手渡す）",
           "favoriteFood": "海藻・ケルプ系",
           "habitat": "海底・岩礁",
           "saddleRide": "資源生産ペット（騎乗不可）",
-          "specialAbility": "ハープーンで撃てるウニのトゲ矢や、料理素材「ウニの卵(Urchin Roe)」を生産",
+          "specialAbility": "【使い方・特徴】（騎乗不可の拠点生産ペット）\n・テイムして水中で飼っておくと、時間経過でインベントリ内に以下の有用アイテムを生み出す：\n　①ウニのトゲ矢（Urchin Spike）：ハープーンガンで撃てる弾薬（麻酔薬を塗ると強力な水中麻酔矢「Urchin Tranq Spike」に加工できる）\n　②ウニの卵（Urchin Roe）：獲得経験値+20%料理「ウニ軍艦(Uni Gunkan)」の材料になる",
           "usageType": "生物・繁殖"
         },
         {
@@ -31850,7 +31850,7 @@
           "favoriteFood": "海藻・プランクトン系",
           "habitat": "浅瀬・海底",
           "saddleRide": "資源・採取系（騎乗不可）",
-          "specialAbility": "討伐・採取でキチンと微量の黒真珠を入手可能",
+          "specialAbility": "【特徴・用途】（騎乗不可の小型古代魚）\n・浅瀬や海底をおとなしく泳いでおり、倒して採取すると序盤では貴重な「キチン」と少量の「黒真珠」を入手できる資源魚",
           "usageType": "生物・繁殖"
         },
         {
@@ -31873,7 +31873,7 @@
           "favoriteFood": "海藻系",
           "habitat": "河川・浅瀬・海",
           "saddleRide": "資源・採取系（騎乗不可）",
-          "specialAbility": "採取でシースケール防具の素材となる魚の鱗を大量に入手可能",
+          "specialAbility": "【特徴・用途】（騎乗不可の小型魚）\n・倒して採取すると、序盤の水中探索用「シースケール防具セット(Sea Scale Armor)」の作成に必要な専用素材「海の鱗(Sea Scale)」を大量に入手できる",
           "usageType": "生物・繁殖"
         },
         {
@@ -31896,7 +31896,7 @@
           "favoriteFood": "魚肉・肉類",
           "habitat": "海洋バイオーム",
           "saddleRide": "小型水中肉食（騎乗不可）",
-          "specialAbility": "高速遊泳による奇襲攻撃",
+          "specialAbility": "【特徴・用途】（騎乗不可の小型高速魚）\n・非常に泳ぐスピードが速い肉食魚。複数体テイムして水中移動時の護衛（群れ）として連れ歩ける",
           "usageType": "生物・繁殖"
         },
         {
@@ -31918,7 +31918,7 @@
           "tamingMethod": "手渡しテイム（パッシブテイム）",
           "favoriteFood": "肉類",
           "habitat": "沿岸・森林周辺",
-          "saddleRide": "騎乗可能（専用サドルあり）",
+          "saddleRide": "騎乗可能（専用サドルはLv68で解放）",
           "specialAbility": "【騎乗中の操作】\n・左クリック：噛みつき攻撃\n・右クリック：引っかき攻撃（左右の爪による連続攻撃）\n・Cキー：強噛みつき（Heavy Bite）\n・Ctrlキー等：咆哮（Roar）\n【パッシブ・特徴】\n・陸上・水辺で活躍する肉食恐竜（専用サドルあり）",
           "usageType": "生物・繁殖"
         },
@@ -31969,7 +31969,7 @@
           "image": "",
           "enName": "Stone Knife & Diving Knife",
           "jaName": "石のナイフ / ダイビングナイフ(Stone Knife / Diving Knife)",
-          "description": "通常マップの水中植物からTSW専用素材（海草・ケルプ等）を採取できるようにするツール。上位版のダイビングナイフはレア素材採取量と水中ダメージが上昇。",
+          "description": "アイランド等の通常マップにある水中の海藻・サンゴから、TSW専用の水中素材（ケルプ・海草・各種海藻ベリー等）を採取できるようにする必須ツール。石のナイフ（Lv6解放）と上位版のダイビングナイフ（Lv57解放）の2段階がある。",
           "category": "ツール・武器",
           "obtainMethod": "",
           "dinoName": "",
@@ -31980,7 +31980,7 @@
           "enOriginal": "Allows harvesting of underwater plants on non-TSW maps for TSW resources. Diving Knife yields rarer resources and bonus underwater damage.",
           "notes": "アセット: PrimalItemWeapon_StoneKnife / PrimalItemWeapon_DivingKnife.uasset",
           "assetName": "PrimalItemWeapon_DivingKnife",
-          "specialAbility": "アイランド等の通常マップでTSW専用水中素材を採取するための必須ツール",
+          "specialAbility": "【解放レベル】石のナイフ：Lv6 / ダイビングナイフ：Lv57\n【使い方】手に持って水中の海藻オブジェクトを攻撃すると、ヘノドゥスやウニのテイム・水中料理に必要な「ケルプ(Kelp)」や「海草(Seagrass)」を採取できる（素手や普通のピッケルでは採れないため必須！）",
           "usageType": "生物・繁殖",
           "habitat": ""
         },
@@ -32292,7 +32292,7 @@
           "image": "",
           "enName": "Monolophosaurus Saddle",
           "jaName": "モノロフォサウルス用サドル(Monolophosaurus Saddle)",
-          "description": "モノロフォサウルスに騎乗するための専用サドル。エングラム作成のほか、紫・黄ビーコンやアルファ個体からも入手できる。",
+          "description": "モノロフォサウルスに騎乗するための専用サドル（Lv35エングラム解放・0ポイントで習得可／紫・黄色の補給ビーコンやアルファ個体の討伐からも入手可能）。",
           "category": "装備・サドル",
           "obtainMethod": "",
           "dinoName": "",
@@ -32308,14 +32308,14 @@
           "favoriteFood": "",
           "habitat": "",
           "saddleRide": "モノロフォサウルスに装着して騎乗",
-          "specialAbility": "騎乗可能になり、複数の追加効果を発揮"
+          "specialAbility": "【解放レベル】Lv35エングラム（0ポイント）で解放、またはビーコン・アルファ討伐で高品質品を入手可能"
         },
         {
           "index": 7,
           "image": "",
           "enName": "Monolophosaurus Blade-Crest",
           "jaName": "モノロフォサウルス・トサカ刃(Monolophosaurus Blade-Crest)",
-          "description": "モノロフォサウルスの頭部トサカに装着する刃アタッチメント。",
+          "description": "モノロフォサウルスの専用装備枠に付けるトサカ刃アタッチメント（Lv45エングラム解放・0ポイントで習得可）。",
           "category": "装備・サドル",
           "obtainMethod": "",
           "dinoName": "",
@@ -32331,14 +32331,14 @@
           "favoriteFood": "",
           "habitat": "",
           "saddleRide": "モノロフォサウルスに装着",
-          "specialAbility": "頭突き（右クリック）のダメージ+50%＆マンタ同等の装甲貫通効果を付与（対虫バフ中は耐久が自動修復）"
+          "specialAbility": "【解放レベル】Lv45エングラム（0ポイント）\n【効果】装着すると右クリックの頭突き攻撃の威力が+50%上がり、敵の防具・外殻を貫通するようになる（虫を倒した後の対虫バフ中は耐久値が毎秒自動で修理される）"
         },
         {
           "index": 8,
           "image": "",
           "enName": "Monolophosaurus Mounted Shield",
           "jaName": "モノロフォサウルス・騎乗者シールド(Monolophosaurus Mounted Shield)",
-          "description": "モノロフォサウルスに装着し、騎乗しているサバイバーを特定の攻撃から守る専用シールド。",
+          "description": "モノロフォサウルスに装着し、背中から攻撃してくる虫の毒液などから騎乗者を守る専用シールド（Lv45エングラム解放・0ポイントで習得可）。",
           "category": "装備・サドル",
           "obtainMethod": "",
           "dinoName": "",
@@ -32354,14 +32354,14 @@
           "favoriteFood": "",
           "habitat": "",
           "saddleRide": "モノロフォサウルスに装着",
-          "specialAbility": "特定のダメージタイプから騎乗者を保護（対虫バフ中は耐久が自動修復）"
+          "specialAbility": "【解放レベル】Lv45エングラム（0ポイント）\n【効果】アースロプレウラ（ムカデ）の酸液など特定の攻撃から騎乗しているプレイヤーの防具・体力を守る（対虫バフ中は耐久値が毎秒自動で修理される）"
         },
         {
           "index": 9,
           "image": "",
           "enName": "Monolophosaurus Bile",
           "jaName": "モノロフォサウルスの胆汁(Monolophosaurus Bile)",
-          "description": "モノロフォサウルスから得られる特殊な胆汁。テイム用エサや戦闘時の噛みつき強化に使う（モノロフォのインベントリ内では重量0）。",
+          "description": "野生モノロフォサウルスの討伐などで手に入る特殊な胆汁。テイム時の大好物エサになるほか、テイム後の戦闘強化にも使える（モノロフォのインベントリ内では重量0）。",
           "category": "消費アイテム",
           "obtainMethod": "",
           "dinoName": "",
@@ -32377,7 +32377,7 @@
           "favoriteFood": "",
           "habitat": "",
           "saddleRide": "",
-          "specialAbility": "インベントリで使用すると噛みつき威力+25%＆酸デバフを付与。テイム時の餌としても有効"
+          "specialAbility": "【2つの使い道】\n①テイム用：野生のモノロフォサウルスをおとなしくさせ、高効率で手渡しテイムできる\n②戦闘強化用：テイム済みのモノロフォサウルスのインベントリに入れて「使用（食べる）」させると、180秒間噛みつきダメージ+25%＆相手の体力を毎秒削る酸デバフを付与できるようになる"
         }
       ]
     }
