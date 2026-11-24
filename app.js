@@ -661,7 +661,14 @@
 
   function isNonLinkablePhrase(rawSegment) {
     const s = rawSegment.trim();
-    return /^(インベントリ|なし|-|ー|不明|作成|採取|コスメティック|エングラム|スポーン|クラス切替|アビリティ)/.test(s);
+    if (/^(インベントリ|なし|-|ー|不明|作成|採取|コスメティック|エングラム|スポーン|クラス切替|アビリティ|および|または|そのほか|その他)/.test(s)) {
+      return true;
+    }
+    const base = s.replace(/\s*[（(][^）)]+[）)]/g, '').trim();
+    if (base.length > 22 || /(攻撃|ダメージ|コンポーネント|ファイル|参照|使用)/.test(base)) {
+      return true;
+    }
+    return false;
   }
 
   function buildWikiSearchUrl(rawSegment) {
@@ -1048,6 +1055,10 @@
       if (e.target === els.detailModal || e.target === els.modalStage) {
         closeDetailModal();
       }
+    });
+
+    window.addEventListener('hashchange', () => {
+      if (state.data) openItemFromHash();
     });
 
     document.addEventListener('keydown', (e) => {
