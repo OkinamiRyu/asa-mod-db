@@ -2,6 +2,10 @@
   'use strict';
 
   const PAGE_SIZE = 80;
+  const THEME_STORAGE_KEY = 'asa_mod_db_theme';
+  const PIN_STORAGE_KEY = 'asa_mod_db_pins';
+  const RECENT_STORAGE_KEY = 'asa_mod_db_recent';
+  const MAX_RECENT = 20;
 
   const VANILLA_REF_EN_NAMES = new Set([
     'wood', 'thatch', 'fiber', 'stone', 'flint', 'hide', 'raw meat', 'spoiled meat',
@@ -12,6 +16,22 @@
     'water container', 'primalitemconsumableseed',
   ]);
 
+  const MATCH_HINT_FIELDS = [
+    { prop: 'materials', label: '必要素材' },
+    { prop: 'craftStation', label: '作る場所' },
+    { prop: 'harvestSource', label: '採取元' },
+    { prop: 'toolUsed', label: '使う道具' },
+    { prop: 'dinoName', label: '恐竜名' },
+    { prop: 'tamingMethod', label: 'テイム方法' },
+    { prop: 'favoriteFood', label: '好物・餌' },
+    { prop: 'habitat', label: '生息地' },
+    { prop: 'saddleRide', label: 'サドル・騎乗' },
+    { prop: 'specialAbility', label: '特殊能力' },
+    { prop: 'applyTarget', label: '適用対象' },
+    { prop: 'applyMethod', label: '適用方法' },
+    { prop: 'enOriginal', label: '英語原文' },
+  ];
+
   const state = {
     data: null,
     icons: {},
@@ -20,7 +40,7 @@
     category: '',
     filter2: '',
     filter3: '',
-    quickFilter: '', // '' | 'stations' | 'item' | 'creature' | 'cosmetic'
+    quickFilter: '', // '' | 'stations' | 'item' | 'creature' | 'cosmetic' | 'pinned' | 'recent'
     mobileFiltersOpen: false,
     sortBy: 'index',
     viewMode: 'card', // 'card' | 'table'
@@ -28,10 +48,13 @@
     modSearchQuery: '',
     filteredItems: [],
     allItemsByGlobalIndex: new Map(),
+    itemByKey: new Map(),
     lookupByEn: new Map(),
     lookupByJa: new Map(),
     producedByMap: new Map(),
     usedInMap: new Map(),
+    pinnedKeys: new Set(),
+    recentKeys: [],
     mainItem: null,
     sub1Item: null,
     sub2Stack: [],
@@ -39,6 +62,7 @@
 
   const els = {
     brandHomeLink: document.getElementById('brandHomeLink'),
+    themeToggleBtn: document.getElementById('themeToggleBtn'),
     statBadge: document.getElementById('statBadge'),
     updatedBadge: document.getElementById('updatedBadge'),
     tabList: document.getElementById('tabList'),
@@ -82,6 +106,7 @@
     modalEnName: document.getElementById('modalEnName'),
     copyEnBtn: document.getElementById('copyEnBtn'),
     shareItemBtn: document.getElementById('shareItemBtn'),
+    pinItemBtn: document.getElementById('pinItemBtn'),
     modalCloseBtn: document.getElementById('modalCloseBtn'),
     modalBody: document.getElementById('modalBody'),
     subModalDialog: document.getElementById('subModalDialog'),
@@ -93,6 +118,7 @@
     subEnName: document.getElementById('subEnName'),
     subCopyEnBtn: document.getElementById('subCopyEnBtn'),
     subShareItemBtn: document.getElementById('subShareItemBtn'),
+    subPinItemBtn: document.getElementById('subPinItemBtn'),
     subModalBody: document.getElementById('subModalBody'),
     subModalDialog2: document.getElementById('subModalDialog2'),
     sub2BackBtn: document.getElementById('sub2BackBtn'),
@@ -104,6 +130,7 @@
     sub2EnName: document.getElementById('sub2EnName'),
     sub2CopyEnBtn: document.getElementById('sub2CopyEnBtn'),
     sub2ShareItemBtn: document.getElementById('sub2ShareItemBtn'),
+    sub2PinItemBtn: document.getElementById('sub2PinItemBtn'),
     sub2ModalBody: document.getElementById('sub2ModalBody'),
     toast: document.getElementById('toast'),
   };
@@ -139,6 +166,274 @@
 
   function normalizeKey(str) {
     return normalizeText(str).replace(/\s+/g, ' ').trim();
+  }
+
+  function getCurrentTheme() {
+    return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+  }
+
+  function updateThemeButton() {
+    if (!els.themeToggleBtn) return;
+    const isDark = getCurrentTheme() === 'dark';
+    els.themeToggleBtn.textContent = isDark ? '☀️ ライト' : '🌙 ダーク';
+    els.themeToggleBtn.setAttribute('aria-pressed', String(isDark));
+    els.themeToggleBtn.setAttribute('aria-label', isDark ? 'ライトモードに切替' : 'ダークモードに切替');
+  }
+
+  function toggleTheme() {
+    const next = getCurrentTheme() === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, next);
+    } catch {
+      // Ignore storage errors (e.g. private browsing)
+    }
+    updateThemeButton();
+  }
+
+  function getItemKey(item) {
+    if (!item) return '';
+    return `${item._modId}::${item.assetName ? item.assetName.toLowerCase() : String(item.index)}`;
+  }
+
+  function loadStoredArray(key) {
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw) return [];
+      const parsed = JSON.parse(raw);
+      return Array.isArray(parsed) ? parsed.filter((v) => typeof v === 'string' && v) : [];
+    } catch {
+      return [];
+    }
+  }
+
+  function saveStoredArray(key, arr) {
+    try {
+      localStorage.setItem(key, JSON.stringify(arr));
+    } catch {
+      // Ignore storage errors
+    }
+  }
+
+  function loadUserCollections() {
+    state.pinnedKeys = new Set(loadStoredArray(PIN_STORAGE_KEY));
+    state.recentKeys = loadStoredArray(RECENT_STORAGE_KEY).slice(0, MAX_RECENT);
+  }
+
+  function updateModalPinButton(btnEl, item) {
+    if (!btnEl) return;
+    if (!item) {
+      btnEl.classList.add('hidden');
+      return;
+    }
+    const key = getItemKey(item);
+    const isPinned = state.pinnedKeys.has(key);
+    btnEl.classList.remove('hidden');
+    btnEl.classList.toggle('pinned', isPinned);
+    btnEl.dataset.pinKey = key;
+    btnEl.setAttribute('aria-pressed', String(isPinned));
+    btnEl.textContent = isPinned ? '★ ピン済' : '☆ ピン留め';
+    btnEl.title = isPinned ? 'ピン留めを解除' : 'お気に入りにピン留め';
+  }
+
+  function syncAllPinButtons() {
+    const buttons = els.itemsContainer.querySelectorAll('[data-pin-key]');
+    for (const btn of buttons) {
+      const isPinned = state.pinnedKeys.has(btn.dataset.pinKey);
+      btn.classList.toggle('pinned', isPinned);
+      btn.setAttribute('aria-pressed', String(isPinned));
+      btn.textContent = isPinned ? '★' : '☆';
+      btn.title = isPinned ? 'ピン留めを解除' : 'ピン留めする';
+    }
+    updateModalPinButton(els.pinItemBtn, state.mainItem);
+    updateModalPinButton(els.subPinItemBtn, state.sub1Item);
+    const s2 = state.sub2Stack.length > 0 ? state.sub2Stack[state.sub2Stack.length - 1] : null;
+    updateModalPinButton(els.sub2PinItemBtn, s2);
+  }
+
+  function togglePinByKey(itemKey) {
+    if (!itemKey) return;
+    const item = state.itemByKey.get(itemKey);
+    const label = item ? item.jaName || item.enName : 'アイテム';
+    if (state.pinnedKeys.has(itemKey)) {
+      state.pinnedKeys.delete(itemKey);
+      showToast(`「${label}」のピン留めを解除しました`);
+    } else {
+      state.pinnedKeys.add(itemKey);
+      showToast(`「${label}」をピン留めしました`);
+    }
+    saveStoredArray(PIN_STORAGE_KEY, [...state.pinnedKeys]);
+    renderQuickFilters();
+    if (state.quickFilter === 'pinned') {
+      applyFiltersAndRender();
+      syncAllPinButtons();
+    } else {
+      syncAllPinButtons();
+    }
+  }
+
+  function recordRecentItem(item) {
+    const key = getItemKey(item);
+    if (!key) return;
+    state.recentKeys = [key, ...state.recentKeys.filter((k) => k !== key)].slice(0, MAX_RECENT);
+    saveStoredArray(RECENT_STORAGE_KEY, state.recentKeys);
+    if (state.activeTab !== 'INSTALLED' && state.activeTab !== 'RULES') {
+      renderQuickFilters();
+      if (state.quickFilter === 'recent') {
+        applyFiltersAndRender();
+      }
+    }
+  }
+
+  function buildNormalizedCharMap(rawText) {
+    const str = String(rawText || '');
+    let norm = '';
+    const map = [];
+    let i = 0;
+    while (i < str.length) {
+      let end = i + 1;
+      // Group combining/halfwidth dakuten or handakuten with preceding character
+      if (end < str.length) {
+        const nextCode = str.charCodeAt(end);
+        if (nextCode === 0xff9e || nextCode === 0xff9f || nextCode === 0x3099 || nextCode === 0x309a) {
+          end += 1;
+        }
+      }
+      const piece = str.slice(i, end);
+      const nPiece = piece
+        .normalize('NFKC')
+        .toLowerCase()
+        .replace(/[\u30a1-\u30f6]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) - 0x60));
+      for (let j = 0; j < nPiece.length; j++) {
+        const ch = nPiece[j];
+        if (/\s/.test(ch)) {
+          if (norm.length > 0 && norm[norm.length - 1] !== ' ') {
+            norm += ' ';
+            map.push([i, end]);
+          }
+        } else {
+          norm += ch;
+          map.push([i, end]);
+        }
+      }
+      i = end;
+    }
+    return { norm, map };
+  }
+
+  function highlightText(rawText, tokens) {
+    if (rawText == null || rawText === '') return '';
+    const str = String(rawText);
+    if (!tokens || tokens.length === 0) return escapeHtml(str);
+
+    const { norm, map } = buildNormalizedCharMap(str);
+    if (!norm) return escapeHtml(str);
+
+    const ranges = [];
+    for (const tk of tokens) {
+      if (!tk) continue;
+      let pos = 0;
+      while (pos < norm.length) {
+        const idx = norm.indexOf(tk, pos);
+        if (idx === -1) break;
+        const endIdx = idx + tk.length - 1;
+        if (idx < map.length && endIdx < map.length) {
+          ranges.push([map[idx][0], map[endIdx][1]]);
+        }
+        pos = idx + tk.length;
+      }
+    }
+
+    if (ranges.length === 0) return escapeHtml(str);
+
+    ranges.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+    const merged = [ranges[0]];
+    for (let k = 1; k < ranges.length; k++) {
+      const prev = merged[merged.length - 1];
+      const cur = ranges[k];
+      if (cur[0] <= prev[1]) {
+        if (cur[1] > prev[1]) prev[1] = cur[1];
+      } else {
+        merged.push(cur);
+      }
+    }
+
+    let out = '';
+    let cursor = 0;
+    for (const [start, end] of merged) {
+      if (start > cursor) out += escapeHtml(str.slice(cursor, start));
+      out += `<mark class="search-hit">${escapeHtml(str.slice(start, end))}</mark>`;
+      cursor = end;
+    }
+    if (cursor < str.length) out += escapeHtml(str.slice(cursor));
+    return out;
+  }
+
+  function extractMatchExcerpt(rawVal, tokens) {
+    const str = String(rawVal || '').replace(/\r\n/g, '\n').trim();
+    if (!str) return '';
+
+    const segments = splitRespectingParens(str)
+      .flatMap((seg) => seg.split('\n'))
+      .map((s) => s.trim())
+      .filter(Boolean);
+
+    let chosen = '';
+    for (const seg of segments) {
+      const nSeg = normalizeText(seg);
+      if (tokens.some((tk) => nSeg.includes(tk))) {
+        chosen = seg;
+        break;
+      }
+    }
+    if (!chosen) chosen = str;
+
+    if (chosen.length > 48) {
+      const { norm, map } = buildNormalizedCharMap(chosen);
+      let firstOrigStart = 0;
+      let firstOrigEnd = 0;
+      for (const tk of tokens) {
+        const idx = norm.indexOf(tk);
+        if (idx !== -1 && idx < map.length) {
+          const endIdx = Math.min(idx + tk.length - 1, map.length - 1);
+          firstOrigStart = map[idx][0];
+          firstOrigEnd = map[endIdx][1];
+          break;
+        }
+      }
+      const winStart = Math.max(0, firstOrigStart - 20);
+      const winEnd = Math.min(chosen.length, firstOrigEnd + 20);
+      const prefix = winStart > 0 ? '…' : '';
+      const suffix = winEnd < chosen.length ? '…' : '';
+      chosen = `${prefix}${chosen.slice(winStart, winEnd).trim()}${suffix}`;
+    }
+
+    return highlightText(chosen, tokens);
+  }
+
+  function buildMatchHintsHtml(item, tokens) {
+    if (!tokens || tokens.length === 0) return '';
+    const primaryNorm = normalizeText([item.jaName, item.enName, item.description].join(' '));
+    const secondaryTokens = tokens.filter((tk) => !primaryNorm.includes(tk));
+    if (secondaryTokens.length === 0) return '';
+
+    const badges = [];
+    for (const field of MATCH_HINT_FIELDS) {
+      if (badges.length >= 2) break;
+      const val = item[field.prop];
+      if (!val) continue;
+      const normVal = normalizeText(val);
+      const matchedTks = secondaryTokens.filter((tk) => normVal.includes(tk));
+      if (matchedTks.length === 0) continue;
+      const excerptHtml = extractMatchExcerpt(val, tokens);
+      if (!excerptHtml) continue;
+      badges.push(
+        `<span class="match-hint-badge"><span class="match-hint-label">${escapeHtml(field.label)}に一致:</span><span>${excerptHtml}</span></span>`
+      );
+    }
+
+    if (badges.length === 0) return '';
+    return `<div class="match-hint-row">${badges.join('')}</div>`;
   }
 
   function showToast(msg) {
@@ -338,17 +633,39 @@
     const stationCount = sourceItems.filter(isCraftingStation).length;
     const practicalCount = sourceItems.filter((i) => i.usageType === '実用（機能あり）').length;
     const decorCount = sourceItems.filter((i) => i.usageType === '装飾・観賞用').length;
+    const pinnedCount = sourceItems.filter((i) => state.pinnedKeys.has(getItemKey(i))).length;
+    const recentSet = new Set(state.recentKeys);
+    const recentCount = sourceItems.filter((i) => recentSet.has(getItemKey(i))).length;
     const chips = [];
 
     if (state.activeTab === 'ALL') {
       chips.push({ id: '', label: 'すべて' });
+      if (pinnedCount > 0 || state.quickFilter === 'pinned') {
+        chips.push({ id: 'pinned', label: `★ ピン留め (${pinnedCount})` });
+      }
+      if (recentCount > 0 || state.quickFilter === 'recent') {
+        chips.push({ id: 'recent', label: `🕒 最近見た (${recentCount})` });
+      }
       if (practicalCount > 0) chips.push({ id: 'practical', label: `⚙ 実用のみ (${practicalCount})` });
       if (decorCount > 0) chips.push({ id: 'decor', label: `🎨 装飾・観賞用 (${decorCount})` });
       if (stationCount > 0) chips.push({ id: 'stations', label: `🛠 作業台・設備 (${stationCount})` });
       chips.push({ id: 'creature', label: '🐾 生物系' });
       chips.push({ id: 'cosmetic', label: '✨ スキン系' });
-    } else if (stationCount > 0 || (practicalCount > 0 && decorCount > 0)) {
+    } else if (
+      stationCount > 0 ||
+      (practicalCount > 0 && decorCount > 0) ||
+      pinnedCount > 0 ||
+      recentCount > 0 ||
+      state.quickFilter === 'pinned' ||
+      state.quickFilter === 'recent'
+    ) {
       chips.push({ id: '', label: 'すべて' });
+      if (pinnedCount > 0 || state.quickFilter === 'pinned') {
+        chips.push({ id: 'pinned', label: `★ ピン留め (${pinnedCount})` });
+      }
+      if (recentCount > 0 || state.quickFilter === 'recent') {
+        chips.push({ id: 'recent', label: `🕒 最近見た (${recentCount})` });
+      }
       if (practicalCount > 0 && decorCount > 0) {
         chips.push({ id: 'practical', label: `⚙ 実用のみ (${practicalCount})` });
         chips.push({ id: 'decor', label: `🎨 装飾・観賞用 (${decorCount})` });
@@ -459,8 +776,11 @@
     const tokens = normalizeText(state.searchQuery)
       .split(/\s+/)
       .filter(Boolean);
+    const recentOrder = new Map(state.recentKeys.map((k, idx) => [k, idx]));
 
     let list = sourceItems.filter((item) => {
+      if (state.quickFilter === 'pinned' && !state.pinnedKeys.has(getItemKey(item))) return false;
+      if (state.quickFilter === 'recent' && !recentOrder.has(getItemKey(item))) return false;
       if (state.quickFilter === 'stations' && !isCraftingStation(item)) return false;
       if (state.quickFilter === 'practical' && item.usageType !== '実用（機能あり）') return false;
       if (state.quickFilter === 'decor' && item.usageType !== '装飾・観賞用') return false;
@@ -490,6 +810,9 @@
         case 'category':
           return (a.category || 'ん').localeCompare(b.category || 'ん', 'ja') || a.index - b.index;
         default:
+          if (state.quickFilter === 'recent') {
+            return (recentOrder.get(getItemKey(a)) ?? 9999) - (recentOrder.get(getItemKey(b)) ?? 9999);
+          }
           return a._globalIndex - b._globalIndex;
       }
     });
@@ -521,11 +844,16 @@
     const shown = list.slice(0, state.visibleLimit);
     const showModBadge = state.activeTab === 'ALL';
     const sheetType = getActiveSheetType();
+    const tokens = normalizeText(state.searchQuery)
+      .split(/\s+/)
+      .filter(Boolean);
 
     if (state.viewMode === 'card') {
       els.itemsContainer.className = 'items-grid';
       els.itemsContainer.innerHTML = shown
         .map((item) => {
+          const itemKey = getItemKey(item);
+          const isPinned = state.pinnedKeys.has(itemKey);
           const tags = [];
           if (item._isVanillaRef) {
             tags.push('<span class="tag tag-vanilla">バニラ基本素材</span>');
@@ -564,14 +892,16 @@
           if (item.obtainMethod) tags.push(`<span class="tag">${escapeHtml(item.obtainMethod)}</span>`);
           if (item.habitat) tags.push(`<span class="tag">${escapeHtml(item.habitat)}</span>`);
 
+          const matchHintsHtml = buildMatchHintsHtml(item, tokens);
+
           return `
             <article class="item-card" data-global-index="${item._globalIndex}" tabindex="0">
               <div class="item-card-top">
                 <div class="item-thumb">${renderIconHtml(item)}</div>
                 <div class="item-headings">
-                  <h3 class="item-ja">${escapeHtml(item.jaName || item.enName)}</h3>
+                  <h3 class="item-ja">${highlightText(item.jaName || item.enName, tokens)}</h3>
                   <div class="item-en-line">
-                    <span class="item-en">${escapeHtml(item.enName)}</span>
+                    <span class="item-en">${highlightText(item.enName, tokens)}</span>
                     ${
                       item.enName
                         ? `<button type="button" class="mini-copy-btn" data-copy="${escapeHtml(item.enName)}" title="英語名をコピー">コピー</button>`
@@ -579,8 +909,10 @@
                     }
                   </div>
                 </div>
+                <button type="button" class="card-pin-btn ${isPinned ? 'pinned' : ''}" data-pin-key="${escapeHtml(itemKey)}" aria-pressed="${isPinned}" aria-label="${isPinned ? 'ピン留めを解除' : 'ピン留めする'}" title="${isPinned ? 'ピン留めを解除' : 'ピン留めする'}">${isPinned ? '★' : '☆'}</button>
               </div>
-              ${item.description ? `<p class="item-desc">${escapeHtml(formatSentenceBreaks(item.description))}</p>` : ''}
+              ${item.description ? `<p class="item-desc">${highlightText(formatSentenceBreaks(item.description), tokens)}</p>` : ''}
+              ${matchHintsHtml}
               ${tags.length ? `<div class="item-tags">${tags.join('')}</div>` : ''}
             </article>`;
         })
@@ -608,6 +940,8 @@
           <tbody>
             ${shown
               .map((item) => {
+                const itemKey = getItemKey(item);
+                const isPinned = state.pinnedKeys.has(itemKey);
                 const col4Val =
                   sheetType === 'creature'
                     ? item.tamingMethod || '-'
@@ -624,14 +958,19 @@
               <tr data-global-index="${item._globalIndex}">
                 <td><div class="table-thumb">${renderIconHtml(item)}</div></td>
                 <td>
-                  <div class="table-name-ja">${escapeHtml(item.jaName || item.enName)}</div>
-                  <div class="table-name-en">${escapeHtml(item.enName)}</div>
+                  <div class="table-name-row">
+                    <div>
+                      <div class="table-name-ja">${highlightText(item.jaName || item.enName, tokens)}</div>
+                      <div class="table-name-en">${highlightText(item.enName, tokens)}</div>
+                    </div>
+                    <button type="button" class="card-pin-btn ${isPinned ? 'pinned' : ''}" data-pin-key="${escapeHtml(itemKey)}" aria-pressed="${isPinned}" aria-label="${isPinned ? 'ピン留めを解除' : 'ピン留めする'}" title="${isPinned ? 'ピン留めを解除' : 'ピン留めする'}">${isPinned ? '★' : '☆'}</button>
+                  </div>
                 </td>
                 ${showModBadge ? `<td><span class="tag tag-mod">${escapeHtml(item._modName)}</span></td>` : ''}
                 <td>${item.category ? `<span class="tag tag-cat">${escapeHtml(item.category)}</span>` : ''}</td>
                 <td>${escapeHtml(col4Val)}</td>
                 <td>${escapeHtml(col5Val)}</td>
-                <td>${escapeHtml(formatSentenceBreaks(item.description || ''))}</td>
+                <td>${highlightText(formatSentenceBreaks(item.description || ''), tokens)}</td>
               </tr>`;
               })
               .join('')}
@@ -914,6 +1253,7 @@
     state.mainItem = item;
     state.sub1Item = null;
     state.sub2Stack = [];
+    recordRecentItem(item);
     renderSubPanels();
 
     els.modalIconWrap.innerHTML = renderIconHtml(item);
@@ -922,6 +1262,7 @@
     els.modalEnName.textContent = item.enName || '';
     els.copyEnBtn.classList.toggle('hidden', !item.enName);
     els.copyEnBtn.dataset.copy = item.enName || '';
+    updateModalPinButton(els.pinItemBtn, item);
     els.modalBody.innerHTML = buildDetailBodyHtml(item);
 
     els.detailModal.classList.remove('hidden');
@@ -932,6 +1273,7 @@
     if (!item) return;
     state.sub1Item = item;
     state.sub2Stack = [];
+    recordRecentItem(item);
     renderSubPanels();
     if (window.innerWidth <= 1120) {
       els.subModalDialog.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -947,6 +1289,7 @@
     } else {
       state.sub2Stack = [item];
     }
+    recordRecentItem(item);
     renderSubPanels();
     if (window.innerWidth <= 1120) {
       els.subModalDialog2.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -977,6 +1320,7 @@
     els.subEnName.textContent = s1.enName || '';
     els.subCopyEnBtn.classList.toggle('hidden', !s1.enName);
     els.subCopyEnBtn.dataset.copy = s1.enName || '';
+    updateModalPinButton(els.subPinItemBtn, s1);
     els.subModalBody.innerHTML = buildDetailBodyHtml(s1);
     els.subModalBody.scrollTop = 0;
 
@@ -1000,6 +1344,7 @@
     els.sub2EnName.textContent = s2.enName || '';
     els.sub2CopyEnBtn.classList.toggle('hidden', !s2.enName);
     els.sub2CopyEnBtn.dataset.copy = s2.enName || '';
+    updateModalPinButton(els.sub2PinItemBtn, s2);
     els.sub2ModalBody.innerHTML = buildDetailBodyHtml(s2);
     els.sub2ModalBody.scrollTop = 0;
   }
@@ -1259,6 +1604,12 @@
     });
 
     els.itemsContainer.addEventListener('click', (e) => {
+      const pinBtn = e.target.closest('[data-pin-key]');
+      if (pinBtn) {
+        e.stopPropagation();
+        togglePinByKey(pinBtn.dataset.pinKey);
+        return;
+      }
       const copyBtn = e.target.closest('[data-copy]');
       if (copyBtn) {
         e.stopPropagation();
@@ -1274,12 +1625,17 @@
 
     els.itemsContainer.addEventListener('keydown', (e) => {
       if (e.key !== 'Enter' && e.key !== ' ') return;
+      if (e.target.closest('button')) return;
       const card = e.target.closest('.item-card[data-global-index]');
       if (!card) return;
       e.preventDefault();
       const item = state.allItemsByGlobalIndex.get(Number(card.dataset.globalIndex));
       if (item) openDetailModal(item);
     });
+
+    if (els.themeToggleBtn) {
+      els.themeToggleBtn.addEventListener('click', toggleTheme);
+    }
 
     els.modSearchInput.addEventListener('input', (e) => {
       state.modSearchQuery = e.target.value;
@@ -1323,6 +1679,28 @@
       copyText(buildShareUrl(item));
       showToast('サブ画面②の共有URLをコピーしました');
     });
+
+    if (els.pinItemBtn) {
+      els.pinItemBtn.addEventListener('click', () => {
+        if (!state.mainItem) return;
+        togglePinByKey(getItemKey(state.mainItem));
+      });
+    }
+
+    if (els.subPinItemBtn) {
+      els.subPinItemBtn.addEventListener('click', () => {
+        if (!state.sub1Item) return;
+        togglePinByKey(getItemKey(state.sub1Item));
+      });
+    }
+
+    if (els.sub2PinItemBtn) {
+      els.sub2PinItemBtn.addEventListener('click', () => {
+        if (state.sub2Stack.length === 0) return;
+        const item = state.sub2Stack[state.sub2Stack.length - 1];
+        togglePinByKey(getItemKey(item));
+      });
+    }
 
     // Open Sub1 from Main
     els.modalBody.addEventListener('click', (e) => {
@@ -1402,6 +1780,8 @@
   }
 
   async function init() {
+    updateThemeButton();
+    loadUserCollections();
     bindEvents();
     try {
       const cacheBust = `?v=${Date.now()}`;
@@ -1441,6 +1821,7 @@
       }
 
       const allMap = new Map();
+      const byKey = new Map();
       const byEn = new Map();
       const byJa = new Map();
       let gIdx = 0;
@@ -1494,6 +1875,7 @@
             ].join(' ')
           );
           allMap.set(item._globalIndex, item);
+          byKey.set(getItemKey(item), item);
 
           if (!item._isVanillaRef) {
             if (item.enName) addLookup(byEn, item.enName, item);
@@ -1512,6 +1894,7 @@
       state.data = data;
       state.icons = icons;
       state.allItemsByGlobalIndex = allMap;
+      state.itemByKey = byKey;
       state.lookupByEn = byEn;
       state.lookupByJa = byJa;
 

@@ -1672,3 +1672,331 @@ kbd {
     font-size: 0.72rem;
   }
 }
+
+/* ============================================================
+   Theme Toggle Button
+   ============================================================ */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--surface-subtle);
+  color: var(--text);
+  border-color: var(--accent-border);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.97);
+}
+
+/* ============================================================
+   Pin Buttons (Card / Table / Modal)
+   ============================================================ */
+.card-pin-btn {
+  margin-left: auto;
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface-subtle);
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.12s ease;
+}
+
+.card-pin-btn:hover {
+  border-color: #f59e0b;
+  color: #d97706;
+  background: var(--amber-soft);
+}
+
+.card-pin-btn.pinned {
+  background: var(--amber-soft);
+  border-color: #f59e0b;
+  color: #d97706;
+}
+
+.card-pin-btn:active {
+  transform: scale(0.92);
+}
+
+.table-name-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.table-name-row .card-pin-btn {
+  width: 26px;
+  height: 26px;
+  font-size: 0.88rem;
+}
+
+.pin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.pin-btn:hover {
+  border-color: #f59e0b;
+  color: #b45309;
+  background: var(--amber-soft);
+}
+
+.pin-btn.pinned {
+  background: var(--amber-soft);
+  border-color: #f59e0b;
+  color: #b45309;
+}
+
+/* ============================================================
+   Search Highlight & Match-Hint Badges
+   ============================================================ */
+mark.search-hit {
+  background: #fef08a;
+  color: #713f12;
+  padding: 0 2px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.match-hint-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.match-hint-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  max-width: 100%;
+  padding: 3px 8px;
+  border-radius: 7px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.match-hint-label {
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   Dark Mode Theme Overrides
+   ============================================================ */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0b1120;
+  --surface: #111827;
+  --surface-subtle: #1e293b;
+  --border: rgba(148, 163, 184, 0.16);
+  --border-strong: rgba(148, 163, 184, 0.28);
+  --text: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --accent: #2dd4bf;
+  --accent-hover: #5eead4;
+  --accent-soft: rgba(45, 212, 191, 0.14);
+  --accent-border: rgba(45, 212, 191, 0.34);
+  --blue: #60a5fa;
+  --blue-soft: rgba(96, 165, 250, 0.14);
+  --blue-border: rgba(96, 165, 250, 0.34);
+  --amber-soft: rgba(251, 191, 36, 0.15);
+  --amber-text: #fbbf24;
+  --shadow-border:
+    0 0 0 1px rgba(148, 163, 184, 0.14),
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 2px 6px rgba(0, 0, 0, 0.22);
+  --shadow-card-hover:
+    0 0 0 1px rgba(45, 212, 191, 0.42),
+    0 10px 24px -6px rgba(0, 0, 0, 0.55),
+    0 2px 8px -1px rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 20px -4px rgba(0, 0, 0, 0.55);
+  --shadow-lg:
+    0 0 0 1px rgba(148, 163, 184, 0.18),
+    0 24px 48px -12px rgba(0, 0, 0, 0.72);
+}
+
+:root[data-theme="dark"] .site-header {
+  background: rgba(11, 17, 32, 0.88);
+}
+
+:root[data-theme="dark"] .modal-header {
+  background: #0f172a;
+}
+
+:root[data-theme="dark"] .modal-backdrop {
+  background: rgba(2, 6, 23, 0.76);
+}
+
+:root[data-theme="dark"] .items-table tbody tr:hover {
+  background: rgba(30, 41, 59, 0.75);
+}
+
+:root[data-theme="dark"] .tag-station {
+  background: rgba(96, 165, 250, 0.14);
+  color: #93c5fd;
+  border-color: rgba(96, 165, 250, 0.32);
+}
+
+:root[data-theme="dark"] .tag-mod {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fcd34d;
+  border-color: rgba(251, 191, 36, 0.32);
+}
+
+:root[data-theme="dark"] .tag-temp-aggro {
+  background: rgba(239, 68, 68, 0.18);
+  color: #fca5a5;
+  border-color: rgba(248, 113, 113, 0.36);
+}
+
+:root[data-theme="dark"] .tag-temp-neutral {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fcd34d;
+  border-color: rgba(251, 191, 36, 0.36);
+}
+
+:root[data-theme="dark"] .tag-temp-skittish {
+  background: rgba(59, 130, 246, 0.18);
+  color: #93c5fd;
+  border-color: rgba(96, 165, 250, 0.36);
+}
+
+:root[data-theme="dark"] .tag-temp-passive {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
+  border-color: rgba(52, 211, 153, 0.36);
+}
+
+:root[data-theme="dark"] .tag-practical {
+  background: rgba(16, 185, 129, 0.16);
+  color: #6ee7b7;
+  border-color: rgba(52, 211, 153, 0.34);
+}
+
+:root[data-theme="dark"] .tag-decor {
+  background: rgba(236, 72, 153, 0.18);
+  color: #f9a8d4;
+  border-color: rgba(244, 114, 182, 0.36);
+}
+
+:root[data-theme="dark"] .tag-vanilla {
+  background: rgba(96, 165, 250, 0.16);
+  color: #93c5fd;
+  border-color: rgba(96, 165, 250, 0.36);
+}
+
+:root[data-theme="dark"] .vanilla-notice {
+  background: rgba(59, 130, 246, 0.14);
+  border-color: rgba(96, 165, 250, 0.34);
+  color: #dbeafe;
+}
+
+:root[data-theme="dark"] .vanilla-notice-link {
+  background: #1e293b;
+  color: #93c5fd;
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+:root[data-theme="dark"] .vanilla-notice-link:hover {
+  background: rgba(59, 130, 246, 0.28);
+  color: #eff6ff;
+}
+
+:root[data-theme="dark"] .type-tip-banner {
+  background: rgba(251, 191, 36, 0.12);
+  border-color: rgba(251, 191, 36, 0.32);
+  color: #fde68a;
+}
+
+:root[data-theme="dark"] .ref-chip-wiki {
+  border-color: rgba(96, 165, 250, 0.34);
+}
+
+:root[data-theme="dark"] .ref-badge {
+  background: rgba(15, 23, 42, 0.65);
+  color: var(--text-secondary);
+}
+
+:root[data-theme="dark"] .ref-chip-mod:hover .ref-badge,
+:root[data-theme="dark"] .ref-chip-wiki:hover .ref-badge {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+:root[data-theme="dark"] .guide-chip-wiki {
+  border-color: rgba(96, 165, 250, 0.34);
+}
+
+:root[data-theme="dark"] .share-btn {
+  border-color: rgba(96, 165, 250, 0.34);
+}
+
+:root[data-theme="dark"] .btn-primary,
+:root[data-theme="dark"] .quick-chip.active,
+:root[data-theme="dark"] .view-btn.active {
+  color: #042f2e;
+}
+
+:root[data-theme="dark"] .card-pin-btn.pinned,
+:root[data-theme="dark"] .card-pin-btn:hover,
+:root[data-theme="dark"] .pin-btn.pinned,
+:root[data-theme="dark"] .pin-btn:hover {
+  color: #fbbf24;
+  border-color: rgba(251, 191, 36, 0.55);
+}
+
+:root[data-theme="dark"] mark.search-hit {
+  background: rgba(250, 204, 21, 0.34);
+  color: #fef08a;
+}
+
+:root[data-theme="dark"] .toast {
+  background: #1e293b;
+  color: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+}
+

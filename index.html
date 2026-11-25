@@ -9,6 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/asa-logo.png" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('asa_mod_db_theme');
+        var theme =
+          saved === 'dark' || saved === 'light'
+            ? saved
+            : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light';
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -26,6 +42,7 @@
       <div class="header-meta">
         <span id="statBadge" class="meta-pill">読み込み中...</span>
         <span id="updatedBadge" class="meta-date"></span>
+        <button type="button" id="themeToggleBtn" class="theme-toggle-btn" aria-label="ダークモード切替" title="ダークモード / ライトモード切替">🌙 ダーク</button>
       </div>
     </div>
     <nav class="tab-bar" aria-label="表示切替">
@@ -203,6 +220,7 @@
                 <span id="modalEnName" class="modal-en-name"></span>
                 <button type="button" id="copyEnBtn" class="copy-btn" title="英語名をコピー">英語名コピー</button>
                 <button type="button" id="shareItemBtn" class="share-btn" title="このアイテムのURLをコピー">🔗 共有URL</button>
+                <button type="button" id="pinItemBtn" class="pin-btn" title="お気に入りにピン留め" aria-pressed="false">☆ ピン留め</button>
               </div>
             </div>
           </div>
@@ -228,6 +246,7 @@
                 <span id="subEnName" class="modal-en-name"></span>
                 <button type="button" id="subCopyEnBtn" class="copy-btn" title="英語名をコピー">英語名コピー</button>
                 <button type="button" id="subShareItemBtn" class="share-btn" title="このアイテムのURLをコピー">🔗 共有URL</button>
+                <button type="button" id="subPinItemBtn" class="pin-btn" title="お気に入りにピン留め" aria-pressed="false">☆ ピン留め</button>
               </div>
             </div>
           </div>
@@ -253,6 +272,7 @@
                 <span id="sub2EnName" class="modal-en-name"></span>
                 <button type="button" id="sub2CopyEnBtn" class="copy-btn" title="英語名をコピー">英語名コピー</button>
                 <button type="button" id="sub2ShareItemBtn" class="share-btn" title="このアイテムのURLをコピー">🔗 共有URL</button>
+                <button type="button" id="sub2PinItemBtn" class="pin-btn" title="お気に入りにピン留め" aria-pressed="false">☆ ピン留め</button>
               </div>
             </div>
           </div>
