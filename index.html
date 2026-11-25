@@ -204,6 +204,362 @@
       </div>
       <div id="rulesContainer" class="rules-container"></div>
     </section>
+
+    <!-- 初心者設定・便利技ビュー -->
+    <section id="tipsSection" class="view-section hidden" aria-label="初心者設定・便利技">
+      <div class="controls-card tips-hero-card">
+        <div class="tips-hero-top">
+          <div>
+            <h2 class="rules-heading">📖 ASA 初心者設定・便利技まとめ</h2>
+            <p class="rules-subtext">プレイ前にやっておくと快適な設定や、PC（キーマウ）・PS5（コントローラー）の必須操作をまとめています。</p>
+          </div>
+          <button type="button" id="shareTipsBtn" class="share-btn" title="このページのURLをコピー">🔗 このページのURLをコピー</button>
+        </div>
+        <div class="tips-device-bar" id="tipsDeviceBar" role="group" aria-label="表示デバイス切替">
+          <span class="tips-device-label">表示切替：</span>
+          <button type="button" class="quick-chip active" data-device="all" aria-pressed="true">すべて表示</button>
+          <button type="button" class="quick-chip" data-device="pc" aria-pressed="false">🖥️ PC（キーマウ）</button>
+          <button type="button" class="quick-chip" data-device="ps5" aria-pressed="false">🎮 PS5（コントローラー）</button>
+        </div>
+      </div>
+
+      <div id="tipsContent" class="tips-content" data-device-filter="all">
+        <!-- セクション①：PC向け初期設定 -->
+        <article class="tips-section-card" data-device-only="pc">
+          <div class="tips-section-head">
+            <h3 class="tips-section-title">① 配信・PCプレイ前にやっておくべき設定</h3>
+            <span class="tips-badge-pc">PC向け</span>
+          </div>
+          <div class="tips-cards-grid">
+            <div class="tips-item-box tips-item-wide">
+              <h4 class="tips-item-title">🔊 裏画面でもゲーム音を鳴らす（Engine.ini 書き換え）</h4>
+              <p class="tips-item-text">初期設定だと別ウィンドウをクリックした際にゲーム音が消えます。以下の手順で常に音が鳴るようにできます。</p>
+              <ol class="tips-steps">
+                <li>ASA を完全に終了する</li>
+                <li>以下のパスにある <code>Engine.ini</code> をメモ帳等で開く</li>
+                <li>ファイルの末尾に下記コードを追記して保存する</li>
+              </ol>
+              <div class="tips-code-block">
+                <div class="tips-code-header">
+                  <span>ファイルパス</span>
+                  <button type="button" class="copy-btn" data-tips-copy="Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\Engine.ini">パスをコピー</button>
+                </div>
+                <pre class="tips-code-pre"><code>Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\Engine.ini</code></pre>
+              </div>
+              <div class="tips-code-block">
+                <div class="tips-code-header">
+                  <span>末尾に追記する内容</span>
+                  <button type="button" class="copy-btn" data-tips-copy="[Audio]&#10;UnfocusedVolumeMultiplier=1.0">コードをコピー</button>
+                </div>
+                <pre class="tips-code-pre"><code>[Audio]
+UnfocusedVolumeMultiplier=1.0</code></pre>
+              </div>
+            </div>
+
+            <div class="tips-item-box">
+              <h4 class="tips-item-title">🖥️ 画面表示を「疑似フルスクリーン」にする</h4>
+              <p class="tips-item-text">設定 → ビデオ → ウィンドウモードを<strong>疑似フルスクリーン（Windowed Fullscreen）</strong>にしておくと、OBS配信中や別モニターをクリックした際のクラッシュ・画面暗転を防げます。</p>
+            </div>
+
+            <div class="tips-item-box">
+              <h4 class="tips-item-title">👀 画面酔い・まぶしさ対策</h4>
+              <ul class="tips-list">
+                <li><strong>モーションブラー</strong>：OFF（視点移動のブレ軽減）</li>
+                <li><strong>ライトブルーム / ライトシャフト</strong>：OFF（海面や金属のまぶしさ軽減）</li>
+                <li><strong>カメラの振動幅</strong>：最小（大型恐竜の足音による揺れ対策）</li>
+              </ul>
+            </div>
+
+            <div class="tips-item-box">
+              <h4 class="tips-item-title">📊 ステータス詳細の常時表示</h4>
+              <p class="tips-item-text">設定の <code>Toggle Extended HUD Info</code> を <strong>ON</strong> にしておくと、毎回キーを押さなくても左上の日時・気温や右下の数値詳細が常時表示されて便利です。</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- セクション②：マップ・ウェイポイント・ピン機能 -->
+        <article class="tips-section-card">
+          <div class="tips-section-head">
+            <h3 class="tips-section-title">② マップ・ウェイポイント・ピン機能</h3>
+          </div>
+          <div class="tips-cards-grid">
+            <div class="tips-item-box">
+              <h4 class="tips-item-title">🗺️ マップの2段階表示（重要）</h4>
+              <ul class="tips-list">
+                <li data-device-only="pc"><strong>PC</strong>：<kbd>M</kbd> <strong>1回押し</strong>＝手持ちマップ（右下に小さく表示、歩きながら確認可） ／ <kbd>M</kbd> <strong>2回連続押し</strong>＝全体マップ（大画面）</li>
+                <li data-device-only="ps5"><strong>PS5</strong>：<span class="ps-btn ps-pad">タッチパッド</span> <strong>長押し</strong>＝全体マップ（またはメニューからマップを開く）</li>
+              </ul>
+            </div>
+
+            <div class="tips-item-box">
+              <h4 class="tips-item-title">📍 ウェイポイント（カスタム目印）＆仲間へのピン共有</h4>
+              <p class="tips-item-text">
+                全体マップ上で<span data-device-only="pc"><strong>ダブルクリック</strong></span><span data-device-only="both-sep">（</span><span data-device-only="ps5">PS5はカーソルを合わせて <span class="ps-btn ps-cross">×</span> ボタン</span><span data-device-only="both-sep">）</span>すると好きな場所にウェイポイントを設置でき、画面上のコンパスや視界内に距離付きで表示されます。<br />
+                マップ画面からピンを打つことで、トライブ（仲間）にも位置を共有できます。
+              </p>
+            </div>
+
+            <div class="tips-item-box">
+              <h4 class="tips-item-title">💀 死体位置（デスマーカー）の自動表示</h4>
+              <p class="tips-item-text">死亡すると、全体マップの「ウェイポイント」タブと現地に<strong>緑色の光柱＋死体アイコン</strong>が自動で表示されます。荷物回収の目印にしましょう。</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- セクション③：建築の便利操作・長押しメニュー -->
+        <article class="tips-section-card">
+          <div class="tips-section-head">
+            <h3 class="tips-section-title">③ 建築の便利操作・長押しメニュー</h3>
+          </div>
+          <div class="tips-table-wrap">
+            <table class="tips-table">
+              <thead>
+                <tr>
+                  <th>操作・できること</th>
+                  <th class="col-pc">🖥️ PC（キーマウ）</th>
+                  <th class="col-ps5">🎮 PS5（コントローラー）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>スナップ位置の切替</strong>（配置前）</td>
+                  <td class="col-pc"><kbd>Q</kbd></td>
+                  <td class="col-ps5"><span class="ps-btn ps-shoulder">R1</span></td>
+                </tr>
+                <tr>
+                  <td><strong>表裏・左右の反転</strong>（配置前）</td>
+                  <td class="col-pc"><kbd>E</kbd></td>
+                  <td class="col-ps5"><span class="ps-btn ps-triangle">△</span></td>
+                </tr>
+                <tr>
+                  <td><strong>建材の種類切替</strong>（壁 ↔ 窓枠 ↔ ドア枠など）</td>
+                  <td class="col-pc"><kbd>R</kbd></td>
+                  <td class="col-ps5"><span class="ps-btn ps-square">□</span></td>
+                </tr>
+                <tr>
+                  <td><strong>設置後のリングメニュー</strong>（回収・解体・ロック）</td>
+                  <td class="col-pc"><kbd>E</kbd> 長押し</td>
+                  <td class="col-ps5"><span class="ps-btn ps-triangle">△</span> 長押し</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tips-note-strip">
+            <ul>
+              <li><strong>回収（Pick Up）</strong>：ASAでは時間制限なしで（ダメージを受けていなければ）いつでも回収してインベントリに戻せます。</li>
+              <li><strong>解体（Demolish）</strong>：建材を壊して素材の一部を回収します（誤操作に注意）。</li>
+              <li><strong>設定・ロック</strong>：収納やドアの鍵設定・アクセス設定も長押しリングメニューから行えます。</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- セクション④：サバイバル・インベントリ・ペット操作 -->
+        <article class="tips-section-card">
+          <div class="tips-section-head">
+            <h3 class="tips-section-title">④ サバイバル・インベントリ・ペット操作（PC / PS5 対照表）</h3>
+          </div>
+          <div class="tips-table-wrap">
+            <table class="tips-table">
+              <thead>
+                <tr>
+                  <th>操作・用途</th>
+                  <th class="col-pc">🖥️ PC（キーマウ）</th>
+                  <th class="col-ps5">🎮 PS5（コントローラー）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>詳細ステータス表示</strong>（満腹度・水分・重量・気温）</td>
+                  <td class="col-pc"><kbd>H</kbd>（長押し / 切替）</td>
+                  <td class="col-ps5"><span class="ps-btn ps-pad">タッチパッド</span>（または <span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-pad">タッチパッド</span>）</td>
+                </tr>
+                <tr>
+                  <td><strong>設備・騎乗中恐竜のインベントリを開く</strong></td>
+                  <td class="col-pc"><kbd>F</kbd></td>
+                  <td class="col-ps5"><span class="ps-btn ps-square">□</span>（長押しメニューからも可）</td>
+                </tr>
+                <tr>
+                  <td><strong>アイテムをスタックごと移動</strong></td>
+                  <td class="col-pc"><kbd>T</kbd></td>
+                  <td class="col-ps5"><span class="ps-btn ps-cross">×</span> <strong>長押し</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>アイテムを1個だけ移動</strong></td>
+                  <td class="col-pc"><kbd>Ctrl</kbd> + <kbd>T</kbd>（またはダブルクリック）</td>
+                  <td class="col-ps5"><span class="ps-btn ps-cross">×</span> <strong>2回押し</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>アイテムを半分に分ける</strong></td>
+                  <td class="col-pc"><kbd>Shift</kbd> + <kbd>T</kbd>（移動） / <kbd>Shift</kbd> + ドラッグ</td>
+                  <td class="col-ps5"><span class="ps-btn ps-square">□</span>（分割メニュー）</td>
+                </tr>
+                <tr>
+                  <td><strong>アイテムをその場に捨てる</strong></td>
+                  <td class="col-pc"><kbd>O</kbd>（1個は <kbd>Ctrl</kbd> + <kbd>O</kbd>）</td>
+                  <td class="col-ps5"><span class="ps-btn ps-triangle">△</span>（ドロップ）</td>
+                </tr>
+                <tr>
+                  <td><strong>製作（クラフト）画面を開く</strong></td>
+                  <td class="col-pc"><kbd>V</kbd></td>
+                  <td class="col-ps5">インベントリ内 <span class="ps-btn ps-shoulder">R1</span> でタブ切替</td>
+                </tr>
+                <tr>
+                  <td><strong>自由カメラ（背後確認）・視点切替</strong></td>
+                  <td class="col-pc"><kbd>K</kbd>（自由カメラ） / ホイール（FPS・TPS切替）</td>
+                  <td class="col-ps5"><span class="ps-btn ps-pad">タッチパッド</span> 長押し →「三人称視点の切替」</td>
+                </tr>
+                <tr>
+                  <td><strong>肩乗せペットを降ろす</strong></td>
+                  <td class="col-pc"><kbd>F</kbd> <strong>2回連続押し</strong></td>
+                  <td class="col-ps5"><span class="ps-btn ps-triangle">△</span> <strong>2回連続押し</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>UI（HUD）全非表示</strong>（スクショ撮影用）</td>
+                  <td class="col-pc"><kbd>BackSpace</kbd></td>
+                  <td class="col-ps5"><span class="ps-btn ps-pad">タッチパッド</span> 長押し →「HUDの切り替え」</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tips-warning-box" role="note" aria-label="誤爆注意">
+            <h4 class="tips-warning-title">⚠️ 口笛の誤爆に注意！（拠点のペット配置が崩れる原因No.1）</h4>
+            <ul class="tips-list">
+              <li>
+                <strong>「全員追従」の誤爆に注意！</strong>：
+                <span data-device-only="pc">PC <kbd>J</kbd> キー</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5 <span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">↓</span>（口笛メニュー）</span>
+                を押すと<strong>周囲のペット全員が自分に追従</strong>してしまい、拠点の配置が総崩れします。<span data-device-only="pc">PC勢はキー設定から <kbd>J</kbd> を外すか、遠いキーに変更しておくのがおすすめです。</span>
+              </li>
+              <li>
+                <strong>全員停止（止まれ）</strong>：
+                <span data-device-only="pc">PC <kbd>U</kbd> キー</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5 <span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">←</span></span>
+              </li>
+              <li>
+                <strong>攻撃モードの基本</strong>：ペットは「無抵抗」だと襲われても反撃せず死んでしまうため、基本は<strong>「自分のターゲットを攻撃」</strong>か<strong>「中立」</strong>に設定しておきましょう（<span data-device-only="pc">PC <kbd>=</kbd> / <kbd>-</kbd>、または</span>長押しリングメニュー「行動」から変更）。
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- セクション⑤：恐竜への指示・行動設定・放浪モード -->
+        <article class="tips-section-card">
+          <div class="tips-section-head">
+            <h3 class="tips-section-title">⑤ 🦖 恐竜への指示・行動設定・放浪モード</h3>
+          </div>
+
+          <div class="tips-cards-grid">
+            <div class="tips-item-box">
+              <h4 class="tips-item-title">🎯 1匹だけに指示する（安全・基本）</h4>
+              <ul class="tips-list">
+                <li>
+                  恐竜に近づいて<strong>長押し</strong>（<span data-device-only="pc">PC：<kbd>E</kbd> 長押し</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5：<span class="ps-btn ps-triangle">△</span> 長押し</span>）でリングメニューを開く。
+                </li>
+                <li>
+                  照準を合わせた1匹だけ呼ぶ／止める：
+                  <span data-device-only="pc">PC <kbd>T</kbd>（1匹追従） / <kbd>Y</kbd>（1匹停止）</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5 <span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">↑</span> 等</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tips-item-box">
+              <h4 class="tips-item-title">📢 周囲すべてに指示する（全体口笛・誤爆注意）</h4>
+              <p class="tips-item-text">
+                口笛リングメニュー（<span data-device-only="pc">PC：<kbd>T</kbd> 長押し</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5：<span class="ps-btn ps-circle">○</span> 長押し</span>）や全体ショートカット（<span data-device-only="pc">PC：<kbd>J</kbd> 全員追従・<kbd>U</kbd> 全員停止</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5：<span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">↓</span> 全員追従・<span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">←</span> 全員停止</span>）は、<strong>壁を貫通して周囲の恐竜全員</strong>に届きます。
+              </p>
+              <p class="tips-item-tip">💡 <strong>拠点の配置を守るコツ</strong>：動かしたくない拠点待機ペットは、長押しリングメニュー「行動」→<strong>「グループ口笛を無視」をON</strong>にしておくと誤爆を防げます。</p>
+            </div>
+          </div>
+
+          <h4 class="tips-sub-heading">⚔️ 攻撃モード（行動スタンス）5種の違い</h4>
+          <div class="tips-table-wrap">
+            <table class="tips-table tips-stance-table">
+              <thead>
+                <tr>
+                  <th>攻撃モード</th>
+                  <th>おすすめの場面</th>
+                  <th>動きの特徴・注意点</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>中立（Neutral）</strong></td>
+                  <td><span class="stance-badge stance-good">おすすめ：拠点防衛</span></td>
+                  <td>自分や仲間が攻撃されたときだけ反撃する。拠点の留守番に最適。</td>
+                </tr>
+                <tr>
+                  <td><strong>自分のターゲットを攻撃（Attack My Target）</strong></td>
+                  <td><span class="stance-badge stance-good">おすすめ：探索・連れ歩き</span></td>
+                  <td>プレイヤーが殴った敵、またはプレイヤーを攻撃してきた敵を攻撃する。</td>
+                </tr>
+                <tr>
+                  <td><strong>無抵抗（Passive）</strong></td>
+                  <td><span class="stance-badge stance-info">テイム中・安全地帯用</span></td>
+                  <td>攻撃されても一切反撃しない。テイム中の誤爆防止に便利だが、外に放置すると一方的に倒されるため注意。</td>
+                </tr>
+                <tr>
+                  <td><strong>攻撃的（Aggressive）</strong></td>
+                  <td><span class="stance-badge stance-warn">⚠️ 基本OFF推奨</span></td>
+                  <td>視界に入った野生生物すべてに襲いかかり、遠くまで追いかけて迷子になりやすい。</td>
+                </tr>
+                <tr>
+                  <td><strong>逃走（Passive Flee）</strong></td>
+                  <td><span class="stance-badge stance-muted">非戦闘ペット向け</span></td>
+                  <td>攻撃されると反撃せず逃げ出す（迷子になりやすいので注意）。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 class="tips-sub-heading">🚶 放浪モード（Wandering）と交配の違い</h4>
+          <div class="tips-item-box">
+            <ul class="tips-list">
+              <li><strong>放浪モードとは</strong>：長押しメニュー「行動」→「放浪を有効にする」で恐竜が自動で歩き回ります。ドエディクルス・フンコロガシなど一部生物の<strong>自動採取・自動生産</strong>に使います。</li>
+              <li><strong>⚠️ 脱走注意</strong>：柵や壁で囲わずに放浪させると、そのままどこかへ歩いて行って迷子になります。</li>
+              <li><strong>💡 交配（ブリーディング）は放浪不要</strong>：ASAでは「放浪」ではなく「行動」→<strong>「交配を有効にする（Enable Mating）」</strong>を使えば、その場に止めたまま安全に卵を産ませられます。</li>
+            </ul>
+
+            <div class="tips-measure-box">
+              <h5 class="tips-measure-title">🛡️ 放浪モードで脱走させないための3つの対策</h5>
+              <ol class="tips-measure-list">
+                <li>
+                  <strong>恐竜用リーシュ（Dino Leash）を置く（自動採取におすすめ）</strong><br />
+                  設置して範囲（小・中・大）を設定すると赤い境界線が表示され、放浪中の恐竜がその範囲外に出られなくなります。ドエディクルスやカストロイデスなど、歩き回って素材を自動採取させたい生物に最適です（※サーバー・マップ設定によりエングラム解放が必要な場合あり）。
+                </li>
+                <li>
+                  <strong>柵・壁・木製の檻（Cage）で囲う（序盤から使える基本対策）</strong><br />
+                  拠点の柵や壁で囲っておけば安全です。フンコロガシなどの小型生物は「木製の檻」に入れておくと省スペースで絶対に脱走しません。
+                </li>
+                <li>
+                  <strong>石などを詰めて「重量オーバー」にする（歩かなくてよい生物向け）</strong><br />
+                  インベントリに重いアイテムを詰めて動けない状態にしてから放浪ONにすると、その場に固定したまま特殊効果（フンコロガシの肥料生成など）だけを発動できます。<br />
+                  <span class="tips-measure-note">※素材を自動採取させる生物は歩く必要があるため、①または②を使ってください。</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <!-- セクション⑥：導入MODの便利ショートカット -->
+        <article class="tips-section-card">
+          <div class="tips-section-head">
+            <h3 class="tips-section-title">⑥ このサーバー導入MODの便利ショートカット</h3>
+          </div>
+          <div class="tips-cards-grid">
+            <div class="tips-item-box">
+              <h4 class="tips-item-title">🧭 ArkNav（ミニマップ・ナビHUD）</h4>
+              <ul class="tips-list">
+                <li><kbd>Alt</kbd> + <kbd>N</kbd>：ミニマップ・コンパスHUDの表示オン / オフ切替</li>
+                <li><kbd>Alt</kbd> + <kbd>M</kbd>：大きな地図と設定メニューを開く（マーカー管理・トライブ位置確認）</li>
+              </ul>
+            </div>
+            <div class="tips-item-box">
+              <h4 class="tips-item-title">🔭 Super Spyglass Plus（高性能望遠鏡）</h4>
+              <p class="tips-item-text">野生恐竜のステータスやテイム進行度を詳しく確認できる便利MOD。<strong>通常装備</strong>／<strong>頭防具スキン</strong>／<strong>切替式</strong>の3通りから好みのスタイルで使えます。</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <!-- アイテム詳細モーダル（サブ画面並べて表示対応） -->

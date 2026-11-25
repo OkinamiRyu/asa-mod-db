@@ -2014,3 +2014,440 @@ mark.search-hit {
   border: 1px solid rgba(148, 163, 184, 0.28);
 }
 
+/* ============================================================
+   Beginner Tips Section (#tipsSection)
+   ============================================================ */
+.tips-hero-card {
+  margin-bottom: 18px;
+}
+
+.tips-hero-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tips-device-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.tips-device-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.tips-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.tips-content[data-device-filter="pc"] [data-device-only="ps5"],
+.tips-content[data-device-filter="pc"] [data-device-only="both-sep"],
+.tips-content[data-device-filter="pc"] .col-ps5 {
+  display: none !important;
+}
+
+.tips-content[data-device-filter="ps5"] [data-device-only="pc"],
+.tips-content[data-device-filter="ps5"] [data-device-only="both-sep"],
+.tips-content[data-device-filter="ps5"] .col-pc {
+  display: none !important;
+}
+
+.tips-section-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow-border);
+}
+
+.tips-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tips-section-title {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tips-badge-pc {
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  border: 1px solid var(--blue-border);
+}
+
+.tips-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.tips-item-box {
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  min-width: 0;
+}
+
+.tips-item-wide {
+  grid-column: 1 / -1;
+}
+
+.tips-item-title {
+  margin: 0 0 8px;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tips-item-text {
+  margin: 0;
+  font-size: 0.87rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.tips-item-tip {
+  margin: 10px 0 0;
+  padding: 9px 12px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  font-size: 0.84rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.tips-list,
+.tips-steps {
+  margin: 0;
+  padding-left: 1.25em;
+  font-size: 0.87rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.tips-list li + li,
+.tips-steps li + li {
+  margin-top: 5px;
+}
+
+.tips-sub-heading {
+  margin: 18px 0 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tips-code-block {
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.tips-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 12px;
+  background: var(--surface-subtle);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.tips-code-pre {
+  margin: 0;
+  padding: 10px 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--text);
+  max-width: 100%;
+}
+
+.tips-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.tips-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  background: var(--surface);
+}
+
+.tips-table th,
+.tips-table td {
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border);
+}
+
+.tips-table thead th {
+  background: var(--surface-subtle);
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.tips-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tips-table tbody td {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.tips-note-strip {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
+}
+
+.tips-note-strip ul {
+  margin: 0;
+  padding-left: 1.25em;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.tips-warning-box {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-left: 4px solid #dc2626;
+}
+
+.tips-warning-title {
+  margin: 0 0 8px;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #991b1b;
+}
+
+.tips-warning-box .tips-list {
+  color: #7f1d1d;
+}
+
+.tips-measure-box {
+  margin-top: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--accent-border);
+  border-left: 4px solid var(--accent);
+}
+
+.tips-measure-title {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.tips-measure-list {
+  margin: 0;
+  padding-left: 1.3em;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.72;
+}
+
+.tips-measure-list li + li {
+  margin-top: 8px;
+}
+
+.tips-measure-note {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.stance-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.stance-good {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.stance-info {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.stance-warn {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.stance-muted {
+  background: var(--surface-subtle);
+  color: var(--text-muted);
+  border: 1px solid var(--border-strong);
+}
+
+/* PC Keyboard Key & PS5 Controller Button Badges */
+#tipsSection kbd {
+  display: inline-block;
+  min-width: 1.55em;
+  padding: 1px 6px;
+  margin: 0 1px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: center;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.08);
+}
+
+.ps-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.65em;
+  padding: 1px 7px;
+  margin: 0 1px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #ffffff;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.ps-cross {
+  background: #2563eb;
+}
+
+.ps-circle {
+  background: #dc2626;
+}
+
+.ps-triangle {
+  background: #059669;
+}
+
+.ps-square {
+  background: #db2777;
+}
+
+.ps-shoulder,
+.ps-pad,
+.ps-dpad {
+  background: #334155;
+  border-radius: 6px;
+}
+
+/* Dark mode overrides for #tipsSection */
+:root[data-theme="dark"] .tips-warning-box {
+  background: rgba(239, 68, 68, 0.14);
+  border-color: rgba(248, 113, 113, 0.34);
+  border-left-color: #ef4444;
+}
+
+:root[data-theme="dark"] .tips-warning-title {
+  color: #fca5a5;
+}
+
+:root[data-theme="dark"] .tips-warning-box .tips-list {
+  color: #fecaca;
+}
+
+:root[data-theme="dark"] .stance-good {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
+  border-color: rgba(52, 211, 153, 0.36);
+}
+
+:root[data-theme="dark"] .stance-info {
+  background: rgba(59, 130, 246, 0.18);
+  color: #93c5fd;
+  border-color: rgba(96, 165, 250, 0.36);
+}
+
+:root[data-theme="dark"] .stance-warn {
+  background: rgba(239, 68, 68, 0.18);
+  color: #fca5a5;
+  border-color: rgba(248, 113, 113, 0.36);
+}
+
+:root[data-theme="dark"] .ps-shoulder,
+:root[data-theme="dark"] .ps-pad,
+:root[data-theme="dark"] .ps-dpad {
+  background: #475569;
+}
+
+@media (max-width: 640px) {
+  .tips-section-card {
+    padding: 14px;
+  }
+  .tips-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .tips-table th,
+  .tips-table td {
+    padding: 8px 10px;
+    font-size: 0.81rem;
+  }
+}
+
+

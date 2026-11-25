@@ -70,6 +70,10 @@
     modsSection: document.getElementById('modsSection'),
     rulesSection: document.getElementById('rulesSection'),
     rulesContainer: document.getElementById('rulesContainer'),
+    tipsSection: document.getElementById('tipsSection'),
+    tipsContent: document.getElementById('tipsContent'),
+    tipsDeviceBar: document.getElementById('tipsDeviceBar'),
+    shareTipsBtn: document.getElementById('shareTipsBtn'),
     typeTipBanner: document.getElementById('typeTipBanner'),
     modSelect: document.getElementById('modSelect'),
     resetModBtn: document.getElementById('resetModBtn'),
@@ -577,13 +581,16 @@
     const tabs = [
       { id: 'SEARCH', label: '🔍 アイテム検索', count: totalItems },
       { id: 'INSTALLED', label: '📋 導入中MOD一覧', count: installedCount },
+      { id: 'TIPS', label: '📖 初心者設定・便利技', count: null },
     ];
     if (rulesCount > 0) {
       tabs.push({ id: 'RULES', label: '📜 鯖ルール・設定', count: rulesCount });
     }
 
     const activeTop =
-      state.activeTab === 'INSTALLED' || state.activeTab === 'RULES' ? state.activeTab : 'SEARCH';
+      state.activeTab === 'INSTALLED' || state.activeTab === 'RULES' || state.activeTab === 'TIPS'
+        ? state.activeTab
+        : 'SEARCH';
 
     els.tabList.innerHTML = tabs
       .map(
@@ -596,7 +603,7 @@
           data-tab-id="${escapeHtml(t.id)}"
         >
           <span>${escapeHtml(t.label)}</span>
-          <span class="tab-count">${t.count}</span>
+          ${t.count != null ? `<span class="tab-count">${t.count}</span>` : ''}
         </button>`
       )
       .join('');
@@ -630,7 +637,7 @@
 
     els.modSelect.innerHTML = html;
     const currentVal =
-      state.activeTab === 'INSTALLED' || state.activeTab === 'RULES' || !state.activeTab
+      state.activeTab === 'INSTALLED' || state.activeTab === 'RULES' || state.activeTab === 'TIPS' || !state.activeTab
         ? 'ALL'
         : state.activeTab;
     els.modSelect.value = currentVal;
@@ -1391,6 +1398,10 @@
 
   function openItemFromHash() {
     const hash = window.location.hash || '';
+    if (hash === '#guide' || hash === '#tips') {
+      switchTab('TIPS');
+      return;
+    }
     if (!hash.startsWith('#item=')) return;
     const raw = hash.slice(6);
     const slashIdx = raw.indexOf('/');
@@ -1445,7 +1456,7 @@
     if (target === 'SEARCH') {
       target = state.lastModTab || 'ALL';
     }
-    if (target !== 'INSTALLED' && target !== 'RULES') {
+    if (target !== 'INSTALLED' && target !== 'RULES' && target !== 'TIPS') {
       state.lastModTab = target;
     }
 
@@ -1458,9 +1469,13 @@
 
     const isInstalled = target === 'INSTALLED';
     const isRules = target === 'RULES';
-    els.itemsSection.classList.toggle('hidden', isInstalled || isRules);
+    const isTips = target === 'TIPS';
+    els.itemsSection.classList.toggle('hidden', isInstalled || isRules || isTips);
     els.modsSection.classList.toggle('hidden', !isInstalled);
     els.rulesSection.classList.toggle('hidden', !isRules);
+    if (els.tipsSection) {
+      els.tipsSection.classList.toggle('hidden', !isTips);
+    }
 
     if (isInstalled) {
       els.typeTipBanner.classList.add('hidden');
@@ -1468,6 +1483,8 @@
     } else if (isRules) {
       els.typeTipBanner.classList.add('hidden');
       renderServerRules();
+    } else if (isTips) {
+      els.typeTipBanner.classList.add('hidden');
     } else {
       els.modSelect.value = target;
       els.resetModBtn.classList.toggle('hidden', target === 'ALL');
@@ -1775,6 +1792,36 @@
       }
     });
 
+    if (els.shareTipsBtn) {
+      els.shareTipsBtn.addEventListener('click', () => {
+        const guideUrl = `${window.location.origin}${window.location.pathname}#guide`;
+        copyText(guideUrl);
+        showToast('初心者設定・便利技ページのURLをコピーしました');
+      });
+    }
+
+    if (els.tipsDeviceBar && els.tipsContent) {
+      els.tipsDeviceBar.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-device]');
+        if (!btn) return;
+        const device = btn.dataset.device || 'all';
+        els.tipsContent.dataset.deviceFilter = device;
+        for (const b of els.tipsDeviceBar.querySelectorAll('[data-device]')) {
+          const active = b === btn;
+          b.classList.toggle('active', active);
+          b.setAttribute('aria-pressed', String(active));
+        }
+      });
+    }
+
+    if (els.tipsSection) {
+      els.tipsSection.addEventListener('click', (e) => {
+        const copyBtn = e.target.closest('[data-tips-copy]');
+        if (!copyBtn) return;
+        copyText(copyBtn.dataset.tipsCopy);
+      });
+    }
+
     window.addEventListener('hashchange', () => {
       if (state.data) openItemFromHash();
     });
@@ -1798,6 +1845,9 @@
         if (state.activeTab === 'INSTALLED') {
           els.modSearchInput.focus();
         } else {
+          if (state.activeTab === 'TIPS' || state.activeTab === 'RULES') {
+            switchTab('ALL');
+          }
           els.itemSearchInput.focus();
         }
       }
