@@ -560,6 +560,156 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
         </article>
       </div>
     </section>
+
+    <!-- よくある質問（Q&A）ビュー -->
+    <section id="faqSection" class="view-section hidden" aria-label="よくある質問（Q&A）">
+      <div class="controls-card tips-hero-card">
+        <div class="tips-hero-top">
+          <div>
+            <h2 class="rules-heading">❓ よくある質問（Q&A）</h2>
+            <p class="rules-subtext">プレイ中・配信中に困りやすいトラブルの原因と対処法をQ&A形式でまとめています。</p>
+          </div>
+          <button type="button" id="shareFaqBtn" class="share-btn" title="このQ&AページのURLをコピー">🔗 このQ&AのURLをコピー</button>
+        </div>
+        <div class="search-row" style="margin-top: 12px;">
+          <div class="search-input-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="search"
+              id="faqSearchInput"
+              class="search-input"
+              placeholder="Q&Aをキーワードで絞り込み（例：音、放浪、交配、口笛、回収）"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="faqList" class="faq-groups">
+        <!-- カテゴリ①：音・画面・配信まわり -->
+        <div class="faq-group" data-faq-group>
+          <h3 class="faq-group-title">🔊 音・画面・配信まわり</h3>
+
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span class="faq-q-badge">Q</span>
+              <span class="faq-q-text">裏画面（OBSやコメント欄、DBサイト）をクリックするとゲーム音が消えてしまいます</span>
+            </summary>
+            <div class="faq-answer">
+              <p>ASAの初期設定では、ウィンドウが非アクティブになるとゲーム音がミュートになります。ゲームを完全に終了したうえで、<code>Engine.ini</code> の末尾に以下を追記して保存すると、裏画面でも音が鳴り続けます。</p>
+              <div class="tips-code-block">
+                <div class="tips-code-header">
+                  <span>Engine.ini 末尾に追記</span>
+                  <button type="button" class="copy-btn" data-tips-copy="[Audio]&#10;UnfocusedVolumeMultiplier=1.0">コードをコピー</button>
+                </div>
+                <pre class="tips-code-pre"><code>[Audio]
+UnfocusedVolumeMultiplier=1.0</code></pre>
+              </div>
+              <p class="faq-link-row">詳しいファイルパスや配信向け初期設定は <button type="button" class="faq-inline-link" data-jump-tab="TIPS">📖 初心者設定・便利技</button> を参照してください。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-q-badge">Q</span>
+              <span class="faq-q-text">画面が暗い・霧や反射で見づらい・動作が重いときはどこを確認すればいいですか？</span>
+            </summary>
+            <div class="faq-answer">
+              <ul class="tips-list">
+                <li><strong>反射・まぶしさ対策</strong>：設定 → ビデオで「ライトブルーム」「ライトシャフト」「モーションブラー」を <strong>OFF</strong> にすると、海面や金属の白飛びが大幅に改善します。</li>
+                <li><strong>動作が重いとき</strong>：グラフィック品質の「グローバルイルミネーション」「影」「雲・霧（ボリューメトリッククラウド等）」を下げ、ウィンドウモードを「疑似フルスクリーン」にすると安定しやすいです。</li>
+                <li><strong>夜や洞窟が暗すぎるとき</strong>：松明（腰装備やサドル装着も可）や照明設備を活用しましょう。</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <!-- カテゴリ②：恐竜・放浪・指示まわり -->
+        <div class="faq-group" data-faq-group>
+          <h3 class="faq-group-title">🦖 恐竜・放浪・指示まわり</h3>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-q-badge">Q</span>
+              <span class="faq-q-text">放浪モードにした恐竜がどこかへ歩いていって迷子（脱走）になります</span>
+            </summary>
+            <div class="faq-answer">
+              <p>放浪モード（Wandering）は周囲を自由に歩き回る設定のため、何もしないと拠点の外へ出てしまいます。用途に合わせて以下の3つを使い分けてください。</p>
+              <ol class="tips-steps">
+                <li><strong>恐竜用リーシュ（Dino Leash）</strong>：自動採取させたい生物（ドエディクルス等）に最適。赤い境界線の外に出られなくなります。</li>
+                <li><strong>柵・壁・木製の檻（Cage）で囲う</strong>：序盤から使える基本対策。フンコロガシ等の小型生物は「木製の檻」に入れると省スペースで確実です。</li>
+                <li><strong>石などを詰めて「重量オーバー」にする</strong>：歩く必要がない生物（フンコロガシの肥料生成など）は動けない重さにしてから放浪ONにするとその場に固定できます。</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-q-badge">Q</span>
+              <span class="faq-q-text">交配（ブリーディング）したいときも放浪モードにする必要がありますか？</span>
+            </summary>
+            <div class="faq-answer">
+              <p><strong>いいえ、放浪モードは不要です！</strong></p>
+              <p>ASAではオス・メスを近くに並べて、長押しリングメニュー「行動」→<strong>「交配を有効にする（Enable Mating）」</strong>をONにするだけで、その場に止めたまま安全に交配・産卵できます。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-q-badge">Q</span>
+              <span class="faq-q-text">拠点のペットが勝手に追いかけてきて配置が崩れてしまいます</span>
+            </summary>
+            <div class="faq-answer">
+              <p>ほとんどの場合、全体口笛「<strong>全員追従</strong>」（PC：<kbd>J</kbd> ／ PS5：<span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">↓</span>）の誤爆が原因です。壁を貫通して周囲のペット全員に届きます。</p>
+              <ul class="tips-list">
+                <li><strong>今すぐ止める</strong>：「全員停止」（PC：<kbd>U</kbd> ／ PS5：<span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">←</span>）を押す。</li>
+                <li><strong>今後の予防（重要）</strong>：動かしたくない拠点待機ペットは、長押しメニュー「行動」→<strong>「グループ口笛を無視」をON</strong>にしておくと全体口笛に反応しなくなります。</li>
+                <li><strong>行動モードも確認</strong>：「攻撃的」になっていると野生生物を追ってどこかへ行くため、拠点待機は「中立」にしておくのが安全です。</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <!-- カテゴリ③：建築・アイテム・MOD検索まわり -->
+        <div class="faq-group" data-faq-group>
+          <h3 class="faq-group-title">🏠 建築・アイテム・MOD検索まわり</h3>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-q-badge">Q</span>
+              <span class="faq-q-text">設置した建築物や設備の場所をやり直したいです。壊すしかありませんか？</span>
+            </summary>
+            <div class="faq-answer">
+              <p><strong>壊さずに回収できます！</strong></p>
+              <p>ASAではダメージを受けていない建築物・設備であれば、時間制限なしで<strong>長押しリングメニュー（PC：<kbd>E</kbd> 長押し ／ PS5：<span class="ps-btn ps-triangle">△</span> 長押し）→「回収（Pick Up）」</strong>からそのままインベントリに戻せます。「解体（Demolish）」を選ぶと壊れて素材の一部しか戻らないのでご注意ください。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-q-badge">Q</span>
+              <span class="faq-q-text">MODアイテムの英語名やエングラムをゲーム内で素早く見つけるコツは？</span>
+            </summary>
+            <div class="faq-answer">
+              <p>このサイトの <button type="button" class="faq-inline-link" data-jump-tab="ALL">🔍 アイテム検索</button> では、日本語名・英語名・必要素材・特殊能力などから横断検索できます。</p>
+              <ol class="tips-steps">
+                <li>検索で見つけたアイテムの<strong>「コピー」</strong>または詳細画面の<strong>「英語名コピー」</strong>を押す。</li>
+                <li>ゲーム内のエングラム画面・作業台の検索欄にそのまま貼り付けると一発で見つかります。</li>
+                <li>よく使う作業台や生物は <strong>★ ピン留め</strong> しておくと次回からすぐ開けます。</li>
+              </ol>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div id="faqEmptyState" class="empty-state hidden">
+        <p class="empty-title">一致するQ&Aが見つかりませんでした</p>
+        <p class="empty-desc">別のキーワードで検索するか、入力をクリアして全件表示してください。</p>
+      </div>
+    </section>
   </main>
 
   <!-- アイテム詳細モーダル（サブ画面並べて表示対応） -->

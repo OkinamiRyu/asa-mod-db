@@ -74,6 +74,11 @@
     tipsContent: document.getElementById('tipsContent'),
     tipsDeviceBar: document.getElementById('tipsDeviceBar'),
     shareTipsBtn: document.getElementById('shareTipsBtn'),
+    faqSection: document.getElementById('faqSection'),
+    shareFaqBtn: document.getElementById('shareFaqBtn'),
+    faqSearchInput: document.getElementById('faqSearchInput'),
+    faqList: document.getElementById('faqList'),
+    faqEmptyState: document.getElementById('faqEmptyState'),
     typeTipBanner: document.getElementById('typeTipBanner'),
     modSelect: document.getElementById('modSelect'),
     resetModBtn: document.getElementById('resetModBtn'),
@@ -582,13 +587,17 @@
       { id: 'SEARCH', label: '🔍 アイテム検索', count: totalItems },
       { id: 'INSTALLED', label: '📋 導入中MOD一覧', count: installedCount },
       { id: 'TIPS', label: '📖 初心者設定・便利技', count: null },
+      { id: 'FAQ', label: '❓ よくある質問（Q&A）', count: null },
     ];
     if (rulesCount > 0) {
       tabs.push({ id: 'RULES', label: '📜 鯖ルール・設定', count: rulesCount });
     }
 
     const activeTop =
-      state.activeTab === 'INSTALLED' || state.activeTab === 'RULES' || state.activeTab === 'TIPS'
+      state.activeTab === 'INSTALLED' ||
+      state.activeTab === 'RULES' ||
+      state.activeTab === 'TIPS' ||
+      state.activeTab === 'FAQ'
         ? state.activeTab
         : 'SEARCH';
 
@@ -637,7 +646,11 @@
 
     els.modSelect.innerHTML = html;
     const currentVal =
-      state.activeTab === 'INSTALLED' || state.activeTab === 'RULES' || state.activeTab === 'TIPS' || !state.activeTab
+      state.activeTab === 'INSTALLED' ||
+      state.activeTab === 'RULES' ||
+      state.activeTab === 'TIPS' ||
+      state.activeTab === 'FAQ' ||
+      !state.activeTab
         ? 'ALL'
         : state.activeTab;
     els.modSelect.value = currentVal;
@@ -1402,6 +1415,10 @@
       switchTab('TIPS');
       return;
     }
+    if (hash === '#faq') {
+      switchTab('FAQ');
+      return;
+    }
     if (!hash.startsWith('#item=')) return;
     const raw = hash.slice(6);
     const slashIdx = raw.indexOf('/');
@@ -1456,7 +1473,7 @@
     if (target === 'SEARCH') {
       target = state.lastModTab || 'ALL';
     }
-    if (target !== 'INSTALLED' && target !== 'RULES' && target !== 'TIPS') {
+    if (target !== 'INSTALLED' && target !== 'RULES' && target !== 'TIPS' && target !== 'FAQ') {
       state.lastModTab = target;
     }
 
@@ -1470,11 +1487,15 @@
     const isInstalled = target === 'INSTALLED';
     const isRules = target === 'RULES';
     const isTips = target === 'TIPS';
-    els.itemsSection.classList.toggle('hidden', isInstalled || isRules || isTips);
+    const isFaq = target === 'FAQ';
+    els.itemsSection.classList.toggle('hidden', isInstalled || isRules || isTips || isFaq);
     els.modsSection.classList.toggle('hidden', !isInstalled);
     els.rulesSection.classList.toggle('hidden', !isRules);
     if (els.tipsSection) {
       els.tipsSection.classList.toggle('hidden', !isTips);
+    }
+    if (els.faqSection) {
+      els.faqSection.classList.toggle('hidden', !isFaq);
     }
 
     if (isInstalled) {
@@ -1483,7 +1504,7 @@
     } else if (isRules) {
       els.typeTipBanner.classList.add('hidden');
       renderServerRules();
-    } else if (isTips) {
+    } else if (isTips || isFaq) {
       els.typeTipBanner.classList.add('hidden');
     } else {
       els.modSelect.value = target;
@@ -1822,6 +1843,53 @@
       });
     }
 
+    if (els.shareFaqBtn) {
+      els.shareFaqBtn.addEventListener('click', () => {
+        const faqUrl = `${window.location.origin}${window.location.pathname}#faq`;
+        copyText(faqUrl);
+        showToast('よくある質問（Q&A）ページのURLをコピーしました');
+      });
+    }
+
+    if (els.faqSection) {
+      els.faqSection.addEventListener('click', (e) => {
+        const copyBtn = e.target.closest('[data-tips-copy]');
+        if (copyBtn) {
+          copyText(copyBtn.dataset.tipsCopy);
+          return;
+        }
+        const jumpBtn = e.target.closest('[data-jump-tab]');
+        if (jumpBtn) {
+          switchTab(jumpBtn.dataset.jumpTab);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    }
+
+    if (els.faqSearchInput && els.faqList) {
+      els.faqSearchInput.addEventListener('input', (e) => {
+        const tokens = normalizeText(e.target.value).split(/\s+/).filter(Boolean);
+        let visibleTotal = 0;
+        for (const grp of els.faqList.querySelectorAll('[data-faq-group]')) {
+          let visibleInGroup = 0;
+          for (const item of grp.querySelectorAll('.faq-item')) {
+            const blob = normalizeText(item.textContent || '');
+            const matched = tokens.every((tk) => blob.includes(tk));
+            item.classList.toggle('hidden', !matched);
+            if (matched) {
+              visibleInGroup++;
+              if (tokens.length > 0) item.open = true;
+            }
+          }
+          grp.classList.toggle('hidden', visibleInGroup === 0);
+          visibleTotal += visibleInGroup;
+        }
+        if (els.faqEmptyState) {
+          els.faqEmptyState.classList.toggle('hidden', visibleTotal > 0);
+        }
+      });
+    }
+
     window.addEventListener('hashchange', () => {
       if (state.data) openItemFromHash();
     });
@@ -1844,6 +1912,8 @@
         e.preventDefault();
         if (state.activeTab === 'INSTALLED') {
           els.modSearchInput.focus();
+        } else if (state.activeTab === 'FAQ' && els.faqSearchInput) {
+          els.faqSearchInput.focus();
         } else {
           if (state.activeTab === 'TIPS' || state.activeTab === 'RULES') {
             switchTab('ALL');
