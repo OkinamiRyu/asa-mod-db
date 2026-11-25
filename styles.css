@@ -2629,6 +2629,18 @@ mark.search-hit {
   border-radius: 5px;
 }
 
+#tipsSection :not(pre) > code,
+#faqSection :not(pre) > code {
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.84em;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 640px) {
   .faq-group {
     padding: 14px;

@@ -1504,8 +1504,11 @@
     } else if (isRules) {
       els.typeTipBanner.classList.add('hidden');
       renderServerRules();
-    } else if (isTips || isFaq) {
+    } else if (isTips) {
       els.typeTipBanner.classList.add('hidden');
+    } else if (isFaq) {
+      els.typeTipBanner.classList.add('hidden');
+      applyFaqFilter();
     } else {
       els.modSelect.value = target;
       els.resetModBtn.classList.toggle('hidden', target === 'ALL');
@@ -1513,6 +1516,42 @@
       renderQuickFilters();
       rebuildFilterOptions();
       applyFiltersAndRender();
+    }
+  }
+
+  function applyFaqFilter() {
+    if (!els.faqSearchInput || !els.faqList) return;
+    const tokens = normalizeText(els.faqSearchInput.value).split(/\s+/).filter(Boolean);
+    if (tokens.length === 0) {
+      for (const grp of els.faqList.querySelectorAll('[data-faq-group]')) {
+        grp.classList.remove('hidden');
+        for (const item of grp.querySelectorAll('.faq-item')) {
+          item.classList.remove('hidden');
+        }
+      }
+      if (els.faqEmptyState) {
+        els.faqEmptyState.classList.add('hidden');
+      }
+      return;
+    }
+
+    let visibleTotal = 0;
+    for (const grp of els.faqList.querySelectorAll('[data-faq-group]')) {
+      let visibleInGroup = 0;
+      for (const item of grp.querySelectorAll('.faq-item')) {
+        const blob = normalizeText(item.textContent || '');
+        const matched = tokens.every((tk) => blob.includes(tk));
+        item.classList.toggle('hidden', !matched);
+        if (matched) {
+          visibleInGroup++;
+          item.open = true;
+        }
+      }
+      grp.classList.toggle('hidden', visibleInGroup === 0);
+      visibleTotal += visibleInGroup;
+    }
+    if (els.faqEmptyState) {
+      els.faqEmptyState.classList.toggle('hidden', visibleTotal > 0);
     }
   }
 
@@ -1549,6 +1588,10 @@
         els.sortSelect.value = 'index';
         state.modSearchQuery = '';
         els.modSearchInput.value = '';
+        if (els.faqSearchInput) {
+          els.faqSearchInput.value = '';
+          applyFaqFilter();
+        }
         state.visibleLimit = PAGE_SIZE;
         switchTab('ALL');
         if (window.location.hash) {
@@ -1873,27 +1916,8 @@
     }
 
     if (els.faqSearchInput && els.faqList) {
-      els.faqSearchInput.addEventListener('input', (e) => {
-        const tokens = normalizeText(e.target.value).split(/\s+/).filter(Boolean);
-        let visibleTotal = 0;
-        for (const grp of els.faqList.querySelectorAll('[data-faq-group]')) {
-          let visibleInGroup = 0;
-          for (const item of grp.querySelectorAll('.faq-item')) {
-            const blob = normalizeText(item.textContent || '');
-            const matched = tokens.every((tk) => blob.includes(tk));
-            item.classList.toggle('hidden', !matched);
-            if (matched) {
-              visibleInGroup++;
-              if (tokens.length > 0) item.open = true;
-            }
-          }
-          grp.classList.toggle('hidden', visibleInGroup === 0);
-          visibleTotal += visibleInGroup;
-        }
-        if (els.faqEmptyState) {
-          els.faqEmptyState.classList.toggle('hidden', visibleTotal > 0);
-        }
-      });
+      els.faqSearchInput.addEventListener('input', applyFaqFilter);
+      els.faqSearchInput.addEventListener('search', applyFaqFilter);
     }
 
     window.addEventListener('hashchange', () => {
