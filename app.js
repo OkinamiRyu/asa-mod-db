@@ -968,8 +968,8 @@
                 </td>
                 ${showModBadge ? `<td><span class="tag tag-mod">${escapeHtml(item._modName)}</span></td>` : ''}
                 <td>${item.category ? `<span class="tag tag-cat">${escapeHtml(item.category)}</span>` : ''}</td>
-                <td>${escapeHtml(col4Val)}</td>
-                <td>${escapeHtml(col5Val)}</td>
+                <td>${highlightText(col4Val, tokens)}</td>
+                <td>${highlightText(col5Val, tokens)}</td>
                 <td>${highlightText(formatSentenceBreaks(item.description || ''), tokens)}</td>
               </tr>`;
               })
@@ -1539,18 +1539,42 @@
       updateMobileFilterToggle();
     });
 
-    els.itemSearchInput.addEventListener('input', (e) => {
-      state.searchQuery = e.target.value;
+    let searchDebounceTimer = null;
+    let isSearchComposing = false;
+
+    const runSearchNow = (val) => {
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = null;
+      state.searchQuery = val;
       state.visibleLimit = PAGE_SIZE;
       applyFiltersAndRender();
+    };
+
+    els.itemSearchInput.addEventListener('compositionstart', () => {
+      isSearchComposing = true;
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = null;
+    });
+
+    els.itemSearchInput.addEventListener('compositionend', (e) => {
+      isSearchComposing = false;
+      runSearchNow(e.target.value);
+    });
+
+    els.itemSearchInput.addEventListener('input', (e) => {
+      const val = e.target.value;
+      els.clearSearchBtn.classList.toggle('hidden', !val);
+      if (isSearchComposing || e.isComposing) return;
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = setTimeout(() => {
+        runSearchNow(val);
+      }, 150);
     });
 
     els.clearSearchBtn.addEventListener('click', () => {
-      state.searchQuery = '';
       els.itemSearchInput.value = '';
       els.itemSearchInput.focus();
-      state.visibleLimit = PAGE_SIZE;
-      applyFiltersAndRender();
+      runSearchNow('');
     });
 
     els.filterCategory.addEventListener('change', (e) => {
