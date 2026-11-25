@@ -3,7 +3,17 @@
     "cat_character_bp_arklastt": "icons/ArklasAnimals/Cat_Character_BP_ArklasTT.png",
     "chicken_character_bp_arklastt": "icons/ArklasAnimals/Chicken_Character_BP_ArklasTT.png",
     "parrot_character_bp_arklastt": "icons/ArklasAnimals/Parrot_Character_BP_ArklasTT.png",
-    "penguin_character_bp_arklastt": "icons/ArklasAnimals/Penguin_Character_BP_ArklasTT.png"
+    "penguin_character_bp_arklastt": "icons/ArklasAnimals/Penguin_Character_BP_ArklasTT.png",
+    "monkey_character_bp_arklastt": "icons/ArklasAnimals/Monkey_Character_BP_ArklasTT.png",
+    "rabbit_character_bp_arklastt": "icons/ArklasAnimals/Rabbit_Character_BP_ArklasTT.png",
+    "raven_character_bp_arklastt": "icons/ArklasAnimals/Raven_Character_BP_ArklasTT.png",
+    "primalitemconsumable_egg_chicken_fertilized": "icons/ArklasAnimals/PrimalItemConsumable_Egg_Chicken_Fertilized.png",
+    "primalitemconsumable_egg_parrot": "icons/ArklasAnimals/PrimalItemConsumable_Egg_Parrot.png",
+    "primalitemconsumable_egg_parrot_fertilized": "icons/ArklasAnimals/PrimalItemConsumable_Egg_Parrot_Fertilized.png",
+    "primalitemconsumable_egg_penguin_fertilized": "icons/ArklasAnimals/PrimalItemConsumable_Egg_Penguin_Fertilized.png",
+    "primalitemconsumable_egg_raven": "icons/ArklasAnimals/PrimalItemConsumable_Egg_Raven.png",
+    "primalitemconsumable_egg_raven_fertilized": "icons/ArklasAnimals/PrimalItemConsumable_Egg_Raven_Fertilized.png",
+    "_default": "icons/ArklasAnimals/Cat_Character_BP_ArklasTT.png"
   },
   "Brachiosaurus Costume SKIN": {
     "primalitemskin_costume_brachiosauruscostumeskin": "icons/Brachiosaurus Costume SKIN/PrimalItemSkin_Costume_BrachiosaurusCostumeSkin.png"
@@ -388,7 +398,40 @@
     "primalitem_advancedbloodextractor": "icons/MuchStuffPack/PrimalItem_AdvancedBloodExtractor.png",
     "primalitem_weapfarmpitchfork": "icons/MuchStuffPack/PrimalItem_WeapFarmPitchfork.png",
     "primalitem_weaponcarbontool": "icons/MuchStuffPack/PrimalItem_WeaponCarbonTool.png",
-    "primalitem_weaponepochsword": "icons/MuchStuffPack/PrimalItem_WeaponEpochSword.png"
+    "primalitem_weaponepochsword": "icons/MuchStuffPack/PrimalItem_WeaponEpochSword.png",
+    "wood": "icons/MuchStuffPack/vanilla_wood.png",
+    "thatch": "icons/MuchStuffPack/vanilla_thatch.png",
+    "fiber": "icons/MuchStuffPack/vanilla_fiber.png",
+    "stone": "icons/MuchStuffPack/vanilla_stone.png",
+    "flint": "icons/MuchStuffPack/vanilla_flint.png",
+    "hide": "icons/MuchStuffPack/vanilla_hide.png",
+    "raw meat": "icons/MuchStuffPack/vanilla_raw_meat.png",
+    "spoiled meat": "icons/MuchStuffPack/vanilla_spoiled_meat.png",
+    "metal": "icons/MuchStuffPack/vanilla_metal.png",
+    "metal ingot": "icons/MuchStuffPack/vanilla_metal_ingot.png",
+    "crystal": "icons/MuchStuffPack/vanilla_crystal.png",
+    "oil": "icons/MuchStuffPack/vanilla_oil.png",
+    "obsidian": "icons/MuchStuffPack/vanilla_obsidian.png",
+    "sap": "icons/MuchStuffPack/vanilla_sap.png",
+    "rare flower": "icons/MuchStuffPack/vanilla_rare_flower.png",
+    "azulberry": "icons/MuchStuffPack/vanilla_azulberry.png",
+    "rockarrot": "icons/MuchStuffPack/vanilla_rockarrot.png",
+    "cementing paste": "icons/MuchStuffPack/vanilla_cementing_paste.png",
+    "electronics": "icons/MuchStuffPack/vanilla_electronics.png",
+    "polymer": "icons/MuchStuffPack/vanilla_polymer.png",
+    "organic polymer": "icons/MuchStuffPack/vanilla_organic_polymer.png",
+    "sparkpowder": "icons/MuchStuffPack/vanilla_sparkpowder.png",
+    "charcoal": "icons/MuchStuffPack/vanilla_charcoal.png",
+    "narcotic": "icons/MuchStuffPack/vanilla_narcotic.png",
+    "soap": "icons/MuchStuffPack/vanilla_soap.png",
+    "stone arrow": "icons/MuchStuffPack/vanilla_stone_arrow.png",
+    "campfire": "icons/MuchStuffPack/vanilla_campfire.png",
+    "blood extractor": "icons/MuchStuffPack/vanilla_blood_extractor.png",
+    "chitin or keratin": "icons/MuchStuffPack/vanilla_chitin.png",
+    "feces": "icons/MuchStuffPack/vanilla_feces.png",
+    "water container": "icons/MuchStuffPack/vanilla_water_container.png",
+    "primalitemconsumableseed": "icons/MuchStuffPack/vanilla_seed.png",
+    "_default": "icons/MuchStuffPack/_default.png"
   },
   "Procoptodon cosutume skin": {
     "primalitemskin_costume_prococostumeskin": "icons/Procoptodon cosutume skin/PrimalItemSkin_Costume_ProcoCostumeSkin.png"
@@ -431,7 +474,8 @@
     "primalitem_druidweaponpike": "icons/Pulse Arcana - Roleplay Classes and Magic Mod/PrimalItem_DruidWeaponPike.png",
     "primalitem_mageweaponpike": "icons/Pulse Arcana - Roleplay Classes and Magic Mod/PrimalItem_MageWeaponPike.png",
     "primalitem_weaponhighdamagetorch": "icons/Pulse Arcana - Roleplay Classes and Magic Mod/PrimalItem_WeaponHighDamageTorch.png",
-    "primalitem_weaponwickedoiljar": "icons/Pulse Arcana - Roleplay Classes and Magic Mod/PrimalItem_WeaponWickedOilJar.png"
+    "primalitem_weaponwickedoiljar": "icons/Pulse Arcana - Roleplay Classes and Magic Mod/PrimalItem_WeaponWickedOilJar.png",
+    "primalitemability_buff_exitedmekshield": "icons/Pulse Arcana - Roleplay Classes and Magic Mod/PrimalItemAbility_Buff_ExitedMekShield.png"
   },
   "Reaper CostumeSkin": {
     "primalitemskin_costume_reapercostumeskin": "icons/Reaper CostumeSkin/PrimalItemSkin_Costume_ReaperCostumeSkin.png"
@@ -1514,7 +1558,8 @@
     "wyvern_pet_bone_character_bp": "icons/Wyvern Pets/Wyvern_Pet_Bone_Character_BP.png",
     "dragon_pet_fire_character_bp": "icons/Wyvern Pets/Dragon_Pet_Fire_Character_BP.png",
     "wyvern_pet_blood_character_bp": "icons/Wyvern Pets/Wyvern_Pet_Blood_Character_BP.png",
-    "primalitemarmor_saddle_wyvern_pet": "icons/Wyvern Pets/PrimalItemArmor_Saddle_Wyvern_Pet.png"
+    "primalitemarmor_saddle_wyvern_pet": "icons/Wyvern Pets/PrimalItemArmor_Saddle_Wyvern_Pet.png",
+    "_default": "icons/Wyvern Pets/Wyvern_Pet_Fire_Character_BP.png"
   },
   "Scorched Resources": {
     "primalitem_scorchedresources_silk": "icons/Scorched Resources/PrimalItem_ScorchedResources_Silk.png",
@@ -1522,7 +1567,8 @@
     "primalitem_scorchedresources_clay": "icons/Scorched Resources/PrimalItem_ScorchedResources_Clay.png",
     "primalitem_scorchedresources_sand": "icons/Scorched Resources/PrimalItem_ScorchedResources_Sand.png",
     "primalitem_scorchedresources_sulfur": "icons/Scorched Resources/PrimalItem_ScorchedResources_Sulfur.png",
-    "primalitem_scorchedresources_rawsalt": "icons/Scorched Resources/PrimalItem_ScorchedResources_RawSalt.png"
+    "primalitem_scorchedresources_rawsalt": "icons/Scorched Resources/PrimalItem_ScorchedResources_RawSalt.png",
+    "_default": "icons/Scorched Resources/PrimalItem_ScorchedResources_Silk.png"
   },
   "Z-Variants Otter Additions (Crossplay)": {
     "z_pandaotter_character_bp": "icons/Z-Variants Otter Additions (Crossplay)/Z_PandaOtter_Character_BP.png",
@@ -1532,7 +1578,8 @@
     "z_otter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_Otter_Character_BP_ASA.png",
     "z_aberrant_otter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_Aberrant_Otter_Character_BP_ASA.png",
     "z_spottedotter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_SpottedOtter_Character_BP_ASA.png",
-    "z_ferretotter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_FerretOtter_Character_BP_ASA.png"
+    "z_ferretotter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_FerretOtter_Character_BP_ASA.png",
+    "_default": "icons/Z-Variants Otter Additions (Crossplay)/Z_PandaOtter_Character_BP.png"
   },
   "Forgotten Fauna Continued: Monolophosaurus": {
     "mono_character_bp": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP.png",
@@ -1544,5 +1591,13 @@
     "primalitemarmor_monosaddleblade": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemArmor_MonoSaddleBlade.png",
     "primalitemarmor_monosaddleshield": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemArmor_MonoSaddleShield.png",
     "primalitemconsumable_monolophobile": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemConsumable_MonolophoBile.png"
+  },
+  "ArkNav": {
+    "primalitem_arknavconfigurator": "icons/ArkNav/PrimalItem_ArkNavConfigurator.png",
+    "_default": "icons/ArkNav/PrimalItem_ArkNavConfigurator.png"
+  },
+  "Bear Skin": {
+    "primalitemskin_costume_bearskin": "icons/Bear Skin/PrimalItemSkin_Costume_BearSkin.png",
+    "_default": "icons/Bear Skin/PrimalItemSkin_Costume_BearSkin.png"
   }
 }

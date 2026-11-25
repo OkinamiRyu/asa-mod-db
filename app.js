@@ -480,9 +480,18 @@
       }
     }
     const modIcons = state.icons[item._modId];
-    if (modIcons && item.assetName) {
-      const found = modIcons[item.assetName.toLowerCase()];
-      if (found) return found;
+    if (modIcons) {
+      if (item.assetName) {
+        const found = modIcons[item.assetName.toLowerCase()];
+        if (found) return found;
+      }
+      if (item.enName) {
+        const byEn = modIcons[item.enName.toLowerCase()];
+        if (byEn) return byEn;
+      }
+      if (modIcons._default) {
+        return modIcons._default;
+      }
     }
     return '';
   }
