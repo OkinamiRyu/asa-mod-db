@@ -225,7 +225,7 @@
 
       <div id="tipsContent" class="tips-content" data-device-filter="all">
         <!-- セクション①：PC向け初期設定 -->
-        <article class="tips-section-card" data-device-only="pc">
+        <article id="tips-pc" class="tips-section-card" data-device-only="pc">
           <div class="tips-section-head">
             <h3 class="tips-section-title">① 配信・PCプレイ前にやっておくべき設定</h3>
             <span class="tips-badge-pc">PC向け</span>
@@ -278,7 +278,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
         </article>
 
         <!-- セクション②：マップ・ウェイポイント・ピン機能 -->
-        <article class="tips-section-card">
+        <article id="tips-map" class="tips-section-card">
           <div class="tips-section-head">
             <h3 class="tips-section-title">② マップ・ウェイポイント・ピン機能</h3>
           </div>
@@ -307,7 +307,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
         </article>
 
         <!-- セクション③：建築の便利操作・長押しメニュー -->
-        <article class="tips-section-card">
+        <article id="tips-build" class="tips-section-card">
           <div class="tips-section-head">
             <h3 class="tips-section-title">③ 建築の便利操作・長押しメニュー</h3>
           </div>
@@ -354,7 +354,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
         </article>
 
         <!-- セクション④：サバイバル・インベントリ・ペット操作 -->
-        <article class="tips-section-card">
+        <article id="tips-controls" class="tips-section-card">
           <div class="tips-section-head">
             <h3 class="tips-section-title">④ サバイバル・インベントリ・ペット操作（PC / PS5 対照表）</h3>
           </div>
@@ -428,21 +428,18 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
               <li>
                 <strong>「全員追従」の誤爆に注意！</strong>：
                 <span data-device-only="pc">PC <kbd>J</kbd> キー</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5 <span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">↓</span>（口笛メニュー）</span>
-                を押すと<strong>周囲のペット全員が自分に追従</strong>してしまい、拠点の配置が総崩れします。<span data-device-only="pc">PC勢はキー設定から <kbd>J</kbd> を外すか、遠いキーに変更しておくのがおすすめです。</span>
+                を押すと<strong>周囲のペット全員が自分に追従</strong>してしまいます。<span data-device-only="pc">PC勢はキー設定から <kbd>J</kbd> を外すか、遠いキーに変更しておくのがおすすめです。</span>
               </li>
               <li>
                 <strong>全員停止（止まれ）</strong>：
                 <span data-device-only="pc">PC <kbd>U</kbd> キー</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5 <span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">←</span></span>
-              </li>
-              <li>
-                <strong>攻撃モードの基本</strong>：ペットは「無抵抗」だと襲われても反撃せず死んでしまうため、基本は<strong>「自分のターゲットを攻撃」</strong>か<strong>「中立」</strong>に設定しておきましょう（<span data-device-only="pc">PC <kbd>=</kbd> / <kbd>-</kbd>、または</span>長押しリングメニュー「行動」から変更）。
               </li>
             </ul>
           </div>
         </article>
 
         <!-- セクション⑤：恐竜への指示・行動設定・放浪モード -->
-        <article class="tips-section-card">
+        <article id="tips-dino" class="tips-section-card">
           <div class="tips-section-head">
             <h3 class="tips-section-title">⑤ 🦖 恐竜への指示・行動設定・放浪モード</h3>
           </div>
@@ -464,7 +461,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
             <div class="tips-item-box">
               <h4 class="tips-item-title">📢 周囲すべてに指示する（全体口笛・誤爆注意）</h4>
               <p class="tips-item-text">
-                口笛リングメニュー（<span data-device-only="pc">PC：<kbd>T</kbd> 長押し</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5：<span class="ps-btn ps-circle">○</span> 長押し</span>）や全体ショートカット（<span data-device-only="pc">PC：<kbd>J</kbd> 全員追従・<kbd>U</kbd> 全員停止</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5：<span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">↓</span> 全員追従・<span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">←</span> 全員停止</span>）は、<strong>壁を貫通して周囲の恐竜全員</strong>に届きます。
+                口笛リングメニュー（<span data-device-only="pc">PC：<kbd>T</kbd> 長押し</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5：<span class="ps-btn ps-circle">○</span> 長押し</span>）や全体ショートカットは、<strong>壁を貫通して周囲の恐竜全員</strong>に届きます。
               </p>
               <p class="tips-item-tip">💡 <strong>拠点の配置を守るコツ</strong>：動かしたくない拠点待機ペットは、長押しリングメニュー「行動」→<strong>「グループ口笛を無視」をON</strong>にしておくと誤爆を防げます。</p>
             </div>
@@ -540,7 +537,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
         </article>
 
         <!-- セクション⑥：導入MODの便利ショートカット -->
-        <article class="tips-section-card">
+        <article id="tips-mods" class="tips-section-card">
           <div class="tips-section-head">
             <h3 class="tips-section-title">⑥ このサーバー導入MODの便利ショートカット</h3>
           </div>
@@ -589,117 +586,129 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
       </div>
 
       <div id="faqList" class="faq-groups">
-        <!-- カテゴリ①：音・画面・配信まわり -->
+        <!-- カテゴリ①：サーバー参加・DLC・MOD検索まわり -->
         <div class="faq-group" data-faq-group>
-          <h3 class="faq-group-title">🔊 音・画面・配信まわり</h3>
+          <h3 class="faq-group-title">🌐 サーバー参加・DLC・MODまわり</h3>
 
           <details class="faq-item" open>
             <summary class="faq-question">
               <span class="faq-q-badge">Q</span>
-              <span class="faq-q-text">裏画面（OBSやコメント欄、DBサイト）をクリックするとゲーム音が消えてしまいます</span>
+              <span class="faq-q-text">このサーバーで遊ぶのにSteamの有料DLC（Tides of Fortune や Bob's Tall Tales など）は必要ですか？</span>
             </summary>
             <div class="faq-answer">
-              <p>ASAの初期設定では、ウィンドウが非アクティブになるとゲーム音がミュートになります。ゲームを完全に終了したうえで、<code>Engine.ini</code> の末尾に以下を追記して保存すると、裏画面でも音が鳴り続けます。</p>
-              <div class="tips-code-block">
-                <div class="tips-code-header">
-                  <span>Engine.ini 末尾に追記</span>
-                  <button type="button" class="copy-btn" data-tips-copy="[Audio]&#10;UnfocusedVolumeMultiplier=1.0">コードをコピー</button>
-                </div>
-                <pre class="tips-code-pre"><code>[Audio]
-UnfocusedVolumeMultiplier=1.0</code></pre>
-              </div>
-              <p class="faq-link-row">詳しいファイルパスや配信向け初期設定は <button type="button" class="faq-inline-link" data-jump-tab="TIPS">📖 初心者設定・便利技</button> を参照してください。</p>
+              <p><strong>いいえ、Steamの有料DLCは一切不要です！</strong> ASA本体だけでアイランドと導入MODをそのまま遊べます（無料マップDLCもアイランドのみならインストール不要です）。</p>
+              <p>※一部プレミアムMOD（フリーミアム）は未購入でもサーバー参加は可能ですが、騎乗・テイムには各自購入が必要な場合があります。</p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
               <span class="faq-q-badge">Q</span>
-              <span class="faq-q-text">画面が暗い・霧や反射で見づらい・動作が重いときはどこを確認すればいいですか？</span>
+              <span class="faq-q-text">導入MODは事前に自分でダウンロードしておく必要がありますか？</span>
             </summary>
             <div class="faq-answer">
-              <ul class="tips-list">
-                <li><strong>反射・まぶしさ対策</strong>：設定 → ビデオで「ライトブルーム」「ライトシャフト」「モーションブラー」を <strong>OFF</strong> にすると、海面や金属の白飛びが大幅に改善します。</li>
-                <li><strong>動作が重いとき</strong>：グラフィック品質の「グローバルイルミネーション」「影」「雲・霧（ボリューメトリッククラウド等）」を下げ、ウィンドウモードを「疑似フルスクリーン」にすると安定しやすいです。</li>
-                <li><strong>夜や洞窟が暗すぎるとき</strong>：松明（腰装備やサドル装着も可）や照明設備を活用しましょう。</li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <!-- カテゴリ②：恐竜・放浪・指示まわり -->
-        <div class="faq-group" data-faq-group>
-          <h3 class="faq-group-title">🦖 恐竜・放浪・指示まわり</h3>
-
-          <details class="faq-item">
-            <summary class="faq-question">
-              <span class="faq-q-badge">Q</span>
-              <span class="faq-q-text">放浪モードにした恐竜がどこかへ歩いていって迷子（脱走）になります</span>
-            </summary>
-            <div class="faq-answer">
-              <p>放浪モード（Wandering）は周囲を自由に歩き回る設定のため、何もしないと拠点の外へ出てしまいます。用途に合わせて以下の3つを使い分けてください。</p>
-              <ol class="tips-steps">
-                <li><strong>恐竜用リーシュ（Dino Leash）</strong>：自動採取させたい生物（ドエディクルス等）に最適。赤い境界線の外に出られなくなります。</li>
-                <li><strong>柵・壁・木製の檻（Cage）で囲う</strong>：序盤から使える基本対策。フンコロガシ等の小型生物は「木製の檻」に入れると省スペースで確実です。</li>
-                <li><strong>石などを詰めて「重量オーバー」にする</strong>：歩く必要がない生物（フンコロガシの肥料生成など）は動けない重さにしてから放浪ONにするとその場に固定できます。</li>
-              </ol>
+              <p>サーバー参加時にゲーム側で<strong>自動ダウンロード</strong>されるため、事前導入は不要です。初回参加時のみMOD容量に応じて数分かかる場合があるので、少し余裕をもって接続すると安心です。</p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
               <span class="faq-q-badge">Q</span>
-              <span class="faq-q-text">交配（ブリーディング）したいときも放浪モードにする必要がありますか？</span>
+              <span class="faq-q-text">このDBで見たMODアイテムがゲーム内で見つかりません</span>
             </summary>
             <div class="faq-answer">
-              <p><strong>いいえ、放浪モードは不要です！</strong></p>
-              <p>ASAではオス・メスを近くに並べて、長押しリングメニュー「行動」→<strong>「交配を有効にする（Enable Mating）」</strong>をONにするだけで、その場に止めたまま安全に交配・産卵できます。</p>
+              <p>アイテムカードの<strong>「コピー」</strong>または詳細画面の<strong>「英語名コピー」</strong>を押し、ゲーム内のエングラム検索・作業台検索に貼り付けてください。専用作業台が必要なアイテムは詳細画面の「作る場所」と解放レベルも確認しましょう。</p>
+              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="ALL">🔍 アイテム検索へ移動</button></p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
               <span class="faq-q-badge">Q</span>
-              <span class="faq-q-text">拠点のペットが勝手に追いかけてきて配置が崩れてしまいます</span>
+              <span class="faq-q-text">MOD追加生物にボーラは効きますか？野生のとき襲ってきますか？</span>
             </summary>
             <div class="faq-answer">
-              <p>ほとんどの場合、全体口笛「<strong>全員追従</strong>」（PC：<kbd>J</kbd> ／ PS5：<span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">↓</span>）の誤爆が原因です。壁を貫通して周囲のペット全員に届きます。</p>
-              <ul class="tips-list">
-                <li><strong>今すぐ止める</strong>：「全員停止」（PC：<kbd>U</kbd> ／ PS5：<span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">←</span>）を押す。</li>
-                <li><strong>今後の予防（重要）</strong>：動かしたくない拠点待機ペットは、長押しメニュー「行動」→<strong>「グループ口笛を無視」をON</strong>にしておくと全体口笛に反応しなくなります。</li>
-                <li><strong>行動モードも確認</strong>：「攻撃的」になっていると野生生物を追ってどこかへ行くため、拠点待機は「中立」にしておくのが安全です。</li>
-              </ul>
+              <p>各生物カードに <strong>野生：攻撃的 / 中立 / 臆病 / 非攻撃的</strong> の色分けバッジを載せており、詳細画面の「テイム方法」欄に <strong>【ボーラ】の有効／無効</strong> も記載しています。</p>
+              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="ALL">🔍 アイテム検索で生物を調べる</button></p>
             </div>
           </details>
         </div>
 
-        <!-- カテゴリ③：建築・アイテム・MOD検索まわり -->
+        <!-- カテゴリ②：音・画面・トラブル解決 -->
         <div class="faq-group" data-faq-group>
-          <h3 class="faq-group-title">🏠 建築・アイテム・MOD検索まわり</h3>
+          <h3 class="faq-group-title">🔧 音・画面・トラブル解決</h3>
 
           <details class="faq-item">
             <summary class="faq-question">
               <span class="faq-q-badge">Q</span>
-              <span class="faq-q-text">設置した建築物や設備の場所をやり直したいです。壊すしかありませんか？</span>
+              <span class="faq-q-text">裏画面（OBSやコメント欄、DBサイト）をクリックするとゲーム音が消えます</span>
             </summary>
             <div class="faq-answer">
-              <p><strong>壊さずに回収できます！</strong></p>
-              <p>ASAではダメージを受けていない建築物・設備であれば、時間制限なしで<strong>長押しリングメニュー（PC：<kbd>E</kbd> 長押し ／ PS5：<span class="ps-btn ps-triangle">△</span> 長押し）→「回収（Pick Up）」</strong>からそのままインベントリに戻せます。「解体（Demolish）」を選ぶと壊れて素材の一部しか戻らないのでご注意ください。</p>
+              <p>ASAの初期仕様で非アクティブ時はミュートになります。<code>Engine.ini</code> に1行追記すれば常に鳴るようになります。</p>
+              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-pc">📖 初心者設定 ①（手順とコピー用コードを見る）</button></p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
               <span class="faq-q-badge">Q</span>
-              <span class="faq-q-text">MODアイテムの英語名やエングラムをゲーム内で素早く見つけるコツは？</span>
+              <span class="faq-q-text">動作が重い・夜が暗すぎる・霧で見づらいときはどうすればいいですか？</span>
             </summary>
             <div class="faq-answer">
-              <p>このサイトの <button type="button" class="faq-inline-link" data-jump-tab="ALL">🔍 アイテム検索</button> では、日本語名・英語名・必要素材・特殊能力などから横断検索できます。</p>
-              <ol class="tips-steps">
-                <li>検索で見つけたアイテムの<strong>「コピー」</strong>または詳細画面の<strong>「英語名コピー」</strong>を押す。</li>
-                <li>ゲーム内のエングラム画面・作業台の検索欄にそのまま貼り付けると一発で見つかります。</li>
-                <li>よく使う作業台や生物は <strong>★ ピン留め</strong> しておくと次回からすぐ開けます。</li>
-              </ol>
+              <ul class="tips-list">
+                <li><strong>動作が重い</strong>：ビデオ設定の「グローバルイルミネーション」「影」「雲・霧（ボリューメトリッククラウド等）」を下げると軽くなりやすいです。</li>
+                <li><strong>夜や洞窟が暗い</strong>：松明は腰装備スロットや恐竜のサドルにも装着でき、両手を空けたまま周囲を照らせます。</li>
+              </ul>
+              <p class="faq-link-row">画面酔い・まぶしさ対策は <button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-pc">📖 初心者設定 ①</button> を参照してください。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-q-badge">Q</span>
+              <span class="faq-q-text">死んで荷物を落としました！どこに落ちたか分かりません</span>
+            </summary>
+            <div class="faq-answer">
+              <p>死亡地点には<strong>緑色の光柱</strong>が立ち、全体マップの「ウェイポイント」タブに死体アイコンが表示されます。荷物バッグには消滅タイマーがあるため、なるべく早めに回収へ向かいましょう。</p>
+              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-map">📖 初心者設定 ②（マップ表示の操作を見る）</button></p>
+            </div>
+          </details>
+        </div>
+
+        <!-- カテゴリ③：恐竜・建築のギモン -->
+        <div class="faq-group" data-faq-group>
+          <h3 class="faq-group-title">🦖 恐竜・建築のギモン</h3>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-q-badge">Q</span>
+              <span class="faq-q-text">拠点のペットが急に全員ついてきて配置が崩れました！</span>
+            </summary>
+            <div class="faq-answer">
+              <p>壁を貫通する全体口笛「全員追従」の誤爆です。まずは<strong>全員停止</strong>（PC：<kbd>U</kbd> ／ PS5：<span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">←</span>）で止め、動かしたくないペットは<strong>「グループ口笛を無視」をON</strong>にしておきましょう。</p>
+              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-dino">📖 初心者設定 ⑤（口笛・行動設定の詳細を見る）</button></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-q-badge">Q</span>
+              <span class="faq-q-text">放浪モードにした恐竜が脱走します。交配にも放浪が必要ですか？</span>
+            </summary>
+            <div class="faq-answer">
+              <p><strong>交配（ブリーディング）に放浪は不要</strong>です（「交配を有効にする」だけでOK）。自動採取などで放浪を使う場合は、<strong>リーシュ・柵/木製の檻・重量オーバー固定</strong>の3対策で脱走を防げます。</p>
+              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-dino">📖 初心者設定 ⑤（脱走対策3つの詳細を見る）</button></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-q-badge">Q</span>
+              <span class="faq-q-text">建築物や設備を置き間違えました。壊すしかありませんか？</span>
+            </summary>
+            <div class="faq-answer">
+              <p><strong>壊さずに回収できます！</strong> ダメージを受けていなければ時間制限なしで「長押しリングメニュー → 回収（Pick Up）」からインベントリに戻せます。</p>
+              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-build">📖 初心者設定 ③（建築の操作一覧を見る）</button></p>
             </div>
           </details>
         </div>

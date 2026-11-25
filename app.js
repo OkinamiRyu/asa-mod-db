@@ -1861,7 +1861,13 @@
         const jumpBtn = e.target.closest('[data-jump-tab]');
         if (jumpBtn) {
           switchTab(jumpBtn.dataset.jumpTab);
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          const targetId = jumpBtn.dataset.jumpTarget;
+          const targetEl = targetId ? document.getElementById(targetId) : null;
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
         }
       });
     }
