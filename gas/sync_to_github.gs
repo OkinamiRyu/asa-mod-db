@@ -17,6 +17,8 @@
 const CONFIG = {
   INSTALLED_MODS_SHEET: '導入中mod一覧',
   SERVER_RULES_SHEET: '鯖ルール・設定',
+  // レンタルサーバー未導入のためDBから除外するMOD名
+  EXCLUDED_MODS: ['Pulse Arcana - Roleplay Classes and Magic Mod', 'ASACD'],
   // DBサイトに含めない管理用シート名（先頭が「_」または「下書き」のシートも自動除外されます）
   EXCLUDED_SHEETS: ['AIへの指示', '導入中mod一覧', '鯖ルール・設定', 'アイテム一覧', '情報源'],
   TARGET_FILE_PATH: 'data/mods.json',
@@ -122,6 +124,7 @@ function buildDatabaseJson_() {
 
     if (
       CONFIG.EXCLUDED_SHEETS.includes(name) ||
+      CONFIG.EXCLUDED_MODS.includes(name) ||
       name.startsWith('_') ||
       name.startsWith('下書き')
     ) {
@@ -179,7 +182,7 @@ function parseInstalledModsSheet_(sheet) {
   for (let i = 1; i < values.length; i++) {
     const row = values[i];
     const modName = (row[0] || '').trim();
-    if (!modName) continue;
+    if (!modName || CONFIG.EXCLUDED_MODS.includes(modName)) continue;
 
     const description = (row[1] || '').trim();
     const curseForgeId = (row[2] || '').trim();
