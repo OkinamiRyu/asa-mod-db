@@ -2045,6 +2045,28 @@ mark.search-hit {
   color: var(--text-muted);
 }
 
+.tips-default-note {
+  margin-top: 12px;
+  padding: 10px 13px;
+  border-radius: var(--radius-sm);
+  background: var(--blue-soft);
+  border: 1px solid var(--blue-border);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.tips-default-note strong {
+  color: var(--text);
+}
+
+.tips-table-note {
+  margin: 8px 0 0;
+  font-size: 0.79rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
 .tips-content {
   display: flex;
   flex-direction: column;

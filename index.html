@@ -221,6 +221,9 @@
           <button type="button" class="quick-chip" data-device="pc" aria-pressed="false">🖥️ PC（キーマウ）</button>
           <button type="button" class="quick-chip" data-device="ps5" aria-pressed="false">🎮 PS5（コントローラー）</button>
         </div>
+        <p class="tips-default-note" role="note">
+          ※記載のキー・ボタンは <strong>ARK: Survival Ascended（ASA）のデフォルト操作の一例</strong>です。キー設定（「設定 → キーボード／ゲームパッド」）の変更、画面状態（徒歩／騎乗中など）、キーボード配列（JIS／US）、大型アップデートによる設定リセット等により異なる場合があります。
+        </p>
       </div>
 
       <div id="tipsContent" class="tips-content" data-device-filter="all">
@@ -236,7 +239,7 @@
               <p class="tips-item-text">初期設定だと別ウィンドウをクリックした際にゲーム音が消えます。以下の手順で常に音が鳴るようにできます。</p>
               <ol class="tips-steps">
                 <li>ASA を完全に終了する</li>
-                <li>以下のパスにある <code>Engine.ini</code> をメモ帳等で開く</li>
+                <li>以下のパスにある <code>Engine.ini</code> をメモ帳等で開く（※Steamのインストール先により先頭フォルダは異なる場合があります）</li>
                 <li>ファイルの末尾に下記コードを追記して保存する</li>
               </ol>
               <div class="tips-code-block">
@@ -257,22 +260,22 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
             </div>
 
             <div class="tips-item-box">
-              <h4 class="tips-item-title">🖥️ 画面表示を「疑似フルスクリーン」にする</h4>
-              <p class="tips-item-text">設定 → ビデオ → ウィンドウモードを<strong>疑似フルスクリーン（Windowed Fullscreen）</strong>にしておくと、OBS配信中や別モニターをクリックした際のクラッシュ・画面暗転を防げます。</p>
+              <h4 class="tips-item-title">🖥️ 画面表示を「擬似フルスクリーン」にする</h4>
+              <p class="tips-item-text">設定 → ビデオ（<code>VIDEO</code>）→ ウィンドウモード（<code>Window Mode</code>）を<strong>擬似フルスクリーン（<code>Windowed Fullscreen</code>）</strong>にしておくと、OBS配信中や別モニターをクリックした際のクラッシュ・画面暗転を防げます。</p>
             </div>
 
             <div class="tips-item-box">
-              <h4 class="tips-item-title">👀 画面酔い・まぶしさ対策</h4>
+              <h4 class="tips-item-title">👀 画面酔い・まぶしさ対策（英語UI名併記）</h4>
               <ul class="tips-list">
-                <li><strong>モーションブラー</strong>：OFF（視点移動のブレ軽減）</li>
-                <li><strong>ライトブルーム / ライトシャフト</strong>：OFF（海面や金属のまぶしさ軽減）</li>
-                <li><strong>カメラの振動幅</strong>：最小（大型恐竜の足音による揺れ対策）</li>
+                <li><strong>ビデオ（VIDEO）</strong>：モーションブラー（<code>Motion Blur</code>）<strong>OFF</strong> ／ ライトブルーム（<code>Light Bloom</code>）・ライトシャフト（<code>Light Shafts</code>）<strong>OFF</strong></li>
+                <li><strong>カメラ（CAMERA）</strong>：カメラの振動幅（<code>Camera Shake Scale</code>）<strong>0（最小）</strong> ／ 行動時のカメラ振動（<code>Camera View Bob</code>）<strong>OFF</strong></li>
+                <li><strong>UI</strong>：近接カメラアニメーション（<code>Melee Camera Animation</code>）<strong>OFF</strong>（ピッケル・斧採取時の手ブレ軽減）</li>
               </ul>
             </div>
 
             <div class="tips-item-box">
               <h4 class="tips-item-title">📊 ステータス詳細の常時表示</h4>
-              <p class="tips-item-text">設定の <code>Toggle Extended HUD Info</code> を <strong>ON</strong> にしておくと、毎回キーを押さなくても左上の日時・気温や右下の数値詳細が常時表示されて便利です。</p>
+              <p class="tips-item-text">設定 → <strong>UI</strong> タブ（左列下部付近）の <code>Toggle Extended HUD Info</code>（拡張HUD情報の常時表示）を <strong>ON</strong> にすると、毎回 <kbd>H</kbd> キーを押さなくても日時・気温・数値詳細が常時表示されて便利です。</p>
             </div>
           </div>
         </article>
@@ -286,22 +289,26 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
             <div class="tips-item-box">
               <h4 class="tips-item-title">🗺️ マップの2段階表示（重要）</h4>
               <ul class="tips-list">
-                <li data-device-only="pc"><strong>PC</strong>：<kbd>M</kbd> <strong>1回押し</strong>＝手持ちマップ（右下に小さく表示、歩きながら確認可） ／ <kbd>M</kbd> <strong>2回連続押し</strong>＝全体マップ（大画面）</li>
-                <li data-device-only="ps5"><strong>PS5</strong>：<span class="ps-btn ps-pad">タッチパッド</span> <strong>長押し</strong>＝全体マップ（またはメニューからマップを開く）</li>
+                <li data-device-only="pc"><strong>PC</strong>：<kbd>M</kbd> <strong>1回押し</strong>＝手持ちマップ（歩きながら確認可） ／ <kbd>M</kbd> <strong>2回連続押し</strong>（または <kbd>I</kbd> のインベントリ内マップタブ）＝詳細マップ</li>
+                <li data-device-only="ps5"><strong>PS5</strong>：<span class="ps-btn ps-pad">タッチパッド</span> <strong>1回押し</strong>＝手持ち地図 ／ <span class="ps-btn ps-pad">タッチパッド</span> <strong>2度押し</strong>（または <span class="ps-btn ps-circle">○</span> のインベントリ右端マップタブ）＝詳細マップ（※長押しはリングメニューが開きます）</li>
               </ul>
             </div>
 
             <div class="tips-item-box">
-              <h4 class="tips-item-title">📍 ウェイポイント（カスタム目印）＆仲間へのピン共有</h4>
-              <p class="tips-item-text">
-                全体マップ上で<span data-device-only="pc"><strong>ダブルクリック</strong></span><span data-device-only="both-sep">（</span><span data-device-only="ps5">PS5はカーソルを合わせて <span class="ps-btn ps-cross">×</span> ボタン</span><span data-device-only="both-sep">）</span>すると好きな場所にウェイポイントを設置でき、画面上のコンパスや視界内に距離付きで表示されます。<br />
-                マップ画面からピンを打つことで、トライブ（仲間）にも位置を共有できます。
-              </p>
+              <h4 class="tips-item-title">📍 ウェイポイント設置＆仲間へのピン共有</h4>
+              <ul class="tips-list">
+                <li>
+                  <strong>ウェイポイント（常設目印）</strong>：詳細マップ上で<span data-device-only="pc"><strong>ダブルクリック</strong></span><span data-device-only="both-sep">（</span><span data-device-only="ps5">PS5はカーソルを合わせて <span class="ps-btn ps-cross">×</span> <strong>2度押し</strong></span><span data-device-only="both-sep">）</span>すると距離付き目印を設置できます。
+                </li>
+                <li>
+                  <strong>仲間へのピン（一時マーカー）</strong>：視線の先に刺す場合は <span data-device-only="pc">PC <kbd>ホイールクリック</kbd>（長押しで種類選択）</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5 <span class="ps-btn ps-shoulder">L1</span> 長押し + <span class="ps-btn ps-shoulder">R2</span>（長押しで種類選択、または <span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-shoulder">R1</span>）</span>でトライブに共有できます。
+                </li>
+              </ul>
             </div>
 
             <div class="tips-item-box">
               <h4 class="tips-item-title">💀 死体位置（デスマーカー）の自動表示</h4>
-              <p class="tips-item-text">死亡すると、全体マップの「ウェイポイント」タブと現地に<strong>緑色の光柱＋死体アイコン</strong>が自動で表示されます。荷物回収の目印にしましょう。</p>
+              <p class="tips-item-text">死亡すると、詳細マップの「ウェイポイント」欄と現地に<strong>緑色の光柱＋死体アイコン</strong>が自動で表示されます（※消えている場合は設定 → UI の <code>Automatically Create POI On Death</code> がONか確認）。</p>
             </div>
           </div>
         </article>
@@ -327,12 +334,12 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
                   <td class="col-ps5"><span class="ps-btn ps-shoulder">R1</span></td>
                 </tr>
                 <tr>
-                  <td><strong>表裏・左右の反転</strong>（配置前）</td>
+                  <td><strong>表裏・向きの反転</strong>（配置前）</td>
                   <td class="col-pc"><kbd>E</kbd></td>
                   <td class="col-ps5"><span class="ps-btn ps-triangle">△</span></td>
                 </tr>
                 <tr>
-                  <td><strong>建材の種類切替</strong>（壁 ↔ 窓枠 ↔ ドア枠など）</td>
+                  <td><strong>建材の形状バリエーション切替</strong>（壁 ↔ ドア枠 ↔ 窓枠など）</td>
                   <td class="col-pc"><kbd>R</kbd></td>
                   <td class="col-ps5"><span class="ps-btn ps-square">□</span></td>
                 </tr>
@@ -344,9 +351,10 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
               </tbody>
             </table>
           </div>
+          <p class="tips-table-note">※デフォルト操作の一例です。キー設定の変更や画面状態・アップデートにより異なる場合があります。</p>
           <div class="tips-note-strip">
             <ul>
-              <li><strong>回収（Pick Up）</strong>：ASAでは時間制限なしで（ダメージを受けていなければ）いつでも回収してインベントリに戻せます。</li>
+              <li><strong>回収（Pick Up）</strong>：ASAの標準設定では時間制限なしで（ダメージを受けていなければ）いつでも回収してインベントリに戻せます（※サーバー設定により制限時間がある場合あり）。</li>
               <li><strong>解体（Demolish）</strong>：建材を壊して素材の一部を回収します（誤操作に注意）。</li>
               <li><strong>設定・ロック</strong>：収納やドアの鍵設定・アクセス設定も長押しリングメニューから行えます。</li>
             </ul>
@@ -369,48 +377,48 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>詳細ステータス表示</strong>（満腹度・水分・重量・気温）</td>
-                  <td class="col-pc"><kbd>H</kbd>（長押し / 切替）</td>
-                  <td class="col-ps5"><span class="ps-btn ps-pad">タッチパッド</span>（または <span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-pad">タッチパッド</span>）</td>
+                  <td><strong>詳細ステータス表示</strong>（日時・気温・数値詳細）</td>
+                  <td class="col-pc"><kbd>H</kbd>（長押し ／ UI設定 <code>Toggle Extended HUD Info</code> で常時ON可）</td>
+                  <td class="col-ps5"><span class="ps-btn ps-pad">タッチパッド</span> 長押し → 拡張HUD切替（または設定 → UI の <code>Toggle Extended HUD Info</code> をON）</td>
                 </tr>
                 <tr>
-                  <td><strong>設備・騎乗中恐竜のインベントリを開く</strong></td>
-                  <td class="col-pc"><kbd>F</kbd></td>
-                  <td class="col-ps5"><span class="ps-btn ps-square">□</span>（長押しメニューからも可）</td>
+                  <td><strong>設備・恐竜のインベントリを開く</strong></td>
+                  <td class="col-pc"><kbd>F</kbd>（対象に向ける ／ 騎乗中も <kbd>F</kbd>）</td>
+                  <td class="col-ps5"><span class="ps-btn ps-square">□</span>（騎乗中も <span class="ps-btn ps-square">□</span> ／ 肩乗せ生物は <span class="ps-btn ps-square">□</span> 長押しメニュー）</td>
                 </tr>
                 <tr>
                   <td><strong>アイテムをスタックごと移動</strong></td>
                   <td class="col-pc"><kbd>T</kbd></td>
-                  <td class="col-ps5"><span class="ps-btn ps-cross">×</span> <strong>長押し</strong></td>
+                  <td class="col-ps5"><span class="ps-btn ps-cross">×</span> を押しながら <span class="ps-btn ps-shoulder">R2</span>（全移動は <span class="ps-btn ps-shoulder">L1</span> ※クレートでの連打注意）</td>
                 </tr>
                 <tr>
                   <td><strong>アイテムを1個だけ移動</strong></td>
                   <td class="col-pc"><kbd>Ctrl</kbd> + <kbd>T</kbd>（またはダブルクリック）</td>
-                  <td class="col-ps5"><span class="ps-btn ps-cross">×</span> <strong>2回押し</strong></td>
+                  <td class="col-ps5"><span class="ps-btn ps-cross">×</span> <strong>2度押し</strong></td>
                 </tr>
                 <tr>
-                  <td><strong>アイテムを半分に分ける</strong></td>
-                  <td class="col-pc"><kbd>Shift</kbd> + <kbd>T</kbd>（移動） / <kbd>Shift</kbd> + ドラッグ</td>
-                  <td class="col-ps5"><span class="ps-btn ps-square">□</span>（分割メニュー）</td>
+                  <td><strong>アイテムを分割する</strong>（半分 ／ 1個）</td>
+                  <td class="col-pc">半分：<kbd>Shift</kbd> + ドラッグ（移動は <kbd>Shift</kbd> + <kbd>T</kbd>） ／ 1個：<kbd>Ctrl</kbd> + ドラッグ</td>
+                  <td class="col-ps5">半分：<span class="ps-btn ps-triangle">△</span> ／ 1個：<span class="ps-btn ps-square">□</span></td>
                 </tr>
                 <tr>
-                  <td><strong>アイテムをその場に捨てる</strong></td>
-                  <td class="col-pc"><kbd>O</kbd>（1個は <kbd>Ctrl</kbd> + <kbd>O</kbd>）</td>
-                  <td class="col-ps5"><span class="ps-btn ps-triangle">△</span>（ドロップ）</td>
+                  <td><strong>アイテムをその場に捨てる</strong>（インベントリ内）</td>
+                  <td class="col-pc"><kbd>O</kbd>（オー：スタック単位 ※1個捨てる時は先に分割）</td>
+                  <td class="col-ps5"><span class="ps-btn ps-shoulder">L2</span></td>
                 </tr>
                 <tr>
-                  <td><strong>製作（クラフト）画面を開く</strong></td>
-                  <td class="col-pc"><kbd>V</kbd></td>
-                  <td class="col-ps5">インベントリ内 <span class="ps-btn ps-shoulder">R1</span> でタブ切替</td>
+                  <td><strong>自分のインベントリ・製作画面を開く</strong></td>
+                  <td class="col-pc">インベントリ <kbd>I</kbd> ／ 製作タブ直開き <kbd>V</kbd></td>
+                  <td class="col-ps5"><span class="ps-btn ps-circle">○</span> で開き <span class="ps-btn ps-shoulder">R1</span> / <span class="ps-btn ps-shoulder">L1</span> でタブ切替</td>
                 </tr>
                 <tr>
-                  <td><strong>自由カメラ（背後確認）・視点切替</strong></td>
-                  <td class="col-pc"><kbd>K</kbd>（自由カメラ） / ホイール（FPS・TPS切替）</td>
-                  <td class="col-ps5"><span class="ps-btn ps-pad">タッチパッド</span> 長押し →「三人称視点の切替」</td>
+                  <td><strong>自由視点・周囲確認・一人称／三人称切替</strong></td>
+                  <td class="col-pc"><kbd>K</kbd>（自由視点） ／ <kbd>右Alt</kbd>（走りながら周囲確認） ／ ホイール上下（FPS・TPSズーム）</td>
+                  <td class="col-ps5"><span class="ps-btn ps-pad">タッチパッド</span> 長押し →「三人称視点の切り替え」</td>
                 </tr>
                 <tr>
                   <td><strong>肩乗せペットを降ろす</strong></td>
-                  <td class="col-pc"><kbd>F</kbd> <strong>2回連続押し</strong></td>
+                  <td class="col-pc">徒歩：<kbd>F</kbd> <strong>2回連続押し</strong> ／ 騎乗中：<kbd>R</kbd> <strong>2回連続押し</strong>（※キー設定で単体キー割当も可）</td>
                   <td class="col-ps5"><span class="ps-btn ps-triangle">△</span> <strong>2回連続押し</strong></td>
                 </tr>
                 <tr>
@@ -421,18 +429,21 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
               </tbody>
             </table>
           </div>
+          <p class="tips-table-note">※デフォルト操作の一例です。前作ASEから一部ボタン配置が変更されているため、メニューの「設定 → キーボード／ゲームパッド」もあわせてご確認ください。</p>
 
           <div class="tips-warning-box" role="note" aria-label="誤爆注意">
-            <h4 class="tips-warning-title">⚠️ 口笛の誤爆に注意！（拠点のペット配置が崩れる原因No.1）</h4>
+            <h4 class="tips-warning-title">⚠️ 口笛（ホイッスル）の誤爆とアップデート後のリセットに注意！</h4>
             <ul class="tips-list">
               <li>
-                <strong>「全員追従」の誤爆に注意！</strong>：
-                <span data-device-only="pc">PC <kbd>J</kbd> キー</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5 <span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">↓</span>（口笛メニュー）</span>
-                を押すと<strong>周囲のペット全員が自分に追従</strong>してしまいます。<span data-device-only="pc">PC勢はキー設定から <kbd>J</kbd> を外すか、遠いキーに変更しておくのがおすすめです。</span>
+                <strong>「追従（全員）」などの全体口笛誤爆</strong>：
+                <span data-device-only="pc">PCのデフォルトでは <kbd>J</kbd>（命令：追従（全員））や <kbd>,</kbd>（コンマ：ここへ移動（全員））を押すと、</span><span data-device-only="ps5">PS5では <span class="ps-btn ps-circle">○</span> <strong>長押し</strong>の口笛リングメニューで「すべて追従」等を選ぶと、</span><strong>壁を貫通して周囲のペット全員が一斉に動いてしまいます。</strong>
               </li>
               <li>
-                <strong>全員停止（止まれ）</strong>：
-                <span data-device-only="pc">PC <kbd>U</kbd> キー</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5 <span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">←</span></span>
+                <strong>誤爆したときの緊急停止（全員停止）</strong>：
+                <span data-device-only="pc">PC：<kbd>U</kbd> キー（命令：停止（全員））または <kbd>T</kbd> 長押しリングメニュー →「すべて停止」</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5：<span class="ps-btn ps-circle">○</span> 長押しリングメニュー →「すべて停止」</span>
+              </li>
+              <li data-device-only="pc">
+                <strong>キー割り当ての確認＆アプデ後のリセット注意（PC）</strong>：「メニュー → 設定 → キーボード（<code>KEYBOARD</code>）」から <kbd>J</kbd> などを押しにくい遠いキーへ変更しておくと安心です。<strong>※大型アップデート後にキー設定が初期値へ戻ることがある</strong>ため、アプデ後は再確認をおすすめします。
               </li>
             </ul>
           </div>
@@ -446,14 +457,16 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
 
           <div class="tips-cards-grid">
             <div class="tips-item-box">
-              <h4 class="tips-item-title">🎯 1匹だけに指示する（安全・基本）</h4>
+              <h4 class="tips-item-title">🎯 1匹だけ・視線の先に指示する（安全・基本）</h4>
               <ul class="tips-list">
                 <li>
-                  恐竜に近づいて<strong>長押し</strong>（<span data-device-only="pc">PC：<kbd>E</kbd> 長押し</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5：<span class="ps-btn ps-triangle">△</span> 長押し</span>）でリングメニューを開く。
+                  恐竜に近づいて<strong>長押し</strong>（<span data-device-only="pc">PC：<kbd>E</kbd> 長押し</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5：<span class="ps-btn ps-triangle">△</span> 長押し</span>）で個体リングメニューを開く。
                 </li>
-                <li>
-                  照準を合わせた1匹だけ呼ぶ／止める：
-                  <span data-device-only="pc">PC <kbd>T</kbd>（1匹追従） / <kbd>Y</kbd>（1匹停止）</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5 <span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">↑</span> 等</span>
+                <li data-device-only="pc">
+                  <strong>照準を合わせた1匹だけ呼ぶ／止める（PC）</strong>：<kbd>T</kbd>（追従・単体） ／ <kbd>Y</kbd>（静止・単体）
+                </li>
+                <li data-device-only="ps5">
+                  <strong>視線の先へ移動／攻撃指示（PS5・ASA変更点）</strong>：<span class="ps-btn ps-shoulder">L1</span> 長押し + <span class="ps-btn ps-dpad">↓</span>（地面に向けると移動指示、敵に向けると攻撃指示 ※前作ASEと操作が異なります）
                 </li>
               </ul>
             </div>
@@ -461,9 +474,9 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
             <div class="tips-item-box">
               <h4 class="tips-item-title">📢 周囲すべてに指示する（全体口笛・誤爆注意）</h4>
               <p class="tips-item-text">
-                口笛リングメニュー（<span data-device-only="pc">PC：<kbd>T</kbd> 長押し</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5：<span class="ps-btn ps-circle">○</span> 長押し</span>）や全体ショートカットは、<strong>壁を貫通して周囲の恐竜全員</strong>に届きます。
+                口笛リングメニュー（<span data-device-only="pc">PC：<kbd>T</kbd> 長押し ※単体キー <kbd>'</kbd> は日本語JIS配列だと反応しない環境があるため <kbd>T</kbd> 長押しが確実</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5：<span class="ps-btn ps-circle">○</span> 長押し → 右スティック選択＋<span class="ps-btn ps-shoulder">R2</span> 決定</span>）は、<strong>壁を貫通して周囲の恐竜全員</strong>に届きます。
               </p>
-              <p class="tips-item-tip">💡 <strong>拠点の配置を守るコツ</strong>：動かしたくない拠点待機ペットは、長押しリングメニュー「行動」→<strong>「グループ口笛を無視」をON</strong>にしておくと誤爆を防げます。</p>
+              <p class="tips-item-tip">💡 <strong>拠点の配置を守るコツ</strong>：動かしたくない拠点待機ペットは、個体リングメニュー「行動（<code>Behavior</code>）」→<strong>「グループ口笛を無視（<code>Ignore Group Whistles</code>）」をON</strong>にしておくと誤爆を防げます。</p>
             </div>
           </div>
 
@@ -545,8 +558,8 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
             <div class="tips-item-box">
               <h4 class="tips-item-title">🧭 ArkNav（ミニマップ・ナビHUD）</h4>
               <ul class="tips-list">
-                <li><kbd>Alt</kbd> + <kbd>N</kbd>：ミニマップ・コンパスHUDの表示オン / オフ切替</li>
-                <li><kbd>Alt</kbd> + <kbd>M</kbd>：大きな地図と設定メニューを開く（マーカー管理・トライブ位置確認）</li>
+                <li data-device-only="pc"><strong>PC（デフォルト）</strong>：<kbd>Alt</kbd> + <kbd>N</kbd> でミニマップ・コンパスHUDの表示切替 ／ <kbd>Alt</kbd> + <kbd>M</kbd> で大マップ＆設定メニューを開く</li>
+                <li data-device-only="ps5"><strong>PS5（コントローラー）</strong>：ゲーム内で専用リモコン（<code>ArkNav Configurator</code>）をクラフトして装備・使用すると設定メニューを開けます</li>
               </ul>
             </div>
             <div class="tips-item-box">
@@ -644,7 +657,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
               <span class="faq-q-text">裏画面（OBSやコメント欄、DBサイト）をクリックするとゲーム音が消えます</span>
             </summary>
             <div class="faq-answer">
-              <p>ASAの初期仕様で非アクティブ時はミュートになります。<code>Engine.ini</code> に1行追記すれば常に鳴るようになります。</p>
+              <p>PC版ASAの初期仕様で非アクティブ時はミュートになります。<code>Engine.ini</code> に設定を追記すれば裏画面でも鳴るようになります。</p>
               <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-pc">📖 初心者設定 ①（手順とコピー用コードを見る）</button></p>
             </div>
           </details>
@@ -656,8 +669,8 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
             </summary>
             <div class="faq-answer">
               <ul class="tips-list">
-                <li><strong>動作が重い</strong>：ビデオ設定の「グローバルイルミネーション」「影」「雲・霧（ボリューメトリッククラウド等）」を下げると軽くなりやすいです。</li>
-                <li><strong>夜や洞窟が暗い</strong>：松明は腰装備スロットや恐竜のサドルにも装着でき、両手を空けたまま周囲を照らせます。</li>
+                <li><strong>動作が重い</strong>：ビデオ（<code>VIDEO</code>）設定の「グローバルイルミネーション（<code>Global Illumination Quality</code>）」「エフェクト品質（<code>Effects Quality</code>：雲の負荷）」「草木の品質（<code>Foliage Quality</code>）」を下げると軽くなりやすいです。</li>
+                <li><strong>夜や洞窟が暗い</strong>：ビデオ設定の <code>Low-Light Enhancement</code> をONにするか、松明を腰スロット（PS5は松明装備中等に <span class="ps-btn ps-shoulder">L2</span> ※デフォルト時）や恐竜のサドルに装着すると両手を空けたまま周囲を照らせます。</li>
               </ul>
               <p class="faq-link-row">画面酔い・まぶしさ対策は <button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-pc">📖 初心者設定 ①</button> を参照してください。</p>
             </div>
@@ -669,7 +682,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
               <span class="faq-q-text">死んで荷物を落としました！どこに落ちたか分かりません</span>
             </summary>
             <div class="faq-answer">
-              <p>死亡地点には<strong>緑色の光柱</strong>が立ち、全体マップの「ウェイポイント」タブに死体アイコンが表示されます。荷物バッグには消滅タイマーがあるため、なるべく早めに回収へ向かいましょう。</p>
+              <p>死亡地点には<strong>緑色の光柱</strong>が立ち、詳細マップの「ウェイポイント」欄に死体アイコンが表示されます。荷物バッグには消滅タイマーがあるため、なるべく早めに回収へ向かいましょう。</p>
               <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-map">📖 初心者設定 ②（マップ表示の操作を見る）</button></p>
             </div>
           </details>
@@ -685,7 +698,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
               <span class="faq-q-text">拠点のペットが急に全員ついてきて配置が崩れました！</span>
             </summary>
             <div class="faq-answer">
-              <p>壁を貫通する全体口笛「全員追従」の誤爆です。まずは<strong>全員停止</strong>（PC：<kbd>U</kbd> ／ PS5：<span class="ps-btn ps-shoulder">L1</span> + <span class="ps-btn ps-dpad">←</span>）で止め、動かしたくないペットは<strong>「グループ口笛を無視」をON</strong>にしておきましょう。</p>
+              <p>壁を貫通する全体口笛「追従（全員）」等の誤爆です。まずは<strong>全員停止</strong>（デフォルト操作の一例：PC <kbd>U</kbd> キー または <kbd>T</kbd> 長押しメニュー ／ PS5 <span class="ps-btn ps-circle">○</span> 長押しリングメニュー →「すべて停止」）で止め、動かしたくないペットは<strong>「グループ口笛を無視」をON</strong>にしておきましょう。PC版は大型アップデート後にキー設定が初期値に戻ることがあるため、<kbd>J</kbd> キー等の割り当て再確認もおすすめです。</p>
               <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-dino">📖 初心者設定 ⑤（口笛・行動設定の詳細を見る）</button></p>
             </div>
           </details>
@@ -707,7 +720,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
               <span class="faq-q-text">建築物や設備を置き間違えました。壊すしかありませんか？</span>
             </summary>
             <div class="faq-answer">
-              <p><strong>壊さずに回収できます！</strong> ダメージを受けていなければ時間制限なしで「長押しリングメニュー → 回収（Pick Up）」からインベントリに戻せます。</p>
+              <p><strong>壊さずに回収できます！</strong> ダメージを受けていなければ、ASAの標準設定では時間制限なしで長押しリングメニュー（PC <kbd>E</kbd> 長押し ／ PS5 <span class="ps-btn ps-triangle">△</span> 長押し ※デフォルト時）→「回収（Pick Up）」からインベントリに戻せます（※サーバー設定により異なる場合あり）。</p>
               <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-build">📖 初心者設定 ③（建築の操作一覧を見る）</button></p>
             </div>
           </details>
