@@ -269,6 +269,28 @@ function parseModItemSheet_(sheet) {
     const notes = gc(cNote);
     const assetMatch = notes.match(/([A-Za-z0-9_]+)\.uasset/);
 
+    const specialAbility = gc(cAbility);
+
+    let obtainMethod = gc(cObt);
+    let craftStation = gc(cStat);
+    let materials = gc(cMat);
+
+    // 生物系シート内のサドル・アイテム行など、個別列が無い場合は「特殊能力・用途」内の見出しから自動抽出
+    if (specialAbility) {
+      if (!obtainMethod) {
+        const mObt = specialAbility.match(/【(?:入手方法|解放レベル・入手方法|解放レベル)】([^\n]+)/);
+        if (mObt) obtainMethod = mObt[1].trim();
+      }
+      if (!craftStation) {
+        const mStat = specialAbility.match(/【作る場所】([^\n]+)/);
+        if (mStat) craftStation = mStat[1].trim();
+      }
+      if (!materials) {
+        const mMat = specialAbility.match(/【必要素材】([^\n]+)/);
+        if (mMat) materials = mMat[1].trim();
+      }
+    }
+
     const entry = {
       index: items.length + 1,
       image: gc(cImg),
@@ -276,12 +298,12 @@ function parseModItemSheet_(sheet) {
       jaName: jaName,
       description: gc(cDesc),
       category: gc(cCat),
-      obtainMethod: gc(cObt),
+      obtainMethod: obtainMethod,
       dinoName: gc(cDino),
-      craftStation: gc(cStat),
+      craftStation: craftStation,
       toolUsed: gc(cTool),
       harvestSource: gc(cHarv),
-      materials: gc(cMat),
+      materials: materials,
       enOriginal: gc(cOrig),
       notes: notes,
       assetName: assetMatch ? assetMatch[1] : '',
@@ -295,7 +317,6 @@ function parseModItemSheet_(sheet) {
     const favoriteFood = gc(cFood);
     const habitat = gc(cHabitat);
     const saddleRide = gc(cSaddle);
-    const specialAbility = gc(cAbility);
     const applyTarget = gc(cApplyTarget);
     const applyMethod = gc(cApplyMethod);
 
