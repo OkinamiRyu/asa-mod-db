@@ -210,8 +210,11 @@ function parseModItemSheet_(sheet) {
   const headers = values[0].map((h) => String(h || '').trim());
   const findCol = (candidates) => {
     for (let idx = 0; idx < headers.length; idx++) {
+      const h = headers[idx];
+      // 管理者コマンド列（野生出現コマンド・テイム済み出現コマンド・サドル/アイテム入手コマンド等）は常に除外
+      if (!h || h.includes('コマンド')) continue;
       for (const cand of candidates) {
-        if (headers[idx].includes(cand)) return idx;
+        if (h.includes(cand)) return idx;
       }
     }
     return -1;
@@ -237,7 +240,8 @@ function parseModItemSheet_(sheet) {
 
   // 生物系
   const cTaming = findCol(['テイム方法']);
-  const cFood = findCol(['高効率', '好物', '餌']);
+  const cFood = findCol(['大好きなエサ', 'エサ', '高効率', '好物', '餌']);
+  const cFoodAmount = findCol(['必要数の目安', '必要数']);
   const cHabitat = findCol(['生息地', 'スポーン']);
   const cSaddle = findCol(['サドル', '騎乗']);
   const cAbility = findCol(['特殊能力']);
@@ -315,6 +319,7 @@ function parseModItemSheet_(sheet) {
     // 生物系・コスメティック系項目は値がある場合のみ付与（JSON軽量化）
     const tamingMethod = gc(cTaming);
     const favoriteFood = gc(cFood);
+    const foodAmount = gc(cFoodAmount);
     const habitat = gc(cHabitat);
     const saddleRide = gc(cSaddle);
     const applyTarget = gc(cApplyTarget);
@@ -322,6 +327,7 @@ function parseModItemSheet_(sheet) {
 
     if (tamingMethod) entry.tamingMethod = tamingMethod;
     if (favoriteFood) entry.favoriteFood = favoriteFood;
+    if (foodAmount) entry.foodAmount = foodAmount;
     if (habitat) entry.habitat = habitat;
     if (saddleRide) entry.saddleRide = saddleRide;
     if (specialAbility) entry.specialAbility = specialAbility;

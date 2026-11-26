@@ -5,6 +5,8 @@
   const THEME_STORAGE_KEY = 'asa_mod_db_theme';
   const PIN_STORAGE_KEY = 'asa_mod_db_pins';
   const RECENT_STORAGE_KEY = 'asa_mod_db_recent';
+  const VIEW_MODE_STORAGE_KEY = 'asa_mod_db_view_mode';
+  const TIPS_DEVICE_STORAGE_KEY = 'asa_mod_db_tips_device';
   const MAX_RECENT = 20;
 
   const VANILLA_REF_EN_NAMES = new Set([
@@ -23,7 +25,8 @@
     { prop: 'toolUsed', label: '使う道具' },
     { prop: 'dinoName', label: '恐竜名' },
     { prop: 'tamingMethod', label: 'テイム方法' },
-    { prop: 'favoriteFood', label: '高効率の餌' },
+    { prop: 'favoriteFood', label: '大好きなエサ' },
+    { prop: 'foodAmount', label: '必要数の目安' },
     { prop: 'habitat', label: '生息地' },
     { prop: 'saddleRide', label: 'サドル・騎乗' },
     { prop: 'specialAbility', label: '特殊能力' },
@@ -141,6 +144,7 @@
     sub2ShareItemBtn: document.getElementById('sub2ShareItemBtn'),
     sub2PinItemBtn: document.getElementById('sub2PinItemBtn'),
     sub2ModalBody: document.getElementById('sub2ModalBody'),
+    scrollTopBtn: document.getElementById('scrollTopBtn'),
     toast: document.getElementById('toast'),
   };
 
@@ -198,6 +202,60 @@
       // Ignore storage errors (e.g. private browsing)
     }
     updateThemeButton();
+  }
+
+  function applyViewMode(mode, persist) {
+    const validMode = mode === 'table' ? 'table' : 'card';
+    state.viewMode = validMode;
+    if (els.viewCardBtn) els.viewCardBtn.classList.toggle('active', validMode === 'card');
+    if (els.viewTableBtn) els.viewTableBtn.classList.toggle('active', validMode === 'table');
+    if (persist) {
+      try {
+        localStorage.setItem(VIEW_MODE_STORAGE_KEY, validMode);
+      } catch {
+        // Ignore storage errors
+      }
+    }
+  }
+
+  function applyTipsDevice(device, persist) {
+    const validDevice = device === 'pc' || device === 'ps5' ? device : 'all';
+    if (els.tipsSection) els.tipsSection.dataset.deviceFilter = validDevice;
+    if (els.tipsContent) els.tipsContent.dataset.deviceFilter = validDevice;
+    if (els.tipsDeviceBar) {
+      for (const b of els.tipsDeviceBar.querySelectorAll('[data-device]')) {
+        const active = (b.dataset.device || 'all') === validDevice;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-pressed', String(active));
+      }
+    }
+    if (persist) {
+      try {
+        localStorage.setItem(TIPS_DEVICE_STORAGE_KEY, validDevice);
+      } catch {
+        // Ignore storage errors
+      }
+    }
+  }
+
+  function loadUserPreferences() {
+    let savedViewMode = 'card';
+    let savedTipsDevice = 'all';
+    try {
+      const vm = localStorage.getItem(VIEW_MODE_STORAGE_KEY);
+      if (vm === 'card' || vm === 'table') savedViewMode = vm;
+      const td = localStorage.getItem(TIPS_DEVICE_STORAGE_KEY);
+      if (td === 'all' || td === 'pc' || td === 'ps5') savedTipsDevice = td;
+    } catch {
+      // Ignore storage errors
+    }
+    applyViewMode(savedViewMode, false);
+    applyTipsDevice(savedTipsDevice, false);
+  }
+
+  function updateScrollTopButton() {
+    if (!els.scrollTopBtn) return;
+    els.scrollTopBtn.classList.toggle('hidden', window.scrollY <= 400);
   }
 
   function getItemKey(item) {
@@ -286,7 +344,12 @@
     if (!key) return;
     state.recentKeys = [key, ...state.recentKeys.filter((k) => k !== key)].slice(0, MAX_RECENT);
     saveStoredArray(RECENT_STORAGE_KEY, state.recentKeys);
-    if (state.activeTab !== 'INSTALLED' && state.activeTab !== 'RULES') {
+    if (
+      state.activeTab !== 'INSTALLED' &&
+      state.activeTab !== 'RULES' &&
+      state.activeTab !== 'TIPS' &&
+      state.activeTab !== 'FAQ'
+    ) {
       renderQuickFilters();
       if (state.quickFilter === 'recent') {
         applyFiltersAndRender();
@@ -951,7 +1014,7 @@
       const col4Header =
         sheetType === 'creature' ? 'テイム方法' : sheetType === 'cosmetic' ? '適用対象' : '作る場所';
       const col5Header =
-        sheetType === 'creature' ? '高効率の餌（左から1〜3位）' : sheetType === 'cosmetic' ? '適用方法' : '必要素材';
+        sheetType === 'creature' ? '大好きなエサ' : sheetType === 'cosmetic' ? '適用方法' : '必要素材';
 
       els.itemsContainer.innerHTML = `
         <table class="items-table">
@@ -1191,7 +1254,8 @@
       ['必要素材', item.materials, true, true],
       // 生物系
       ['テイム方法', item.tamingMethod, false, false],
-      ['高効率の餌（左から1〜3位）', item.favoriteFood, false, true],
+      ['大好きなエサ', item.favoriteFood, false, true],
+      ['必要数の目安', item.foodAmount, false, false],
       ['生息地・スポーン', item.habitat, false, false],
       ['サドル・騎乗', item.saddleRide, false, true],
       ['特殊能力・用途', item.specialAbility, true, false],
@@ -1413,6 +1477,12 @@
     const hash = window.location.hash || '';
     if (hash === '#guide' || hash === '#tips') {
       switchTab('TIPS');
+      return;
+    }
+    if (hash.startsWith('#tips-')) {
+      switchTab('TIPS');
+      const secEl = document.getElementById(hash.slice(1));
+      if (secEl) secEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
       return;
     }
     if (hash === '#faq') {
@@ -1694,16 +1764,12 @@
     els.emptyResetBtn.addEventListener('click', resetItemFilters);
 
     els.viewCardBtn.addEventListener('click', () => {
-      state.viewMode = 'card';
-      els.viewCardBtn.classList.add('active');
-      els.viewTableBtn.classList.remove('active');
+      applyViewMode('card', true);
       renderItemsList();
     });
 
     els.viewTableBtn.addEventListener('click', () => {
-      state.viewMode = 'table';
-      els.viewTableBtn.classList.add('active');
-      els.viewCardBtn.classList.remove('active');
+      applyViewMode('table', true);
       renderItemsList();
     });
 
@@ -1868,21 +1934,32 @@
       els.tipsDeviceBar.addEventListener('click', (e) => {
         const btn = e.target.closest('[data-device]');
         if (!btn) return;
-        const device = btn.dataset.device || 'all';
-        els.tipsContent.dataset.deviceFilter = device;
-        for (const b of els.tipsDeviceBar.querySelectorAll('[data-device]')) {
-          const active = b === btn;
-          b.classList.toggle('active', active);
-          b.setAttribute('aria-pressed', String(active));
-        }
+        applyTipsDevice(btn.dataset.device || 'all', true);
       });
     }
 
     if (els.tipsSection) {
       els.tipsSection.addEventListener('click', (e) => {
         const copyBtn = e.target.closest('[data-tips-copy]');
-        if (!copyBtn) return;
-        copyText(copyBtn.dataset.tipsCopy);
+        if (copyBtn) {
+          copyText(copyBtn.dataset.tipsCopy);
+          return;
+        }
+        const jumpBtn = e.target.closest('[data-jump-tab]');
+        if (jumpBtn) {
+          switchTab(jumpBtn.dataset.jumpTab);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
+        const tocLink = e.target.closest('.tips-toc a[href^="#"]');
+        if (tocLink) {
+          const targetId = tocLink.getAttribute('href').slice(1);
+          const targetEl = targetId ? document.getElementById(targetId) : null;
+          if (targetEl) {
+            e.preventDefault();
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
       });
     }
 
@@ -1919,6 +1996,14 @@
       els.faqSearchInput.addEventListener('input', applyFaqFilter);
       els.faqSearchInput.addEventListener('search', applyFaqFilter);
     }
+
+    if (els.scrollTopBtn) {
+      els.scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    window.addEventListener('scroll', updateScrollTopButton, { passive: true });
 
     window.addEventListener('hashchange', () => {
       if (state.data) openItemFromHash();
@@ -1965,6 +2050,8 @@
   async function init() {
     updateThemeButton();
     loadUserCollections();
+    loadUserPreferences();
+    updateScrollTopButton();
     bindEvents();
     try {
       const cacheBust = `?v=${Date.now()}`;
@@ -2048,6 +2135,7 @@
               item.materials,
               item.tamingMethod,
               item.favoriteFood,
+              item.foodAmount,
               item.habitat,
               item.saddleRide,
               item.specialAbility,

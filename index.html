@@ -206,7 +206,7 @@
     </section>
 
     <!-- 初心者設定・便利技ビュー -->
-    <section id="tipsSection" class="view-section hidden" aria-label="初心者設定・便利技">
+    <section id="tipsSection" class="view-section hidden" aria-label="初心者設定・便利技" data-device-filter="all">
       <div class="controls-card tips-hero-card">
         <div class="tips-hero-top">
           <div>
@@ -221,6 +221,15 @@
           <button type="button" class="quick-chip" data-device="pc" aria-pressed="false">🖥️ PC（キーマウ）</button>
           <button type="button" class="quick-chip" data-device="ps5" aria-pressed="false">🎮 PS5（コントローラー）</button>
         </div>
+        <nav class="tips-toc" aria-label="初心者設定の目次">
+          <span class="tips-toc-label">目次：</span>
+          <a href="#tips-pc" class="tips-toc-link" data-device-only="pc">① PC初期設定</a>
+          <a href="#tips-map" class="tips-toc-link">② マップ・ピン</a>
+          <a href="#tips-build" class="tips-toc-link">③ 建築・回収</a>
+          <a href="#tips-controls" class="tips-toc-link">④ 基本・ペット操作</a>
+          <a href="#tips-dino" class="tips-toc-link">⑤ 恐竜指示・放浪</a>
+          <a href="#tips-mods" class="tips-toc-link">⑥ おすすめMOD早見表</a>
+        </nav>
         <p class="tips-default-note" role="note">
           ※ASAのデフォルト操作の一例です（キー設定「設定 → キーボード（<code>KEYBOARD</code>）／ゲームパッド（<code>GAMEPAD</code>）」の変更、画面状態、キーボード配列、大型アップデートによる設定リセット等により異なる場合があります）。
         </p>
@@ -587,7 +596,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
 
           <h4 class="tips-sub-heading" id="tips-mod-creatures">🐾 目的から逆引き！初心者におすすめの追加MOD生物＆便利アイテム早見表</h4>
           <p class="tips-item-text" style="margin-bottom: 10px;">
-            「追加MODの生物やアイテムが多すぎて、どれからテイム・作成すればいいか分からない！」という方向けの目的別おすすめガイドです（詳しいテイム方法やレシピは「すべて（横断検索）」から検索できます）。
+            「追加MODの生物やアイテムが多すぎて、どれからテイム・作成すればいいか分からない！」という方向けの目的別おすすめガイドです（詳しいテイム方法やレシピは<strong>「🔍 アイテム検索」</strong>から検索できます）。
           </p>
           <div class="tips-table-wrap">
             <table class="tips-table">
@@ -948,6 +957,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
     </div>
   </div>
 
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn hidden" aria-label="ページの先頭へ戻る">↑ 上へ</button>
   <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
 
   <footer class="site-footer">

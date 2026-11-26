@@ -2045,6 +2045,44 @@ mark.search-hit {
   color: var(--text-muted);
 }
 
+.tips-toc {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+
+.tips-toc-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-right: 2px;
+}
+
+.tips-toc-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.35;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.tips-toc-link:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .tips-default-note {
   margin-top: 12px;
   padding: 10px 13px;
@@ -2073,12 +2111,18 @@ mark.search-hit {
   gap: 18px;
 }
 
+#tipsSection[data-device-filter="pc"] [data-device-only="ps5"],
+#tipsSection[data-device-filter="pc"] [data-device-only="both-sep"],
+#tipsSection[data-device-filter="pc"] .col-ps5,
 .tips-content[data-device-filter="pc"] [data-device-only="ps5"],
 .tips-content[data-device-filter="pc"] [data-device-only="both-sep"],
 .tips-content[data-device-filter="pc"] .col-ps5 {
   display: none !important;
 }
 
+#tipsSection[data-device-filter="ps5"] [data-device-only="pc"],
+#tipsSection[data-device-filter="ps5"] [data-device-only="both-sep"],
+#tipsSection[data-device-filter="ps5"] .col-pc,
 .tips-content[data-device-filter="ps5"] [data-device-only="pc"],
 .tips-content[data-device-filter="ps5"] [data-device-only="both-sep"],
 .tips-content[data-device-filter="ps5"] .col-pc {
@@ -2091,6 +2135,11 @@ mark.search-hit {
   border-radius: var(--radius);
   padding: 20px;
   box-shadow: var(--shadow-border);
+  scroll-margin-top: 136px;
+}
+
+#tips-mod-creatures {
+  scroll-margin-top: 136px;
 }
 
 .tips-section-head {
@@ -2641,7 +2690,56 @@ mark.search-hit {
   overflow-wrap: anywhere;
 }
 
+/* ============================================================
+   Floating Scroll-to-Top Button
+   ============================================================ */
+.scroll-top-btn {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 35;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--accent-border);
+  background: var(--surface);
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.2;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.12s ease;
+}
+
+.scroll-top-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.scroll-top-btn:active {
+  transform: translateY(0);
+}
+
+:root[data-theme="dark"] .scroll-top-btn:hover {
+  color: #042f2e;
+}
+
 @media (max-width: 640px) {
+  .tips-section-card,
+  #tips-mod-creatures {
+    scroll-margin-top: 192px;
+  }
+  .tips-toc-link {
+    padding: 4px 9px;
+    font-size: 0.75rem;
+  }
   .faq-group {
     padding: 14px;
   }
@@ -2652,7 +2750,10 @@ mark.search-hit {
   .faq-answer {
     padding: 0 12px 12px 12px;
   }
+  .scroll-top-btn {
+    right: 14px;
+    bottom: 68px;
+    padding: 7px 12px;
+    font-size: 0.78rem;
+  }
 }
-
-
-
