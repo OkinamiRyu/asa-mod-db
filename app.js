@@ -23,7 +23,7 @@
     { prop: 'toolUsed', label: '使う道具' },
     { prop: 'dinoName', label: '恐竜名' },
     { prop: 'tamingMethod', label: 'テイム方法' },
-    { prop: 'favoriteFood', label: '好物・餌' },
+    { prop: 'favoriteFood', label: '高効率の餌' },
     { prop: 'habitat', label: '生息地' },
     { prop: 'saddleRide', label: 'サドル・騎乗' },
     { prop: 'specialAbility', label: '特殊能力' },
@@ -951,7 +951,7 @@
       const col4Header =
         sheetType === 'creature' ? 'テイム方法' : sheetType === 'cosmetic' ? '適用対象' : '作る場所';
       const col5Header =
-        sheetType === 'creature' ? '好物・餌' : sheetType === 'cosmetic' ? '適用方法' : '必要素材';
+        sheetType === 'creature' ? '高効率の餌（左から1〜3位）' : sheetType === 'cosmetic' ? '適用方法' : '必要素材';
 
       els.itemsContainer.innerHTML = `
         <table class="items-table">
@@ -1191,7 +1191,7 @@
       ['必要素材', item.materials, true, true],
       // 生物系
       ['テイム方法', item.tamingMethod, false, false],
-      ['好物・餌', item.favoriteFood, false, true],
+      ['高効率の餌（左から1〜3位）', item.favoriteFood, false, true],
       ['生息地・スポーン', item.habitat, false, false],
       ['サドル・騎乗', item.saddleRide, false, true],
       ['特殊能力・用途', item.specialAbility, true, false],

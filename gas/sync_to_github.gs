@@ -237,7 +237,7 @@ function parseModItemSheet_(sheet) {
 
   // 生物系
   const cTaming = findCol(['テイム方法']);
-  const cFood = findCol(['好物', '餌']);
+  const cFood = findCol(['高効率', '好物', '餌']);
   const cHabitat = findCol(['生息地', 'スポーン']);
   const cSaddle = findCol(['サドル', '騎乗']);
   const cAbility = findCol(['特殊能力']);
