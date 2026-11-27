@@ -63,6 +63,9 @@
     sub2Stack: [],
   };
 
+  let isRestoringHistory = false;
+  let historyInitialized = false;
+
   const els = {
     brandHomeLink: document.getElementById('brandHomeLink'),
     themeToggleBtn: document.getElementById('themeToggleBtn'),
@@ -1497,16 +1500,19 @@
   function openItemFromHash() {
     const hash = window.location.hash || '';
     if (hash === '#guide' || hash === '#tips') {
-      switchTab('TIPS');
+      switchTab('TIPS', { skipHistory: true });
+      history.replaceState({ page: state.activeTab }, '', window.location.href);
       return;
     }
     if (hash.startsWith('#tips-')) {
-      switchTab('TIPS');
+      switchTab('TIPS', { skipHistory: true });
+      history.replaceState({ page: state.activeTab }, '', window.location.href);
       scrollToTipsTarget(hash.slice(1));
       return;
     }
     if (hash === '#faq') {
-      switchTab('FAQ');
+      switchTab('FAQ', { skipHistory: true });
+      history.replaceState({ page: state.activeTab }, '', window.location.href);
       return;
     }
     if (!hash.startsWith('#item=')) return;
@@ -1521,7 +1527,8 @@
       (i) => (i.assetName && i.assetName.toLowerCase() === key.toLowerCase()) || String(i.index) === key
     );
     if (!item) return;
-    switchTab(sheet.id);
+    switchTab(sheet.id, { skipHistory: true });
+    history.replaceState({ page: state.activeTab }, '', window.location.href);
     openDetailModal(item);
   }
 
@@ -1558,10 +1565,22 @@
       .join('');
   }
 
-  function switchTab(tabId) {
+  function switchTab(tabId, opts = {}) {
+    const prevTab = state.activeTab;
     let target = tabId;
     if (target === 'SEARCH') {
       target = state.lastModTab || 'ALL';
+    }
+    if (
+      target !== 'ALL' &&
+      target !== 'INSTALLED' &&
+      target !== 'RULES' &&
+      target !== 'TIPS' &&
+      target !== 'FAQ' &&
+      state.data &&
+      !(state.data.modSheets || []).some((s) => s.id === target)
+    ) {
+      target = 'ALL';
     }
     if (target !== 'INSTALLED' && target !== 'RULES' && target !== 'TIPS' && target !== 'FAQ') {
       state.lastModTab = target;
@@ -1572,6 +1591,12 @@
     state.filter2 = '';
     state.filter3 = '';
     state.quickFilter = '';
+
+    if (!opts.skipHistory && !isRestoringHistory && historyInitialized && prevTab !== target) {
+      const baseUrl = window.location.pathname + window.location.search;
+      history.pushState({ page: target }, '', baseUrl);
+    }
+
     buildTabs();
 
     const isInstalled = target === 'INSTALLED';
@@ -1685,7 +1710,7 @@
         state.visibleLimit = PAGE_SIZE;
         switchTab('ALL');
         if (window.location.hash) {
-          history.replaceState(null, '', window.location.pathname + window.location.search);
+          history.replaceState({ page: 'ALL' }, '', window.location.pathname + window.location.search);
         }
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
@@ -2047,7 +2072,32 @@
     window.addEventListener('scroll', updateScrollTopButton, { passive: true });
 
     window.addEventListener('hashchange', () => {
-      if (state.data) openItemFromHash();
+      if (state.data && !isRestoringHistory) openItemFromHash();
+    });
+
+    window.addEventListener('popstate', (e) => {
+      if (!state.data) return;
+      isRestoringHistory = true;
+      try {
+        if (!els.detailModal.classList.contains('hidden')) {
+          closeDetailModal();
+        }
+        const hash = window.location.hash || '';
+        if (
+          hash === '#guide' ||
+          hash === '#tips' ||
+          hash.startsWith('#tips-') ||
+          hash === '#faq' ||
+          hash.startsWith('#item=')
+        ) {
+          openItemFromHash();
+        } else {
+          const targetPage = e.state && e.state.page ? e.state.page : 'ALL';
+          switchTab(targetPage, { skipHistory: true });
+        }
+      } finally {
+        isRestoringHistory = false;
+      }
     });
 
     document.addEventListener('keydown', (e) => {
@@ -2245,8 +2295,10 @@
 
       buildTabs();
       buildModSelector();
-      switchTab('ALL');
+      switchTab('ALL', { skipHistory: true });
       openItemFromHash();
+      history.replaceState({ page: state.activeTab }, '', window.location.href);
+      historyInitialized = true;
     } catch (err) {
       els.statBadge.textContent = '読み込みエラー';
       els.itemsContainer.innerHTML = `<div class="empty-state"><p class="empty-title">データを読み込めませんでした</p><p class="empty-desc">${escapeHtml(err.message)}</p></div>`;
