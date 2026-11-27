@@ -217,28 +217,49 @@
         </div>
         <nav class="tips-toc" aria-label="初心者設定の目次">
           <span class="tips-toc-label">目次：</span>
-          <a href="#tips-pc" class="tips-toc-link" data-device-only="pc">① PC初期設定</a>
-          <a href="#tips-map" class="tips-toc-link">② マップ・ピン</a>
-          <a href="#tips-build" class="tips-toc-link">③ 建築・回収</a>
-          <a href="#tips-controls" class="tips-toc-link">④ 基本・ペット操作</a>
-          <a href="#tips-dino" class="tips-toc-link">⑤ 恐竜指示・放浪</a>
-          <a href="#tips-mods" class="tips-toc-link">⑥ おすすめMOD早見表</a>
+          <a href="#tips-pc" class="tips-toc-link">① 初期設定</a>
+          <a href="#tips-commands" class="tips-toc-link">② 軽量化・視界コマンド</a>
+          <a href="#tips-map" class="tips-toc-link">③ マップ・ピン</a>
+          <a href="#tips-build" class="tips-toc-link">④ 建築・回収</a>
+          <a href="#tips-controls" class="tips-toc-link">⑤ 基本・ペット操作</a>
+          <a href="#tips-dino" class="tips-toc-link">⑥ 恐竜指示・放浪</a>
+          <a href="#tips-mods" class="tips-toc-link">⑦ おすすめMOD早見表</a>
         </nav>
+
+        <!-- 参考動画バナー（将来サーバー独自の紹介動画へ差し替える場合はここのURL・タイトル・チャンネル名を変更） -->
+        <div class="tips-video-banner" role="note" aria-label="参考動画の案内">
+          <div class="tips-video-banner-body">
+            <div class="tips-video-banner-title">
+              <span class="tips-video-badge">🎬 参考動画</span>
+              <strong>【ASAゆっくり解説】ASA買ったらまず設定する項目まとめ！</strong>
+              <span class="tips-video-channel">（寝落ち 氏）</span>
+            </div>
+            <p class="tips-video-banner-desc">各設定・コマンド横の <strong>▶ 時間</strong> を押すと、YouTube動画の該当箇所からそのまま再生できます。</p>
+          </div>
+          <a
+            href="https://www.youtube.com/watch?v=yyCDNcANbvU"
+            class="tips-video-open-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >動画トップを開く ↗</a>
+        </div>
+
         <p class="tips-default-note" role="note">
           ※ASAのデフォルト操作の一例です（キー設定「設定 → キーボード（<code>KEYBOARD</code>）／ゲームパッド（<code>GAMEPAD</code>）」の変更、画面状態、キーボード配列、大型アップデートによる設定リセット等により異なる場合があります）。
         </p>
       </div>
 
       <div id="tipsContent" class="tips-content" data-device-filter="all">
-        <!-- セクション①：PC向け初期設定 -->
-        <article id="tips-pc" class="tips-section-card" data-device-only="pc">
+        <!-- セクション①：初期設定（PC・PS5共通＋PC専用） -->
+        <article id="tips-pc" class="tips-section-card">
           <div class="tips-section-head">
-            <h3 class="tips-section-title">① 配信・PCプレイ前にやっておくべき設定</h3>
-            <span class="tips-badge-pc">PC向け</span>
+            <h3 class="tips-section-title">① プレイ前にやっておくべき初期設定</h3>
+            <span class="tips-badge-pc" data-device-only="pc">PC専用項目あり</span>
           </div>
           <div class="tips-cards-grid">
-            <div class="tips-item-box tips-item-wide">
-              <h4 class="tips-item-title">🔊 裏画面でもゲーム音を鳴らす（Engine.ini 書き換え）</h4>
+            <!-- PC専用：Engine.ini -->
+            <div class="tips-item-box tips-item-wide" data-device-only="pc">
+              <h4 class="tips-item-title">🔊 裏画面でもゲーム音を鳴らす（Engine.ini 書き換え） <span class="tips-badge-pc">PC向け</span></h4>
               <p class="tips-item-text">初期設定だと別ウィンドウをクリックした際にゲーム音が消えます。以下の手順で常に音が鳴るようにできます。</p>
               <ol class="tips-steps">
                 <li>ASA を完全に終了する</li>
@@ -262,31 +283,200 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
               </div>
             </div>
 
-            <div class="tips-item-box">
-              <h4 class="tips-item-title">🖥️ 画面表示を「疑似フルスクリーン」にする</h4>
-              <p class="tips-item-text">設定 → ビデオ（<code>VIDEO</code>）→ ウィンドウモード（<code>Window Mode</code>）を<strong>疑似フルスクリーン（<code>Windowed Fullscreen</code>）</strong>にしておくと、OBS配信中や別モニターをクリックした際のクラッシュ・画面暗転を防げます。</p>
-            </div>
-
-            <div class="tips-item-box">
-              <h4 class="tips-item-title">👀 画面酔い・まぶしさ対策</h4>
+            <!-- PC専用：ビデオ・グラフィック負荷対策 -->
+            <div class="tips-item-box" data-device-only="pc">
+              <h4 class="tips-item-title">⚡ ビデオ・グラフィック負荷対策 <span class="tips-badge-pc">PC向け</span></h4>
               <ul class="tips-list">
-                <li><strong>ビデオ（<code>VIDEO</code>）</strong>：モーションブラー（<code>Motion Blur</code>）<strong>OFF</strong> ／ ライトブルーム（<code>Light Bloom</code>）・ライトシャフト（<code>Light Shafts</code>）<strong>OFF</strong></li>
-                <li><strong>カメラ（<code>CAMERA</code>）</strong>：カメラの振動幅（<code>Camera Shake Scale</code>）<strong>0（最小）</strong> ／ 行動時のカメラ振動（<code>Camera View Bob</code>）<strong>OFF</strong></li>
-                <li><strong>UI</strong>：近接カメラアニメーション（<code>Melee Camera Animation</code>）<strong>OFF</strong>（ピッケル・斧採取時の手ブレ軽減）</li>
+                <li>
+                  <strong>ウィンドウモード（<code>Window Mode</code>）→ 疑似フルスクリーン（<code>Windowed Fullscreen</code>）</strong>：OBS配信中や別モニターをクリックした際のクラッシュ・画面暗転を防ぎます。
+                </li>
+                <li>
+                  <strong>Max Frame Rate を 60 以下に制限（最重要）</strong>：無制限だとPCに過剰負荷がかかるため、基本 <strong>60</strong> ／ バランス <strong>40</strong> ／ 軽量 <strong>30</strong> を目安に設定しましょう。
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=9s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 00:09</a>
+                </li>
+                <li>
+                  <strong>草木・水面インタラクション4項目の推奨値</strong>
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=38s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 00:38</a>
+                  <ul class="tips-sub-list">
+                    <li><code>Enable Foliage &amp; Fluid Interaction</code>：<strong>オン</strong></li>
+                    <li><code>Foliage Interaction Distance Multiplier</code>：<strong>0.02</strong></li>
+                    <li><code>Foliage Interaction Distance Limit</code>：<strong>0.5</strong></li>
+                    <li><code>Foliage Interaction Quantity Limit</code>：<strong>0.5</strong></li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>コスパ重視の品質プリセット目安</strong>：見た目ほぼ最高・重さ中程度の例（<code>Textures</code> <strong>最高</strong> ／ <code>Advanced Graphics</code>・<code>View Distance</code>・<code>Foliage Quality</code> <strong>高</strong> ／ その他 <strong>ノーマル</strong>）。
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=42s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 00:42</a>
+                </li>
               </ul>
             </div>
 
+            <!-- 全機種共通：画面酔い・まぶしさ・カメラ設定 -->
             <div class="tips-item-box">
-              <h4 class="tips-item-title">📊 ステータス詳細の常時表示</h4>
-              <p class="tips-item-text">設定 → <strong>UI</strong> タブ（左列下部付近）の<strong>拡張HUD情報の常時表示（<code>Toggle Extended HUD Info</code>）</strong>を <strong>ON</strong> にすると、毎回 <kbd>H</kbd> キーを押さなくても日時・気温・数値詳細が常時表示されて便利です。</p>
+              <h4 class="tips-item-title">👀 画面酔い・まぶしさ対策＆カメラ設定</h4>
+              <ul class="tips-list">
+                <li>
+                  <strong>ビデオ（<code>VIDEO</code>）</strong>：モーションブラー（<code>Motion Blur</code>）<strong>OFF</strong> ／ ライトブルーム（<code>Light Bloom</code>）・ライトシャフト（<code>Light Shafts</code>）<strong>OFF</strong>
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=25s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 00:25</a>
+                </li>
+                <li>
+                  <strong>UI</strong>：近接カメラアニメーション（<code>Melee Camera Animation</code>）<strong>OFF（重要）</strong>（ピッケル・斧採取時の手ブレ軽減）
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=98s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 01:38</a>
+                </li>
+                <li>
+                  <strong>カメラ（<code>CAMERA</code>）</strong>：行動時のカメラ振動を有効化（<code>Camera View Bob</code>）<strong>OFF（重要）</strong>
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=147s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 02:27</a>
+                </li>
+                <li>
+                  <strong>カメラの振動幅（<code>Camera Shake Scale</code>）</strong>：<strong>0〜20（動画推奨 15／酔いやすい方は 0）</strong>
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=190s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 03:10</a>
+                </li>
+                <li>
+                  <strong>TPVカメラの側方オフセット</strong>：三人称でキャラを左右にずらし正面を見やすくする
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=133s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 02:13</a>
+                </li>
+                <li>
+                  <strong>恐竜カメラモード</strong>：<strong>OFF</strong>（騎乗時のカメラ追従遅れを解消）
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=154s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 02:34</a>
+                </li>
+                <li>
+                  <strong>カメラの視野角</strong>：<strong>90前後を推奨</strong>（初期値50は狭すぎる、100は端が歪む場合あり）
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=165s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 02:45</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 全機種共通：UI・詳細設定 -->
+            <div class="tips-item-box">
+              <h4 class="tips-item-title">📊 UI・詳細タブの必須設定</h4>
+              <ul class="tips-list">
+                <li>
+                  <strong>UI：拡張HUD情報切替（<code>Toggle Extended HUD Info</code>）→ オン</strong>：日時・気温・数値詳細が常時表示されるほか、表示中はクロスヘアも常時表示され<strong>画面酔い対策にも有効</strong>。
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=111s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 01:51</a>
+                </li>
+                <li>
+                  <strong>UI：アイテム通知設定 → デフォルト</strong>（採取時にアイコンのみで見づらいのを防ぐ）
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=62s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 01:02</a>
+                </li>
+                <li>
+                  <strong>UI：マルチユーステキストを常に表示 → オン</strong>（リングメニューに項目名を表示）
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=73s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 01:13</a>
+                </li>
+                <li>
+                  <strong>UI：ツールチップ遅延なし → オン</strong>（アイテム説明の表示高速化）
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=93s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 01:33</a>
+                </li>
+                <li>
+                  <strong>UI：サーバー情報の非表示 → 配信者向け任意</strong>
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=87s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 01:27</a>
+                  ／ <strong>UIアイテムスロットの大きさ → お好み</strong>
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=56s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 00:56</a>
+                </li>
+                <li>
+                  <strong>詳細：コンソールアクセス（<code>Console Access</code>）→ オン（必須）</strong>：ポーズ画面左下にコンソールコマンド入力欄を表示。
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=202s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 03:22</a>
+                </li>
+                <li>
+                  <strong>詳細：閉じた際に探検家の記録音声を停止 → オン</strong>
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=219s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 03:39</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- PC専用：キーバインド変更・誤爆防止 -->
+            <div class="tips-item-box" data-device-only="pc">
+              <h4 class="tips-item-title">⌨️ キーバインド変更・誤爆防止 <span class="tips-badge-pc">PC向け</span></h4>
+              <ul class="tips-list">
+                <li>
+                  <strong>「命令：積極的に攻撃（全員）」「命令：追従（全員）」は必ず割り当て解除（最重要・大事故防止）</strong>：別キーを被せるか、<kbd>PrintScreen</kbd> キーを押すと割り当てを消せます。
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=254s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 04:14</a>
+                </li>
+                <li>
+                  <strong>アイテムをドロップ</strong>：使用頻度が高いため押しやすいキーへ変更推奨（動画例：<kbd>Z</kbd>）。
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=235s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 03:55</a>
+                </li>
+                <li>
+                  <strong>インベントリを表示</strong>：初期の <kbd>I</kbd> は遠いため <kbd>Tab</kbd> など押しやすいキーへ変更推奨。
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=241s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 04:01</a>
+                </li>
+                <li>
+                  <strong>補足Tips</strong>：インベントリ画面で <kbd>Q</kbd> キーを押すとアイコン上のアイテム名表示を切り替え可能。
+                  <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=378s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 06:18</a>
+                </li>
+              </ul>
             </div>
           </div>
         </article>
 
-        <!-- セクション②：マップ・ウェイポイント・ピン機能 -->
+        <!-- セクション②：軽量化・視界改善コンソールコマンド -->
+        <article id="tips-commands" class="tips-section-card">
+          <div class="tips-section-head">
+            <h3 class="tips-section-title">② ☁️ 軽量化・視界改善コンソールコマンド</h3>
+            <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=283s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 使い方 04:43</a>
+          </div>
+          <div class="tips-item-box" style="margin-bottom: 12px;">
+            <h4 class="tips-item-title">💡 コンソールコマンドの使い方と注意点（PC・PS5共通）</h4>
+            <ul class="tips-list">
+              <li>事前に<strong>「設定 → 詳細 → コンソールアクセス（<code>Console Access</code>）」をオン</strong>にしておくと、ポーズ画面左下に「コンソールコマンド」ボタンが表示されます。</li>
+              <li>ゲーム再起動のたびにリセットされますが、<strong>入力履歴が残る</strong>ため2回目以降は履歴から簡単に呼び出せます。</li>
+            </ul>
+          </div>
+
+          <div class="tips-cmd-grid">
+            <div class="tips-cmd-card">
+              <div class="tips-cmd-head">
+                <span class="tips-cmd-priority tips-cmd-priority-high">最優先（まずこれだけ）</span>
+                <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=307s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 05:07</a>
+              </div>
+              <div class="tips-cmd-row">
+                <code class="tips-cmd-code">r.VolumetricCloud 0</code>
+                <button type="button" class="copy-btn" data-tips-copy="r.VolumetricCloud 0">コピー</button>
+              </div>
+              <p class="tips-cmd-desc"><strong>最重要・雲を消去</strong>：描画負荷を大幅に軽減し、空や遠景の視界がくっきり見やすくなります。</p>
+            </div>
+
+            <div class="tips-cmd-card">
+              <div class="tips-cmd-head">
+                <span class="tips-cmd-priority tips-cmd-priority-high">最優先（まずこれだけ）</span>
+                <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=329s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 05:29</a>
+              </div>
+              <div class="tips-cmd-row">
+                <code class="tips-cmd-code">r.fog 0</code>
+                <button type="button" class="copy-btn" data-tips-copy="r.fog 0">コピー</button>
+              </div>
+              <p class="tips-cmd-desc"><strong>霧を消去</strong>：霧による視界不良を解消します。洞窟の雰囲気を楽しみたい時は <code>r.fog 1</code> で元に戻せます。</p>
+            </div>
+
+            <div class="tips-cmd-card">
+              <div class="tips-cmd-head">
+                <span class="tips-cmd-priority tips-cmd-priority-high">最優先（まずこれだけ）</span>
+                <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=339s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 05:39</a>
+              </div>
+              <div class="tips-cmd-row">
+                <code class="tips-cmd-code">gamma 2.8</code>
+                <button type="button" class="copy-btn" data-tips-copy="gamma 2.8">コピー</button>
+              </div>
+              <p class="tips-cmd-desc"><strong>夜・暗所を明るくする</strong>：初期値は <code>2.2</code>。定番の <code>3</code> は昼間に白飛びしやすいため <strong><code>2.8</code> がおすすめ</strong>です。</p>
+            </div>
+
+            <div class="tips-cmd-card">
+              <div class="tips-cmd-head">
+                <span class="tips-cmd-priority tips-cmd-priority-opt">お好み・スペック次第</span>
+                <a href="https://www.youtube.com/watch?v=yyCDNcANbvU&t=353s" class="tips-video-chip" target="_blank" rel="noopener noreferrer">▶ 05:53</a>
+              </div>
+              <div class="tips-cmd-row">
+                <code class="tips-cmd-code">r.Nanite.MaxPixelsPerEdge 3</code>
+                <button type="button" class="copy-btn" data-tips-copy="r.Nanite.MaxPixelsPerEdge 3">コピー</button>
+              </div>
+              <p class="tips-cmd-desc"><strong>草木の描画簡素化（低〜中スペック向け）</strong>：FPSが約10〜20%向上しますがグラフィックは低下します（デフォルトは <code>1</code>）。</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- セクション③：マップ・ウェイポイント・ピン機能 -->
         <article id="tips-map" class="tips-section-card">
           <div class="tips-section-head">
-            <h3 class="tips-section-title">② マップ・ウェイポイント・ピン機能</h3>
+            <h3 class="tips-section-title">③ マップ・ウェイポイント・ピン機能</h3>
           </div>
           <div class="tips-cards-grid">
             <div class="tips-item-box">
@@ -317,10 +507,10 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
           <p class="tips-table-note">※ASAのデフォルト操作の一例です（キー設定や画面状態により異なる場合があります）。</p>
         </article>
 
-        <!-- セクション③：建築の便利操作・リングメニュー -->
+        <!-- セクション④：建築の便利操作・リングメニュー -->
         <article id="tips-build" class="tips-section-card">
           <div class="tips-section-head">
-            <h3 class="tips-section-title">③ 建築の便利操作・リングメニュー</h3>
+            <h3 class="tips-section-title">④ 建築の便利操作・リングメニュー</h3>
           </div>
           <div class="tips-table-wrap">
             <table class="tips-table">
@@ -365,10 +555,10 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
           </div>
         </article>
 
-        <!-- セクション④：サバイバル・インベントリ・ペット操作 -->
+        <!-- セクション⑤：サバイバル・インベントリ・ペット操作 -->
         <article id="tips-controls" class="tips-section-card">
           <div class="tips-section-head">
-            <h3 class="tips-section-title">④ サバイバル・インベントリ・ペット操作（PC / PS5 対照表）</h3>
+            <h3 class="tips-section-title">⑤ サバイバル・インベントリ・ペット操作（PC / PS5 対照表）</h3>
           </div>
           <div class="tips-table-wrap">
             <table class="tips-table">
@@ -462,16 +652,16 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
                 <span data-device-only="pc">PC：<kbd>U</kbd>（命令：停止（全員））または <kbd>T</kbd> 長押しリングメニュー →「すべて停止」</span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5：<span class="ps-btn ps-circle">○</span> 長押しリングメニュー →「すべて停止」</span>
               </li>
               <li data-device-only="pc">
-                <strong>キー割り当ての確認＆アプデ後のリセット注意（PC）</strong>：「メニュー → 設定 → キーボード（<code>KEYBOARD</code>）」から <kbd>J</kbd> などを押しにくい遠いキーへ変更しておくと安心です。<strong>※大型アップデート後にキー設定が初期値へ戻ることがある</strong>ため、アプデ後は再確認をおすすめします。
+                <strong>キー割り当て解除＆アプデ後のリセット注意（PC）</strong>：「メニュー → 設定 → キーボード（<code>KEYBOARD</code>）」から「命令：追従（全員）」「命令：積極的に攻撃（全員）」を <kbd>PrintScreen</kbd> キー等で<strong>割り当て解除</strong>しておくと安心です。<strong>※大型アップデート後にキー設定が初期値へ戻ることがある</strong>ため、アプデ後は再確認をおすすめします。
               </li>
             </ul>
           </div>
         </article>
 
-        <!-- セクション⑤：恐竜への指示・行動設定・放浪モード -->
+        <!-- セクション⑥：恐竜への指示・行動設定・放浪モード -->
         <article id="tips-dino" class="tips-section-card">
           <div class="tips-section-head">
-            <h3 class="tips-section-title">⑤ 🦖 恐竜への指示・行動設定・放浪モード</h3>
+            <h3 class="tips-section-title">⑥ 🦖 恐竜への指示・行動設定・放浪モード</h3>
           </div>
 
           <div class="tips-cards-grid">
@@ -569,10 +759,10 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
           <p class="tips-table-note">※ASAのデフォルト操作の一例です（キー設定や画面状態により異なる場合があります）。</p>
         </article>
 
-        <!-- セクション⑥：導入MODの便利ショートカット＆目的別おすすめMOD生物・アイテム早見表 -->
+        <!-- セクション⑦：導入MODの便利ショートカット＆目的別おすすめMOD生物・アイテム早見表 -->
         <article id="tips-mods" class="tips-section-card">
           <div class="tips-section-head">
-            <h3 class="tips-section-title">⑥ 🐾 迷ったらこれ！導入MODの便利ショートカット＆目的別おすすめ早見表</h3>
+            <h3 class="tips-section-title">⑦ 🐾 迷ったらこれ！導入MODの便利ショートカット＆目的別おすすめ早見表</h3>
           </div>
           <div class="tips-cards-grid">
             <div class="tips-item-box">
@@ -783,7 +973,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
             </summary>
             <div class="faq-answer">
               <p><strong>結論：目的別のおすすめ早見表を用意しました！</strong><br />餌不要で拾うだけで水中酸素を供給してくれる<strong>バブルフィッシュ</strong>、たき火の6倍速で肉を焼ける<strong>ロティサリー（Lv14）</strong>、防寒・防暑や重量アップが付く<strong>肩乗せペット（カワウソ・レッサーパンダ・ペットワイバーン）</strong>、リードシクティスに襲われない水上拠点<strong>ヘノドゥス</strong>などが序盤から大活躍します。</p>
-              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-mods">📖 初心者設定 ⑥（目的別おすすめMOD生物＆アイテム早見表を見る）</button></p>
+              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-mods">📖 初心者設定 ⑦（目的別おすすめMOD生物＆アイテム早見表を見る）</button></p>
             </div>
           </details>
         </div>
@@ -810,10 +1000,14 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
             </summary>
             <div class="faq-answer">
               <ul class="tips-list">
-                <li><strong>動作が重い</strong>：ビデオ（<code>VIDEO</code>）設定のグローバルイルミネーション（<code>Global Illumination Quality</code>）・エフェクト品質（<code>Effects Quality</code>）・草木の品質（<code>Foliage Quality</code>）を下げると軽減しやすいです。</li>
-                <li><strong>夜や洞窟が暗い</strong>：暗所補正（<code>Low-Light Enhancement</code>）をONにするか、松明を腰スロット（PS5は松明装備時に <span class="ps-btn ps-shoulder">L2</span> ※デフォルト時）やサドルに装着すると両手が空きます。</li>
+                <li><strong>コンソールコマンドで即改善（最優先）</strong>：雲消し（<code>r.VolumetricCloud 0</code>）・霧消し（<code>r.fog 0</code>）・明るさ調整（<code>gamma 2.8</code>）を入れるだけで劇的に軽く見やすくなります。</li>
+                <li><strong>動作が重い（設定）</strong>：Max Frame Rate を <strong>60以下</strong> に制限し、ビデオ（<code>VIDEO</code>）設定のグローバルイルミネーション・エフェクト品質・草木の品質を下げると軽減しやすいです。</li>
+                <li><strong>夜や洞窟が暗い（装備）</strong>：暗所補正（<code>Low-Light Enhancement</code>）をONにするか、松明を腰スロット（PS5は松明装備時に <span class="ps-btn ps-shoulder">L2</span> ※デフォルト時）やサドルに装着すると両手が空きます。</li>
               </ul>
-              <p class="faq-link-row">画面酔い・まぶしさ対策は <button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-pc">📖 初心者設定 ①</button> を参照してください。</p>
+              <p class="faq-link-row">
+                <button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-commands">☁️ 初心者設定 ②（軽量化・視界改善コマンドをコピー）</button>
+                <button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-pc">📖 初心者設定 ①（負荷・画面酔い対策）</button>
+              </p>
             </div>
           </details>
 
@@ -824,7 +1018,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
             </summary>
             <div class="faq-answer">
               <p>死亡地点には<strong>緑色の光柱</strong>が立ち、詳細マップの「ウェイポイント」欄に死体アイコンが自動表示されます。荷物バッグには消滅タイマーがあるため、早めに回収へ向かいましょう。</p>
-              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-map">📖 初心者設定 ②（マップ表示の操作を見る）</button></p>
+              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-map">📖 初心者設定 ③（マップ表示の操作を見る）</button></p>
             </div>
           </details>
         </div>
@@ -840,7 +1034,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
             </summary>
             <div class="faq-answer">
               <p><strong>結論：壁を貫通する口笛（ホイッスル）「追従（全員）」等の誤爆です。</strong><br />まずは<strong>全員停止</strong>（PC：<kbd>U</kbd> ／ PS5：<span class="ps-btn ps-circle">○</span> 長押しリングメニュー →「すべて停止」 ※デフォルト操作の一例）で止め、拠点待機ペットは<strong>グループ口笛を無視（<code>Ignore Group Whistles</code>）</strong>をONにしておきましょう。</p>
-              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-dino">📖 初心者設定 ⑤（口笛（ホイッスル）・行動設定の詳細を見る）</button></p>
+              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-dino">📖 初心者設定 ⑥（口笛（ホイッスル）・行動設定の詳細を見る）</button></p>
             </div>
           </details>
 
@@ -851,7 +1045,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
             </summary>
             <div class="faq-answer">
               <p><strong>結論：ASAでは交配に放浪は不要です。</strong>個体のリングメニューから<strong>交配を有効にする（<code>Enable Mating</code>）</strong>だけでその場で交配できます。<br />自動採取などで放浪を使う場合は、<strong>リーシュ・柵や木製の檻・重量オーバー固定</strong>のいずれかで脱走を防ぎましょう。</p>
-              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-dino">📖 初心者設定 ⑤（脱走対策3つの詳細を見る）</button></p>
+              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-dino">📖 初心者設定 ⑥（脱走対策3つの詳細を見る）</button></p>
             </div>
           </details>
 
@@ -862,7 +1056,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
             </summary>
             <div class="faq-answer">
               <p><strong>結論：壊さずにインベントリへ回収できます！</strong><br />ダメージを受けていなければ、リングメニュー（PC：<kbd>E</kbd> 長押し ／ PS5：<span class="ps-btn ps-triangle">△</span> 長押し ※デフォルト操作の一例）の<strong>回収（<code>Pick Up</code>）</strong>から時間制限なしで戻せます（※サーバー設定により異なる場合あり）。</p>
-              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-build">📖 初心者設定 ③（建築の操作一覧を見る）</button></p>
+              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-build">📖 初心者設定 ④（建築の操作一覧を見る）</button></p>
             </div>
           </details>
         </div>

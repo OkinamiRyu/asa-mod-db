@@ -2002,6 +2002,88 @@ mark.search-hit {
   color: var(--text);
 }
 
+.tips-video-banner {
+  margin-top: 10px;
+  padding: 10px 13px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tips-video-banner-body {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+
+.tips-video-banner-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.tips-video-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tips-video-channel {
+  font-size: 0.77rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.tips-video-banner-desc {
+  margin: 4px 0 0;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.tips-video-open-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 11px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--accent-border);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 120ms var(--ease-out), border-color 120ms var(--ease-out), color 120ms var(--ease-out);
+}
+
+.tips-video-open-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+:root[data-theme="dark"] .tips-video-open-btn:hover {
+  color: #0b1210;
+}
+
 .tips-table-note {
   margin: 8px 0 0;
   font-size: 0.78rem;
@@ -2044,8 +2126,7 @@ mark.search-hit {
   scroll-margin-top: 136px;
 }
 
-.tips-content > .tips-section-card:first-child,
-#tipsSection[data-device-filter="ps5"] #tips-map {
+.tips-content > .tips-section-card:first-child {
   padding-top: 12px;
 }
 
@@ -2137,6 +2218,45 @@ mark.search-hit {
   margin-top: 5px;
 }
 
+.tips-sub-list {
+  margin: 5px 0 0;
+  padding-left: 1.25em;
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.tips-sub-list li + li {
+  margin-top: 4px;
+}
+
+.tips-video-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 5px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: baseline;
+  transition: background-color 110ms var(--ease-out), border-color 110ms var(--ease-out), color 110ms var(--ease-out);
+}
+
+.tips-video-chip:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .tips-sub-heading {
   margin: 18px 0 10px;
   font-size: 0.94rem;
@@ -2175,6 +2295,93 @@ mark.search-hit {
   line-height: 1.55;
   color: var(--text);
   max-width: 100%;
+}
+
+/* Console Command Cards (#tips-commands) */
+.tips-cmd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.tips-cmd-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 13px 15px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.tips-cmd-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tips-cmd-priority {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.tips-cmd-priority-high {
+  background: var(--amber-soft);
+  color: var(--amber-text);
+  border: 1px solid var(--amber-border);
+}
+
+.tips-cmd-priority-opt {
+  background: var(--surface-subtle);
+  color: var(--text-muted);
+  border: 1px solid var(--border-strong);
+}
+
+.tips-cmd-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
+  min-width: 0;
+}
+
+.tips-cmd-code {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.tips-cmd-row .copy-btn {
+  flex-shrink: 0;
+}
+
+.tips-cmd-desc {
+  margin: 0;
+  font-size: 0.83rem;
+  line-height: 1.62;
+  color: var(--text-secondary);
 }
 
 .tips-table-wrap {
@@ -2518,6 +2725,10 @@ mark.search-hit {
 
 .faq-link-row {
   margin-top: 9px !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
   font-size: 0.82rem;
   color: var(--text-muted);
 }
@@ -2541,6 +2752,10 @@ mark.search-hit {
 .faq-inline-link:hover {
   background: var(--accent);
   color: #ffffff;
+}
+
+:root[data-theme="dark"] .faq-inline-link:hover {
+  color: #0b1210;
 }
 
 .tips-search-link {
@@ -2616,6 +2831,14 @@ mark.search-hit {
 }
 
 @media (max-width: 640px) {
+  .tips-video-banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .tips-video-open-btn {
+    justify-content: center;
+  }
   .tips-section-card {
     padding: 16px 0 4px;
     scroll-margin-top: 192px;
@@ -2623,8 +2846,12 @@ mark.search-hit {
   #tips-mod-creatures {
     scroll-margin-top: 192px;
   }
-  .tips-cards-grid {
+  .tips-cards-grid,
+  .tips-cmd-grid {
     grid-template-columns: 1fr;
+  }
+  .tips-cmd-code {
+    font-size: 0.78rem;
   }
   .tips-table th,
   .tips-table td {
