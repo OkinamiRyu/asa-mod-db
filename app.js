@@ -1719,7 +1719,26 @@
     els.tabList.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-tab-id]');
       if (!btn) return;
-      switchTab(btn.dataset.tabId);
+      const tabId = btn.dataset.tabId;
+      if (tabId === 'SEARCH') {
+        state.lastModTab = 'ALL';
+        state.searchQuery = '';
+        els.itemSearchInput.value = '';
+        els.clearSearchBtn.classList.add('hidden');
+        state.category = '';
+        state.filter2 = '';
+        state.filter3 = '';
+        state.quickFilter = '';
+        els.filterCategory.value = '';
+        els.filterObtain.value = '';
+        els.filterStation.value = '';
+        state.sortBy = 'index';
+        els.sortSelect.value = 'index';
+        state.visibleLimit = PAGE_SIZE;
+        switchTab('ALL');
+        return;
+      }
+      switchTab(tabId);
     });
 
     els.modSelect.addEventListener('change', (e) => {
