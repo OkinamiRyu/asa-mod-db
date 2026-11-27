@@ -182,7 +182,7 @@
   }
 
   function getCurrentTheme() {
-    return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+    return document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
   }
 
   function updateThemeButton() {
@@ -1473,18 +1473,25 @@
     return `${window.location.origin}${window.location.pathname}${hash}`;
   }
 
-  function ensureTipsTargetVisible(targetEl) {
-    if (!targetEl || !els.tipsContent) return;
-    const deviceHolder = targetEl.closest('[data-device-only]') || targetEl;
-    const reqDevice = deviceHolder.dataset ? deviceHolder.dataset.deviceOnly : '';
-    const currentFilter = els.tipsContent.dataset.deviceFilter || 'all';
-    if (
-      (reqDevice === 'pc' || reqDevice === 'ps5') &&
-      currentFilter !== 'all' &&
-      currentFilter !== reqDevice
-    ) {
-      applyTipsDevice('all', false);
+  function scrollToTipsTarget(targetId) {
+    const targetEl = targetId ? document.getElementById(targetId) : null;
+    if (!targetEl) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
     }
+    if (els.tipsContent) {
+      const deviceHolder = targetEl.closest('.tips-section-card[data-device-only], [data-device-only]') || targetEl;
+      const reqDevice = deviceHolder.dataset ? deviceHolder.dataset.deviceOnly : '';
+      const currentFilter = els.tipsContent.dataset.deviceFilter || 'all';
+      if (
+        (reqDevice === 'pc' || reqDevice === 'ps5') &&
+        currentFilter !== 'all' &&
+        currentFilter !== reqDevice
+      ) {
+        applyTipsDevice('all', false);
+      }
+    }
+    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   function openItemFromHash() {
@@ -1495,11 +1502,7 @@
     }
     if (hash.startsWith('#tips-')) {
       switchTab('TIPS');
-      const secEl = document.getElementById(hash.slice(1));
-      if (secEl) {
-        ensureTipsTargetVisible(secEl);
-        secEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      scrollToTipsTarget(hash.slice(1));
       return;
     }
     if (hash === '#faq') {
@@ -1965,20 +1968,19 @@
         const searchJumpBtn = e.target.closest('[data-search-jump]');
         if (searchJumpBtn) {
           const query = (searchJumpBtn.dataset.searchJump || '').trim();
-          switchTab('ALL');
           state.category = '';
           state.filter2 = '';
           state.filter3 = '';
           state.quickFilter = '';
-          state.visibleLimit = PAGE_SIZE;
-          state.searchQuery = query;
           els.filterCategory.value = '';
           els.filterObtain.value = '';
           els.filterStation.value = '';
+          state.searchQuery = query;
           els.itemSearchInput.value = query;
-          renderQuickFilters();
-          applyFiltersAndRender();
+          state.visibleLimit = PAGE_SIZE;
+          switchTab('ALL');
           window.scrollTo({ top: 0, behavior: 'smooth' });
+          showToast(`「${query}」で検索しました`);
           return;
         }
         const jumpBtn = e.target.closest('[data-jump-tab]');
@@ -1990,11 +1992,9 @@
         const tocLink = e.target.closest('.tips-toc a[href^="#"]');
         if (tocLink) {
           const targetId = tocLink.getAttribute('href').slice(1);
-          const targetEl = targetId ? document.getElementById(targetId) : null;
-          if (targetEl) {
+          if (targetId && document.getElementById(targetId)) {
             e.preventDefault();
-            ensureTipsTargetVisible(targetEl);
-            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            scrollToTipsTarget(targetId);
           }
         }
       });
@@ -2017,12 +2017,15 @@
         }
         const jumpBtn = e.target.closest('[data-jump-tab]');
         if (jumpBtn) {
-          switchTab(jumpBtn.dataset.jumpTab);
+          const jumpTab = jumpBtn.dataset.jumpTab;
           const targetId = jumpBtn.dataset.jumpTarget;
-          const targetEl = targetId ? document.getElementById(targetId) : null;
-          if (targetEl) {
-            ensureTipsTargetVisible(targetEl);
-            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          switchTab(jumpTab);
+          if (jumpTab === 'TIPS' && targetId) {
+            scrollToTipsTarget(targetId);
+          } else if (targetId) {
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            else window.scrollTo({ top: 0, behavior: 'smooth' });
           } else {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }

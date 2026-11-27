@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,21 +7,15 @@
   <meta name="description" content="ARK: Survival Ascended (ASA) 導入MOD・アイテム日本語検索データベース" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/asa-logo.png" />
   <script>
     (function () {
       try {
         var saved = localStorage.getItem('asa_mod_db_theme');
-        var theme =
-          saved === 'dark' || saved === 'light'
-            ? saved
-            : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-              ? 'dark'
-              : 'light';
-        document.documentElement.dataset.theme = theme;
+        document.documentElement.dataset.theme = saved === 'light' ? 'light' : 'dark';
       } catch (e) {
-        document.documentElement.dataset.theme = 'light';
+        document.documentElement.dataset.theme = 'dark';
       }
     })();
   </script>
@@ -42,7 +36,7 @@
       <div class="header-meta">
         <span id="statBadge" class="meta-pill">読み込み中...</span>
         <span id="updatedBadge" class="meta-date"></span>
-        <button type="button" id="themeToggleBtn" class="theme-toggle-btn" aria-label="ダークモード切替" title="ダークモード / ライトモード切替">🌙 ダーク</button>
+        <button type="button" id="themeToggleBtn" class="theme-toggle-btn" aria-label="ライトモードに切替" aria-pressed="true" title="ダークモード / ライトモード切替">☀️ ライト</button>
       </div>
     </div>
     <nav class="tab-bar" aria-label="表示切替">
@@ -613,7 +607,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
                   <td>
                     ・<button type="button" class="tips-search-link" data-search-jump="カワウソ">各種カワウソ亜種</button>（<code>Z-Variants Otter</code>）<br />
                     ・<button type="button" class="tips-search-link" data-search-jump="レッサーパンダ">レッサーパンダ</button>（<code>Redpanda</code>）<br />
-                    ・<button type="button" class="tips-search-link" data-search-jump="ペット・アイスワイバーン">ペット・アイス</button>／<button type="button" class="tips-search-link" data-search-jump="ペット・ファイアワイバーン">ファイア</button>／<button type="button" class="tips-search-link" data-search-jump="ペット・TEKワイバーン">TEKワイバーン</button>（<code>Wyvern Pets</code>）<br />
+                    ・<button type="button" class="tips-search-link" data-search-jump="ペット・アイス">ペット・アイス</button>／<button type="button" class="tips-search-link" data-search-jump="ペット・ファイア">ファイア</button>／<button type="button" class="tips-search-link" data-search-jump="ペット・TEK">TEKワイバーン</button>（<code>Wyvern Pets</code>）<br />
                     ・<button type="button" class="tips-search-link" data-search-jump="ペンギン">ペンギン</button>（<code>ArklasAnimals</code>）
                   </td>
                   <td>
@@ -626,8 +620,8 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
                   <td>
                     ・<button type="button" class="tips-search-link" data-search-jump="バブルフィッシュ">バブルフィッシュ</button>（<code>Oceania Content</code>）<br />
                     ・<button type="button" class="tips-search-link" data-search-jump="アノマロカリス">アノマロカリス</button>（<code>The Sunken World</code>）<br />
-                    ・<button type="button" class="tips-search-link" data-search-jump="石のナイフ">石のナイフ</button>＆<button type="button" class="tips-search-link" data-search-jump="シースケール防具">シースケール防具</button>（<code>The Sunken World</code>）<br />
-                    ・<button type="button" class="tips-search-link" data-search-jump="サンゴ建材">サンゴ建材</button>＆<button type="button" class="tips-search-link" data-search-jump="スリーピングポッド">スリーピングポッド</button>（<code>Oceania Content</code>）
+                    ・<button type="button" class="tips-search-link" data-search-jump="石のナイフ">石のナイフ</button>＆<button type="button" class="tips-search-link" data-search-jump="シースケール">シースケール防具</button>（<code>The Sunken World</code>）<br />
+                    ・<button type="button" class="tips-search-link" data-search-jump="サンゴ">サンゴ建材</button>＆<button type="button" class="tips-search-link" data-search-jump="スリーピングポッド">スリーピングポッド</button>（<code>Oceania Content</code>）
                   </td>
                   <td>
                     ・<strong>バブルフィッシュ</strong>は<strong>餌や麻酔が一切不要！</strong>水中で近づいてリングメニュー（PC：<kbd>E</kbd> 長押し ／ PS5：<span class="ps-btn ps-triangle">△</span> 長押し）の<code>Grab Bubblefish</code>で拾うだけで即テイム＆肩乗せになり、<strong>酸素供給＋水中スタミナ回復＋視界クリア</strong>の3大効果がつきます！<br />
@@ -637,7 +631,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
                 <tr>
                   <td><strong>🎒 重量アップ・荷物自動整理・アーティファクト複数運搬</strong></td>
                   <td>
-                    ・<button type="button" class="tips-search-link" data-search-jump="ペット・ドードーワイバーン">ペット・ドードーワイバーン</button>（<code>Wyvern Pets</code>）<br />
+                    ・<button type="button" class="tips-search-link" data-search-jump="ドードーワイバーン">ペット・ドードーワイバーン</button>（<code>Wyvern Pets</code>）<br />
                     ・<button type="button" class="tips-search-link" data-search-jump="レッサーパンダ">レッサーパンダ</button>（<code>Redpanda</code>）<br />
                     ・<button type="button" class="tips-search-link" data-search-jump="カワウソ">各種カワウソ亜種</button>（<code>Z-Variants Otter</code>）
                   </td>
@@ -649,9 +643,9 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
                 <tr>
                   <td><strong>🛡️ 泥棒害獣の撃退・毒＆電撃無効</strong><br />（ペゴ・カモメ・クラゲ対策）</td>
                   <td>
-                    ・<button type="button" class="tips-search-link" data-search-jump="ネコ(Cat)">ネコ</button>（<code>ArklasAnimals</code>）<br />
-                    ・<button type="button" class="tips-search-link" data-search-jump="グレーター・ホッキョクギツネ">グレーター・ホッキョクギツネ</button>／<button type="button" class="tips-search-link" data-search-jump="グレーター・アカギツネ">アカギツネ</button>（<code>Foxes</code>）<br />
-                    ・<button type="button" class="tips-search-link" data-search-jump="ペット・ポイズンワイバーン">ペット・ポイズンワイバーン</button>（<code>Wyvern Pets</code>）<br />
+                    ・<button type="button" class="tips-search-link" data-search-jump="ネコ">ネコ</button>（<code>ArklasAnimals</code>）<br />
+                    ・<button type="button" class="tips-search-link" data-search-jump="ホッキョクギツネ">グレーター・ホッキョクギツネ</button>／<button type="button" class="tips-search-link" data-search-jump="アカギツネ">アカギツネ</button>（<code>Foxes</code>）<br />
+                    ・<button type="button" class="tips-search-link" data-search-jump="ポイズンワイバーン">ペット・ポイズンワイバーン</button>（<code>Wyvern Pets</code>）<br />
                     ・<button type="button" class="tips-search-link" data-search-jump="オクロノサウルス">オクロノサウルス</button>（<code>Oceania</code>）／<button type="button" class="tips-search-link" data-search-jump="対電撃抗毒素">対電撃抗毒素</button>（<code>TSW</code>）
                   </td>
                   <td>
@@ -666,7 +660,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
                     ・<button type="button" class="tips-search-link" data-search-jump="ロティサリー">ロティサリー</button>（<code>The Sunken World</code>：Lv14）<br />
                     ・<button type="button" class="tips-search-link" data-search-jump="スフィルナ">スフィルナ</button>／<button type="button" class="tips-search-link" data-search-jump="エデストゥス">エデストゥス</button>（<code>The Sunken World</code>）<br />
                     ・<button type="button" class="tips-search-link" data-search-jump="ジュゴン">ジュゴン</button>／<button type="button" class="tips-search-link" data-search-jump="メディケロン">メディケロン</button>／<button type="button" class="tips-search-link" data-search-jump="オクロノサウルス">オクロノサウルス</button>（<code>Oceania</code>）<br />
-                    ・<button type="button" class="tips-search-link" data-search-jump="グレーター・ホッキョクギツネ">グレーターキツネ</button>（<code>Foxes</code>）
+                    ・<button type="button" class="tips-search-link" data-search-jump="グレーター">グレーターキツネ</button>（<code>Foxes</code>）
                   </td>
                   <td>
                     ・<strong>ロティサリー（Lv14）</strong>はたき火の6倍の速度で肉や魚を焼ける序盤の神設備！<br />
