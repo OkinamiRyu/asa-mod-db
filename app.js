@@ -1255,7 +1255,7 @@
       // 生物系
       ['テイム方法', item.tamingMethod, false, false],
       ['大好きなエサ', item.favoriteFood, false, true],
-      ['必要数の目安', item.foodAmount, false, false],
+      ['必要数の目安', item.foodAmount, true, false],
       ['生息地・スポーン', item.habitat, false, false],
       ['サドル・騎乗', item.saddleRide, false, true],
       ['特殊能力・用途', item.specialAbility, true, false],
@@ -1473,6 +1473,20 @@
     return `${window.location.origin}${window.location.pathname}${hash}`;
   }
 
+  function ensureTipsTargetVisible(targetEl) {
+    if (!targetEl || !els.tipsContent) return;
+    const deviceHolder = targetEl.closest('[data-device-only]') || targetEl;
+    const reqDevice = deviceHolder.dataset ? deviceHolder.dataset.deviceOnly : '';
+    const currentFilter = els.tipsContent.dataset.deviceFilter || 'all';
+    if (
+      (reqDevice === 'pc' || reqDevice === 'ps5') &&
+      currentFilter !== 'all' &&
+      currentFilter !== reqDevice
+    ) {
+      applyTipsDevice('all', false);
+    }
+  }
+
   function openItemFromHash() {
     const hash = window.location.hash || '';
     if (hash === '#guide' || hash === '#tips') {
@@ -1482,7 +1496,10 @@
     if (hash.startsWith('#tips-')) {
       switchTab('TIPS');
       const secEl = document.getElementById(hash.slice(1));
-      if (secEl) secEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (secEl) {
+        ensureTipsTargetVisible(secEl);
+        secEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
       return;
     }
     if (hash === '#faq') {
@@ -1945,6 +1962,25 @@
           copyText(copyBtn.dataset.tipsCopy);
           return;
         }
+        const searchJumpBtn = e.target.closest('[data-search-jump]');
+        if (searchJumpBtn) {
+          const query = (searchJumpBtn.dataset.searchJump || '').trim();
+          switchTab('ALL');
+          state.category = '';
+          state.filter2 = '';
+          state.filter3 = '';
+          state.quickFilter = '';
+          state.visibleLimit = PAGE_SIZE;
+          state.searchQuery = query;
+          els.filterCategory.value = '';
+          els.filterObtain.value = '';
+          els.filterStation.value = '';
+          els.itemSearchInput.value = query;
+          renderQuickFilters();
+          applyFiltersAndRender();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
         const jumpBtn = e.target.closest('[data-jump-tab]');
         if (jumpBtn) {
           switchTab(jumpBtn.dataset.jumpTab);
@@ -1957,6 +1993,7 @@
           const targetEl = targetId ? document.getElementById(targetId) : null;
           if (targetEl) {
             e.preventDefault();
+            ensureTipsTargetVisible(targetEl);
             targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
         }
@@ -1984,6 +2021,7 @@
           const targetId = jumpBtn.dataset.jumpTarget;
           const targetEl = targetId ? document.getElementById(targetId) : null;
           if (targetEl) {
+            ensureTipsTargetVisible(targetEl);
             targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
           } else {
             window.scrollTo({ top: 0, behavior: 'smooth' });
