@@ -62,7 +62,7 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -73,7 +73,7 @@ body {
   font-family: var(--font-sans);
   background: var(--bg);
   color: var(--text);
-  line-height: 1.68;
+  line-height: 1.7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@ h3 {
 
 .container {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1380px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -2832,7 +2832,7 @@ mark.search-hit {
 
 @media (max-width: 640px) {
   html {
-    font-size: 16.5px;
+    font-size: 17.5px;
   }
   .tips-video-banner {
     flex-direction: column;
