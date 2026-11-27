@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T23:31:11Z",
+  "updatedAt": "2026-11-27T14:07:39.882Z",
   "installedMods": [
     {
       "name": "Super Spyglass Plus",
@@ -182,6 +182,13 @@
       "curseForgeId": "1067560",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/forgotten-fauna-continued-monolophosaurus",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。生物・亜種・サドル・能力・テイム方法は同梱アセットおよびCurseForge公式ページより確認。フォルダ: 1067560_9487153"
+    },
+    {
+      "name": "Death Recovery Mod",
+      "description": "個人用の墓石（A Personal Grave）を設置し、死亡時に落とした荷物を拠点から一括回収できる救済MODです。\n事前にベッド・収納箱の近くへ置き、復活後に墓石を操作（PC：E / PS5：△）して回収します。\n【当鯖ルール】1人1個／拾い上げ可（CT中・劣化時は不可）／クールダウン60分（個人ごと・常設）／死亡バッグ消滅は約60分／アーティファクト回収不可。",
+      "curseForgeId": "930404",
+      "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/death-recovery-mod",
+      "notes": "ゲーム内表示名は .uplugin の FriendlyName による。v1.29.2 / 作者: Mannalo。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/death-recovery-mod\nフォルダ: 930404_9417674"
     }
   ],
   "modSheets": [
@@ -31667,6 +31674,34 @@
           "habitat": "",
           "saddleRide": "",
           "specialAbility": "【入手方法】野生モノロフォサウルスやアルファ個体の討伐ドロップ、またはテイム済み個体のインベントリ内で入手\n【2つの使い道】\n①テイム用：野生のモノロフォサウルスに手渡してテイムできる（モノロフォのインベントリ内では重量0＆腐敗時間が大幅延長される）\n②戦闘強化用：テイム済みのモノロフォサウルスのインベントリに入れて「使用（食べる）」させると、180秒間「Acid-Laced Jaws（酸顎）」バフが発動し、左クリック（PS5：R2）の噛みつきダメージ+25%＆相手の防御を下げて毎秒体力を削る酸デバフを付与できるようになる"
+        }
+      ]
+    },
+    {
+      "id": "Death Recovery Mod",
+      "name": "Death Recovery Mod",
+      "sheetType": "item",
+      "itemCount": 1,
+      "items": [
+        {
+          "index": 1,
+          "image": "",
+          "enName": "A Personal Grave",
+          "jaName": "個人用の墓石(A Personal Grave)",
+          "description": "死亡時に落とした荷物を拠点から一括回収できる本人専用の墓石（トライブで並べて設置可）。※バニラの通常墓石と間違えないよう注意。\n【準備】死ぬ前に拠点のベッド・収納箱の近くへ設置（回収直後に重量オーバーになりやすいため）。\n【操作】回収：PC E ／ PS5 △ ｜ メニュー：PC E長押し ／ PS5 △長押し（専用キー不要）\n【回収の見分け方】回収対象があると炎が約5秒間上がる。炎が出ない場合は回収できる荷物なし（※炎だけ出ないバグ時は拾って置き直すと解消）。\n【メニュー機能】拾い上げ（移動用）／「Duplicate Skin removal」（透明な重複スキンを削除）／「Debugging」（回収履歴確認）／解体\n【当鯖ルール】1人1個まで（常設）／拾い上げ可（CT中や劣化時は不可・修理すると拾える）／クールダウン60分（個人ごと・置き直しても継続）／死亡バッグ・死体の消滅も約60分／アーティファクトのみ回収対象外。\n【注意】時間経過で劣化するため時々修理が必要。マップ外落下・海洋生物によるインベントリ消失・消滅時間（約60分）超過等で本体側から消えた荷物は回収不可。",
+          "category": "実用設備",
+          "obtainMethod": "エングラム習得（Lv.0 / 0 EP）→ 作成",
+          "dinoName": "",
+          "craftStation": "インベントリ",
+          "toolUsed": "",
+          "harvestSource": "",
+          "materials": "石×70、セメント×8",
+          "enOriginal": "To help with deaths recovery,  You can recaim the inventory of your corpse or item cache.",
+          "notes": "アセット: Content/PrimalItemStructure_Personal_Grave.uasset",
+          "assetName": "PrimalItemStructure_Personal_Grave",
+          "specialAbility": "",
+          "usageType": "実用（機能あり）",
+          "habitat": ""
         }
       ]
     }

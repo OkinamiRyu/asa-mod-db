@@ -501,7 +501,7 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
 
             <div class="tips-item-box">
               <h4 class="tips-item-title">💀 死体位置（デスマーカー）の自動表示</h4>
-              <p class="tips-item-text">死亡すると、詳細マップの「ウェイポイント」欄と現地に<strong>緑色の光柱＋死体アイコン</strong>が自動で表示されます（※消えている場合は設定 → UI の死亡地点の自動マーカー表示（<code>Automatically Create POI On Death</code>）がONか確認）。</p>
+              <p class="tips-item-text">死亡すると、詳細マップの「ウェイポイント」欄と現地に<strong>緑色の光柱＋死体アイコン</strong>が自動で表示されます（※消えている場合は設定 → UI の死亡地点の自動マーカー表示（<code>Automatically Create POI On Death</code>）がONか確認）。当サーバーでは荷物バッグの消滅は約60分で、拠点に個人用の墓石（Death Recovery Mod）を置いてあれば一括回収も可能です（詳細は⑦を参照）。</p>
             </div>
           </div>
           <p class="tips-table-note">※ASAのデフォルト操作の一例です（キー設定や画面状態により異なる場合があります）。</p>
@@ -776,6 +776,15 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
               <h4 class="tips-item-title">🔭 Super Spyglass Plus（高性能望遠鏡）</h4>
               <p class="tips-item-text">野生恐竜のステータスやテイムに必要な餌・進行度を詳しく確認できる便利MOD。<strong>通常装備</strong>／<strong>頭防具スキン</strong>／<strong>切替式</strong>の3通りから好みのスタイルで使えます。</p>
             </div>
+            <div class="tips-item-box">
+              <h4 class="tips-item-title">🪦 Death Recovery Mod（荷物回収の墓石）</h4>
+              <ul class="tips-list">
+                <li><strong>準備</strong>：<button type="button" class="tips-search-link" data-search-jump="A Personal Grave">個人用の墓石（A Personal Grave）</button>を作り、<strong>死ぬ前にベッド・収納箱の近くへ設置</strong>（本人専用／バニラ墓石と間違えないよう注意）。</li>
+                <li><strong>操作</strong>：回収は <strong><span data-device-only="pc">PC：<kbd>E</kbd></span><span data-device-only="both-sep"> ／ </span><span data-device-only="ps5">PS5：<span class="ps-btn ps-triangle">△</span></span></strong>（炎が約5秒上がれば成功）。長押しで <strong>拾い上げ</strong> や <strong>重複スキン削除（<code>Duplicate Skin removal</code>）</strong> を開ける。</li>
+                <li><strong>当鯖ルール</strong>：<strong>1人1個（常設）</strong> ／ <strong>拾い上げ可</strong>（CT中・劣化時は修理後のみ）／ <strong>CT60分・バッグ消滅も約60分</strong>（個人ごと・再設置してもCT継続）／ <strong>アーティファクト回収不可</strong>。</li>
+                <li><strong>注意</strong>：時間経過で劣化するため時々修理。マップ外落下や消滅時間（約60分）切れで消えた荷物は回収不可。</li>
+              </ul>
+            </div>
           </div>
 
           <h4 class="tips-sub-heading" id="tips-mod-creatures">🐾 目的から逆引き！初心者におすすめの追加MOD生物＆便利アイテム早見表</h4>
@@ -1017,8 +1026,12 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
               <span class="faq-q-text">死んで荷物を落としました！どこに落ちたか分かりません</span>
             </summary>
             <div class="faq-answer">
-              <p>死亡地点には<strong>緑色の光柱</strong>が立ち、詳細マップの「ウェイポイント」欄に死体アイコンが自動表示されます。荷物バッグには消滅タイマーがあるため、早めに回収へ向かいましょう。</p>
-              <p class="faq-link-row"><button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-map">📖 初心者設定 ③（マップ表示の操作を見る）</button></p>
+              <p>死亡地点には<strong>緑色の光柱</strong>＋詳細マップの「ウェイポイント」欄に死体アイコンが自動表示され、当サーバーでは荷物バッグの消滅時間は<strong>約60分</strong>です。</p>
+              <p>拠点に個人用の墓石（<code>A Personal Grave</code>）を置いてあれば、復活後に <strong>PC：<kbd>E</kbd> ／ PS5：<span class="ps-btn ps-triangle">△</span></strong> で一括回収できます（CT60分・アーティファクト対象外・1人1個）。</p>
+              <p class="faq-link-row">
+                <button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-map">📖 初心者設定 ③（マップ表示の操作を見る）</button>
+                <button type="button" class="faq-inline-link" data-jump-tab="TIPS" data-jump-target="tips-mods">📖 初心者設定 ⑦（墓石の使い方）</button>
+              </p>
             </div>
           </details>
         </div>

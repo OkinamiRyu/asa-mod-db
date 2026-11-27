@@ -15,11 +15,27 @@
     "primalitemconsumable_egg_raven_fertilized": "icons/ArklasAnimals/PrimalItemConsumable_Egg_Raven_Fertilized.png",
     "_default": "icons/ArklasAnimals/Cat_Character_BP_ArklasTT.png"
   },
+  "ArkNav": {
+    "primalitem_arknavconfigurator": "icons/ArkNav/PrimalItem_ArkNavConfigurator.png",
+    "_default": "icons/ArkNav/PrimalItem_ArkNavConfigurator.png"
+  },
+  "Bear Skin": {
+    "primalitemskin_costume_bearskin": "icons/Bear Skin/PrimalItemSkin_Costume_BearSkin.png",
+    "_default": "icons/Bear Skin/PrimalItemSkin_Costume_BearSkin.png"
+  },
   "Brachiosaurus Costume SKIN": {
     "primalitemskin_costume_brachiosauruscostumeskin": "icons/Brachiosaurus Costume SKIN/PrimalItemSkin_Costume_BrachiosaurusCostumeSkin.png"
   },
   "Cartoon Crow": {
     "primalitemskin_costume_cartooncrow": "icons/Cartoon Crow/PrimalItemSkin_Costume_CartoonCrow.png"
+  },
+  "Cyrus's Critters: Redpanda": {
+    "primalitemarmor_pandascarf": "icons/Cyrus's Critters Redpanda/PrimalItemArmor_PandaScarf.png",
+    "redpanda_character_bp": "icons/Cyrus's Critters Redpanda/RedPanda_Character_BP.png",
+    "snowredpanda_character_bp": "icons/Cyrus's Critters Redpanda/SnowRedPanda_Character_BP.png",
+    "jungleredpanda_character_bp": "icons/Cyrus's Critters Redpanda/JungleRedPanda_Character_BP.png",
+    "primalitemskin_chibidino_redpanda": "icons/Cyrus's Critters Redpanda/PrimalItemSkin_ChibiDino_Redpanda.png",
+    "primalitemconsumable_redpandaplatter": "icons/Cyrus's Critters Redpanda/PrimalItemConsumable_RedpandaPlatter.png"
   },
   "DaniTech Concrete Style Structure Skin": {
     "primalitemstructureskin_danitech_concrete_01": "icons/DaniTech Concrete Style Structure Skin/PrimalItemStructureSkin_DaniTech_Concrete_01.png",
@@ -27,6 +43,30 @@
     "primalitemstructureskin_danitech_concrete_03": "icons/DaniTech Concrete Style Structure Skin/PrimalItemStructureSkin_DaniTech_Concrete_03.png",
     "primalitemstructureskin_danitech_concrete_04": "icons/DaniTech Concrete Style Structure Skin/PrimalItemStructureSkin_DaniTech_Concrete_04.png",
     "primalitemstructureskin_danitech_concrete_05": "icons/DaniTech Concrete Style Structure Skin/PrimalItemStructureSkin_DaniTech_Concrete_05.png"
+  },
+  "Death Recovery Mod": {
+    "primalitemstructure_personal_grave": "icons/Death Recovery Mod/PrimalItemStructure_Personal_Grave.png",
+    "_default": "icons/Death Recovery Mod/PrimalItemStructure_Personal_Grave.png"
+  },
+  "Feras Fauna: Foxes": {
+    "arcticfox_character_bp": "icons/Feras Fauna Foxes/ArcticFox_Character_BP.png",
+    "greatarcticfox_character_bp": "icons/Feras Fauna Foxes/GreatArcticfox_Character_BP.png",
+    "primalitemarmor_arcticfoxsaddle": "icons/Feras Fauna Foxes/PrimalItemArmor_ArcticfoxSaddle.png",
+    "primalitemcostume_bonegreaterarcticfox": "icons/Feras Fauna Foxes/PrimalItemCostume_BoneGreaterArcticFox.png",
+    "greaterredfox_character_bp": "icons/Feras Fauna Foxes/GreaterRedfox_Character_BP.png",
+    "megagreatarcticfox_character_bp": "icons/Feras Fauna Foxes/MegaGreatArcticfox_Character_BP.png",
+    "bonegreatarcticfox_character_bp": "icons/Feras Fauna Foxes/BoneGreatArcticfox_Character_BP.png"
+  },
+  "Forgotten Fauna Continued: Monolophosaurus": {
+    "mono_character_bp": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP.png",
+    "mono_character_bp_cave": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP_Cave.png",
+    "mono_character_bp_scorched": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP_Scorched.png",
+    "mono_character_bp_aberrant": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP_Aberrant.png",
+    "mono_character_bp_alpha": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP_Alpha.png",
+    "primalitemarmor_monosaddle": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemArmor_MonoSaddle.png",
+    "primalitemarmor_monosaddleblade": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemArmor_MonoSaddleBlade.png",
+    "primalitemarmor_monosaddleshield": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemArmor_MonoSaddleShield.png",
+    "primalitemconsumable_monolophobile": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemConsumable_MonolophoBile.png"
   },
   "GliderCostumes": {
     "primalitemarmor_glidercos_angel_new": "icons/GliderCostumes/PrimalItemArmor_Glidercos_Angel_New.png",
@@ -37,8 +77,17 @@
     "primalitemarmor_glidercos_tekwyvern_new": "icons/GliderCostumes/PrimalItemArmor_Glidercos_TEKWyvern_New.png",
     "primalitemarmor_glidercos_wyvern_new": "icons/GliderCostumes/PrimalItemArmor_Glidercos_Wyvern_New.png"
   },
-  "MOUSHIWAKE GOZAIMASEN COS": {
-    "primalitemskin_costume_moushiwakegozaimasencos": "icons/MOUSHIWAKE GOZAIMASEN COS/PrimalItemSkin_Costume_MOUSHIWAKEGOZAIMASENCOS.png"
+  "Hatzegopteryx Kukulkan": {
+    "hatzeg_character_bp": "icons/Hatzegopteryx Kukulkan/Hatzeg_Character_BP.png",
+    "hatzeg_character_bp_aberrant": "icons/Hatzegopteryx Kukulkan/Hatzeg_Character_BP_Aberrant.png",
+    "hatzeg_character_bp_angel": "icons/Hatzegopteryx Kukulkan/Hatzeg_Character_BP_Angel.png",
+    "hatzeg_character_bp_devil": "icons/Hatzegopteryx Kukulkan/Hatzeg_Character_BP_Devil.png",
+    "primalitemarmor_hatzsaddle": "icons/Hatzegopteryx Kukulkan/PrimalItemArmor_HatzSaddle.png",
+    "primalitemarmor_hatzsaddle_platform": "icons/Hatzegopteryx Kukulkan/PrimalItemArmor_HatzSaddle_Platform.png",
+    "primalitemarmor_hatzsaddle_battle": "icons/Hatzegopteryx Kukulkan/PrimalItemArmor_HatzSaddle_Battle.png",
+    "primalitemtrophy_hatzeg": "icons/Hatzegopteryx Kukulkan/PrimalItemTrophy_Hatzeg.png",
+    "primalitemconsumable_crackedalphakarkinosclaw": "icons/Hatzegopteryx Kukulkan/PrimalItemConsumable_CrackedAlphaKarkinosClaw.png",
+    "primalitemskin_chibidino_hatzeg": "icons/Hatzegopteryx Kukulkan/PrimalItemSkin_ChibiDino_Hatzeg.png"
   },
   "Modern Structure Skin Compendium": {
     "primalitemstructureskin_tileset_beam": "icons/Modern Structure Skin Compendium/PrimalItemStructureSkin_Tileset_Beam.png",
@@ -72,6 +121,9 @@
     "primalitemstructureskin_tileset_wallpaper1": "icons/Modern Structure Skin Compendium/PrimalItemStructureSkin_Tileset_Wallpaper1.png",
     "primalitemstructureskin_tileset_whiteblue_marble": "icons/Modern Structure Skin Compendium/PrimalItemStructureSkin_Tileset_WhiteBlue_Marble.png",
     "primalitemstructureskin_tileset_whitemarble": "icons/Modern Structure Skin Compendium/PrimalItemStructureSkin_Tileset_WhiteMarble.png"
+  },
+  "MOUSHIWAKE GOZAIMASEN COS": {
+    "primalitemskin_costume_moushiwakegozaimasencos": "icons/MOUSHIWAKE GOZAIMASEN COS/PrimalItemSkin_Costume_MOUSHIWAKEGOZAIMASENCOS.png"
   },
   "MuchStuffPack": {
     "primalitemammo_arrowgoodnight": "icons/MuchStuffPack/PrimalItemAmmo_ArrowGoodNight.png",
@@ -433,11 +485,35 @@
     "primalitemconsumableseed": "icons/MuchStuffPack/vanilla_seed.png",
     "_default": "icons/MuchStuffPack/_default.png"
   },
+  "Oceania Content": {
+    "bubblefish": "icons/Oceania Content/Bubblefish.png",
+    "archelon": "icons/Oceania Content/Archelon.png",
+    "baculite": "icons/Oceania Content/Baculite.png",
+    "brachyura": "icons/Oceania Content/Brachyura.png",
+    "krono": "icons/Oceania Content/Krono.png",
+    "primalitemstructure_coralcampfire": "icons/Oceania Content/PrimalItemStructure_CoralCampfire.png",
+    "primalitemstructure_coralwaterbed": "icons/Oceania Content/PrimalItemStructure_CoralWaterBed.png",
+    "primalitemstructure_preservingbarrel": "icons/Oceania Content/PrimalItemStructure_PreservingBarrel.png",
+    "primalitemstructure_wallscarekron": "icons/Oceania Content/PrimalItemStructure_WallScarekron.png",
+    "dugong": "icons/Oceania Content/Dugong.png",
+    "primalitemstructure_coralnode": "icons/Oceania Content/PrimalItemStructure_CoralNode.png",
+    "primalitemconsumable_meatcake": "icons/Oceania Content/PrimalItemConsumable_MeatCake.png",
+    "primalitem_weapontrappingnet": "icons/Oceania Content/PrimalItem_WeaponTrappingNet.png"
+  },
   "Procoptodon cosutume skin": {
     "primalitemskin_costume_prococostumeskin": "icons/Procoptodon cosutume skin/PrimalItemSkin_Costume_ProcoCostumeSkin.png"
   },
   "Reaper CostumeSkin": {
     "primalitemskin_costume_reapercostumeskin": "icons/Reaper CostumeSkin/PrimalItemSkin_Costume_ReaperCostumeSkin.png"
+  },
+  "Scorched Resources": {
+    "primalitem_scorchedresources_silk": "icons/Scorched Resources/PrimalItem_ScorchedResources_Silk.png",
+    "primalitem_scorchedresources_cactussap": "icons/Scorched Resources/PrimalItem_ScorchedResources_CactusSap.png",
+    "primalitem_scorchedresources_clay": "icons/Scorched Resources/PrimalItem_ScorchedResources_Clay.png",
+    "primalitem_scorchedresources_sand": "icons/Scorched Resources/PrimalItem_ScorchedResources_Sand.png",
+    "primalitem_scorchedresources_sulfur": "icons/Scorched Resources/PrimalItem_ScorchedResources_Sulfur.png",
+    "primalitem_scorchedresources_rawsalt": "icons/Scorched Resources/PrimalItem_ScorchedResources_RawSalt.png",
+    "_default": "icons/Scorched Resources/PrimalItem_ScorchedResources_Silk.png"
   },
   "Showcase Storage Skins": {
     "primalitemstructure_displayableanvilbench": "icons/Showcase Storage Skins/PrimalItemStructure_DisplayableAnvilBench.png",
@@ -464,6 +540,35 @@
     "primalitemskin_ssp": "icons/Super Spyglass Plus/PrimalItemSkin_SSP.png",
     "primalitemweapon_superspyglassplus": "icons/Super Spyglass Plus/PrimalItemWeapon_SuperSpyglassPlus.png",
     "primalitem_ssp_consumable": "icons/Super Spyglass Plus/PrimalItem_SSP_Consumable.png"
+  },
+  "The Sunken World Additions": {
+    "stethtsw_character_bp": "icons/The Sunken World Additions/StethTSW_Character_BP.png",
+    "henodustsw_character_bp": "icons/The Sunken World Additions/HenodusTSW_Character_BP.png",
+    "anomatsw_character_bp": "icons/The Sunken World Additions/AnomaTSW_Character_BP.png",
+    "prototsw_character_bp": "icons/The Sunken World Additions/ProtoTSW_Character_BP.png",
+    "ambulocetustsw_character_bp": "icons/The Sunken World Additions/AmbulocetusTSW_Character_BP.png",
+    "acrophysetertsw_character_bp": "icons/The Sunken World Additions/AcrophyseterTSW_Character_BP.png",
+    "sunfishtsw_character_bp": "icons/The Sunken World Additions/SunfishTSW_Character_BP.png",
+    "materpiscistsw_character_bp": "icons/The Sunken World Additions/MaterpiscisTSW_Character_BP.png",
+    "sphyrnatsw_character_bp": "icons/The Sunken World Additions/SphyrnaTSW_Character_BP.png",
+    "edestustsw_character_bp": "icons/The Sunken World Additions/EdestusTSW_Character_BP.png",
+    "urchintsw_character_bp": "icons/The Sunken World Additions/UrchinTSW_Character_BP.png",
+    "bothritsw_character_bp": "icons/The Sunken World Additions/BothriTSW_Character_BP.png",
+    "lepitsw_character_bp": "icons/The Sunken World Additions/LepiTSW_Character_BP.png",
+    "saurictsw_character_bp": "icons/The Sunken World Additions/SauricTSW_Character_BP.png",
+    "altispinaxtsw_character_bp": "icons/The Sunken World Additions/AltispinaxTSW_Character_BP.png",
+    "primalitemarmor_seascaleshirt": "icons/The Sunken World Additions/PrimalItemArmor_SeaScaleShirt.png",
+    "primalitemweapon_divingknife": "icons/The Sunken World Additions/PrimalItemWeapon_DivingKnife.png",
+    "primalitemstructure_floatingweavefoundation": "icons/The Sunken World Additions/PrimalItemStructure_FloatingWeaveFoundation.png",
+    "primalitemstructure_rotisserie": "icons/The Sunken World Additions/PrimalItemStructure_Rotisserie.png",
+    "primalitemstructure_cropplot_aquatic": "icons/The Sunken World Additions/PrimalItemStructure_CropPlot_Aquatic.png",
+    "primalitemconsumable_sharkrepellanttsw": "icons/The Sunken World Additions/PrimalItemConsumable_SharkRepellantTSW.png",
+    "primalitemconsumable_unigunkan": "icons/The Sunken World Additions/PrimalItemConsumable_UniGunkan.png",
+    "primalitemconsumable_seafoodgourmet": "icons/The Sunken World Additions/PrimalItemConsumable_SeafoodGourmet.png",
+    "primalitemconsumable_tropicalsmoothie": "icons/The Sunken World Additions/PrimalItemConsumable_TropicalSmoothie.png",
+    "primalitemconsumable_antitoxin": "icons/The Sunken World Additions/PrimalItemConsumable_Antitoxin.png",
+    "primalitemweapon_trident": "icons/The Sunken World Additions/PrimalItemWeapon_Trident.png",
+    "primalitemarmor_coralshirt": "icons/The Sunken World Additions/PrimalItemArmor_CoralShirt.png"
   },
   "TORANEKO MOD": {
     "primalitemskin_costume_toranekocostumeskin": "icons/TORANEKO MOD/PrimalItemSkin_Costume_ToranekoCostumeSkin.png"
@@ -1434,79 +1539,6 @@
     "primalitemtrophy_yutyhead": "icons/Wall'n'Floor Decor/PrimalItemTrophy_YutyHead.png",
     "primalitemtrophy_yutyhead_x": "icons/Wall'n'Floor Decor/PrimalItemTrophy_YutyHead_X.png"
   },
-  "Hatzegopteryx Kukulkan": {
-    "hatzeg_character_bp": "icons/Hatzegopteryx Kukulkan/Hatzeg_Character_BP.png",
-    "hatzeg_character_bp_aberrant": "icons/Hatzegopteryx Kukulkan/Hatzeg_Character_BP_Aberrant.png",
-    "hatzeg_character_bp_angel": "icons/Hatzegopteryx Kukulkan/Hatzeg_Character_BP_Angel.png",
-    "hatzeg_character_bp_devil": "icons/Hatzegopteryx Kukulkan/Hatzeg_Character_BP_Devil.png",
-    "primalitemarmor_hatzsaddle": "icons/Hatzegopteryx Kukulkan/PrimalItemArmor_HatzSaddle.png",
-    "primalitemarmor_hatzsaddle_platform": "icons/Hatzegopteryx Kukulkan/PrimalItemArmor_HatzSaddle_Platform.png",
-    "primalitemarmor_hatzsaddle_battle": "icons/Hatzegopteryx Kukulkan/PrimalItemArmor_HatzSaddle_Battle.png",
-    "primalitemtrophy_hatzeg": "icons/Hatzegopteryx Kukulkan/PrimalItemTrophy_Hatzeg.png",
-    "primalitemconsumable_crackedalphakarkinosclaw": "icons/Hatzegopteryx Kukulkan/PrimalItemConsumable_CrackedAlphaKarkinosClaw.png",
-    "primalitemskin_chibidino_hatzeg": "icons/Hatzegopteryx Kukulkan/PrimalItemSkin_ChibiDino_Hatzeg.png"
-  },
-  "Cyrus's Critters: Redpanda": {
-    "primalitemarmor_pandascarf": "icons/Cyrus's Critters Redpanda/PrimalItemArmor_PandaScarf.png",
-    "redpanda_character_bp": "icons/Cyrus's Critters Redpanda/RedPanda_Character_BP.png",
-    "snowredpanda_character_bp": "icons/Cyrus's Critters Redpanda/SnowRedPanda_Character_BP.png",
-    "jungleredpanda_character_bp": "icons/Cyrus's Critters Redpanda/JungleRedPanda_Character_BP.png",
-    "primalitemskin_chibidino_redpanda": "icons/Cyrus's Critters Redpanda/PrimalItemSkin_ChibiDino_Redpanda.png",
-    "primalitemconsumable_redpandaplatter": "icons/Cyrus's Critters Redpanda/PrimalItemConsumable_RedpandaPlatter.png"
-  },
-  "Feras Fauna: Foxes": {
-    "arcticfox_character_bp": "icons/Feras Fauna Foxes/ArcticFox_Character_BP.png",
-    "greatarcticfox_character_bp": "icons/Feras Fauna Foxes/GreatArcticfox_Character_BP.png",
-    "primalitemarmor_arcticfoxsaddle": "icons/Feras Fauna Foxes/PrimalItemArmor_ArcticfoxSaddle.png",
-    "primalitemcostume_bonegreaterarcticfox": "icons/Feras Fauna Foxes/PrimalItemCostume_BoneGreaterArcticFox.png",
-    "greaterredfox_character_bp": "icons/Feras Fauna Foxes/GreaterRedfox_Character_BP.png",
-    "megagreatarcticfox_character_bp": "icons/Feras Fauna Foxes/MegaGreatArcticfox_Character_BP.png",
-    "bonegreatarcticfox_character_bp": "icons/Feras Fauna Foxes/BoneGreatArcticfox_Character_BP.png"
-  },
-  "Oceania Content": {
-    "bubblefish": "icons/Oceania Content/Bubblefish.png",
-    "archelon": "icons/Oceania Content/Archelon.png",
-    "baculite": "icons/Oceania Content/Baculite.png",
-    "brachyura": "icons/Oceania Content/Brachyura.png",
-    "krono": "icons/Oceania Content/Krono.png",
-    "primalitemstructure_coralcampfire": "icons/Oceania Content/PrimalItemStructure_CoralCampfire.png",
-    "primalitemstructure_coralwaterbed": "icons/Oceania Content/PrimalItemStructure_CoralWaterBed.png",
-    "primalitemstructure_preservingbarrel": "icons/Oceania Content/PrimalItemStructure_PreservingBarrel.png",
-    "primalitemstructure_wallscarekron": "icons/Oceania Content/PrimalItemStructure_WallScarekron.png",
-    "dugong": "icons/Oceania Content/Dugong.png",
-    "primalitemstructure_coralnode": "icons/Oceania Content/PrimalItemStructure_CoralNode.png",
-    "primalitemconsumable_meatcake": "icons/Oceania Content/PrimalItemConsumable_MeatCake.png",
-    "primalitem_weapontrappingnet": "icons/Oceania Content/PrimalItem_WeaponTrappingNet.png"
-  },
-  "The Sunken World Additions": {
-    "stethtsw_character_bp": "icons/The Sunken World Additions/StethTSW_Character_BP.png",
-    "henodustsw_character_bp": "icons/The Sunken World Additions/HenodusTSW_Character_BP.png",
-    "anomatsw_character_bp": "icons/The Sunken World Additions/AnomaTSW_Character_BP.png",
-    "prototsw_character_bp": "icons/The Sunken World Additions/ProtoTSW_Character_BP.png",
-    "ambulocetustsw_character_bp": "icons/The Sunken World Additions/AmbulocetusTSW_Character_BP.png",
-    "acrophysetertsw_character_bp": "icons/The Sunken World Additions/AcrophyseterTSW_Character_BP.png",
-    "sunfishtsw_character_bp": "icons/The Sunken World Additions/SunfishTSW_Character_BP.png",
-    "materpiscistsw_character_bp": "icons/The Sunken World Additions/MaterpiscisTSW_Character_BP.png",
-    "sphyrnatsw_character_bp": "icons/The Sunken World Additions/SphyrnaTSW_Character_BP.png",
-    "edestustsw_character_bp": "icons/The Sunken World Additions/EdestusTSW_Character_BP.png",
-    "urchintsw_character_bp": "icons/The Sunken World Additions/UrchinTSW_Character_BP.png",
-    "bothritsw_character_bp": "icons/The Sunken World Additions/BothriTSW_Character_BP.png",
-    "lepitsw_character_bp": "icons/The Sunken World Additions/LepiTSW_Character_BP.png",
-    "saurictsw_character_bp": "icons/The Sunken World Additions/SauricTSW_Character_BP.png",
-    "altispinaxtsw_character_bp": "icons/The Sunken World Additions/AltispinaxTSW_Character_BP.png",
-    "primalitemarmor_seascaleshirt": "icons/The Sunken World Additions/PrimalItemArmor_SeaScaleShirt.png",
-    "primalitemweapon_divingknife": "icons/The Sunken World Additions/PrimalItemWeapon_DivingKnife.png",
-    "primalitemstructure_floatingweavefoundation": "icons/The Sunken World Additions/PrimalItemStructure_FloatingWeaveFoundation.png",
-    "primalitemstructure_rotisserie": "icons/The Sunken World Additions/PrimalItemStructure_Rotisserie.png",
-    "primalitemstructure_cropplot_aquatic": "icons/The Sunken World Additions/PrimalItemStructure_CropPlot_Aquatic.png",
-    "primalitemconsumable_sharkrepellanttsw": "icons/The Sunken World Additions/PrimalItemConsumable_SharkRepellantTSW.png",
-    "primalitemconsumable_unigunkan": "icons/The Sunken World Additions/PrimalItemConsumable_UniGunkan.png",
-    "primalitemconsumable_seafoodgourmet": "icons/The Sunken World Additions/PrimalItemConsumable_SeafoodGourmet.png",
-    "primalitemconsumable_tropicalsmoothie": "icons/The Sunken World Additions/PrimalItemConsumable_TropicalSmoothie.png",
-    "primalitemconsumable_antitoxin": "icons/The Sunken World Additions/PrimalItemConsumable_Antitoxin.png",
-    "primalitemweapon_trident": "icons/The Sunken World Additions/PrimalItemWeapon_Trident.png",
-    "primalitemarmor_coralshirt": "icons/The Sunken World Additions/PrimalItemArmor_CoralShirt.png"
-  },
   "Wyvern Pets": {
     "wyvern_pet_fire_character_bp": "icons/Wyvern Pets/Wyvern_Pet_Fire_Character_BP.png",
     "wyvern_pet_ice_character_bp": "icons/Wyvern Pets/Wyvern_Pet_Ice_Character_BP.png",
@@ -1520,15 +1552,6 @@
     "primalitemarmor_saddle_wyvern_pet": "icons/Wyvern Pets/PrimalItemArmor_Saddle_Wyvern_Pet.png",
     "_default": "icons/Wyvern Pets/Wyvern_Pet_Fire_Character_BP.png"
   },
-  "Scorched Resources": {
-    "primalitem_scorchedresources_silk": "icons/Scorched Resources/PrimalItem_ScorchedResources_Silk.png",
-    "primalitem_scorchedresources_cactussap": "icons/Scorched Resources/PrimalItem_ScorchedResources_CactusSap.png",
-    "primalitem_scorchedresources_clay": "icons/Scorched Resources/PrimalItem_ScorchedResources_Clay.png",
-    "primalitem_scorchedresources_sand": "icons/Scorched Resources/PrimalItem_ScorchedResources_Sand.png",
-    "primalitem_scorchedresources_sulfur": "icons/Scorched Resources/PrimalItem_ScorchedResources_Sulfur.png",
-    "primalitem_scorchedresources_rawsalt": "icons/Scorched Resources/PrimalItem_ScorchedResources_RawSalt.png",
-    "_default": "icons/Scorched Resources/PrimalItem_ScorchedResources_Silk.png"
-  },
   "Z-Variants Otter Additions (Crossplay)": {
     "z_pandaotter_character_bp": "icons/Z-Variants Otter Additions (Crossplay)/Z_PandaOtter_Character_BP.png",
     "z_redpandaotter_character_bp": "icons/Z-Variants Otter Additions (Crossplay)/Z_RedPandaOtter_Character_BP.png",
@@ -1539,24 +1562,5 @@
     "z_spottedotter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_SpottedOtter_Character_BP_ASA.png",
     "z_ferretotter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_FerretOtter_Character_BP_ASA.png",
     "_default": "icons/Z-Variants Otter Additions (Crossplay)/Z_PandaOtter_Character_BP.png"
-  },
-  "Forgotten Fauna Continued: Monolophosaurus": {
-    "mono_character_bp": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP.png",
-    "mono_character_bp_cave": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP_Cave.png",
-    "mono_character_bp_scorched": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP_Scorched.png",
-    "mono_character_bp_aberrant": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP_Aberrant.png",
-    "mono_character_bp_alpha": "icons/Forgotten Fauna Continued Monolophosaurus/Mono_Character_BP_Alpha.png",
-    "primalitemarmor_monosaddle": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemArmor_MonoSaddle.png",
-    "primalitemarmor_monosaddleblade": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemArmor_MonoSaddleBlade.png",
-    "primalitemarmor_monosaddleshield": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemArmor_MonoSaddleShield.png",
-    "primalitemconsumable_monolophobile": "icons/Forgotten Fauna Continued Monolophosaurus/PrimalItemConsumable_MonolophoBile.png"
-  },
-  "ArkNav": {
-    "primalitem_arknavconfigurator": "icons/ArkNav/PrimalItem_ArkNavConfigurator.png",
-    "_default": "icons/ArkNav/PrimalItem_ArkNavConfigurator.png"
-  },
-  "Bear Skin": {
-    "primalitemskin_costume_bearskin": "icons/Bear Skin/PrimalItemSkin_Costume_BearSkin.png",
-    "_default": "icons/Bear Skin/PrimalItemSkin_Costume_BearSkin.png"
   }
 }
