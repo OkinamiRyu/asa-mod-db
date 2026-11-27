@@ -12,14 +12,14 @@
   <script>
     (function () {
       try {
-        var saved = localStorage.getItem('asa_mod_db_theme');
+        var saved = localStorage.getItem('asa_mod_db_theme_v2');
         document.documentElement.dataset.theme = saved === 'light' ? 'light' : 'dark';
       } catch (e) {
         document.documentElement.dataset.theme = 'dark';
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261127-2" />
+  <link rel="stylesheet" href="styles.css?v=20261127-3" />
 </head>
 <body>
   <header class="site-header">
@@ -1224,6 +1224,6 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
     </div>
   </footer>
 
-  <script src="app.js?v=20261127-2"></script>
+  <script src="app.js?v=20261127-3"></script>
 </body>
 </html>

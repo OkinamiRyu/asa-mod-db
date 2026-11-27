@@ -2,7 +2,7 @@
   'use strict';
 
   const PAGE_SIZE = 80;
-  const THEME_STORAGE_KEY = 'asa_mod_db_theme';
+  const THEME_STORAGE_KEY = 'asa_mod_db_theme_v2';
   const PIN_STORAGE_KEY = 'asa_mod_db_pins';
   const RECENT_STORAGE_KEY = 'asa_mod_db_recent';
   const VIEW_MODE_STORAGE_KEY = 'asa_mod_db_view_mode';
