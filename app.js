@@ -1102,10 +1102,11 @@
       return matched && matched.sheetType ? matched.sheetType : 'other';
     };
 
-    const counts = { item: 0, creature: 0, cosmetic: 0 };
+    const counts = { item: 0, creature: 0, cosmetic: 0, other: 0 };
     for (const m of mods) {
       const t = getModType(m);
       if (t in counts) counts[t]++;
+      else counts.other++;
     }
 
     if (els.modTypeFilterBar) {
@@ -1114,6 +1115,7 @@
         { id: 'item', label: `📦 アイテム・設備 (${counts.item})`, count: counts.item },
         { id: 'creature', label: `🐾 生物 (${counts.creature})`, count: counts.creature },
         { id: 'cosmetic', label: `✨ スキン (${counts.cosmetic})`, count: counts.cosmetic },
+        { id: 'other', label: `⚙ システム・UI (${counts.other})`, count: counts.other },
       ].filter((c) => c.id === '' || c.count > 0);
 
       els.modTypeFilterBar.innerHTML = chipDefs
@@ -1139,6 +1141,7 @@
       item: { cls: 'mod-type-item', label: '📦 アイテム' },
       creature: { cls: 'mod-type-creature', label: '🐾 生物' },
       cosmetic: { cls: 'mod-type-cosmetic', label: '✨ スキン' },
+      other: { cls: 'mod-type-other', label: '⚙ システム・UI' },
     };
 
     els.modsGrid.innerHTML = filtered

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T09:10:11.152Z",
+  "updatedAt": "2026-11-28T09:17:40.204Z",
   "installedMods": [
     {
       "name": "Super Spyglass Plus",
@@ -13,11 +13,11 @@
       "description": "家具、収納、制作設備、独自素材、料理、建築パーツなど、生活と拠点を豊かにする300種以上のアイテムを追加します。\n実用的な作業台や調理設備・収納から、部屋を彩る装飾家具まで幅広く収録されています。",
       "curseForgeId": "933785",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/muchstuffpack",
-      "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n325件の内訳は、以前同じファイルから抽出して「全アイテム」タブに載せた結果。\nエングラム名と PrimalItem 件数は Manifest_UFSFiles。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/muchstuffpack\nフォルダ: 933785_9442351"
+      "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\n件数・内訳は MuchStuffPack シート参照（現行396件）。\nエングラム名と PrimalItem 件数は Manifest_UFSFiles。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/muchstuffpack\nフォルダ: 933785_9442351"
     },
     {
       "name": "ArkNav",
-      "description": "GPS・コンパス・ミニマップのナビゲーション用 HUD を画面に追加します。\n緯度経度・マーカー・トライブメンバーの位置確認ができ、Alt+N でHUDの表示切替、Alt+M で大きな地図と設定メニューを開けます。",
+      "description": "ログイン時から画面に自動表示される GPS・コンパス・ミニマップのナビゲーション用 HUD を追加します。\n緯度経度・マーカー・トライブメンバーの位置確認ができ、キーマウはアイテム作成不要で Alt+N（HUD表示切替）／ Alt+M（大マップ＆設定メニュー）、コントローラーは専用リモコン「ArkNav Configurator」を作成して操作できます。",
       "curseForgeId": "933975",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/arknav",
       "notes": "ゲーム内表示名はファイル（.uplugin の FriendlyName）による。\nHUD の概要は .uplugin の Description。\n部品の内訳は Manifest_UFSFiles。\npreview_description.txt と CurseForge 公式ページも参照。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/arknav\nフォルダ: 933975_9419090"
@@ -7476,12 +7476,12 @@
           "craftStation": "",
           "toolUsed": "",
           "harvestSource": "",
-          "materials": "セメント、皮、金属のインゴット、水晶",
+          "materials": "",
           "enOriginal": "Adds an Spyglass that shows advanced information about most stuff you point it at.",
           "notes": "アセット: Spyglass/PrimalItemWeapon_SuperSpyglassPlus.uasset / エングラム: EngramEntry_SuperSpyglassPlus.uasset",
           "assetName": "PrimalItemWeapon_SuperSpyglassPlus",
           "usageType": "実用（機能あり）",
-          "specialAbility": "【効果・使い方】\n・対象に照準を向けるだけで、恐竜の詳細ステータス・突然変異・テイムに必要な餌・カラーリージョン・構造物・補給ドロップ情報などをHUD表示できる\n・通常の望遠鏡と同様にホットバーへセットして装備・使用する"
+          "specialAbility": "【効果・使い方】\n・対象に照準を向けるだけで、恐竜の詳細ステータス・突然変異・テイムに必要な餌・カラーリージョン・構造物・補給ドロップ情報などをHUD表示できる\n・通常の望遠鏡と同様にホットバーへセットして装備・使用する\n・主な操作：設定メニュー Alt + Home（コントローラー：□ / X 長押し等） ／ ターゲットロック切替：左クリック（近接攻撃キー） ／ ズーム：Alt + マウスホイール（リセット：Alt + 右クリック） ／ プレデタービジョン：Shift + F3 ／ ナイトビジョン：Shift + F4 ／ アウトライン：Shift + F5"
         },
         {
           "index": 2,
@@ -7500,7 +7500,7 @@
           "notes": "アセット: Spyglass/PrimalItemSkin_SSP.uasset / エングラム: EngramEntry_SSP_SpyglassSkin.uasset",
           "assetName": "PrimalItemSkin_SSP",
           "usageType": "見た目変更（スキン）",
-          "specialAbility": "【効果・使い方】\n・頭防具へスキンとして適用することで、武器枠を使わずにスーパースパイグラス(Super Spyglass Plus)の詳細HUD表示機能を利用できる"
+          "specialAbility": "【効果・使い方】\n・頭防具へスキンとして適用することで、武器枠を使わずにスーパースパイグラス(Super Spyglass Plus)の詳細HUD表示機能を利用できる\n・主な操作：設定メニュー Alt + Home（コントローラー：□ / X 長押し等） ／ プレデタービジョン：Shift + F3 ／ ナイトビジョン：Shift + F4 ／ アウトライン：Shift + F5"
         },
         {
           "index": 3,
@@ -7519,7 +7519,7 @@
           "notes": "アセット: Spyglass/PrimalItem_SSP_Consumable.uasset / エングラム: EngramEntry_SuperSpyglassPlus_Consumable.uasset",
           "assetName": "PrimalItem_SSP_Consumable",
           "usageType": "実用（機能あり）",
-          "specialAbility": "【効果・使い方】\n・インベントリまたはホットバーから使用（消費）すると、武器や頭防具スキンを使わずにスーパースパイグラス(Super Spyglass Plus)のHUD表示ON/OFFを切り替えられる"
+          "specialAbility": "【効果・使い方】\n・インベントリまたはホットバーから使用（消費）すると、武器や頭防具スキンを使わずにスーパースパイグラス(Super Spyglass Plus)のHUD表示ON/OFFを切り替えられる\n・主な操作：設定メニュー Alt + Home（コントローラー：□ / X 長押し等） ／ プレデタービジョン：Shift + F3 ／ ナイトビジョン：Shift + F4 ／ アウトライン：Shift + F5"
         }
       ]
     },
@@ -7534,19 +7534,19 @@
           "image": "",
           "enName": "ArkNav Configurator",
           "jaName": "アークナビ設定ツール(ArkNav Configurator)",
-          "description": "ミニマップ・コンパス・マーカー・トライブメンバー表示などのナビゲーションHUD(ArkNav)を設定するための専用リモコン。",
+          "description": "コントローラー操作でミニマップHUDの表示切替や設定メニューを開くための専用リモコン。\n※ArkNavのミニマップ・コンパスHUD自体はログインした時点で画面に自動表示されるため、キーマウ操作（Alt+N / Alt+M）の場合は作成不要です。",
           "category": "道具",
-          "obtainMethod": "エングラム作成",
+          "obtainMethod": "エングラム習得（Lv.0・コントローラー操作時のみ作成）",
           "dinoName": "",
           "craftStation": "インベントリ",
           "toolUsed": "",
           "harvestSource": "",
-          "materials": "わら",
+          "materials": "わら×1",
           "enOriginal": "Navigation HUD with configurable options, now controller friendly!",
           "notes": "アセット: ArkNav_Configurator/PrimalItem_ArkNavConfigurator.uasset / エングラム: EngramEntry_ArkNav_Configurator.uasset（ショートカット: Alt+N でHUD切替、Alt+M で大地図・メニュー）",
           "assetName": "PrimalItem_ArkNavConfigurator",
           "usageType": "実用（機能あり）",
-          "specialAbility": "【機能・操作】\n・GPS・コンパス・ミニマップ・大マップ・マーカー・トライブメンバー位置などの表示位置・サイズ・各種オプションをカスタマイズできる\n・キーマウ操作：Alt + N でミニマップ・コンパスHUDの表示切替 ／ Alt + M で大マップ＆設定メニューを開く\n・コントローラー操作：本アイテム（ArkNav Configurator）を使用することで設定メニューを開ける"
+          "specialAbility": "【機能・操作】\n・HUD表示：ログイン時からミニマップ・コンパス・現在座標が画面に自動表示されます。\n・キーマウ操作（作成不要）：Alt + N でHUD表示切替 ／ Alt + M で大マップ＆設定メニューを開く。\n・コントローラー操作：インベントリで「ArkNav Configurator」を作成して装備し、攻撃（R2 / RT）または照準（L2 / LT）でHUD表示切替・大マップ＆設定メニューを開きます。"
         }
       ]
     },

@@ -959,6 +959,12 @@ h3 {
   border: 1px solid var(--blue-border);
 }
 
+.mod-type-other {
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-strong);
+}
+
 .cf-badge {
   font-family: var(--font-mono);
   font-size: 0.78rem;
