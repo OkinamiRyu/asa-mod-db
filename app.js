@@ -1217,6 +1217,24 @@
     return `https://ark.wiki.gg/ja/wiki/Special:Search?search=${encodeURIComponent(query)}&go=Go`;
   }
 
+  function renderChipLabelHtml(labelText) {
+    const raw = String(labelText || '').trim();
+    if (!raw) return '';
+    const openIdx = raw.search(/[（(]/);
+    if (openIdx <= 0) {
+      return `<span class="ref-chip-text"><span class="ref-chip-main">${escapeHtml(raw)}</span></span>`;
+    }
+    let mainPart = raw.slice(0, openIdx).trim();
+    let rest = raw.slice(openIdx).trim();
+    const qtyMatch = rest.match(/^([\s\S]*[）)])\s*([×xX＊*]\s*\d+[^\s]*|\d+個)$/);
+    if (qtyMatch) {
+      rest = qtyMatch[1].trim();
+      mainPart = `${mainPart} ${qtyMatch[2].trim()}`;
+    }
+    const subNormalized = rest.replace(/（/g, '(').replace(/）/g, ')');
+    return `<span class="ref-chip-text"><span class="ref-chip-main">${escapeHtml(mainPart)}</span><span class="ref-chip-sub">${escapeHtml(subNormalized)}</span></span>`;
+  }
+
   function renderReferenceChipsHtml(rawText, item) {
     const segments = splitRespectingParens(rawText);
     if (segments.length === 0) return escapeHtml(rawText);
@@ -1225,13 +1243,13 @@
       .map((seg) => {
         const modMatch = findReferencedModItem(seg, item._modId, item._globalIndex);
         if (modMatch) {
-          return `<button type="button" class="ref-chip ref-chip-mod" data-open-sub="${modMatch._globalIndex}" title="${escapeHtml(modMatch.jaName || modMatch.enName)} をサブ画面で開く"><span>${escapeHtml(seg)}</span><span class="ref-badge">MOD詳細</span></button>`;
+          return `<button type="button" class="ref-chip ref-chip-mod" data-open-sub="${modMatch._globalIndex}" title="${escapeHtml(modMatch.jaName || modMatch.enName)} をサブ画面で開く">${renderChipLabelHtml(seg)}<span class="ref-badge">MOD詳細</span></button>`;
         }
         if (isNonLinkablePhrase(seg)) {
-          return `<span class="ref-chip ref-chip-plain">${escapeHtml(seg)}</span>`;
+          return `<span class="ref-chip ref-chip-plain">${renderChipLabelHtml(seg)}</span>`;
         }
         const wikiUrl = buildWikiSearchUrl(seg);
-        return `<a class="ref-chip ref-chip-wiki" href="${escapeHtml(wikiUrl)}" target="_blank" rel="noopener noreferrer" title="ARK日本語Wikiで開く"><span>${escapeHtml(seg)}</span><span class="ref-badge">Wiki ↗</span></a>`;
+        return `<a class="ref-chip ref-chip-wiki" href="${escapeHtml(wikiUrl)}" target="_blank" rel="noopener noreferrer" title="ARK日本語Wikiで開く">${renderChipLabelHtml(seg)}<span class="ref-badge">Wiki ↗</span></a>`;
       })
       .join('')}</div>`;
   }
@@ -1241,7 +1259,7 @@
     return `<div class="ref-chips">${shown
       .map(
         (it) =>
-          `<button type="button" class="ref-chip ref-chip-mod" data-open-sub="${it._globalIndex}" title="${escapeHtml(it.jaName || it.enName)} をサブ画面で開く"><span>${escapeHtml(it.jaName || it.enName)}</span><span class="ref-badge">MOD詳細</span></button>`
+          `<button type="button" class="ref-chip ref-chip-mod" data-open-sub="${it._globalIndex}" title="${escapeHtml(it.jaName || it.enName)} をサブ画面で開く">${renderChipLabelHtml(it.jaName || it.enName)}<span class="ref-badge">MOD詳細</span></button>`
       )
       .join('')}</div>`;
   }

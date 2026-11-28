@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T02:05:17.801Z",
+  "updatedAt": "2026-11-28T02:38:24.025Z",
   "installedMods": [
     {
       "name": "Super Spyglass Plus",
@@ -373,7 +373,8 @@
           "enOriginal": "Place materials here to craft the newly added furniture for your base!",
           "notes": "アセット: CustomStructures/CarpenterBench/PrimalItemStructure_CarpenterBench.uasset。 アイコン: CustomStructures/CarpenterBench/carpenter-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_CarpenterBench",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・素材をここに置いて、新たに追加された家具をクラフトしよう！"
         },
         {
           "index": 7,
@@ -391,7 +392,8 @@
           "enOriginal": "Stores rain and use it for your crops anytime! Refills automatically.",
           "notes": "アセット: CustomStructures/OldWaterWell/PrimalItemStructure_OldWaterWell.uasset。 アイコン: CustomStructures/OldWaterWell/oldwaterwell-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_OldWaterWell",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【給水・設備機能】\n・雨水を貯めて、作物にいつでも使える！自動で再充填される。"
         },
         {
           "index": 8,
@@ -445,7 +447,8 @@
           "enOriginal": "A usefull tool in the kitchen to prepare food the clean way.",
           "notes": "アセット: CustomStructures/CuttingBoard/PrimalItemStructure_CuttingBoard.uasset。 アイコン: CustomStructures/CuttingBoard/cuttingboard-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 原文 typo「usefull」は useful と解釈して訳した（英語原文列はファイルどおり）。",
           "assetName": "PrimalItemStructure_CuttingBoard",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・清潔に料理の下ごしらえをするための、便利な台所道具。"
         },
         {
           "index": 11,
@@ -715,7 +718,8 @@
           "enOriginal": "This simple press is used to crunch berries into delicious juice.",
           "notes": "アセット: CustomStructures/OldFruitPress/PrimalItemStructure_OldFruitPress.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_OldFruitPress",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・この簡易な圧搾機は、ベリーを潰しておいしいジュースにするために使う。"
         },
         {
           "index": 26,
@@ -823,7 +827,8 @@
           "enOriginal": "A special mineshaft, built to extract resources from the core of earth.",
           "notes": "アセット: CustomStructures/CoalMine/PrimalItemStructure_CoalMine.uasset。 アイコン: CustomStructures/CoalMine/coalmine-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_CoalMine",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・地球の核から資源を取り出すために作られた、特別な坑道。"
         },
         {
           "index": 32,
@@ -949,7 +954,8 @@
           "enOriginal": "Perfect for cooking meat, staying warm, and providing light.",
           "notes": "アセット: Epoch_Medieval/CampCookingPlace/PrimalItemStructure_OutdoorCookingPlace.uasset。 アイコン: Epoch_Medieval/CampCookingPlace/outdoorcooking-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_OutdoorCookingPlace",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【調理設備・用途】\n・肉を調理したり、暖を取ったり、明かりを取ったりするのに最適。"
         },
         {
           "index": 39,
@@ -985,7 +991,8 @@
           "enOriginal": "This machine turns milk based liquids into butter, or cheese.",
           "notes": "アセット: CustomStructures/ButterChurn/PrimalItemStructure_ButterChurn.uasset。 アイコン: CustomStructures/ButterChurn/butterchurn-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ButterChurn",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・この機械は、乳を主とした液体をバターやチーズ（Cheese）に変える。"
         },
         {
           "index": 41,
@@ -1183,7 +1190,8 @@
           "enOriginal": "Use this on a human to extract pure clean blood. Used for making potions and medicine.",
           "notes": "アセット: Craft_Items/Resource_Blueprints/PrimalItem_AdvancedBloodExtractor.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItem_AdvancedBloodExtractor",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【機能・用途】\n・人間に使って、きれいで純粋な血を採取する。ポーションや薬を作るために使われる。"
         },
         {
           "index": 52,
@@ -1255,7 +1263,8 @@
           "enOriginal": "Grind up crafted items and certain resources!",
           "notes": "アセット: CustomStructures/PrimitiveWorkStations/PrimalItemStructure_PrimitiveIndustrialGrinder.uasset。 アイコン: CustomStructures/PrimitiveWorkStations/primitive_grinder-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_PrimitiveIndustrialGrinder",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・クラフトしたアイテムや、特定の資源を粉砕する！"
         },
         {
           "index": 56,
@@ -1273,7 +1282,8 @@
           "enOriginal": "Keeps you warm while providing good protection due to the leather layers.",
           "notes": "アセット: Craft_Items/Clothing/PrimalItemArmor_ReinforcedHideShirt.uasset。 アイコンを抽出できず。理由: 候補として当たったアイコンが別アイテムのものとしか確認できず、誤った画像を載せないため不採用。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemArmor_ReinforcedHideShirt",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【防具効果】\n・皮革の層のおかげで、保温しながらよい防護を提供する。"
         },
         {
           "index": 57,
@@ -1381,7 +1391,8 @@
           "enOriginal": "For producing cement more and faster its handy to have a mixer!",
           "notes": "アセット: CustomStructures/CementMixer/PrimalItemStructure_CementMixer.uasset。 アイコン: CustomStructures/CementMixer/cementmixer-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_CementMixer",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・セメントをより多く、より速く作るには、ミキサーがあると便利だ！"
         },
         {
           "index": 63,
@@ -1417,7 +1428,8 @@
           "enOriginal": "A special pitchfork to harvest manure from piles.",
           "notes": "アセット: FarmUpdate/Items/PrimalItem_WeapFarmPitchfork.uasset。 アイコン: FarmUpdate/Plots/pitchfork-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItem_WeapFarmPitchfork",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【ツール・武器効果】\n・堆肥の山から肥料を収穫するための特別なピッチフォーク。"
         },
         {
           "index": 65,
@@ -2155,7 +2167,8 @@
           "enOriginal": "A smaller version of a normal fridge.",
           "notes": "アセット: CustomStructures/MiniFridge/PrimalItemStructure_MiniFridge.uasset。 アイコン: CustomStructures/MiniFridge/minifridge-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MiniFridge",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【保管・冷蔵機能】\n・通常の冷蔵庫の小型版。"
         },
         {
           "index": 106,
@@ -2227,7 +2240,8 @@
           "enOriginal": "Place materials here to craft the newly added items.",
           "notes": "アセット: Epoch_Medieval/MedievalAnvil/PrimalItemStructure_MiniAnvil.uasset。 アイコン: Epoch_Medieval/MedievalAnvil/minianvil-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MiniAnvil",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・新たに追加されたアイテムをクラフトするために、ここに素材を置く。"
         },
         {
           "index": 110,
@@ -2317,7 +2331,8 @@
           "enOriginal": "Perfect for cooking meat in bulk, staying warm, and providing light. Powered by cookingoil.",
           "notes": "アセット: CustomStructures/PrimitiveWorkStations/PrimalItemStructure_PrimitiveIndustrialGrill.uasset。 アイコン: CustomStructures/PrimitiveWorkStations/primitive_grill-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 原文「cookingoil」は cooking oil と解釈して訳した（英語原文列はファイルどおり）。",
           "assetName": "PrimalItemStructure_PrimitiveIndustrialGrill",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【調理設備・用途】\n・肉を大量に調理したり、暖を取ったり、明かりを取ったりするのに最適。調理油（Cooking Oil）で動く。"
         },
         {
           "index": 115,
@@ -2335,7 +2350,8 @@
           "enOriginal": "Burns Fuel Rods to keep your food Cool! This is pre war science!",
           "notes": "アセット: CustomStructures/UraniumFridge/PrimalItemStructure_UraniumFridge.uasset。 アイコン: CustomStructures/UraniumFridge/plutoniumfridge-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_UraniumFridge",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【保管・冷蔵機能】\n・燃料棒（Fuel Rod）を燃やして、食料を冷たく保つ！これは戦前の科学だ！"
         },
         {
           "index": 116,
@@ -2425,7 +2441,8 @@
           "enOriginal": "A small Oil Pump, which will extract Oil when placed. Takes damage over time.",
           "notes": "アセット: CustomStructures/OilPump_Small/PrimalItemStructure_OilPump_Small.uasset。 アイコン: CustomStructures/OilPump_Small/oilpump-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_OilPump_Small",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【自動採取機能】\n・設置すると石油を抽出する、小型のオイルポンプ。時間とともに損傷する。"
         },
         {
           "index": 121,
@@ -2533,7 +2550,8 @@
           "enOriginal": "A Cement PastePackage. Use it to get the stuff inside.",
           "notes": "アセット: Trading/PrimalItemResource_TradePackageChitinPaste.uasset。 エングラム識別子は TradeChitinPaste、アイテムファイル名は PrimalItemResource_TradePackageChitinPaste.uasset。 アイコンを抽出できず。理由: 候補として当たったアイコンが別アイテムのものとしか確認できず、誤った画像を載せないため不採用。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemResource_TradePackageChitinPaste",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【アイテム用途】\n・セメントペーストのパッケージ。中身を取り出すために使う。"
         },
         {
           "index": 127,
@@ -2641,7 +2659,8 @@
           "enOriginal": "Put grapes and fermenting paste into the barrel to start the fermenting process. Then you can start making wine.",
           "notes": "アセット: CustomStructures/WineBarrel/PrimalItemStructure_WineBarrel.uasset。 アイコン: CustomStructures/WineBarrel/winebarrel-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_WineBarrel",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【調理設備・用途】\n・ブドウと発酵ペースト（Fermenting Paste）を樽に入れて発酵を始める。その後、ワインを作り始められる。"
         },
         {
           "index": 133,
@@ -2659,7 +2678,8 @@
           "enOriginal": "Place materials in this to transmute chemical substances with extreme efficiency!",
           "notes": "アセット: CustomStructures/PrimitiveWorkStations/PrimalItemStructure_PrimitiveChemBench.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_PrimitiveChemBench",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・ここに素材を置いて、化学物質をきわめて効率よく変換する！"
         },
         {
           "index": 134,
@@ -2731,7 +2751,8 @@
           "enOriginal": "A modernised powerful sword made with enhanced materials.",
           "notes": "アセット: Weapons/EpochSword/PrimalItem_WeaponEpochSword.uasset。 アイコン: Weapons/EpochSword/EpochSword_Icon.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItem_WeaponEpochSword",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【ツール・武器効果】\n・強化素材で作られた、近代化された強力な剣。"
         },
         {
           "index": 138,
@@ -2821,7 +2842,8 @@
           "enOriginal": "Requires Wood, Thatch, or Sparkpowder to activate.  Put unrefined resources in this to refine them to valuable coins and jewelry.",
           "notes": "アセット: CustomStructures/JewelrySmithy/PrimalItemStructure_JewelrySmithy.uasset。 アイコン: CustomStructures/JewelrySmithy/jewelrysmithy-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_JewelrySmithy",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・作動には木材、わら、または火花粉が必要。未精製の資源を入れて、貴重なコインや宝飾品に精製する。"
         },
         {
           "index": 143,
@@ -2929,7 +2951,8 @@
           "enOriginal": "A Bone Package. Use it to get the stuff inside.",
           "notes": "アセット: Trading/PrimalItemResource_TradePackageBone.uasset。 エングラム識別子は TradeBone、アイテムファイル名は PrimalItemResource_TradePackageBone.uasset。 アイコン: Trading/Icons/Icon_TradePackageBone.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemResource_TradePackageBone",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【アイテム用途】\n・骨のパッケージ。中身を取り出すために使う。"
         },
         {
           "index": 149,
@@ -3055,7 +3078,8 @@
           "enOriginal": "Put various ingredients in here to cook the MuchStuffPack Recipes.  Must contain basic fuel to light the fire.",
           "notes": "アセット: CustomStructures/OldStove/PrimalItemStructure_OldStove.uasset。 アイコン: CustomStructures/OldStove/oldstove-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_OldStove",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【調理設備・用途】\n・さまざまな材料を入れて、MuchStuffPack のレシピを調理する。火をつけるには基本的な燃料が入っている必要がある。"
         },
         {
           "index": 156,
@@ -3325,7 +3349,8 @@
           "enOriginal": "Requires Wood, Thatch, or Sparkpowder to activate.  Put unrefined resources in this to refine them.",
           "notes": "アセット: CustomStructures/GreaterForge/PrimalItemStructure_GreaterForge.uasset。 アイコン: CustomStructures/GreaterForge/greaterforge-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_GreaterForge",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・作動には木材、わら、または火花粉が必要。未精製の資源を入れて精製する。"
         },
         {
           "index": 171,
@@ -3361,7 +3386,8 @@
           "enOriginal": "A very complex potion made out of various rare ingredients. Will let you carry more metal, uranium and stone.",
           "notes": "アセット: FarmUpdate/Items/PrimalItemConsumable_FeatherWeightPotion.uasset。 アイコンを抽出できず。理由: DXT5がuasset内のみで、誤デコードのおそれがあるため不採用。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemConsumable_FeatherWeightPotion",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【効果・用途】\n・さまざまな稀少な材料から作った、非常に複雑なポーション。金属、ウラン（Uranium）、石をより多く運べるようになる。"
         },
         {
           "index": 173,
@@ -3379,7 +3405,8 @@
           "enOriginal": "A much more efficient arrow than the tranq arrow, but is more expensive.",
           "notes": "アセット: Ammunition/SleepingArrow/PrimalItemAmmo_ArrowSleep.uasset。 アイコンを抽出できず。理由: arrow_icon_goodknight は Good Night Arrow 用で、Sleeping Arrow とは確認できないため不採用。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemAmmo_ArrowSleep",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【弾薬効果・用途】\n・麻酔矢よりもはるかに効率がよいが、より高価である。"
         },
         {
           "index": 174,
@@ -3487,7 +3514,8 @@
           "enOriginal": "The strength of a vampire gives you enormous stats for speed, melee damage. You loose health over time and food.",
           "notes": "アセット: Epoch_Medieval/Crafts/PrimalItemConsumable_VampireStew.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemConsumable_VampireStew",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【効果・用途】\n・ヴァンパイアの力が、速度と近接ダメージに大きなステータスを与える。時間とともに体力と食料を失う。"
         },
         {
           "index": 180,
@@ -3505,7 +3533,8 @@
           "enOriginal": "Clean kitchenware here.",
           "notes": "アセット: Epoch_Primitive/KitchenSink/PrimalItemStructure_KitchenSink.uasset。 アイコン: Epoch_Primitive/KitchenSink/kitchensink-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_KitchenSink",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【調理設備・用途】\n・ここで食器を洗う。"
         },
         {
           "index": 181,
@@ -3577,7 +3606,8 @@
           "enOriginal": "Can only used with compound bow.This arrow gives you instant nightmares and puts you to sleep very fast, or other creatures. Crafting process is more complex.",
           "notes": "アセット: Ammunition/GoodNightArrow/PrimalItemAmmo_ArrowGoodNight.uasset。 アイコン: Ammunition/GoodNightArrow/arrow_icon_goodknight.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 原文「Can only used」は Can only be used と解釈して訳した（英語原文列はファイルどおり）。",
           "assetName": "PrimalItemAmmo_ArrowGoodNight",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【弾薬効果・用途】\n・コンパウンドボウでのみ使える。この矢はたちまち悪夢を見せ、自分やほかの生物を非常に早く眠らせる。製作工程はより複雑である。"
         },
         {
           "index": 185,
@@ -3649,7 +3679,8 @@
           "enOriginal": "Prepare special seeds and craft garden items here.",
           "notes": "アセット: FarmUpdate/PrimalItemStructure_HorticultureBench.uasset。 アイコン: FarmUpdate/Plots/horticulture_bench-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_HorticultureBench",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・ここで特別な種を用意し、園芸アイテムをクラフトする。"
         },
         {
           "index": 189,
@@ -3847,7 +3878,8 @@
           "enOriginal": "A big wooden construction to deal with heavy stone objects.",
           "notes": "アセット: CustomStructures/StoneQuarry/PrimalItemStructure_StoneQuarry.uasset。 アイコン: CustomStructures/StoneQuarry/stonequarry-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_StoneQuarry",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・重い石の物体を扱うための、大きな木製の構造物。"
         },
         {
           "index": 200,
@@ -3919,7 +3951,8 @@
           "enOriginal": "Refines resources in bulk. Powered by gasoline.",
           "notes": "アセット: CustomStructures/PrimitiveWorkStations/PrimalItemStructure_PrimitiveIndustrialForge.uasset。 アイコン: CustomStructures/PrimitiveWorkStations/primitiveforge-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_PrimitiveIndustrialForge",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・資源を大量に精製する。ガソリンで動く。"
         },
         {
           "index": 204,
@@ -3937,7 +3970,8 @@
           "enOriginal": "Cures diseases with those pills..",
           "notes": "アセット: Craft_Items/Resource_Blueprints/PrimalItemConsumable_Antibiotics.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemConsumable_Antibiotics",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【アイテム効果】\n・この錠剤で病気を治す……。"
         },
         {
           "index": 205,
@@ -4027,7 +4061,8 @@
           "enOriginal": "A wooden water mill that can produce elictricity with the power of water.",
           "notes": "アセット: CustomStructures/WaterMill/PrimalItemStructure_WaterMill.uasset。 アイコン: CustomStructures/WaterMill/watermill-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 原文 typo「elictricity」は electricity と解釈して訳した（英語原文列はファイルどおり）。",
           "assetName": "PrimalItemStructure_WaterMill",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【発電・設備機能】\n・水の力で電気を作れる木製の水車（Water Mill）。"
         },
         {
           "index": 210,
@@ -4063,7 +4098,8 @@
           "enOriginal": "Stores a lot of rain or manually deposited water .",
           "notes": "アセット: CustomStructures/ModernWaterTank/PrimalItemStructure_ModernWaterTank.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ModernWaterTank",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【給水・設備機能】\n・大量の雨水、または手で入れた水を貯める。"
         },
         {
           "index": 212,
@@ -4081,7 +4117,8 @@
           "enOriginal": "Put various ingredients with water in this to make various breads.  Must contain basic fuel to light the fire.",
           "notes": "アセット: CustomStructures/BakeryOven/PrimalItemStructure_BakeryOven.uasset。 アイコン: CustomStructures/BakeryOven/bakeryoven-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_BakeryOven",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【調理設備・用途】\n・さまざまな材料と水を入れて、いろいろなパンを作る。火をつけるには基本的な燃料が入っている必要がある。"
         },
         {
           "index": 213,
@@ -4153,7 +4190,8 @@
           "enOriginal": "Turns raw hide into a durable leather for further production and clothing. Needs Animal Oil to work!",
           "notes": "アセット: CustomStructures/TanningRack/PrimalItemStructure_TanningRack.uasset。 アイコン: CustomStructures/TanningRack/tanningrack-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_TanningRack",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・生皮を、その後の生産や衣類向けの耐久性のある革に変える。動かすには動物油（Animal Oil）が必要！"
         },
         {
           "index": 217,
@@ -4189,7 +4227,8 @@
           "enOriginal": "The spinning wheel is used to work with threads",
           "notes": "アセット: CustomStructures/SpinningWheel/PrimalItemStructure_SpinningWheel.uasset。 アイコン: CustomStructures/SpinningWheel/spinnignwheel-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_SpinningWheel",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・紡ぎ車（Spinning Wheel）は、糸（Thread）を扱うために使う。"
         },
         {
           "index": 219,
@@ -4243,7 +4282,8 @@
           "enOriginal": "A simple construction that helps grinding wheat into flour faster.",
           "notes": "アセット: CustomStructures/WindMill/PrimalItemStructure_WindMill.uasset。 アイコン: CustomStructures/WindMill/windmill-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_WindMill",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・小麦（Wheat）を小麦粉（Flour）に挽くのを速くする、シンプルな装置。"
         },
         {
           "index": 222,
@@ -4333,7 +4373,8 @@
           "enOriginal": "Much skill is needed to make nice looking structures out of sandstone and water. Nobody is born a master!",
           "notes": "アセット: CustomStructures/PotteryWorkshop/PrimalItemStructure_PotteryWorkshop.uasset。 アイコン: CustomStructures/PotteryWorkshop/potteryworkshop-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_PotteryWorkshop",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・砂岩（Sand Stone）と水からきれいな構造物を作るには、かなりの技能が必要だ。生まれながらの達人はいない！"
         },
         {
           "index": 227,
@@ -4459,7 +4500,8 @@
           "enOriginal": "Cooks large quantities of soups, stews, and dyes quickly.  Requires cooking oil as fuel.",
           "notes": "アセット: CustomStructures/PrimitiveWorkStations/PrimalItemStructure_PrimitiveIndustrialCooker.uasset。 アイコン: CustomStructures/PrimitiveWorkStations/primitivecooker-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_PrimitiveIndustrialCooker",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【調理設備・用途】\n・大量のスープ、シチュー、染料をすばやく調理する。燃料として調理油（Cooking Oil）が必要。"
         },
         {
           "index": 234,
@@ -4495,7 +4537,8 @@
           "enOriginal": "Perfect for cooking meat in very high amounts. Provides heat as well. Needs Power or Gasoline.",
           "notes": "アセット: CustomStructures/ModernBBQBarrel/PrimalItemStructure_ModernBBQGrill.uasset。 アイコン: CustomStructures/ModernBBQBarrel/modernbbqgrill-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ModernBBQGrill",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【調理設備・用途】\n・非常に大量の肉を調理するのに最適。熱も供給する。電力またはガソリンが必要。"
         },
         {
           "index": 236,
@@ -4927,7 +4970,8 @@
           "enOriginal": "Place materials here to start crafting strong items.",
           "notes": "アセット: CustomStructures/WeldingBench/PrimalItemStructure_WeldingBench.uasset。 アイコン: CustomStructures/WeldingBench/Weldingbench-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_WeldingBench",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・強いアイテムのクラフトを始めるために、ここに素材を置く。"
         },
         {
           "index": 260,
@@ -4981,7 +5025,8 @@
           "enOriginal": "This meat grinder can make a fine paste ot of raw meat.",
           "notes": "アセット: CustomStructures/MeatGrinder/PrimalItemStructure_Meatgrinder.uasset。 アイコン: CustomStructures/MeatGrinder/grinder-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 原文 typo「ot of」は out of と解釈して訳した（英語原文列はファイルどおり）。",
           "assetName": "PrimalItemStructure_Meatgrinder",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・このミートグラインダー（Meat Grinder）は、生肉から細かいペーストを作れる。"
         },
         {
           "index": 263,
@@ -4999,7 +5044,8 @@
           "enOriginal": "A special fireplace for a kitchen, very fast in processing meat and other food.",
           "notes": "アセット: Epoch_Primitive/KitchenFireplace/PrimalItemStructure_KitchenFirePlace.uasset。 アイコン: Epoch_Primitive/KitchenFireplace/kitchenfireplace-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_KitchenFirePlace",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【調理設備・用途】\n・台所向けの特別な暖炉。肉やほかの食料の処理が非常に速い。"
         },
         {
           "index": 264,
@@ -5341,7 +5387,8 @@
           "enOriginal": "A fire arrow which will enlight your enemy.",
           "notes": "アセット: Ammunition/FireArrow/PrimalItemAmmo_FireArrow.uasset。 アイコンを抽出できず。理由: arrow_icon_goodknight は Good Night Arrow 用で、Fire Arrow とは確認できないため不採用。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 原文「enlight」は ignite / light の意として訳した（英語原文列はファイルどおり）。",
           "assetName": "PrimalItemAmmo_FireArrow",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【弾薬効果・用途】\n・敵を燃え上がらせる火矢（Fire Arrow）。"
         },
         {
           "index": 283,
@@ -5449,7 +5496,8 @@
           "enOriginal": "Place materials along with blueprints in this to create certain high-end machined items.",
           "notes": "アセット: CustomStructures/PrimitiveWorkStations/PrimalItemStructure_PrimitiveFabricator.uasset。 アイコン: CustomStructures/PrimitiveWorkStations/PrimitiveFabricator-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_PrimitiveFabricator",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・素材と設計図を一緒に入れて、特定の高級な機械加工アイテムを作る。"
         },
         {
           "index": 289,
@@ -5755,7 +5803,8 @@
           "enOriginal": "A special table for brewing potions and other science style stuff.",
           "notes": "アセット: CustomStructures/AlchemyTable/PrimalItemStructure_AlchemyTable.uasset。 アイコン: CustomStructures/AlchemyTable/alchemytable-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_AlchemyTable",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・ポーションや、ほかの科学風のものを醸造するための特別なテーブル。"
         },
         {
           "index": 306,
@@ -5845,7 +5894,8 @@
           "enOriginal": "A Knowledge Rune Package. Use it to get the stuff inside.",
           "notes": "アセット: Trading/PrimalItemResource_TradePackageKnowledgeRune.uasset。 エングラム識別子は TradeKnowledgeRune、アイテムファイル名は PrimalItemResource_TradePackageKnowledgeRune.uasset。 アイコンを抽出できず。理由: 候補として当たったアイコンが別アイテムのものとしか確認できず、誤った画像を載せないため不採用。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemResource_TradePackageKnowledgeRune",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【アイテム用途】\n・知識ルーンのパッケージ。中身を取り出すために使う。"
         },
         {
           "index": 311,
@@ -5971,7 +6021,8 @@
           "enOriginal": "Perfect for cooking meat, staying warm, and providing light.",
           "notes": "アセット: CustomStructures/DecoProps/Fires/FirePit/PrimalItemStructure_ConcreteFirePlace.uasset。 アイコン: CustomStructures/DecoProps/Fires/FirePit/cocnretefireplace-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ConcreteFirePlace",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【調理設備・用途】\n・肉を調理したり、暖を取ったり、明かりを取ったりするのに最適。"
         },
         {
           "index": 318,
@@ -6025,7 +6076,8 @@
           "enOriginal": "Here you can trade your coins for other items and resources.",
           "notes": "アセット: CustomStructures/ShoppingTent/PrimalItemStructure_ShoppingTent.uasset。 アイコン: CustomStructures/ShoppingTent/marketstand-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ShoppingTent",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・ここでコインを、ほかのアイテムや資源と交換できる。"
         },
         {
           "index": 321,
@@ -6043,7 +6095,8 @@
           "enOriginal": "Dry meat, so it doesn't spoil so fast.",
           "notes": "アセット: CustomStructures/MeatDryingRack/PrimalItemStructure_MeatDryingRack.uasset。 アイコン: CustomStructures/MeatDryingRack/meatdryingrack-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MeatDryingRack",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【加工・保存機能】\n・肉を乾燥させて、すぐに腐らないようにする。"
         },
         {
           "index": 322,
@@ -6079,7 +6132,8 @@
           "enOriginal": "Place wood into the sawmill and start crafting lumber planks. Way more faster than manual crafting at the Smithy.Needs Lumbertools to run.",
           "notes": "アセット: CustomStructures/Sawmill/PrimalItemStructure_Sawmill.uasset。 アイコン: CustomStructures/Sawmill/sawmill-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 原文「Way more faster」はファイルどおりの比較表現として訳した。 原文「Smithy.Needs」はピリオド後の空白抜けとして訳した（英語原文列はファイルどおり）。 原文「Lumbertools」は Lumber tools と解釈して訳した（英語原文列はファイルどおり）。",
           "assetName": "PrimalItemStructure_Sawmill",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・木材を製材所（Sawmill）に入れて、材木の板（Lumber Plank）のクラフトを始める。鍛冶場での手作業よりずっと速い。動かすには製材道具（Lumber Tools）が必要。"
         },
         {
           "index": 324,
@@ -7408,7 +7462,7 @@
           "image": "",
           "enName": "Super Spyglass Plus",
           "jaName": "スーパースパイグラス・プラス(Super Spyglass Plus)",
-          "description": "対象に向けた恐竜・構造物・補給ドロップなどの詳細ステータス、突然変異、テイム餌、カラーリージョン等をHUD表示できる高性能スパイグラス(Super Spyglass Plus)。",
+          "description": "対象に向けた恐竜・構造物・補給ドロップなどの詳細情報をHUD表示できる高性能スパイグラス(Super Spyglass Plus)。",
           "category": "道具・武器",
           "obtainMethod": "エングラム作成",
           "dinoName": "",
@@ -7419,14 +7473,15 @@
           "enOriginal": "Adds an Spyglass that shows advanced information about most stuff you point it at.",
           "notes": "アセット: Spyglass/PrimalItemWeapon_SuperSpyglassPlus.uasset / エングラム: EngramEntry_SuperSpyglassPlus.uasset",
           "assetName": "PrimalItemWeapon_SuperSpyglassPlus",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【効果・使い方】\n・対象に照準を向けるだけで、恐竜の詳細ステータス・突然変異・テイムに必要な餌・カラーリージョン・構造物・補給ドロップ情報などをHUD表示できる\n・通常の望遠鏡と同様にホットバーへセットして装備・使用する"
         },
         {
           "index": 2,
           "image": "",
           "enName": "Super Spyglass Plus Skin",
           "jaName": "スーパースパイグラス・プラス スキン(Super Spyglass Plus Skin)",
-          "description": "頭防具に装着して使用するスキン版のスーパースパイグラス(Super Spyglass Plus)。武器枠を使わずに詳細表示機能を利用できる。",
+          "description": "頭防具に装着して使用するスキン版のスーパースパイグラス(Super Spyglass Plus)。",
           "category": "スキン",
           "obtainMethod": "エングラム作成",
           "dinoName": "",
@@ -7437,7 +7492,8 @@
           "enOriginal": "",
           "notes": "アセット: Spyglass/PrimalItemSkin_SSP.uasset / エングラム: EngramEntry_SSP_SpyglassSkin.uasset",
           "assetName": "PrimalItemSkin_SSP",
-          "usageType": "見た目変更（スキン）"
+          "usageType": "見た目変更（スキン）",
+          "specialAbility": "【効果・使い方】\n・頭防具へスキンとして適用することで、武器枠を使わずにスーパースパイグラス(Super Spyglass Plus)の詳細HUD表示機能を利用できる"
         },
         {
           "index": 3,
@@ -7455,7 +7511,8 @@
           "enOriginal": "",
           "notes": "アセット: Spyglass/PrimalItem_SSP_Consumable.uasset / エングラム: EngramEntry_SuperSpyglassPlus_Consumable.uasset",
           "assetName": "PrimalItem_SSP_Consumable",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【効果・使い方】\n・インベントリまたはホットバーから使用（消費）すると、武器や頭防具スキンを使わずにスーパースパイグラス(Super Spyglass Plus)のHUD表示ON/OFFを切り替えられる"
         }
       ]
     },
@@ -7470,7 +7527,7 @@
           "image": "",
           "enName": "ArkNav Configurator",
           "jaName": "アークナビ設定ツール(ArkNav Configurator)",
-          "description": "GPS・コンパス・地図・マーカー・トライブメンバー表示などのナビゲーションHUD(ArkNav)の表示位置・サイズ・各種オプションを設定するためのアイテム。",
+          "description": "ミニマップ・コンパス・マーカー・トライブメンバー表示などのナビゲーションHUD(ArkNav)を設定するための専用リモコン。",
           "category": "道具",
           "obtainMethod": "エングラム作成",
           "dinoName": "",
@@ -7481,7 +7538,8 @@
           "enOriginal": "Navigation HUD with configurable options, now controller friendly!",
           "notes": "アセット: ArkNav_Configurator/PrimalItem_ArkNavConfigurator.uasset / エングラム: EngramEntry_ArkNav_Configurator.uasset（ショートカット: Alt+N でHUD切替、Alt+M で大地図・メニュー）",
           "assetName": "PrimalItem_ArkNavConfigurator",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【機能・操作】\n・GPS・コンパス・ミニマップ・大マップ・マーカー・トライブメンバー位置などの表示位置・サイズ・各種オプションをカスタマイズできる\n・キーマウ操作：Alt + N でミニマップ・コンパスHUDの表示切替 ／ Alt + M で大マップ＆設定メニューを開く\n・コントローラー操作：本アイテム（ArkNav Configurator）を使用することで設定メニューを開ける"
         }
       ]
     },
@@ -9055,7 +9113,8 @@
           "enOriginal": "",
           "notes": "アセット: WAFStation/PrimalItemStructure_WAFStation.uasset",
           "assetName": "PrimalItemStructure_WAFStation",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・Wall'n'Floor Decor の各種家具・壁装飾・像・トロフィーなどを作成するための専用作業台。"
         },
         {
           "index": 2,
@@ -9343,7 +9402,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/CeilingElevators/Adobe/PrimalItemStructure_Ceiling_AdvanceElevator_Adobe.uasset",
           "assetName": "PrimalItemStructure_Ceiling_AdvanceElevator_Adobe",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【設備機能・用途】\n・天井に設置して上下移動できる装飾エレベーターパーツ。"
         },
         {
           "index": 18,
@@ -9361,7 +9421,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/CeilingElevators/ClearGlass/PrimalItemStructure_Ceiling_AdvanceElevator_Glass.uasset",
           "assetName": "PrimalItemStructure_Ceiling_AdvanceElevator_Glass",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【設備機能・用途】\n・天井に設置して上下移動できる装飾エレベーターパーツ。"
         },
         {
           "index": 19,
@@ -9379,7 +9440,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/CeilingElevators/Metal/PrimalItemStructure_Ceiling_AdvanceElevator_Metal.uasset",
           "assetName": "PrimalItemStructure_Ceiling_AdvanceElevator_Metal",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【設備機能・用途】\n・天井に設置して上下移動できる装飾エレベーターパーツ。"
         },
         {
           "index": 20,
@@ -9397,7 +9459,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/CeilingElevators/StainedGlass/PrimalItemStructure_Ceiling_AdvanceElevator_StainedGlass.uasset",
           "assetName": "PrimalItemStructure_Ceiling_AdvanceElevator_StainedGlass",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【設備機能・用途】\n・天井に設置して上下移動できる装飾エレベーターパーツ。"
         },
         {
           "index": 21,
@@ -9415,7 +9478,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/CeilingElevators/Stone/PrimalItemStructure_Ceiling_AdvanceElevator_Stone.uasset",
           "assetName": "PrimalItemStructure_Ceiling_AdvanceElevator_Stone",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【設備機能・用途】\n・天井に設置して上下移動できる装飾エレベーターパーツ。"
         },
         {
           "index": 22,
@@ -9433,7 +9497,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/CeilingElevators/Tek/PrimalItemStructure_Ceiling_AdvanceElevator_Tek.uasset",
           "assetName": "PrimalItemStructure_Ceiling_AdvanceElevator_Tek",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【設備機能・用途】\n・天井に設置して上下移動できる装飾エレベーターパーツ。"
         },
         {
           "index": 23,
@@ -9451,7 +9516,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/CeilingElevators/Wood/PrimalItemStructure_Ceiling_AdvanceElevator_Wood.uasset",
           "assetName": "PrimalItemStructure_Ceiling_AdvanceElevator_Wood",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【設備機能・用途】\n・天井に設置して上下移動できる装飾エレベーターパーツ。"
         },
         {
           "index": 24,
@@ -10045,7 +10111,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Bed/Bed1/PrimalItemStructure_ModernBed1.uasset",
           "assetName": "PrimalItemStructure_ModernBed1",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【ベッド機能】\n・Wall'n'Floor Decor の装飾用ベッド。配置して拠点の内装を飾れる。"
         },
         {
           "index": 57,
@@ -10063,7 +10130,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Bed/Bed2/PrimalItemStructure_SimpleBed.uasset",
           "assetName": "PrimalItemStructure_SimpleBed",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【ベッド機能】\n・Wall'n'Floor Decor の装飾用ベッド。配置して拠点の内装を飾れる。"
         },
         {
           "index": 58,
@@ -10081,7 +10149,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Bed/NewBed/PrimalItemStructure_WAF_Bed3.uasset",
           "assetName": "PrimalItemStructure_WAF_Bed3",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【ベッド機能】\n・Wall'n'Floor Decor の装飾用ベッド。配置して拠点の内装を飾れる。"
         },
         {
           "index": 59,
@@ -10099,7 +10168,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Bed/Nightstand/Cosmo/PrimalItemStructure_MBRTable_Cosmo.uasset",
           "assetName": "PrimalItemStructure_MBRTable_Cosmo",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【ベッド機能】\n・Wall'n'Floor Decor の装飾用ベッド。配置して拠点の内装を飾れる。"
         },
         {
           "index": 60,
@@ -10117,7 +10187,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Bed/Nightstand/Creatures/PrimalItemStructure_MBRTable_Otter.uasset",
           "assetName": "PrimalItemStructure_MBRTable_Otter",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【ベッド機能】\n・Wall'n'Floor Decor の装飾用ベッド。配置して拠点の内装を飾れる。"
         },
         {
           "index": 61,
@@ -10135,7 +10206,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Bed/Nightstand/PrimalItemStructure_MBRTable.uasset",
           "assetName": "PrimalItemStructure_MBRTable",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【ベッド機能】\n・Wall'n'Floor Decor の装飾用ベッド。配置して拠点の内装を飾れる。"
         },
         {
           "index": 62,
@@ -10153,7 +10225,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Bed/PrimalItemStructure_ModernBed.uasset",
           "assetName": "PrimalItemStructure_ModernBed",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【ベッド機能】\n・Wall'n'Floor Decor の装飾用ベッド。配置して拠点の内装を飾れる。"
         },
         {
           "index": 63,
@@ -10387,7 +10460,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Commodes/NR1/PrimalItemStructure_Commode.uasset",
           "assetName": "PrimalItemStructure_Commode",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor のチェスト・タンス系家具。配置して拠点の内装を飾れる。"
         },
         {
           "index": 76,
@@ -10405,7 +10479,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Commodes/NR2/PrimalItemStructure_Commode2.uasset",
           "assetName": "PrimalItemStructure_Commode2",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor のチェスト・タンス系家具。配置して拠点の内装を飾れる。"
         },
         {
           "index": 77,
@@ -10423,7 +10498,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Commodes/NR3/PrimalItemStructure_Commode3.uasset",
           "assetName": "PrimalItemStructure_Commode3",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor のチェスト・タンス系家具。配置して拠点の内装を飾れる。"
         },
         {
           "index": 78,
@@ -10441,7 +10517,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Commodes/NR4/PrimalItemStructure_Commode4.uasset",
           "assetName": "PrimalItemStructure_Commode4",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor のチェスト・タンス系家具。配置して拠点の内装を飾れる。"
         },
         {
           "index": 79,
@@ -10459,7 +10536,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Commodes/NR5/PrimalItemStructure_Commode5.uasset",
           "assetName": "PrimalItemStructure_Commode5",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor のチェスト・タンス系家具。配置して拠点の内装を飾れる。"
         },
         {
           "index": 80,
@@ -10477,7 +10555,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Commodes/PrimalItemStructure_Kommodes.uasset",
           "assetName": "PrimalItemStructure_Kommodes",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor のチェスト・タンス系家具。配置して拠点の内装を飾れる。"
         },
         {
           "index": 81,
@@ -10549,7 +10628,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/GlowingStorageStick/PrimalItemStructure_GlowingStorageTotem.uasset",
           "assetName": "PrimalItemStructure_GlowingStorageTotem",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の発光する装飾用収納スティック。配置して拠点の内装を飾れる。"
         },
         {
           "index": 85,
@@ -15967,7 +16047,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/ExplorenoteChests/BBT/PrimalItemStructure_MediumBBT.uasset",
           "assetName": "PrimalItemStructure_MediumBBT",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 386,
@@ -15985,7 +16066,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/ExplorenoteChests/DearJane/PrimalItemStructure_MediumDearJane.uasset",
           "assetName": "PrimalItemStructure_MediumDearJane",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 387,
@@ -16003,7 +16085,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/ExplorenoteChests/ELM/PrimalItemStructure_PrimitiveStorageBox1_WAF.uasset",
           "assetName": "PrimalItemStructure_PrimitiveStorageBox1_WAF",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 388,
@@ -16021,7 +16104,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/ExplorenoteChests/Gradstudent/PrimalItemStructure_MediumGradstudent.uasset",
           "assetName": "PrimalItemStructure_MediumGradstudent",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 389,
@@ -16039,7 +16123,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/ExplorenoteChests/Medium/Medium1/PrimalItemStructure_MediumStorageBox1.uasset",
           "assetName": "PrimalItemStructure_MediumStorageBox1",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 390,
@@ -16057,7 +16142,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/ExplorenoteChests/Medium/Medium2/PrimalItemStructure_MediumStorageBox2.uasset",
           "assetName": "PrimalItemStructure_MediumStorageBox2",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 391,
@@ -16075,7 +16161,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/ExplorenoteChests/MeiYin/PrimalItemStructure_MYBox_WAF.uasset",
           "assetName": "PrimalItemStructure_MYBox_WAF",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 392,
@@ -16093,7 +16180,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/ExplorenoteChests/Rockwell/PrimalItemStructure_RWBox_WAF.uasset",
           "assetName": "PrimalItemStructure_RWBox_WAF",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 393,
@@ -16111,7 +16199,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/ExplorenoteChests/Tek/Diana/PrimalItemStructure_TEK_StorageChest1.uasset",
           "assetName": "PrimalItemStructure_TEK_StorageChest1",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 394,
@@ -16129,7 +16218,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/ExplorenoteChests/Tek/Santiago/PrimalItemStructure_TEK_SantiagoBox.uasset",
           "assetName": "PrimalItemStructure_TEK_SantiagoBox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 395,
@@ -16147,7 +16237,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/ExplorenoteChests/Tek/SHW/PrimalItemStructure_TEK_Chest2.uasset",
           "assetName": "PrimalItemStructure_TEK_Chest2",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 396,
@@ -16165,7 +16256,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/Extinction/PrimalItemStructure_TEK_EXTBox.uasset",
           "assetName": "PrimalItemStructure_TEK_EXTBox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 397,
@@ -16183,7 +16275,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/Hoarde/PrimalItemStructure_HoardeBox.uasset",
           "assetName": "PrimalItemStructure_HoardeBox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 398,
@@ -16201,7 +16294,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/Scout/PrimalItemStructure_ScoutStorage.uasset",
           "assetName": "PrimalItemStructure_ScoutStorage",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 399,
@@ -16219,7 +16313,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/SecretStorage/PrimalItemStructure_SecretStorage.uasset",
           "assetName": "PrimalItemStructure_SecretStorage",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 400,
@@ -16237,7 +16332,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/StorageChest/PrimalItemStructure_StorageChest.uasset",
           "assetName": "PrimalItemStructure_StorageChest",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 401,
@@ -16255,7 +16351,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/StorageChest/StorageChest1/PrimalItemStructure_StorageChest1.uasset",
           "assetName": "PrimalItemStructure_StorageChest1",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納機能】\n・Wall'n'Floor Decor の装飾用収納チェスト・ボックス。配置して拠点の内装を飾れる。"
         },
         {
           "index": 402,
@@ -22969,7 +23066,8 @@
           "enOriginal": "",
           "notes": "アセット: WallDecor/StainedGlass/CraftingStation/PrimalItemStructure_GlassCStation.uasset",
           "assetName": "PrimalItemStructure_GlassCStation",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【クラフト設備・用途】\n・ステンドグラス系パーツを作成するための専用作業台。"
         },
         {
           "index": 775,
@@ -28845,7 +28943,7 @@
           "image": "",
           "enName": "A Personal Grave",
           "jaName": "個人用の墓石(A Personal Grave)",
-          "description": "死亡時に落とした荷物を拠点から一括回収できる本人専用の墓石（トライブで並べて設置可）。※バニラの通常墓石と間違えないよう注意。\n【準備】死ぬ前に拠点のベッド・収納箱の近くへ設置（回収直後に重量オーバーになりやすいため）。\n【操作】回収：E ／ メニュー：E長押し（専用キー不要）\n【回収の見分け方】回収対象があると炎が約5秒間上がる。炎が出ない場合は回収できる荷物なし（※炎だけ出ないバグ時は拾って置き直すと解消）。\n【メニュー機能】拾い上げ（移動用）／「Duplicate Skin removal」（透明な重複スキンを削除）／「Debugging」（回収履歴確認）／解体\n【当鯖ルール】1人1個まで（常設）／拾い上げ可（CT中や劣化時は不可・修理すると拾える）／クールダウン60分（個人ごと・置き直しても継続）／死亡バッグ・死体の消滅も約60分／アーティファクトのみ回収対象外。\n【注意】時間経過で劣化するため時々修理が必要。マップ外落下・海洋生物によるインベントリ消失・消滅時間（約60分）超過等で本体側から消えた荷物は回収不可。",
+          "description": "死亡時に落とした荷物を拠点から一括回収できる本人専用の墓石（トライブで並べて設置可）。※バニラの通常墓石と間違えないよう注意。",
           "category": "実用設備",
           "obtainMethod": "エングラム習得（Lv.0 / 0 EP）→ 作成",
           "dinoName": "",
@@ -28856,7 +28954,8 @@
           "enOriginal": "To help with deaths recovery,  You can recaim the inventory of your corpse or item cache.",
           "notes": "アセット: Content/PrimalItemStructure_Personal_Grave.uasset",
           "assetName": "PrimalItemStructure_Personal_Grave",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【使い方・当鯖ルール】\n・準備：死ぬ前に拠点のベッド・収納箱の近くへ設置（回収直後に重量オーバーになりやすいため）\n・操作：回収は E（コントローラー：△ / Y） ／ メニューは E 長押し（コントローラー：△ / Y 長押し）（専用キー不要）\n・回収の見分け方：回収対象があると炎が約5秒間上がる。炎が出ない場合は回収できる荷物なし（※炎だけ出ないバグ時は拾って置き直すと解消）\n・メニュー機能：拾い上げ（移動用）／「Duplicate Skin removal」（透明な重複スキンを削除）／「Debugging」（回収履歴確認）／解体\n・当鯖ルール：1人1個まで（常設）／拾い上げ可（CT中や劣化時は不可・修理すると拾える）／クールダウン60分（個人ごと・置き直しても継続）／死亡バッグ・死体の消滅も約60分／アーティファクトのみ回収対象外\n・注意：時間経過で劣化するため時々修理が必要。マップ外落下・海洋生物によるインベントリ消失・消滅時間（約60分）超過等で本体側から消えた荷物は回収不可"
         }
       ]
     },
