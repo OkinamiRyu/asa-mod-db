@@ -25,6 +25,7 @@ const CONFIG = {
     'Der Dino Finder',
     'Shiba Inu Companion',
     'The New Legion QoL',
+    'KillCam',
   ],
   // 公開DBサイトに含めない管理者専用・非公開アセット（小文字照合）
   HIDDEN_PUBLIC_ASSETS: [
