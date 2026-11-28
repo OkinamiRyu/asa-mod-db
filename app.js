@@ -1246,6 +1246,23 @@
       .join('')}</div>`;
   }
 
+  function buildSpecialAbilityTitle(text) {
+    const base = '特殊能力・用途';
+    const trimmed = String(text || '').trim();
+    if (!trimmed) return base;
+    const firstLine = trimmed.split(/\r?\n/, 1)[0].trim();
+    const match = firstLine.match(/^【([^】]+)】/);
+    if (!match) return base;
+    let inner = match[1].trim();
+    if (/[（(]/.test(inner)) {
+      inner = inner.replace(/[（(][^）)]*[）)]/g, '').trim();
+    }
+    if (!inner) return `${base}【操作・メニュー】`;
+    const tag = `【${inner}】`;
+    if (tag.length > 18) return base;
+    return `${base}${tag}`;
+  }
+
   function buildDetailBodyHtml(item) {
     // [label, value, isFullWidth, enableRefLinks]
     const fields = [
@@ -1263,7 +1280,6 @@
       ['必要数の目安', item.foodAmount, true, false],
       ['生息地・スポーン', item.habitat, false, false],
       ['サドル・騎乗', item.saddleRide, false, true],
-      ['特殊能力・用途', item.specialAbility, true, false],
       // コスメティック系
       ['適用対象', item.applyTarget, false, true],
       ['適用方法', item.applyMethod, false, false],
@@ -1277,6 +1293,16 @@
           <span>ℹ️ ARK本体の基本素材です（MOD専用アイテムではありません）</span>
           <a class="vanilla-notice-link" href="${escapeHtml(wikiUrl)}" target="_blank" rel="noopener noreferrer">ARK日本語Wikiで見る ↗</a>
         </div>`;
+    }
+    if (item.specialAbility) {
+      const abilityTitle = buildSpecialAbilityTitle(item.specialAbility);
+      bodyHtml += `
+        <details class="detail-ability-box">
+          <summary class="detail-ability-summary">
+            <span class="detail-ability-title">${escapeHtml(abilityTitle)}</span>
+          </summary>
+          <div class="detail-ability-content">${escapeHtml(formatSentenceBreaks(item.specialAbility))}</div>
+        </details>`;
     }
     if (item.description) {
       bodyHtml += `<div class="detail-desc-box">${escapeHtml(formatSentenceBreaks(item.description))}</div>`;

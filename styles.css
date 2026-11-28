@@ -1318,6 +1318,74 @@ h3 {
   gap: 14px;
 }
 
+.detail-ability-box {
+  flex-shrink: 0;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.detail-ability-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 13px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  user-select: none;
+  transition: background-color 120ms var(--ease-out);
+}
+
+.detail-ability-summary::-webkit-details-marker {
+  display: none;
+}
+
+.detail-ability-summary:hover {
+  background: var(--surface-hover);
+}
+
+.detail-ability-title {
+  min-width: 0;
+  word-break: break-word;
+}
+
+.detail-ability-summary::after {
+  content: '＋';
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-border);
+  background: var(--surface);
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.detail-ability-box[open] .detail-ability-summary::after {
+  content: '－';
+}
+
+.detail-ability-content {
+  border-top: 1px solid var(--accent-border);
+  background: var(--surface);
+  padding: 11px 13px;
+  font-size: 0.88rem;
+  color: var(--text);
+  white-space: pre-line;
+  word-break: break-word;
+  line-height: 1.7;
+}
+
 .detail-desc-box {
   background: var(--surface-subtle);
   border: 1px solid var(--border);
