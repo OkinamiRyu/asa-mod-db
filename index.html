@@ -19,7 +19,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261128-7" />
+  <link rel="stylesheet" href="styles.css?v=20261128-8" />
 </head>
 <body>
   <header class="site-header">
@@ -73,11 +73,37 @@
       <div id="typeTipBanner" class="type-tip-banner hidden"></div>
 
       <div class="controls-card">
-        <!-- 対象MODセレクタ（カテゴリ別グループ表示） -->
+        <!-- 対象MODセレクタ（カテゴリ別グループ表示・カスタムドロップダウン） -->
         <div class="mod-picker-row">
-          <label for="modSelect" class="mod-picker-label">対象MOD</label>
+          <label for="modSelectBtn" class="mod-picker-label">対象MOD</label>
           <div class="mod-picker-control">
-            <select id="modSelect" class="mod-select" aria-label="対象MODを選択"></select>
+            <div id="modDropdown" class="mod-dropdown">
+              <button
+                type="button"
+                id="modSelectBtn"
+                class="mod-select-btn"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="modDropdownMenu"
+                aria-label="対象MODを選択"
+              >
+                <span class="mod-select-btn-main">
+                  <span class="mod-select-btn-icon" aria-hidden="true">🔍</span>
+                  <span class="mod-select-btn-text">すべてのMOD</span>
+                </span>
+                <span class="mod-select-btn-meta">
+                  <span class="mod-select-btn-count"></span>
+                  <span class="mod-select-chevron" aria-hidden="true">▾</span>
+                </span>
+              </button>
+              <div
+                id="modDropdownMenu"
+                class="mod-dropdown-menu hidden"
+                role="listbox"
+                aria-label="対象MOD一覧"
+              ></div>
+              <select id="modSelect" class="mod-select-native" tabindex="-1" aria-hidden="true"></select>
+            </div>
             <button type="button" id="resetModBtn" class="btn btn-ghost btn-sm hidden">全MODに戻す</button>
           </div>
         </div>
@@ -1252,6 +1278,6 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
     </div>
   </footer>
 
-  <script src="app.js?v=20261128-6"></script>
+  <script src="app.js?v=20261128-7"></script>
 </body>
 </html>

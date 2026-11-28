@@ -21,6 +21,11 @@
   --amber-soft: #fdf6e7;
   --amber-text: #8c5a14;
   --amber-border: rgba(180, 118, 24, 0.3);
+  --creature-text: #15803d;
+  --creature-soft: #e6f7ec;
+  --creature-hover: #d5f2df;
+  --creature-border: rgba(22, 163, 74, 0.34);
+  --creature-bar: #16a34a;
   --shadow-float: 0 8px 24px rgba(17, 19, 21, 0.14);
   --shadow-modal: 0 18px 40px rgba(17, 19, 21, 0.22);
   --font-sans: 'IBM Plex Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic UI', 'Meiryo', system-ui, sans-serif;
@@ -51,6 +56,11 @@
   --amber-soft: rgba(217, 155, 56, 0.15);
   --amber-text: #e5b25d;
   --amber-border: rgba(229, 178, 93, 0.34);
+  --creature-text: #4ade80;
+  --creature-soft: rgba(34, 197, 94, 0.15);
+  --creature-hover: rgba(34, 197, 94, 0.24);
+  --creature-border: rgba(74, 222, 128, 0.38);
+  --creature-bar: #22c55e;
   --shadow-float: 0 8px 24px rgba(0, 0, 0, 0.48);
   --shadow-modal: 0 20px 48px rgba(0, 0, 0, 0.68);
 }
@@ -311,24 +321,353 @@ h3 {
   min-width: 0;
 }
 
-.mod-select {
+.mod-dropdown {
+  position: relative;
   flex: 1;
   min-width: 0;
+}
+
+.mod-select-native {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  pointer-events: none;
+}
+
+.mod-select-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   font: inherit;
   font-size: 0.9rem;
   font-weight: 600;
-  padding: 8px 11px;
+  padding: 9px 12px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--accent-border);
   background: var(--accent-soft);
   color: var(--text);
   cursor: pointer;
-  transition: border-color 120ms var(--ease-out);
+  text-align: left;
+  transition: border-color 140ms var(--ease-out), background-color 140ms var(--ease-out), box-shadow 140ms var(--ease-out);
 }
 
-.mod-select:focus {
+.mod-select-btn:hover {
+  border-color: var(--accent);
+}
+
+.mod-select-btn:focus-visible,
+.mod-select-btn[aria-expanded="true"] {
   outline: none;
   border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.mod-select-btn[data-group="creature"] {
+  background: var(--creature-soft);
+  border-color: var(--creature-border);
+}
+
+.mod-select-btn[data-group="creature"]:hover,
+.mod-select-btn[data-group="creature"][aria-expanded="true"] {
+  border-color: var(--creature-bar);
+  box-shadow: 0 0 0 2px var(--creature-soft);
+}
+
+.mod-select-btn[data-group="creature"] .mod-select-btn-text {
+  color: var(--creature-text);
+}
+
+.mod-select-btn-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
+}
+
+.mod-select-btn-icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.mod-select-btn-text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mod-select-btn-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.mod-select-btn-count {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.mod-select-btn[data-group="creature"] .mod-select-btn-count {
+  border-color: var(--creature-border);
+  color: var(--creature-text);
+}
+
+.mod-select-chevron {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: transform 160ms var(--ease-out);
+  line-height: 1;
+}
+
+.mod-select-btn[aria-expanded="true"] .mod-select-chevron {
+  transform: rotate(180deg);
+}
+
+.mod-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 60;
+  max-height: min(65vh, 460px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-float);
+  padding: 6px;
+}
+
+.mod-dropdown-group {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+}
+
+.mod-dropdown-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 10px;
+  margin-bottom: 4px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  user-select: none;
+}
+
+.mod-dropdown-group-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.mod-dropdown-group-icon {
+  font-size: 0.98rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.mod-dropdown-group-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+/* 生物追加MOD: 🦖 + 見やすい緑系カラーで強調 */
+.mod-dropdown-group[data-group="creature"] .mod-dropdown-group-header {
+  background: var(--creature-soft);
+  color: var(--creature-text);
+  border: 1px solid var(--creature-border);
+  border-left: 4px solid var(--creature-bar);
+}
+
+.mod-dropdown-group[data-group="creature"] .mod-dropdown-group-badge {
+  background: var(--surface);
+  color: var(--creature-text);
+  border: 1px solid var(--creature-border);
+}
+
+/* アイテム・家具・便利ツールMOD: 青系アクセント */
+.mod-dropdown-group[data-group="item"] .mod-dropdown-group-header {
+  background: var(--blue-soft);
+  color: var(--blue);
+  border: 1px solid var(--blue-border);
+  border-left: 4px solid var(--blue);
+}
+
+.mod-dropdown-group[data-group="item"] .mod-dropdown-group-badge {
+  background: var(--surface);
+  color: var(--blue);
+  border: 1px solid var(--blue-border);
+}
+
+/* スキン・コスチュームMOD: アンバー系アクセント */
+.mod-dropdown-group[data-group="cosmetic"] .mod-dropdown-group-header {
+  background: var(--amber-soft);
+  color: var(--amber-text);
+  border: 1px solid var(--amber-border);
+  border-left: 4px solid var(--amber-text);
+}
+
+.mod-dropdown-group[data-group="cosmetic"] .mod-dropdown-group-badge {
+  background: var(--surface);
+  color: var(--amber-text);
+  border: 1px solid var(--amber-border);
+}
+
+.mod-dropdown-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 8px;
+}
+
+.mod-option-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 110ms var(--ease-out), border-color 110ms var(--ease-out), color 110ms var(--ease-out);
+}
+
+.mod-option-btn.mod-option-all {
+  font-weight: 700;
+  padding: 8px 10px;
+}
+
+.mod-option-btn:hover,
+.mod-option-btn:focus-visible {
+  outline: none;
+  background: var(--surface-subtle);
+  border-color: var(--border);
+}
+
+.mod-option-btn.active {
+  background: var(--accent-soft);
+  border-color: var(--accent-border);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* 生物追加MOD配下のホバー・選択ハイライト */
+.mod-dropdown-group[data-group="creature"] .mod-option-btn:hover,
+.mod-dropdown-group[data-group="creature"] .mod-option-btn:focus-visible {
+  background: var(--creature-soft);
+  border-color: var(--creature-border);
+}
+
+.mod-dropdown-group[data-group="creature"] .mod-option-btn.active {
+  background: var(--creature-hover);
+  border-color: var(--creature-bar);
+  color: var(--creature-text);
+  font-weight: 700;
+}
+
+.mod-option-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
+}
+
+.mod-option-icon {
+  flex-shrink: 0;
+  font-size: 0.94rem;
+  line-height: 1;
+  width: 1.2em;
+  text-align: center;
+}
+
+.mod-option-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mod-option-count {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--surface-subtle);
+  flex-shrink: 0;
+}
+
+.mod-option-btn.active .mod-option-count {
+  background: var(--surface);
+  color: inherit;
+}
+
+.mod-dropdown-group[data-group="creature"] .mod-option-count {
+  color: var(--creature-text);
+  background: var(--creature-soft);
+}
+
+.mod-dropdown-group[data-group="creature"] .mod-option-btn.active .mod-option-count {
+  background: var(--surface);
+  color: var(--creature-text);
+}
+
+@media (max-width: 640px) {
+  .mod-picker-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .mod-picker-control {
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+  }
+
+  .mod-dropdown {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .mod-dropdown-menu {
+    max-height: min(60vh, 380px);
+  }
 }
 
 .btn-sm {
@@ -942,21 +1281,21 @@ h3 {
 }
 
 .mod-type-item {
-  background: var(--accent-soft);
-  color: var(--accent);
-  border: 1px solid var(--accent-border);
-}
-
-.mod-type-creature {
-  background: var(--amber-soft);
-  color: var(--amber-text);
-  border: 1px solid var(--amber-border);
-}
-
-.mod-type-cosmetic {
   background: var(--blue-soft);
   color: var(--blue);
   border: 1px solid var(--blue-border);
+}
+
+.mod-type-creature {
+  background: var(--creature-soft);
+  color: var(--creature-text);
+  border: 1px solid var(--creature-border);
+}
+
+.mod-type-cosmetic {
+  background: var(--amber-soft);
+  color: var(--amber-text);
+  border: 1px solid var(--amber-border);
 }
 
 .mod-type-other {

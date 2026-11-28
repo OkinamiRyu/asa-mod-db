@@ -87,6 +87,9 @@
     faqList: document.getElementById('faqList'),
     faqEmptyState: document.getElementById('faqEmptyState'),
     typeTipBanner: document.getElementById('typeTipBanner'),
+    modDropdown: document.getElementById('modDropdown'),
+    modSelectBtn: document.getElementById('modSelectBtn'),
+    modDropdownMenu: document.getElementById('modDropdownMenu'),
     modSelect: document.getElementById('modSelect'),
     resetModBtn: document.getElementById('resetModBtn'),
     itemSearchInput: document.getElementById('itemSearchInput'),
@@ -643,9 +646,79 @@
 
   function getSheetIcon(sheet) {
     const st = sheet.sheetType || 'item';
-    if (st === 'creature') return '🐾 ';
+    if (st === 'creature') return '🦖 ';
     if (st === 'cosmetic') return '✨ ';
     return '📦 ';
+  }
+
+  function getModOptionIcon(sheet) {
+    const st = sheet.sheetType || 'item';
+    if (st === 'creature') return '🦖';
+    if (st === 'cosmetic') return '✨';
+    const n = (sheet.name || '').toLowerCase();
+    if (n.includes('arknav')) return '🧭';
+    if (n.includes('map')) return '🗺️';
+    if (n.includes('spyglass')) return '🔭';
+    if (n.includes('death recovery')) return '🪦';
+    if (n.includes('scorched')) return '🏜️';
+    if (n.includes("wall'n'floor") || n.includes('decor')) return '🧱';
+    if (n.includes('muchstuffpack')) return '🪑';
+    return '📦';
+  }
+
+  function openModDropdown() {
+    if (!els.modDropdownMenu || !els.modSelectBtn) return;
+    els.modDropdownMenu.classList.remove('hidden');
+    els.modSelectBtn.setAttribute('aria-expanded', 'true');
+    const activeOpt = els.modDropdownMenu.querySelector('.mod-option-btn.active');
+    if (activeOpt && typeof activeOpt.scrollIntoView === 'function') {
+      activeOpt.scrollIntoView({ block: 'nearest' });
+    }
+  }
+
+  function closeModDropdown(returnFocus = false) {
+    if (!els.modDropdownMenu || !els.modSelectBtn) return;
+    if (els.modDropdownMenu.classList.contains('hidden')) return;
+    els.modDropdownMenu.classList.add('hidden');
+    els.modSelectBtn.setAttribute('aria-expanded', 'false');
+    if (returnFocus) {
+      els.modSelectBtn.focus();
+    }
+  }
+
+  function syncModDropdownUI(val) {
+    const targetVal = val || 'ALL';
+    if (els.modSelect) {
+      els.modSelect.value = targetVal;
+    }
+    if (!els.modSelectBtn || !els.modDropdownMenu) return;
+
+    const sheets = (state.data && state.data.modSheets) || [];
+    const totalItems = sheets.reduce((sum, s) => sum + s.items.length, 0);
+    const matched = targetVal === 'ALL' ? null : sheets.find((s) => s.id === targetVal);
+
+    const iconEl = els.modSelectBtn.querySelector('.mod-select-btn-icon');
+    const textEl = els.modSelectBtn.querySelector('.mod-select-btn-text');
+    const countEl = els.modSelectBtn.querySelector('.mod-select-btn-count');
+
+    if (matched) {
+      const grpType = matched.sheetType || 'item';
+      els.modSelectBtn.dataset.group = grpType;
+      if (iconEl) iconEl.textContent = getModOptionIcon(matched);
+      if (textEl) textEl.textContent = matched.name;
+      if (countEl) countEl.textContent = `${matched.items.length}件`;
+    } else {
+      els.modSelectBtn.dataset.group = 'all';
+      if (iconEl) iconEl.textContent = '🔍';
+      if (textEl) textEl.textContent = 'すべてのMOD';
+      if (countEl) countEl.textContent = `全 ${totalItems} 件`;
+    }
+
+    for (const opt of els.modDropdownMenu.querySelectorAll('.mod-option-btn')) {
+      const isSelected = opt.dataset.modValue === targetVal;
+      opt.classList.toggle('active', isSelected);
+      opt.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+    }
   }
 
   function buildTabs() {
@@ -694,9 +767,9 @@
     const totalItems = sheets.reduce((sum, s) => sum + s.items.length, 0);
 
     const groups = {
-      item: { label: '📦 アイテム・家具追加MOD', list: [] },
-      creature: { label: '🐾 生物追加MOD', list: [] },
-      cosmetic: { label: '✨ スキン・コスチュームMOD', list: [] },
+      item: { icon: '📦', label: 'アイテム・家具・便利ツールMOD', list: [] },
+      creature: { icon: '🦖', label: '生物追加MOD', list: [] },
+      cosmetic: { icon: '✨', label: 'スキン・コスチュームMOD', list: [] },
     };
 
     for (const sheet of sheets) {
@@ -704,18 +777,73 @@
       (groups[st] || groups.item).list.push(sheet);
     }
 
-    let html = `<option value="ALL">🔍 すべてのMOD（全 ${totalItems} 件）</option>`;
-    for (const key of ['item', 'creature', 'cosmetic']) {
+    const groupOrder = ['item', 'creature', 'cosmetic'];
+
+    let nativeHtml = `<option value="ALL">🔍 すべてのMOD（全 ${totalItems} 件）</option>`;
+    for (const key of groupOrder) {
       const grp = groups[key];
       if (grp.list.length === 0) continue;
-      html += `<optgroup label="${escapeHtml(grp.label)}">`;
+      nativeHtml += `<optgroup label="${escapeHtml(`${grp.icon} ${grp.label}`)}">`;
       for (const sheet of grp.list) {
-        html += `<option value="${escapeHtml(sheet.id)}">${escapeHtml(sheet.name)}（${sheet.items.length}件）</option>`;
+        nativeHtml += `<option value="${escapeHtml(sheet.id)}">${escapeHtml(sheet.name)}（${sheet.items.length}件）</option>`;
       }
-      html += '</optgroup>';
+      nativeHtml += '</optgroup>';
+    }
+    els.modSelect.innerHTML = nativeHtml;
+
+    if (els.modDropdownMenu) {
+      let menuHtml = `
+        <button
+          type="button"
+          class="mod-option-btn mod-option-all"
+          role="option"
+          aria-selected="false"
+          data-mod-value="ALL"
+        >
+          <span class="mod-option-main">
+            <span class="mod-option-icon" aria-hidden="true">🔍</span>
+            <span class="mod-option-name">すべてのMOD</span>
+          </span>
+          <span class="mod-option-count">全 ${totalItems} 件</span>
+        </button>`;
+
+      for (const key of groupOrder) {
+        const grp = groups[key];
+        if (grp.list.length === 0) continue;
+        menuHtml += `
+          <div class="mod-dropdown-group" data-group="${key}" role="group" aria-label="${escapeHtml(grp.label)}">
+            <div class="mod-dropdown-group-header">
+              <span class="mod-dropdown-group-title">
+                <span class="mod-dropdown-group-icon" aria-hidden="true">${grp.icon}</span>
+                <span>${escapeHtml(grp.label)}</span>
+              </span>
+              <span class="mod-dropdown-group-badge">${grp.list.length} MOD</span>
+            </div>
+            <div class="mod-dropdown-items">`;
+        for (const sheet of grp.list) {
+          const itemIcon = getModOptionIcon(sheet);
+          menuHtml += `
+              <button
+                type="button"
+                class="mod-option-btn"
+                role="option"
+                aria-selected="false"
+                data-mod-value="${escapeHtml(sheet.id)}"
+              >
+                <span class="mod-option-main">
+                  <span class="mod-option-icon" aria-hidden="true">${itemIcon}</span>
+                  <span class="mod-option-name">${escapeHtml(sheet.name)}</span>
+                </span>
+                <span class="mod-option-count">${sheet.items.length}件</span>
+              </button>`;
+        }
+        menuHtml += `
+            </div>
+          </div>`;
+      }
+      els.modDropdownMenu.innerHTML = menuHtml;
     }
 
-    els.modSelect.innerHTML = html;
     const currentVal =
       state.activeTab === 'INSTALLED' ||
       state.activeTab === 'RULES' ||
@@ -724,7 +852,7 @@
       !state.activeTab
         ? 'ALL'
         : state.activeTab;
-    els.modSelect.value = currentVal;
+    syncModDropdownUI(currentVal);
     els.resetModBtn.classList.toggle('hidden', currentVal === 'ALL');
   }
 
@@ -749,7 +877,7 @@
       if (practicalCount > 0) chips.push({ id: 'practical', label: `⚙ 実用のみ (${practicalCount})` });
       if (decorCount > 0) chips.push({ id: 'decor', label: `🎨 装飾・観賞用 (${decorCount})` });
       if (stationCount > 0) chips.push({ id: 'stations', label: `🛠 作業台・設備 (${stationCount})` });
-      chips.push({ id: 'creature', label: '🐾 生物系' });
+      chips.push({ id: 'creature', label: '🦖 生物系' });
       chips.push({ id: 'cosmetic', label: '✨ スキン系' });
     } else if (
       stationCount > 0 ||
@@ -1113,7 +1241,7 @@
       const chipDefs = [
         { id: '', label: `すべて (${mods.length})`, count: mods.length },
         { id: 'item', label: `📦 アイテム・設備 (${counts.item})`, count: counts.item },
-        { id: 'creature', label: `🐾 生物 (${counts.creature})`, count: counts.creature },
+        { id: 'creature', label: `🦖 生物 (${counts.creature})`, count: counts.creature },
         { id: 'cosmetic', label: `✨ スキン (${counts.cosmetic})`, count: counts.cosmetic },
         { id: 'other', label: `⚙ システム・UI (${counts.other})`, count: counts.other },
       ].filter((c) => c.id === '' || c.count > 0);
@@ -1139,7 +1267,7 @@
 
     const typeBadgeMap = {
       item: { cls: 'mod-type-item', label: '📦 アイテム' },
-      creature: { cls: 'mod-type-creature', label: '🐾 生物' },
+      creature: { cls: 'mod-type-creature', label: '🦖 生物' },
       cosmetic: { cls: 'mod-type-cosmetic', label: '✨ スキン' },
       other: { cls: 'mod-type-other', label: '⚙ システム・UI' },
     };
@@ -1721,7 +1849,8 @@
       els.typeTipBanner.classList.add('hidden');
       applyFaqFilter();
     } else {
-      els.modSelect.value = target;
+      syncModDropdownUI(target);
+      closeModDropdown();
       els.resetModBtn.classList.toggle('hidden', target === 'ALL');
       updateTypeTipBanner();
       renderQuickFilters();
@@ -1841,6 +1970,64 @@
     els.modSelect.addEventListener('change', (e) => {
       switchTab(e.target.value);
     });
+
+    if (els.modSelectBtn && els.modDropdownMenu && els.modDropdown) {
+      els.modSelectBtn.addEventListener('click', () => {
+        if (els.modDropdownMenu.classList.contains('hidden')) {
+          openModDropdown();
+        } else {
+          closeModDropdown();
+        }
+      });
+
+      els.modSelectBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModDropdown();
+          const first = els.modDropdownMenu.querySelector('.mod-option-btn.active') || els.modDropdownMenu.querySelector('.mod-option-btn');
+          if (first) first.focus();
+        } else if (e.key === 'Escape') {
+          closeModDropdown();
+        }
+      });
+
+      els.modDropdownMenu.addEventListener('click', (e) => {
+        const opt = e.target.closest('.mod-option-btn');
+        if (!opt) return;
+        const val = opt.dataset.modValue;
+        closeModDropdown(true);
+        if (val) switchTab(val);
+      });
+
+      els.modDropdownMenu.addEventListener('keydown', (e) => {
+        const opts = Array.from(els.modDropdownMenu.querySelectorAll('.mod-option-btn'));
+        const idx = opts.indexOf(document.activeElement);
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          closeModDropdown(true);
+        } else if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          const next = opts[(idx + 1) % opts.length];
+          if (next) next.focus();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          const prev = opts[(idx - 1 + opts.length) % opts.length];
+          if (prev) prev.focus();
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          if (opts[0]) opts[0].focus();
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          if (opts[opts.length - 1]) opts[opts.length - 1].focus();
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!els.modDropdown.contains(e.target)) {
+          closeModDropdown();
+        }
+      });
+    }
 
     els.resetModBtn.addEventListener('click', () => {
       switchTab('ALL');
