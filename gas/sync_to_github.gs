@@ -17,8 +17,22 @@
 const CONFIG = {
   INSTALLED_MODS_SHEET: '導入中mod一覧',
   SERVER_RULES_SHEET: '鯖ルール・設定',
-  // レンタルサーバー未導入のためDBから除外するMOD名
-  EXCLUDED_MODS: ['Pulse Arcana - Roleplay Classes and Magic Mod', 'ASACD'],
+  // レンタルサーバー未導入・導入対象外のためDBから除外するMOD名
+  EXCLUDED_MODS: [
+    'Pulse Arcana - Roleplay Classes and Magic Mod',
+    'ASACD',
+    'Fall Damage Shield',
+    'Der Dino Finder',
+    'Shiba Inu Companion',
+    'The New Legion QoL',
+  ],
+  // 公開DBサイトに含めない管理者専用・非公開アセット（小文字照合）
+  HIDDEN_PUBLIC_ASSETS: [
+    'primalitem_admintool',
+    'primalitemstructure_wafabox',
+    'primalitemconsumable_shibainucompanionconversiontreat',
+    'brachyura',
+  ],
   // DBサイトに含めない管理用シート名（先頭が「_」または「下書き」のシートも自動除外されます）
   EXCLUDED_SHEETS: ['AIへの指示', '導入中mod一覧', '鯖ルール・設定', 'アイテム一覧', '情報源'],
   TARGET_FILE_PATH: 'data/mods.json',
@@ -272,6 +286,16 @@ function parseModItemSheet_(sheet) {
 
     const notes = gc(cNote);
     const assetMatch = notes.match(/([A-Za-z0-9_]+)\.uasset/);
+    const assetName = assetMatch ? assetMatch[1] : '';
+    const assetLower = assetName.toLowerCase();
+    const enLower = enName.toLowerCase();
+    if (
+      CONFIG.HIDDEN_PUBLIC_ASSETS.some(
+        (h) => assetLower === h || enLower === h || assetLower.includes(h)
+      )
+    ) {
+      continue;
+    }
 
     const specialAbility = gc(cAbility);
 

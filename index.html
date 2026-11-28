@@ -19,7 +19,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261128-3" />
+  <link rel="stylesheet" href="styles.css?v=20261128-4" />
 </head>
 <body>
   <header class="site-header">
@@ -61,8 +61,8 @@
           <p class="guide-step-text">素材や作る場所の <span class="guide-chip-mod">MOD詳細</span> を押すと、今の画面を閉じずに<strong>最大2枚まで横にサブ画面</strong>が開きます。<br /><span class="guide-chip-wiki">Wiki ↗</span> を押すと ARK 公式日本語 Wiki が開きます。</p>
         </div>
         <div class="guide-step">
-          <div class="guide-step-title">③ 絞り込み・ピン留め・ダークモード</div>
-          <p class="guide-step-text">「<strong>対象MOD</strong>」や <strong>⚙ 実用のみ</strong> / <strong>🛠 作業台・設備</strong> で素早く絞り込めます。<br />よく使う項目は <strong>★ ピン留め</strong> や <strong>🕒 最近見た</strong> からすぐ呼び出せ、右上のボタンで <strong>🌙 ダークモード</strong> にも切替できます。</p>
+          <div class="guide-step-title">③ 絞り込み・ピン留め・表示切替</div>
+          <p class="guide-step-text">「<strong>対象MOD</strong>」や <strong>⚙ 実用のみ</strong> / <strong>🛠 作業台・設備</strong> で素早く絞り込めます。<br />よく使う項目は <strong>★ ピン留め</strong> や <strong>🕒 最近見た</strong> からすぐ呼び出せ、右上のボタンで <strong>☀️ ライト / 🌙 ダーク表示</strong> を切替できます。</p>
         </div>
       </div>
     </details>
@@ -181,6 +181,7 @@
             />
           </div>
         </div>
+        <div id="modTypeFilterBar" class="quick-filter-bar" role="group" aria-label="MOD種別絞り込み"></div>
         <div class="result-bar">
           <span id="modResultCount" class="result-count"></span>
         </div>
@@ -781,12 +782,13 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
               <h4 class="tips-item-title">🧭 ArkNav（ミニマップ・ナビHUD）</h4>
               <ul class="tips-list">
                 <li data-device-only="pc"><kbd>Alt</kbd> + <kbd>N</kbd> でミニマップ・コンパスHUDの表示切替 ／ <kbd>Alt</kbd> + <kbd>M</kbd> で大マップ＆設定メニューを開く</li>
-                <li data-device-only="pad">専用リモコン（<code>ArkNav Configurator</code>）を使えば、コントローラーからも設定メニューを開けます。</li>
+                <li data-device-only="pad">専用リモコン（<button type="button" class="tips-search-link" data-search-jump="ArkNav Configurator">ArkNav Configurator</button>）を使えば、コントローラーからも設定メニューを開けます。</li>
+                <li data-device-only="pc">設定リモコン：<button type="button" class="tips-search-link" data-search-jump="ArkNav Configurator">ArkNav Configurator</button></li>
               </ul>
             </div>
             <div class="tips-item-box">
               <h4 class="tips-item-title">🔭 Super Spyglass Plus（高性能望遠鏡）</h4>
-              <p class="tips-item-text">野生恐竜のステータスやテイムに必要な餌・進行度を詳しく確認できる便利MOD。<strong>通常装備</strong>／<strong>頭防具スキン</strong>／<strong>切替式</strong>の3通りから好みのスタイルで使えます。</p>
+              <p class="tips-item-text"><button type="button" class="tips-search-link" data-search-jump="Super Spyglass Plus">Super Spyglass Plus</button> は野生恐竜のステータスやテイムに必要な餌・進行度を詳しく確認できる便利MOD。<strong>通常装備</strong>／<strong>頭防具スキン</strong>／<strong>切替式</strong>の3通りから好みのスタイルで使えます。</p>
             </div>
             <div class="tips-item-box">
               <h4 class="tips-item-title">🪦 Death Recovery Mod（荷物回収の墓石）</h4>
@@ -1238,6 +1240,6 @@ UnfocusedVolumeMultiplier=1.0</code></pre>
     </div>
   </footer>
 
-  <script src="app.js?v=20261128-3"></script>
+  <script src="app.js?v=20261128-4"></script>
 </body>
 </html>

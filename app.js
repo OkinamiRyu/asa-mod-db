@@ -49,6 +49,7 @@
     viewMode: 'card', // 'card' | 'table'
     visibleLimit: PAGE_SIZE,
     modSearchQuery: '',
+    modTypeFilter: '', // '' | 'item' | 'creature' | 'cosmetic'
     filteredItems: [],
     allItemsByGlobalIndex: new Map(),
     itemByKey: new Map(),
@@ -111,6 +112,7 @@
     emptyState: document.getElementById('emptyState'),
     emptyResetBtn: document.getElementById('emptyResetBtn'),
     modSearchInput: document.getElementById('modSearchInput'),
+    modTypeFilterBar: document.getElementById('modTypeFilterBar'),
     modResultCount: document.getElementById('modResultCount'),
     modsGrid: document.getElementById('modsGrid'),
     detailModal: document.getElementById('detailModal'),
@@ -522,11 +524,12 @@
     }, 2000);
   }
 
-  async function copyText(text) {
+  async function copyText(text, customMessage) {
     if (!text) return;
+    const toastMsg = customMessage || `「${text}」をコピーしました`;
     try {
       await navigator.clipboard.writeText(text);
-      showToast(`「${text}」をコピーしました`);
+      showToast(toastMsg);
     } catch {
       const ta = document.createElement('textarea');
       ta.value = text;
@@ -534,7 +537,7 @@
       ta.select();
       document.execCommand('copy');
       document.body.removeChild(ta);
-      showToast(`「${text}」をコピーしました`);
+      showToast(toastMsg);
     }
   }
 
@@ -1094,7 +1097,37 @@
       (state.data.modSheets || []).map((s) => [normalizeText(s.name), s])
     );
 
+    const getModType = (mod) => {
+      const matched = sheetByName.get(normalizeText(mod.name));
+      return matched && matched.sheetType ? matched.sheetType : 'other';
+    };
+
+    const counts = { item: 0, creature: 0, cosmetic: 0 };
+    for (const m of mods) {
+      const t = getModType(m);
+      if (t in counts) counts[t]++;
+    }
+
+    if (els.modTypeFilterBar) {
+      const chipDefs = [
+        { id: '', label: `すべて (${mods.length})`, count: mods.length },
+        { id: 'item', label: `📦 アイテム・設備 (${counts.item})`, count: counts.item },
+        { id: 'creature', label: `🐾 生物 (${counts.creature})`, count: counts.creature },
+        { id: 'cosmetic', label: `✨ スキン (${counts.cosmetic})`, count: counts.cosmetic },
+      ].filter((c) => c.id === '' || c.count > 0);
+
+      els.modTypeFilterBar.innerHTML = chipDefs
+        .map((c) => {
+          const active = state.modTypeFilter === c.id;
+          return `<button type="button" class="quick-chip${active ? ' active' : ''}" data-mod-type="${c.id}" aria-pressed="${active}">${escapeHtml(c.label)}</button>`;
+        })
+        .join('');
+    }
+
     const filtered = mods.filter((m) => {
+      if (state.modTypeFilter && getModType(m) !== state.modTypeFilter) {
+        return false;
+      }
       if (tokens.length === 0) return true;
       const blob = normalizeText(`${m.name} ${m.description} ${m.curseForgeId}`);
       return tokens.every((tk) => blob.includes(tk));
@@ -1102,14 +1135,28 @@
 
     els.modResultCount.textContent = `導入中MOD ${mods.length} 件中 ${filtered.length} 件を表示`;
 
+    const typeBadgeMap = {
+      item: { cls: 'mod-type-item', label: '📦 アイテム' },
+      creature: { cls: 'mod-type-creature', label: '🐾 生物' },
+      cosmetic: { cls: 'mod-type-cosmetic', label: '✨ スキン' },
+    };
+
     els.modsGrid.innerHTML = filtered
       .map((m) => {
         const matchedSheet = sheetByName.get(normalizeText(m.name));
+        const modType = matchedSheet && matchedSheet.sheetType ? matchedSheet.sheetType : 'other';
+        const badgeInfo = typeBadgeMap[modType];
+        const typeBadgeHtml = badgeInfo
+          ? `<span class="mod-type-badge ${badgeInfo.cls}">${badgeInfo.label}</span>`
+          : '';
+        const cfBadgeHtml = m.curseForgeId
+          ? `<span class="cf-badge">ID: ${escapeHtml(m.curseForgeId)}</span>`
+          : '';
         return `
           <article class="mod-card">
             <div class="mod-card-head">
               <h3 class="mod-card-title">${escapeHtml(m.name)}</h3>
-              ${m.curseForgeId ? `<span class="cf-badge">ID: ${escapeHtml(m.curseForgeId)}</span>` : ''}
+              ${typeBadgeHtml || cfBadgeHtml ? `<div class="mod-card-badges">${typeBadgeHtml}${cfBadgeHtml}</div>` : ''}
             </div>
             ${m.description ? `<p class="mod-card-desc">${escapeHtml(formatSentenceBreaks(m.description))}</p>` : ''}
             <div class="mod-card-actions">
@@ -1748,6 +1795,7 @@
         state.sortBy = 'index';
         els.sortSelect.value = 'index';
         state.modSearchQuery = '';
+        state.modTypeFilter = '';
         els.modSearchInput.value = '';
         if (els.faqSearchInput) {
           els.faqSearchInput.value = '';
@@ -1932,6 +1980,16 @@
       renderInstalledMods();
     });
 
+    if (els.modTypeFilterBar) {
+      els.modTypeFilterBar.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-mod-type]');
+        if (!btn) return;
+        const nextType = btn.dataset.modType || '';
+        state.modTypeFilter = state.modTypeFilter === nextType && nextType !== '' ? '' : nextType;
+        renderInstalledMods();
+      });
+    }
+
     els.modsGrid.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-jump-tab]');
       if (!btn) return;
@@ -1953,21 +2011,18 @@
 
     els.shareItemBtn.addEventListener('click', () => {
       if (!state.mainItem) return;
-      copyText(buildShareUrl(state.mainItem));
-      showToast('このアイテムの共有URLをコピーしました');
+      copyText(buildShareUrl(state.mainItem), 'このアイテムの共有URLをコピーしました');
     });
 
     els.subShareItemBtn.addEventListener('click', () => {
       if (!state.sub1Item) return;
-      copyText(buildShareUrl(state.sub1Item));
-      showToast('サブ画面①の共有URLをコピーしました');
+      copyText(buildShareUrl(state.sub1Item), 'サブ画面①の共有URLをコピーしました');
     });
 
     els.sub2ShareItemBtn.addEventListener('click', () => {
       if (state.sub2Stack.length === 0) return;
       const item = state.sub2Stack[state.sub2Stack.length - 1];
-      copyText(buildShareUrl(item));
-      showToast('サブ画面②の共有URLをコピーしました');
+      copyText(buildShareUrl(item), 'サブ画面②の共有URLをコピーしました');
     });
 
     if (els.pinItemBtn) {
@@ -2035,8 +2090,7 @@
     if (els.shareTipsBtn) {
       els.shareTipsBtn.addEventListener('click', () => {
         const guideUrl = `${window.location.origin}${window.location.pathname}#guide`;
-        copyText(guideUrl);
-        showToast('初心者設定・便利技ページのURLをコピーしました');
+        copyText(guideUrl, '初心者設定・便利技ページのURLをコピーしました');
       });
     }
 
@@ -2093,8 +2147,7 @@
     if (els.shareFaqBtn) {
       els.shareFaqBtn.addEventListener('click', () => {
         const faqUrl = `${window.location.origin}${window.location.pathname}#faq`;
-        copyText(faqUrl);
-        showToast('よくある質問（Q&A）ページのURLをコピーしました');
+        copyText(faqUrl, 'よくある質問（Q&A）ページのURLをコピーしました');
       });
     }
 
