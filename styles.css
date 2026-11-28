@@ -2097,21 +2097,21 @@ mark.search-hit {
   gap: 16px;
 }
 
-#tipsSection[data-device-filter="pc"] [data-device-only="ps5"],
+#tipsSection[data-device-filter="pc"] [data-device-only="pad"],
 #tipsSection[data-device-filter="pc"] [data-device-only="both-sep"],
-#tipsSection[data-device-filter="pc"] .col-ps5,
-.tips-content[data-device-filter="pc"] [data-device-only="ps5"],
+#tipsSection[data-device-filter="pc"] .col-pad,
+.tips-content[data-device-filter="pc"] [data-device-only="pad"],
 .tips-content[data-device-filter="pc"] [data-device-only="both-sep"],
-.tips-content[data-device-filter="pc"] .col-ps5 {
+.tips-content[data-device-filter="pc"] .col-pad {
   display: none !important;
 }
 
-#tipsSection[data-device-filter="ps5"] [data-device-only="pc"],
-#tipsSection[data-device-filter="ps5"] [data-device-only="both-sep"],
-#tipsSection[data-device-filter="ps5"] .col-pc,
-.tips-content[data-device-filter="ps5"] [data-device-only="pc"],
-.tips-content[data-device-filter="ps5"] [data-device-only="both-sep"],
-.tips-content[data-device-filter="ps5"] .col-pc {
+#tipsSection[data-device-filter="pad"] [data-device-only="pc"],
+#tipsSection[data-device-filter="pad"] [data-device-only="both-sep"],
+#tipsSection[data-device-filter="pad"] .col-pc,
+.tips-content[data-device-filter="pad"] [data-device-only="pc"],
+.tips-content[data-device-filter="pad"] [data-device-only="both-sep"],
+.tips-content[data-device-filter="pad"] .col-pc {
   display: none !important;
 }
 
@@ -2148,16 +2148,6 @@ mark.search-hit {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text);
-}
-
-.tips-badge-pc {
-  font-size: 0.78rem;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 4px;
-  background: var(--blue-soft);
-  color: var(--blue);
-  border: 1px solid var(--blue-border);
 }
 
 .tips-cards-grid {
@@ -2549,7 +2539,7 @@ mark.search-hit {
   border: 1px solid var(--border-strong);
 }
 
-/* PC Keyboard Key & PS5 Controller Button Badges */
+/* Keyboard Key & Controller Button Badges */
 #tipsSection kbd,
 #faqSection kbd {
   display: inline-block;
@@ -2568,7 +2558,8 @@ mark.search-hit {
   border-radius: 4px;
 }
 
-.ps-btn {
+.ps-btn,
+.xb-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2600,15 +2591,40 @@ mark.search-hit {
   background: #b8256a;
 }
 
+.xb-a {
+  background: #1e874b;
+  color: #ffffff;
+}
+
+.xb-b {
+  background: #c52828;
+  color: #ffffff;
+}
+
+.xb-x {
+  background: #1d64c8;
+  color: #ffffff;
+}
+
+.xb-y {
+  background: #e5b822;
+  color: #181b1f;
+}
+
 .ps-shoulder,
 .ps-pad,
-.ps-dpad {
+.ps-dpad,
+.xb-shoulder,
+.xb-pad {
   background: #363e4a;
+  color: #ffffff;
 }
 
 :root[data-theme="dark"] .ps-shoulder,
 :root[data-theme="dark"] .ps-pad,
-:root[data-theme="dark"] .ps-dpad {
+:root[data-theme="dark"] .ps-dpad,
+:root[data-theme="dark"] .xb-shoulder,
+:root[data-theme="dark"] .xb-pad {
   background: #3b4452;
   border: 1px solid #4e596b;
 }

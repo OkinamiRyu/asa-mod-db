@@ -222,7 +222,8 @@
   }
 
   function applyTipsDevice(device, persist) {
-    const validDevice = device === 'pc' || device === 'ps5' ? device : 'all';
+    const normalized = device === 'ps5' ? 'pad' : device;
+    const validDevice = normalized === 'pc' || normalized === 'pad' ? normalized : 'all';
     if (els.tipsSection) els.tipsSection.dataset.deviceFilter = validDevice;
     if (els.tipsContent) els.tipsContent.dataset.deviceFilter = validDevice;
     if (els.tipsDeviceBar) {
@@ -248,7 +249,8 @@
       const vm = localStorage.getItem(VIEW_MODE_STORAGE_KEY);
       if (vm === 'card' || vm === 'table') savedViewMode = vm;
       const td = localStorage.getItem(TIPS_DEVICE_STORAGE_KEY);
-      if (td === 'all' || td === 'pc' || td === 'ps5') savedTipsDevice = td;
+      if (td === 'ps5') savedTipsDevice = 'pad';
+      else if (td === 'all' || td === 'pc' || td === 'pad') savedTipsDevice = td;
     } catch {
       // Ignore storage errors
     }
@@ -1487,7 +1489,7 @@
       const reqDevice = deviceHolder.dataset ? deviceHolder.dataset.deviceOnly : '';
       const currentFilter = els.tipsContent.dataset.deviceFilter || 'all';
       if (
-        (reqDevice === 'pc' || reqDevice === 'ps5') &&
+        (reqDevice === 'pc' || reqDevice === 'pad') &&
         currentFilter !== 'all' &&
         currentFilter !== reqDevice
       ) {
