@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T08:40:17.607Z",
+  "updatedAt": "2026-11-28T09:10:11.152Z",
   "installedMods": [
     {
       "name": "Super Spyglass Plus",
@@ -196,6 +196,13 @@
       "curseForgeId": "1303816",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/randis-ichthyornis-mod",
       "notes": "ゲーム内表示名は .uplugin の FriendlyName による。v1.0 / 作者: Randi_Beers。\n見た目・ゲーム内表示名はバニラと同一（行動仕様のみ変更）。導入後の新規スポーンから置換（既存個体は DestroyWildDinos で入替）。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/randis-ichthyornis-mod\nフォルダ: 1303816_9461131"
+    },
+    {
+      "name": "ArkMapAscended",
+      "description": "マップ画面を拡張し、生物ごとのスポーンエリアをレア度別に色分け表示できるマップツールMODです（CurseForge名：Ark Map Ascended）。\n通常のマップタブ右上に追加される「MAP ASCENDED」からアイテム作成なしで利用でき、生息地を確認しながらウェイポイントを置いて探索・テイムに向かえます（※現在湧いている個体の位置をリアルタイム探知する Dino Finder ではありません）。",
+      "curseForgeId": "1725626",
+      "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/ark-map-ascended",
+      "notes": "ゲーム内表示名は .uplugin の FriendlyName による（CurseForge名: Ark Map Ascended）。v1.0 / 作者: CMMods。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/ark-map-ascended\nフォルダ: 1725626_9498967"
     }
   ],
   "serverRules": [
@@ -28970,6 +28977,33 @@
           "habitat": "海岸・砂浜・海沿いの上空（バニラのイクチオルニスと同一スポーンを自動置換）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
           "specialAbility": "【MODによる主な変更点】\n・野生の性格を「攻撃的」から「中立（Passive unless attacked）」へ変更（攻撃しない限り襲ってこない）\n・プレイヤーの武器を叩き落とす能力、およびヘルメットを剥がす能力を削除\n・※攻撃して怒らせた場合、アイテム強奪や小型恐竜の掴み攻撃は発生する（無視するか素早く倒す）\n【テイム後の使い方・肩乗せ機能（バニラ共通）】\n・Eキーで肩に乗せられる（降ろすときはFキー2回押し／騎乗中はRキー2回押し）\n・Eキー長押しメニューの「狩りをして回収（Hunt and Retrieve）」で魚や小型生物を狩らせると、倒した対象が金色に光り、解体時に「大トロ」「霜降り肉」を高効率で採取できる"
+        }
+      ]
+    },
+    {
+      "id": "ArkMapAscended",
+      "name": "ArkMapAscended",
+      "sheetType": "item",
+      "itemCount": 1,
+      "items": [
+        {
+          "index": 1,
+          "image": "",
+          "enName": "AMA Map",
+          "jaName": "拡張マップ(AMA Map)",
+          "description": "生物ごとのスポーンエリアをレア度別に色分け表示できる拡張マップツール（Ark Map Ascended）。通常はマップ画面右上の「MAP ASCENDED」タブからアイテム作成なしで利用でき、本アイテム（PrimalItem_AMA_Map）を作成・使用して直接UIを開くこともできる。",
+          "category": "ツール",
+          "obtainMethod": "エングラム習得 → 作成（※マップ画面の「MAP ASCENDED」タブはアイテム未作成でも利用可能）",
+          "dinoName": "",
+          "craftStation": "",
+          "toolUsed": "",
+          "harvestSource": "",
+          "materials": "皮、木炭、繊維",
+          "enOriginal": "Ark Map Ascended gives you an in game upgrade to every map that shows you the best place to hunt down your next target! Whether its to defeat or tame!",
+          "notes": "アセット: Content/Items/PrimalItem_AMA_Map.uasset / エングラム: Content/Items/EngramEntry_AMA_Map.uasset",
+          "assetName": "PrimalItem_AMA_Map",
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【使い方・機能】\n・マップタブの開き方：マップ画面を開き、右上の「MAP ASCENDED」タブへ切り替える（※初回表示にはファストトラベルまたはリスポーンが必要な場合あり。通常はアイテム作成不要）\n・レア度別の色分け表示：右側の生物リストから対象を選ぶと、洞窟内を含めたスポーンエリアがレア度別に色分け表示される\n・MOD生物の表示：バニラとスポーン枠を共有するMOD生物は「Reported Location（確認エリア）」として直近の出現傾向が表示される\n・ウェイポイント設置：目的のエリアへウェイポイントを設置し、探索・テイムの目印にできる\n・操作方法：詳細マップを開く（キーマウ：M 2回押し または I ／ コントローラー：タッチパッド / ビュー 2回押し または ○ / B のマップタブ）→ 右上「MAP ASCENDED」タブを選択\n・注意：現在湧いている個体のリアルタイム座標を探知する Dino Finder ではなく、生息エリア確認用ツール"
         }
       ]
     }

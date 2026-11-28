@@ -1566,5 +1566,9 @@
   "Randis Ichthyornis Mod": {
     "randisichthyornis_character_bp": "icons/Randis Ichthyornis Mod/RandisIchthyornis_Character_BP.png",
     "_default": "icons/Randis Ichthyornis Mod/RandisIchthyornis_Character_BP.png"
+  },
+  "ArkMapAscended": {
+    "primalitem_ama_map": "icons/ArkMapAscended/PrimalItem_AMA_Map.png",
+    "_default": "icons/ArkMapAscended/PrimalItem_AMA_Map.png"
   }
 }
