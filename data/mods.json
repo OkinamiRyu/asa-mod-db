@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T09:17:40.204Z",
+  "updatedAt": "2026-11-28T14:01:21.230Z",
   "installedMods": [
     {
       "name": "Super Spyglass Plus",
@@ -308,7 +308,8 @@
           "enOriginal": "A glass for powder.",
           "notes": "アセット: Epoch_Primitive/Storage_GlassJar/PrimalItemStructure_GlassJarPowder.uasset。 アイコン: Epoch_Primitive/Storage_GlassJar/glassjar-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_GlassJarPowder",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・拠点に設置してアイテムを保管できるガラス瓶型の収納容器（インベントリ付き建造物）\n・発火粉・火薬・小麦粉・コーヒー粉などの粉系アイテムの整理・仕分け収納に向く（実際の収納スロット数や格納可能アイテムはゲーム内でインベントリを開いて確認）\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 3,
@@ -344,7 +345,8 @@
           "enOriginal": "A small basket made out of rattan to hold some goods",
           "notes": "アセット: Epoch_Medieval/Storage_BasketRattan/PrimalItemStructure_BasketRattanSmall.uasset。 アイコン: Epoch_Medieval/Storage_BasketRattan/basketrattansmall-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_BasketRattanSmall",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・荷物を入れられる小型のラタン製バスケット型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 5,
@@ -362,7 +364,8 @@
           "enOriginal": "A large chungus box.",
           "notes": "アセット: CustomStructures/ChungusStorageBox/PrimalItemStructure_StorageBox_Chungus.uasset。 アイコンを抽出できず。理由: MOD内に専用アイコンアセットを特定できず（本編側テクスチャの可能性）。誤って別アイコンが当たったため不採用。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_StorageBox_Chungus",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・大型のボックス型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 6,
@@ -418,7 +421,8 @@
           "enOriginal": "A cart to store some goods.",
           "notes": "アセット: Epoch_Medieval/Storage_Woodcart/PrimalItemStructure_WoodCart.uasset。 アイコン: Epoch_Medieval/Storage_Woodcart/woodcart-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_WoodCart",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・荷物をまとめて入れておける荷車型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 9,
@@ -436,7 +440,8 @@
           "enOriginal": "A vintage style chandelier.",
           "notes": "アセット: Epoch_Modern/VintageChandelier/PrimalItemStructure_VintageChandelier.uasset。 アイコン: Epoch_Modern/VintageChandelier/vintagechandelier-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_VintageChandelier",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点に設置して室内や通路を照らせる照明器具\n・点灯／消灯・燃料投入（必要な場合）・回収：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 10,
@@ -473,7 +478,8 @@
           "enOriginal": "A soil garden plot.",
           "notes": "アセット: FarmUpdate/Plots/PrimalItemStructure_CropPlot_SoilFenced.uasset。 アイコン: FarmUpdate/Plots/croplotminifence-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_CropPlot_SoilFenced",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・拠点に設置し、種と肥料・水分を用意して作物を育てられる菜園・作物区画（柵付きデザイン）\n・種・肥料の投入／作物の収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 12,
@@ -491,7 +497,8 @@
           "enOriginal": "Store onions here.",
           "notes": "アセット: Epoch_Primitive/Storage_OnionsStack/PrimalItemStructure_OnionStack.uasset。 アイコン: Epoch_Primitive/Storage_OnionsStack/onionstack-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_OnionStack",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・玉ねぎなどの食材・アイテムを整理して保管できる棚型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 13,
@@ -527,7 +534,8 @@
           "enOriginal": "Calm yourself down with a jonny.",
           "notes": "アセット: FarmUpdate/Items/PrimalItemConsumable_Jonny.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemConsumable_Jonny",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【消費アイテム・用途】\n・インベントリから使用（消費）できるMOD独自の嗜好品アイテム（『Calm yourself down with a jonny』）"
         },
         {
           "index": 15,
@@ -581,7 +589,8 @@
           "enOriginal": "A rack to store weapons.",
           "notes": "アセット: Epoch_Medieval/Storage_WeaponHolder/PrimalItemStructure_WeaponRack.uasset。 アイコン: Epoch_Medieval/Storage_WeaponHolder/weaponrack-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_WeaponRack",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・武器を整理して保管できるラック型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 18,
@@ -617,7 +626,8 @@
           "enOriginal": "A stack of barrels to hold your liquids.",
           "notes": "アセット: Epoch_Medieval/Storage_BarrelStack/PrimalItemStructure_BarrelStack.uasset。 アイコン: Epoch_Medieval/Storage_BarrelStack/barrelstack-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_BarrelStack",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・液体系アイテムなどをまとめて保管できる積み樽型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 20,
@@ -635,7 +645,8 @@
           "enOriginal": "A modern Ammo Crate. Used in the modern days for storing explosive goods.",
           "notes": "アセット: Epoch_Modern/Storage_AmmoBox_Wood/PrimalItemStructure_AmmoBoxWood.uasset。 アイコン: Epoch_Modern/Storage_AmmoBox_Wood/storageammoboxwood-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_AmmoBoxWood",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・弾薬・爆発物などの保管に向く木製の弾薬クレート型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 21,
@@ -689,7 +700,8 @@
           "enOriginal": "Garlic Stack",
           "notes": "アセット: Epoch_Primitive/Storage_GarlicStack/PrimalItemStructure_GarlicStack.uasset。 アイコン: Epoch_Primitive/Storage_GarlicStack/garlicstack-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_GarlicStack",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・にんにくなどの食材・アイテムを整理して保管できる棚型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 24,
@@ -762,7 +774,8 @@
           "enOriginal": "A simple bed from the medieval ages, long time ago.It is a more soft version because of nice textiles and pillows.",
           "notes": "アセット: Epoch_Medieval/Medievalbed_Soft/PrimalItemStructure_MedievalBedSoft.uasset。 アイコン: Epoch_Medieval/Medievalbed_Soft/medievalsoftbed-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 原文「ago.It」はピリオド後の空白抜けとして訳した（英語原文列はファイルどおり）。",
           "assetName": "PrimalItemStructure_MedievalBedSoft",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【寝具・設置用途】\n・拠点に設置して使用するベッド型家具（横になる・リスポーン／ファストトラベル地点として利用）\n・名前の変更／回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 28,
@@ -780,7 +793,8 @@
           "enOriginal": "Requires electricity to activate. Lights a large area without adding much heat.",
           "notes": "アセット: Epoch_Modern/LampLarge/PrimalItemStructure_LampLarge.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_LampLarge",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点に設置して周囲を照らせる電気式の照明器具（作動には発電機などの電力が必要）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 29,
@@ -798,7 +812,8 @@
           "enOriginal": "A chandelier to brighten up rooms.",
           "notes": "アセット: Epoch_Medieval/Lamp_CeilingChandelier/PrimalItemStructure_Chandelier.uasset。 アイコン: Epoch_Medieval/Lamp_CeilingChandelier/ceilingchandelier-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_Chandelier",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点に設置して室内や通路を照らせる照明器具\n・点灯／消灯・燃料投入（必要な場合）・回収：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 30,
@@ -816,7 +831,8 @@
           "enOriginal": "A simple box, not very durable.",
           "notes": "アセット: Epoch_Modern/Storage_CardboardBox/PrimalItemStructure_Cardboardbox.uasset。 アイコン: Epoch_Modern/Storage_CardboardBox/carboardbox-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_Cardboardbox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・シンプルな段ボール箱型の収納建造物（耐久性は低め）。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 31,
@@ -907,7 +923,8 @@
           "enOriginal": "Hohoho!",
           "notes": "アセット: CustomStructures/DecoProps/Furniture/XMAS/XMAS_tree/PrimalItemStructure_ElectricChristmasTree.uasset。 アイコンを抽出できず。理由: DXT5がuasset内のみで、誤デコードのおそれがあるため不採用。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ElectricChristmasTree",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明・電飾機能】\n・拠点に設置して飾れる電飾付きのクリスマスツリー\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 36,
@@ -980,7 +997,8 @@
           "enOriginal": "Sugar Box",
           "notes": "アセット: Epoch_Primitive/StorageBox_Sugar/PrimalItemStructure_SugarBox.uasset。 アイコン: Epoch_Primitive/StorageBox_Sugar/sugarbox-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_SugarBox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・砂糖などの食材・アイテムを保管できる箱型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 40,
@@ -1035,7 +1053,8 @@
           "enOriginal": "Store wine resource types here.",
           "notes": "アセット: Epoch_Primitive/Storage_WineFlask/PrimalItemStructure_FullWineFlask.uasset。 アイコン: Epoch_Primitive/Storage_WineFlask/wineflaskfull-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_FullWineFlask",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・ワイン系資源などを保管できるフラスコ型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 43,
@@ -1071,7 +1090,8 @@
           "enOriginal": "A special high garden bed for planting newly added Seeds from MuchStuffPack.",
           "notes": "アセット: CustomStructures/GardenCropPlot/PrimalItemStructure_GardenBed.uasset。 アイコン: CustomStructures/GardenCropPlot/gardenbed-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_GardenBed",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・MuchStuffPack で追加された新しい種（Seeds）を植えて育てられる専用の高床園芸ベッド\n・種・肥料の投入／作物の収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 45,
@@ -1089,7 +1109,8 @@
           "enOriginal": "It is better to store fuel in the matching vessels, isn't it?",
           "notes": "アセット: Epoch_Modern/Storage_FuelBarrel/PrimalItemStructure_FuelBarrel.uasset。 アイコン: Epoch_Modern/Storage_FuelBarrel/fuelbarrel-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_FuelBarrel",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・燃料系アイテムの整理・保管に向く樽型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 46,
@@ -1107,7 +1128,8 @@
           "enOriginal": "A simple bed from the medieval ages, long time ago. But even its old it comforts you.",
           "notes": "アセット: CustomStructures/DecoProps/Furniture/Beds/Old_MedievalBed/PrimalItemStructure_MedievalBed.uasset。 アイコン: CustomStructures/DecoProps/Furniture/Beds/Old_MedievalBed/medievalbed-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MedievalBed",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【寝具・設置用途】\n・拠点に設置して使用するベッド型家具（横になる・リスポーン／ファストトラベル地点として利用）\n・名前の変更／回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 47,
@@ -1125,7 +1147,8 @@
           "enOriginal": "A Closet for medicinal supplies.",
           "notes": "アセット: Epoch_Modern/Storage_MedicCloset/PrimalItemStructure_MedicCloset.uasset。 アイコン: Epoch_Modern/Storage_MedicCloset/mediccloset-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MedicCloset",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・医療用品・回復アイテムの整理・保管に向くクローゼット型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 48,
@@ -1326,7 +1349,8 @@
           "enOriginal": "A box to store different items.",
           "notes": "アセット: Epoch_Primitive/StorageBoxKitchen_Misc/PrimalItemStructure_MiscBox.uasset。 アイコン: Epoch_Primitive/StorageBoxKitchen_Misc/kitchenboxmisc-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MiscBox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・さまざまなアイテムをまとめて保管できる汎用ボックス型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 59,
@@ -1362,7 +1386,8 @@
           "enOriginal": "A simple big tent, for relaxing.",
           "notes": "アセット: Epoch_Medieval/Bed_MedievalTentBig/PrimalItemStructure_MedievalTentBig.uasset。 アイコン: Epoch_Medieval/Bed_MedievalTentBig/TentBig-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MedievalTentBig",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【寝具・設置用途】\n・拠点やキャンプ地に設置して休憩・拠点演出に使えるテント型建造物\n・名前の変更／回収／解体（リスポーン対応時はファストトラベル操作も）：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 61,
@@ -1508,7 +1533,8 @@
           "enOriginal": "A small tiny candle for your private rooms.",
           "notes": "アセット: CustomStructures/DecoProps/Lamps/MedievalCandleLightStand/PrimalItemStructure_MedievalCandleLightStand.uasset。 アイコン: CustomStructures/DecoProps/Lamps/MedievalCandleLightStand/candlelightstandIcon.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MedievalCandleLightStand",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点に設置して室内や通路を照らせる照明器具\n・点灯／消灯・燃料投入（必要な場合）・回収：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 69,
@@ -1562,7 +1588,8 @@
           "enOriginal": "A shed for storing wood protected from rain.",
           "notes": "アセット: CustomStructures/DecoProps/Storage/FireWoodShed/PrimalItemStructure_FireWoodShed.uasset。 アイコン: CustomStructures/DecoProps/Storage/FireWoodShed/woodshed-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_FireWoodShed",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・雨を避けて木材を整理・保管できる薪小屋型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 72,
@@ -1598,7 +1625,8 @@
           "enOriginal": "A barrier made out of sand filled bags.",
           "notes": "アセット: Epoch_Modern/Sandbags_Rounded/PrimalItemStructure_SandbagsRounded.uasset。 アイコン: Epoch_Modern/Sandbags_Rounded/sandbagsrounded-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_SandbagsRounded",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【防壁・設置用途】\n・砂を詰めた袋をカーブ状に積んだ簡易防壁。拠点周りの遮蔽物やバリケードとして設置できる\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 74,
@@ -1652,7 +1680,8 @@
           "enOriginal": "Coins belong in a purse!",
           "notes": "アセット: Epoch_Medieval/Storage_CoinPurse/PrimalItemStructure_CoinPurse.uasset。 アイコン: Epoch_Medieval/Storage_CoinPurse/coinpurse-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_CoinPurse",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・コイン類の整理・保管に向くパース型の収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 77,
@@ -1724,7 +1753,8 @@
           "enOriginal": "A square soil garden plot.",
           "notes": "アセット: FarmUpdate/Plots/PrimalItemStructure_CropPlot_SquarePlain.uasset。 アイコン: FarmUpdate/Plots/soil_square-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_CropPlot_SquarePlain",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・拠点に設置し、種と肥料・水分を用意して作物を育てられる菜園・作物区画\n・種・肥料の投入／作物の収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 81,
@@ -1760,7 +1790,8 @@
           "enOriginal": "A smaller tent variant for relaxing.",
           "notes": "アセット: Epoch_Medieval/Bed_MedievalTentSmall/PrimalItemStructure_MedievalTentSmall.uasset。 アイコン: Epoch_Medieval/Bed_MedievalTentSmall/tentsmall-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MedievalTentSmall",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【寝具・設置用途】\n・拠点やキャンプ地に設置して休憩・拠点演出に使えるテント型建造物\n・名前の変更／回収／解体（リスポーン対応時はファストトラベル操作も）：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 83,
@@ -1778,7 +1809,8 @@
           "enOriginal": "A special flask for alchemy liquids and materials.",
           "notes": "アセット: Epoch_Primitive/Storage_Flask_3/PrimalItemStructure_PyramidFlask.uasset。 アイコン: Epoch_Primitive/Storage_Flask_3/flask3-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_PyramidFlask",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・錬金術用の液体や素材の保管に向くピラミッド型フラスコの収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 84,
@@ -1796,7 +1828,8 @@
           "enOriginal": "To store your books on a wall.",
           "notes": "アセット: CustomStructures/DecoProps/Furniture/Books/WallBookShelf/PrimalItemStructure_Furniture_WallBookShelf.uasset。 アイコン: CustomStructures/DecoProps/Furniture/Books/WallBookShelf/wallbookshelf-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_Furniture_WallBookShelf",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・本などのアイテムを整理して保管できる本棚型の収納家具\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 85,
@@ -1814,7 +1847,8 @@
           "enOriginal": "A box to store veggies.",
           "notes": "アセット: Epoch_Medieval/Storage_VeggieBox/PrimalItemStructure_VeggieBox.uasset。 アイコン: Epoch_Medieval/Storage_VeggieBox/veggiebox-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_VeggieBox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・野菜類の整理・保管に向く箱型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 86,
@@ -1832,7 +1866,8 @@
           "enOriginal": "A portable Tent where you can take cover in hostile environments",
           "notes": "アセット: Epoch_Medieval/Bed_MedievalTentSmall/TentTest/PrimalItemStructure_Tent_Buffed.uasset。 アイコン: Epoch_Medieval/Bed_MedievalTentSmall/tentsmall-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_Tent_Buffed",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【寝具・シェルター機能】\n・持ち運びでき、敵対的な環境や悪天候から身を守るために設置できる強化テント\n・出入り／回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 87,
@@ -1850,7 +1885,8 @@
           "enOriginal": "A barrier made out of sand filled bags.",
           "notes": "アセット: Epoch_Modern/Sandbags_Long/PrimalItemStructure_SandbagsLong.uasset。 アイコン: Epoch_Modern/Sandbags_Long/sandbags_long-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_SandbagsLong",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【防壁・設置用途】\n・砂を詰めた袋を直線状に積んだ簡易防壁。拠点周りの遮蔽物やバリケードとして設置できる\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 88,
@@ -1904,7 +1940,8 @@
           "enOriginal": "Antique Cabinet",
           "notes": "アセット: Epoch_Primitive/Storage_Cabinet_2/PrimalItemStructure_AntiqueCabinet.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_AntiqueCabinet",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・アンティーク調のキャビネット型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 91,
@@ -1922,7 +1959,8 @@
           "enOriginal": "Be careful with those eggos!",
           "notes": "アセット: Epoch_Medieval/Storage_EggBucket/PrimalItemStructure_EggBucket.uasset。 アイコン: Epoch_Medieval/Storage_EggBucket/eggbucket-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_EggBucket",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・卵類の整理・保管に向くバケツ型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 92,
@@ -1940,7 +1978,8 @@
           "enOriginal": "A large cabinet to store goods in.",
           "notes": "アセット: CustomStructures/DecoProps/Storage/MedievalBookCase/PrimalItemStructure_MedievalBookCase.uasset。 アイコン: CustomStructures/DecoProps/Storage/MedievalBookCase/medievalbookcase-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MedievalBookCase",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・本や品物をまとめて保管できる大型キャビネット型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 93,
@@ -1976,7 +2015,8 @@
           "enOriginal": "Requires electricity to activate.",
           "notes": "アセット: Epoch_Modern/ProjectorLight/PrimalItemStructure_ProjectorLight.uasset。 アイコン: Epoch_Modern/ProjectorLight/projector_light-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ProjectorLight",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点に設置して周囲を照らせる電気式の照明器具（作動には発電機などの電力が必要）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 95,
@@ -1994,7 +2034,8 @@
           "enOriginal": "Kitchen Chest",
           "notes": "アセット: Epoch_Primitive/Storage_KitchenChest/PrimalItemStructure_KitchenChest.uasset。 アイコン: Epoch_Primitive/Storage_KitchenChest/kitchenchest-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_KitchenChest",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・キッチン周りの食材・道具の整理に使えるチェスト型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 96,
@@ -2048,7 +2089,8 @@
           "enOriginal": "Coffe Bean Bag",
           "notes": "アセット: Epoch_Primitive/Storage_Bag_Coffee/PrimalItemStructure_CoffeBeanBag.uasset。 アイコン: Epoch_Primitive/Storage_Bag_Coffee/storagebagcoffeebeans-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 原文 typo「Coffe」は Coffee と解釈して訳した（英語原文列はファイルどおり）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_CoffeBeanBag",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・コーヒー豆などの食材・アイテムを保管できる袋型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 99,
@@ -2066,7 +2108,8 @@
           "enOriginal": "Dish Rack",
           "notes": "アセット: Epoch_Primitive/Storage_Dishrack/PrimalItemStructure_DishRack.uasset。 アイコン: Epoch_Primitive/Storage_Dishrack/dishrack-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_DishRack",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・食器やキッチン用品などの整理・保管に使えるラック型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 100,
@@ -2102,7 +2145,8 @@
           "enOriginal": "CarbonTool",
           "notes": "アセット: Weapons/CarbonTool/PrimalItem_WeaponCarbonTool.uasset。 アイコン: Weapons/CarbonTool/carbontol-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItem_WeaponCarbonTool",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【装備・ツール用途】\n・ホットバーにセットして手に持って使用するMOD追加ツール／近接装備（CarbonTool）"
         },
         {
           "index": 102,
@@ -2193,7 +2237,8 @@
           "enOriginal": "Small Purple Case",
           "notes": "アセット: Epoch_Primitive/Storage_SmallCase1/PrimalItemStructure_SmallPurpleCase.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_SmallPurpleCase",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・小物を保管できる小型の紫ケース型収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 107,
@@ -2229,7 +2274,8 @@
           "enOriginal": "Store gas safely.",
           "notes": "アセット: Epoch_Modern/Storage_GasCylinder/PrimalItemStructure_GasCylinder.uasset。 アイコン: Epoch_Modern/Storage_GasCylinder/gascylinder-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_GasCylinder",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・ガス系資源を安全に保管できるボンベ型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 109,
@@ -2266,7 +2312,8 @@
           "enOriginal": "A single sack to store goods.",
           "notes": "アセット: Epoch_Medieval/Storage_SackSingle/PrimalItemStructure_SingleSack.uasset。 アイコン: Epoch_Medieval/Storage_SackSingle/singlesack-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_SingleSack",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・品物を入れられる単体の麻袋型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 111,
@@ -2284,7 +2331,8 @@
           "enOriginal": "Soil supported by sticks to help plants growing.",
           "notes": "アセット: FarmUpdate/Plots/PrimalItemStructure_SoilWideStickSupported.uasset。 アイコン: FarmUpdate/Plots/sticksupportedwide-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_SoilWideStickSupported",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・拠点に設置し、種と肥料・水分を用意して作物を育てられる菜園・作物区画（支柱付きデザイン）\n・種・肥料の投入／作物の収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 112,
@@ -2394,7 +2442,8 @@
           "enOriginal": "Cabinet Dark Brown",
           "notes": "アセット: Epoch_Primitive/Storage_Cabinet_3/PrimalItemStructure_CabinetDarkBrown.uasset。 アイコン: Epoch_Primitive/Storage_Cabinet_3/cabinet_3-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_CabinetDarkBrown",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・ダークブラウン色のキャビネット型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 118,
@@ -2612,7 +2661,8 @@
           "enOriginal": "A modern bunk bed found in garrisons.",
           "notes": "アセット: Epoch_Modern/DoubleBed/PrimalItemStructure_DoubleBed.uasset。 アイコン: Epoch_Modern/DoubleBed/moderndoublebed-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_DoubleBed",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【寝具・設置用途】\n・拠点に設置して使用するベッド型家具（横になる・リスポーン／ファストトラベル地点として利用）\n・名前の変更／回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 130,
@@ -2722,7 +2772,8 @@
           "enOriginal": "A nicely sorted stack of bowls.",
           "notes": "アセット: Epoch_Medieval/Storage_Deco_ClayBowls/PrimalItemStructure_ClayBowls.uasset。 アイコン: Epoch_Medieval/Storage_Deco_ClayBowls/decobowls-removebg-preview__1_.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ClayBowls",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・鉢を積み重ねたデザインの収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 136,
@@ -2740,7 +2791,8 @@
           "enOriginal": "Soil in a wide variant, raised as well to keep off bugs.",
           "notes": "アセット: FarmUpdate/Plots/PrimalItemStructure_SoilWideRaised.uasset。 アイコン: FarmUpdate/Plots/widefenced-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_SoilWideRaised",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・拠点に設置し、種と肥料・水分を用意して作物を育てられる菜園・作物区画（高床デザイン）\n・種・肥料の投入／作物の収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 137,
@@ -2795,7 +2847,8 @@
           "enOriginal": "A soil garden plot.",
           "notes": "アセット: FarmUpdate/Plots/PrimalItemStructure_CropPlot_SoilRaisedFenced.uasset。 アイコン: FarmUpdate/Plots/plotfence2-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_CropPlot_SoilRaisedFenced",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・拠点に設置し、種と肥料・水分を用意して作物を育てられる菜園・作物区画（柵付きデザイン）\n・種・肥料の投入／作物の収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 140,
@@ -2831,7 +2884,8 @@
           "enOriginal": "A modern metal crate. Used in the modern days for storing explosive goods.",
           "notes": "アセット: Epoch_Modern/Storage_LargeMetalCrate/PrimalItemStructure_LargeMetalCrate.uasset。 アイコン: Epoch_Modern/Storage_LargeMetalCrate/largemetalcrate-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_LargeMetalCrate",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・弾薬・爆発物などの保管に向く現代的な金属クレート型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 142,
@@ -3031,7 +3085,8 @@
           "enOriginal": "A lamp post for brighten up the dark roads.",
           "notes": "アセット: CustomStructures/DecoProps/Lamps/WoodenLampPost/PrimalItemStructure_WoodenLampPost.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_WoodenLampPost",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点に設置して室内や通路を照らせる照明器具\n・点灯／消灯・燃料投入（必要な場合）・回収：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 153,
@@ -3049,7 +3104,8 @@
           "enOriginal": "A soil garden plot.",
           "notes": "アセット: FarmUpdate/Plots/PrimalItemStructure_CropPlot_SquareStickSupported.uasset。 アイコン: FarmUpdate/Plots/sticksupportedplot-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_CropPlot_SquareStickSupported",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・拠点に設置し、種と肥料・水分を用意して作物を育てられる菜園・作物区画（支柱付きデザイン）\n・種・肥料の投入／作物の収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 154,
@@ -3104,7 +3160,8 @@
           "enOriginal": "A metal jug for holding liquids of all sort.",
           "notes": "アセット: Epoch_Primitive/Storage_MetalJug/PrimalItemStructure_MetalJug.uasset。 アイコン: Epoch_Primitive/Storage_MetalJug/metaljug-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MetalJug",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・あらゆる種類の液体の保管に向く金属ジャグ型の収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 157,
@@ -3140,7 +3197,8 @@
           "enOriginal": "A flask to store special alchemy liquids.",
           "notes": "アセット: Epoch_Primitive/Storage_Flask_2/PrimalItemStructure_GlassFlask.uasset。 アイコン: Epoch_Primitive/Storage_Flask_2/flask2-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_GlassFlask",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・特別な錬金術の液体の保管に向くガラスフラスコ型の収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 159,
@@ -3158,7 +3216,8 @@
           "enOriginal": "Simple soil, stretched to a wide variant.",
           "notes": "アセット: FarmUpdate/Plots/PrimalItemStructure_PlainSoilWide.uasset。 アイコン: FarmUpdate/Plots/soilwidethin-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_PlainSoilWide",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・拠点に設置し、種と肥料・水分を用意して作物を育てられる菜園・作物区画\n・種・肥料の投入／作物の収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 160,
@@ -3194,7 +3253,8 @@
           "enOriginal": "Small Case",
           "notes": "アセット: Epoch_Primitive/Storage_DecoSmallCase2/PrimalItemStructure_SmallCase.uasset。 アイコン: Epoch_Primitive/Storage_DecoSmallCase2/smallcase-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_SmallCase",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・小物を保管できる小型ケース型の収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 162,
@@ -3212,7 +3272,8 @@
           "enOriginal": "A rattan basket to hold some goods.",
           "notes": "アセット: Epoch_Medieval/Storage_BasketRattan/PrimalItemStructure_BasketRattanBig.uasset。 アイコン: Epoch_Medieval/Storage_BasketRattan/basketrattanbig-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_BasketRattanBig",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・荷物を入れられる大型のラタン製バスケット型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 163,
@@ -3230,7 +3291,8 @@
           "enOriginal": "A piece of chewy cheese.",
           "notes": "アセット: Food/PrimalItemConsumable_Cheese.uasset。 アイコン: Food/Food_Icons/Icon_Cheese.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemConsumable_Cheese",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【食品・料理用途】\n・そのまま食べたり、MuchStuffPack の料理レシピ素材として利用できるチーズ（Cheese）"
         },
         {
           "index": 164,
@@ -3248,7 +3310,8 @@
           "enOriginal": "A ceramic vessel to hold stuff.",
           "notes": "アセット: Epoch_Primitive/Storage_CeramicVessel/PrimalItemStructure_CeramicVessel.uasset。 アイコン: Epoch_Primitive/Storage_CeramicVessel/ceramicvessel-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_CeramicVessel",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・物を保管できる陶器製の容器型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 165,
@@ -3266,7 +3329,8 @@
           "enOriginal": "A large bin specialized for converting plant material with some help of nature into usefull fertilizer.",
           "notes": "アセット: CustomStructures/PlantMaterialCompostBin/PrimalItemStructure_PlantMaterialCompostBin.uasset。 アイコン: CustomStructures/PlantMaterialCompostBin/plantmaterialbin-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 原文 typo「usefull」は useful と解釈して訳した（英語原文列はファイルどおり）。",
           "assetName": "PrimalItemStructure_PlantMaterialCompostBin",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【肥料生成・使い方】\n・植物材料を中に入れておくと、時間経過で農耕用の有用な肥料に変換してくれる専用コンポスト箱\n・材料の投入／肥料の回収：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 166,
@@ -3284,7 +3348,8 @@
           "enOriginal": "Coffe Powder Box",
           "notes": "アセット: Epoch_Primitive/Storage_ConrainerBox_CoffePowder/PrimalItemStructure_CoffePowderBox.uasset。 アイコン: Epoch_Primitive/Storage_ConrainerBox_CoffePowder/coffecontainer-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 原文 typo「Coffe」は Coffee と解釈して訳した（英語原文列はファイルどおり）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_CoffePowderBox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・コーヒー粉などの粉・食材系アイテムを保管できる箱型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 167,
@@ -3320,7 +3385,8 @@
           "enOriginal": "Coat Rack",
           "notes": "アセット: Epoch_Primitive/Storage_CoatRack/PrimalItemStructure_CoatRack.uasset。 アイコン: Epoch_Primitive/Storage_CoatRack/coatrack-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_CoatRack",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・装備や衣類などの整理・保管に使えるコートラック型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 169,
@@ -3338,7 +3404,8 @@
           "enOriginal": "A closet with free access to the shelves.",
           "notes": "アセット: Epoch_Modern/Storage_ClosetOpen/PrimalItemStructure_ClosetOpenSmall.uasset。 アイコン: Epoch_Modern/Storage_ClosetOpen/closetopensmall-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ClosetOpenSmall",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・棚にすぐ手が届く小型のオープンシェルフ型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 170,
@@ -3467,7 +3534,8 @@
           "enOriginal": "A Stack of bags for your goods.",
           "notes": "アセット: Epoch_Medieval/Storage_BagStack/PrimalItemStructure_BagStack.uasset。 アイコン: Epoch_Medieval/Storage_BagStack/bagstack-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_BagStack",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・品物をまとめて保管できる積み袋型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 177,
@@ -3503,7 +3571,8 @@
           "enOriginal": "Smaller feeding trough. Put food for your nearby pets in this, and they'll automatically eat it when hungry!",
           "notes": "アセット: CustomStructures/MiniFoodTrough/PrimalItemStructure_MiniFeedingTrough.uasset。 アイコン: CustomStructures/MiniFoodTrough/minifeedingtrough-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MiniFeedingTrough",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【給餌機能・使い方】\n・小型の給餌槽。近くに待機しているテイム済み恐竜用の食料を入れておくと、空腹時に自動で食べてくれる\n・食料の出し入れ：Fキー（コントローラー：□ / X）\n・効果範囲の確認／回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 179,
@@ -3577,7 +3646,8 @@
           "enOriginal": "A bucket to hold liquids.",
           "notes": "アセット: Epoch_Primitive/Storage_bucket_metal/PrimalItemStructure_MetalBucket.uasset。 アイコン: Epoch_Primitive/Storage_bucket_metal/metalbucket-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MetalBucket",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・液体などの保管に向く金属バケツ型の収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 183,
@@ -3632,7 +3702,8 @@
           "enOriginal": "A simple tipi style tent to have a good night.",
           "notes": "アセット: CustomStructures/Tent/PrimalItemStructure_TipiTent.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_TipiTent",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【寝具・設置用途】\n・拠点やキャンプ地に設置して休憩・拠点演出に使えるテント型建造物\n・名前の変更／回収／解体（リスポーン対応時はファストトラベル操作も）：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 186,
@@ -3723,7 +3794,8 @@
           "enOriginal": "Requires electricity to activate. Fits good on ceilings.",
           "notes": "アセット: Epoch_Modern/LongLamp/PrimalItemStructure_LongLamp.uasset。 アイコン: Epoch_Modern/LongLamp/bunkerceilinglamp-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_LongLamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点に設置して周囲を照らせる電気式の照明器具（作動には発電機などの電力が必要）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 191,
@@ -3741,7 +3813,8 @@
           "enOriginal": "A triple closet to store items.",
           "notes": "アセット: Epoch_Modern/Storage_Closet_Tripple/PrimalItemStructure_ClosetTripple.uasset。 アイコン: Epoch_Modern/Storage_Closet_Tripple/storageclosettripple-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ClosetTripple",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・アイテムをまとめて保管できる3連クローゼット型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 192,
@@ -3813,7 +3886,8 @@
           "enOriginal": "Cabinet Brown",
           "notes": "アセット: Epoch_Primitive/Storage_Cabinet_1/PrimalItemStructure_CabinetBrown.uasset。 アイコン: Epoch_Primitive/Storage_Cabinet_1/cabinet1-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_CabinetBrown",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・ブラウン色のキャビネット型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 196,
@@ -3831,7 +3905,8 @@
           "enOriginal": "A modern Ammo Crate. Used in the modern days for storing explosive goods.",
           "notes": "アセット: Epoch_Modern/Storage_AmmoBox_Metal_big/PrimalItemStructure_AmmoBoxMetalBig.uasset。 アイコン: Epoch_Modern/Storage_AmmoBox_Metal_big/storageammoboxmetalbig-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_AmmoBoxMetalBig",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・弾薬・爆発物などの保管に向く大型の金属製弾薬箱型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 197,
@@ -3849,7 +3924,8 @@
           "enOriginal": "Flour Box",
           "notes": "アセット: Epoch_Primitive/StorageBox_Flour/PrimalItemStructure_FlourBox.uasset。 アイコン: Epoch_Primitive/StorageBox_Flour/flourbox-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_FlourBox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・小麦粉などの粉・食材系アイテムを保管できる箱型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 198,
@@ -4014,7 +4090,8 @@
           "enOriginal": "A pile where you can dry your wheat into hay.",
           "notes": "アセット: FarmUpdate/Structures/haypile/PrimalItemStructure_HayPile.uasset。 アイコン: FarmUpdate/haypile-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_HayPile",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【乾燥・加工機能】\n・小麦（Wheat）を中に入れて干すことで、干し草（Hay）に加工できる設備\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 207,
@@ -4050,7 +4127,8 @@
           "enOriginal": "A generic milk brand before the great war errupted, made out of coconuts or other milk based plants.",
           "notes": "アセット: Food/PrimalItemConsumable_MiikMilk.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 原文 typo「errupted」は erupted と解釈して訳した（英語原文列はファイルどおり）。 英語名「Miik」はファイル上のブランド表記どおり音写した。",
           "assetName": "PrimalItemConsumable_MiikMilk",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【食品・料理用途】\n・ココナッツなど植物由来のミルク飲料。そのまま飲んだり、バター・チーズ・クリーム等の調理素材に利用できる"
         },
         {
           "index": 209,
@@ -4143,7 +4221,8 @@
           "enOriginal": "Used to store small quantities of oily liquids.",
           "notes": "アセット: CustomStructures/DecoProps/Storage/MedievalJug/PrimalItemStructure_OilJug.uasset。 アイコン: CustomStructures/DecoProps/Storage/MedievalJug/oiljug-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_OilJug",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・少量の油性液体の保管に向くジャグ型の収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 214,
@@ -4179,7 +4258,8 @@
           "enOriginal": "A stack of beer mugs.",
           "notes": "アセット: Epoch_Medieval/Storage_DecoBeerMugs/PrimalItemStructure_BeerMugs.uasset。 アイコン: Epoch_Medieval/Storage_DecoBeerMugs/beermugs-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_BeerMugs",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・ビールマグを積み重ねたデザインの収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 216,
@@ -4216,7 +4296,8 @@
           "enOriginal": "There is Not Mushroom in this box",
           "notes": "アセット: FarmUpdate/Plots/PrimalItemStructure_NotMushRoomBox.uasset。 アイコン: FarmUpdate/Plots/mushroombox1-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_NotMushRoomBox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・拠点に設置してキノコ・菌類などの栽培に使える専用のボックス型栽培区画\n・種・肥料の投入／収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 218,
@@ -4253,7 +4334,8 @@
           "enOriginal": "Store your alchemy stuff here.",
           "notes": "アセット: Epoch_Primitive/Storage_Vial2/PrimalItemStructure_LongCorkVial.uasset。 アイコン: Epoch_Primitive/Storage_Vial2/vial2-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_LongCorkVial",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・錬金術の材料の保管に向くコルク付き長瓶型の収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 220,
@@ -4326,7 +4408,8 @@
           "enOriginal": "A large dung pile, used as a source for valuable soil.",
           "notes": "アセット: FarmUpdate/Structures/dung_pile/PrimalItemStructure_DungPile.uasset。 アイコン: FarmUpdate/Structures/dung_pile/dungpile-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_DungPile",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・資源用途】\n・貴重な土（Soil）の供給源として活用できる大きな糞の山\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 224,
@@ -4344,7 +4427,8 @@
           "enOriginal": "A simple shelf to store and access items quickly.",
           "notes": "アセット: Epoch_Medieval/Deco_StandingShelf/PrimalItemStructure_DecoStandingShelf.uasset。 アイコン: Epoch_Medieval/Deco_StandingShelf/standingshelf-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_DecoStandingShelf",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・アイテムを保管し、すばやく出し入れできるシンプルな立て棚型の収納家具\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 225,
@@ -4653,7 +4737,8 @@
           "enOriginal": "A single durable closet to store items.",
           "notes": "アセット: Epoch_Modern/Storage_ClosetSingle/PrimalItemStructure_ClosetSingle.uasset。 アイコン: Epoch_Modern/Storage_ClosetSingle/closetsingle-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ClosetSingle",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・耐久性のある1連クローゼット型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 242,
@@ -4671,7 +4756,8 @@
           "enOriginal": "A vial to store acids.",
           "notes": "アセット: Epoch_Primitive/Storage_Vial3/PrimalItemStructure_YellowGlasVial.uasset。 アイコン: Epoch_Primitive/Storage_Vial3/vial3-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_YellowGlasVial",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・酸などの液体の保管に向く黄色いガラス瓶型の収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 243,
@@ -4707,7 +4793,8 @@
           "enOriginal": "A stack of logs.",
           "notes": "アセット: Epoch_Medieval/Storage_Logs/PrimalItemStructure_LogStack.uasset。 アイコン: Epoch_Medieval/Storage_Logs/logstack-removebg-preview__1_.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_LogStack",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・丸太を積み重ねたデザインの収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 245,
@@ -4761,7 +4848,8 @@
           "enOriginal": "A small modern lamp to put on a floor.",
           "notes": "アセット: Epoch_Modern/FloorLamp/PrimalItemStructure_FloorLamp.uasset。 アイコン: Epoch_Modern/FloorLamp/floorlamp-removebg-preview__1_.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_FloorLamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点に設置して室内や通路を照らせる照明器具\n・点灯／消灯・燃料投入（必要な場合）・回収：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 248,
@@ -4779,7 +4867,8 @@
           "enOriginal": "A special flask for alchemy.",
           "notes": "アセット: Epoch_Primitive/Storage_Flask1/PrimalItemStructure_RoundFlask.uasset。 アイコンを抽出できず。理由: DXT5がuasset内のみで、誤デコードのおそれがあるため不採用。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_RoundFlask",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・錬金術用の液体や素材の保管に向く丸型フラスコの収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 249,
@@ -4797,7 +4886,8 @@
           "enOriginal": "Spice Bag",
           "notes": "アセット: Epoch_Primitive/Storage_Bag_Spice/PrimalItemStructure_SpiceBag.uasset。 アイコン: Epoch_Primitive/Storage_Bag_Spice/spicebag-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_SpiceBag",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・スパイスなどの調味料・食材系アイテムを保管できる袋型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 250,
@@ -4815,7 +4905,8 @@
           "enOriginal": "A soil garden plot.",
           "notes": "アセット: FarmUpdate/Plots/PrimalItemStructure_CropPlot_SquarePlainRounded.uasset。 アイコン: FarmUpdate/Plots/soil_rounded-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_CropPlot_SquarePlainRounded",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・拠点に設置し、種と肥料・水分を用意して作物を育てられる菜園・作物区画\n・種・肥料の投入／作物の収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 251,
@@ -4851,7 +4942,8 @@
           "enOriginal": "A wide fungus box.",
           "notes": "アセット: FarmUpdate/Plots/PrimalItemStructure_WideFungusBox.uasset。 アイコン: FarmUpdate/Plots/mushroombox2-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_WideFungusBox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・拠点に設置して菌類・キノコ類などの栽培に使える幅広のボックス型栽培区画\n・種・肥料の投入／収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 253,
@@ -4887,7 +4979,8 @@
           "enOriginal": "A very big crop plot which got cultivated from very good soil, mixed with fertilizer. It is secured by a small fence to keep off bugs.",
           "notes": "アセット: FarmUpdate/Plots/PrimalItemStructure_CultivatedCropPlotBoxFenced.uasset。 アイコン: FarmUpdate/Plots/hugeplotfence-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_CultivatedCropPlotBoxFenced",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・拠点に設置し、種と肥料・水分を用意して作物を育てられる菜園・作物区画（柵付きデザイン）\n・種・肥料の投入／作物の収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 255,
@@ -4941,7 +5034,8 @@
           "enOriginal": "Wood Crate",
           "notes": "アセット: Epoch_Medieval/Storage_WoodcrateEmpty/PrimalItemStructure_WoodCrate.uasset。 アイコン: Epoch_Medieval/Storage_WoodcrateEmpty/emptywoodcrate-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_WoodCrate",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・アイテムを保管できる木箱型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 258,
@@ -5124,7 +5218,8 @@
           "enOriginal": "A raised plank garden bed to simplify growing plants in a comfort position, protected from bad bugs and mice.",
           "notes": "アセット: FarmUpdate/Plots/PrimalItemStructure_PlankRaisedBed.uasset。 アイコン: FarmUpdate/Plots/highbeet-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_PlankRaisedBed",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・拠点に設置し、種と肥料・水分を用意して作物を育てられる菜園・作物区画（高床デザイン）\n・種・肥料の投入／作物の収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 268,
@@ -5178,7 +5273,8 @@
           "enOriginal": "A compact box for storing breads of all kind.",
           "notes": "アセット: Epoch_Modern/Storage_BreadBox/PrimalItemStructure_Breadbox.uasset。 アイコン: Epoch_Modern/Storage_BreadBox/breadbox-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_Breadbox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・各種パン類の整理・保管に向くコンパクトな箱型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 271,
@@ -5286,7 +5382,8 @@
           "enOriginal": "A bottle for writing ink.",
           "notes": "アセット: Epoch_Primitive/Storage_InkBottle/PrimalItemStructure_InkBottle.uasset。 アイコン: Epoch_Primitive/Storage_InkBottle/ink-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_InkBottle",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・筆記用インク（Writing Ink）の保管に向く瓶型の収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 277,
@@ -5413,7 +5510,8 @@
           "enOriginal": "Cabinet Lime",
           "notes": "アセット: Epoch_Primitive/Storage_Cabinet_4/PrimalItemStructure_CabinetLime.uasset。 アイコンを抽出できず。理由: could not locate pixel data or dimensions。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_CabinetLime",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・ライム色のキャビネット型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 284,
@@ -5431,7 +5529,8 @@
           "enOriginal": "An old fashioned wood chest to store your personal belongings",
           "notes": "アセット: CustomStructures/DecoProps/Storage/MedievalChest/PrimalItemStructure_MedievalChest.uasset。 アイコン: CustomStructures/DecoProps/Storage/MedievalChest/medeivalchest-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_MedievalChest",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・個人の持ち物を保管できる中世風の木製チェスト型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 285,
@@ -5449,7 +5548,8 @@
           "enOriginal": "A modern desk with a little storage.",
           "notes": "アセット: Epoch_Modern/ModernDesk/PrimalItemStructure_ModernDesk.uasset。 アイコン: Epoch_Modern/ModernDesk/moderndesk-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ModernDesk",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・少量のアイテムを収納できる現代的な机（デスク型収納家具）\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 286,
@@ -5558,7 +5658,8 @@
           "enOriginal": "To store your books on a wall.",
           "notes": "アセット: Epoch_Medieval/FruitBasket/PrimalItemStructure_Furniture_FruitBasket.uasset。 アイコン: Epoch_Medieval/FruitBasket/Icon_FruitBasket.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語説明は「To store your books on a wall.」であり、説明列はその原文の和訳（果物かご（Fruit Basket）の説明としては不自然だが、ファイルどおり）。",
           "assetName": "PrimalItemStructure_Furniture_FruitBasket",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【設置・家具用途】\n・果物かご型の家具アイテム。拠点のテーブルや棚などに配置して利用できる（※MOD英語原文は壁の本棚の説明が流用されている）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 292,
@@ -5576,7 +5677,8 @@
           "enOriginal": "A kettle to keep your liquids warm.",
           "notes": "アセット: Epoch_Primitive/Storage_kettle/PrimalItemStructure_StorageMetalKettle.uasset。 アイコン: Epoch_Primitive/Storage_kettle/storagekettle-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_StorageMetalKettle",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・液体を温かく保って保管できる金属ケトル型の収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 293,
@@ -5630,7 +5732,8 @@
           "enOriginal": "A very big crop plot which got cultivated from very good soil, mixed with fertilizer.",
           "notes": "アセット: FarmUpdate/Plots/PrimalItemStructure_CultivatedCropPlotBox.uasset。 アイコン: FarmUpdate/Plots/hugeplotplain-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_CultivatedCropPlotBox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【農耕・栽培機能】\n・拠点に設置し、種と肥料・水分を用意して作物を育てられる菜園・作物区画\n・種・肥料の投入／作物の収穫：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 296,
@@ -5738,7 +5841,8 @@
           "enOriginal": "Wooden Empty Crate",
           "notes": "アセット: Epoch_Primitive/Storage_WoodenCrate/PrimalItemStructure_WoodenEmptyCrate.uasset。 アイコン: Epoch_Primitive/Storage_WoodenCrate/woodcrateempty-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_WoodenEmptyCrate",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・アイテムを保管できる空の木箱型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 302,
@@ -5756,7 +5860,8 @@
           "enOriginal": "A modern open shelf for quick access.",
           "notes": "アセット: Epoch_Modern/Storage_ClosetWideOpen/PrimalItemStructure_ClosetOpenBig.uasset。 アイコン: Epoch_Modern/Storage_ClosetWideOpen/closetwideopened-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ClosetOpenBig",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・アイテムをすばやく出し入れできる大型の現代的な開き棚型収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 303,
@@ -5774,7 +5879,8 @@
           "enOriginal": "Suitcase",
           "notes": "アセット: Epoch_Modern/Deco_Suitcase/PrimalItemStructure_Suitcase.uasset。 アイコン: Epoch_Modern/Deco_Suitcase/decosuitcae-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。 ファイル内の英語名と英語説明が同一のため、日本語の名前と説明もそれに合わせた。",
           "assetName": "PrimalItemStructure_Suitcase",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・アイテムを保管できるスーツケース型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 304,
@@ -5792,7 +5898,8 @@
           "enOriginal": "A bucket to store fruits.",
           "notes": "アセット: Epoch_Medieval/Storage_FruitBucket/PrimalItemStructure_FruitBucket.uasset。 アイコン: Epoch_Medieval/Storage_FruitBucket/fruitbucket-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_FruitBucket",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・果物類の整理・保管に向くバケツ型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 305,
@@ -5938,7 +6045,8 @@
           "enOriginal": "A simple bed used in garrisons during the great war.",
           "notes": "アセット: Epoch_Modern/SingleBed/PrimalItemStructure_ModernSIngleBed.uasset。 アイコン: Epoch_Modern/SingleBed/modernsinglebed-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_ModernSIngleBed",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【寝具・設置用途】\n・拠点に設置して使用するベッド型家具（横になる・リスポーン／ファストトラベル地点として利用）\n・名前の変更／回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 313,
@@ -5956,7 +6064,8 @@
           "enOriginal": "Swirl milk very fast to get yourself some cream!",
           "notes": "アセット: Food/PrimalItemConsumable_WhippedCream.uasset。 アイコンを抽出できず。理由: DXT5がuasset内のみで、誤デコードのおそれがあるため不採用。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemConsumable_WhippedCream",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【食品・料理用途】\n・乳をかき混ぜて作るホイップクリーム。デザートや料理の素材・食品として利用できる"
         },
         {
           "index": 314,
@@ -5974,7 +6083,8 @@
           "enOriginal": "Store special alchemy essence here.",
           "notes": "アセット: Epoch_Primitive/Storage_Vial1/PrimalItemStructure_LongVial.uasset。 アイコン: Epoch_Primitive/Storage_Vial1/vial1-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_LongVial",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・特別な錬金術のエッセンスの保管に向く長瓶型の収納容器。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 315,
@@ -6065,7 +6175,8 @@
           "enOriginal": "A large Bee Hive. It will convert rare Flowers into valuable honey.",
           "notes": "アセット: CustomStructures/CustomBeeHive/PrimalItemStructure_CustomBeeHive.uasset。 アイコン: CustomStructures/CustomBeeHive/beehive-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_CustomBeeHive",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【蜂蜜生産・使い方】\n・レアフラワー（Rare Flower）を中に入れておくと、貴重な蜂蜜（Honey）へ変換してくれる飼育用ミツバチの巣\n・花の投入／蜂蜜の回収：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 320,
@@ -6121,7 +6232,8 @@
           "enOriginal": "A box to store fruits.",
           "notes": "アセット: Epoch_Medieval/Storage_FruitBox/PrimalItemStructure_Fruitbox.uasset。 アイコン: Epoch_Medieval/Storage_FruitBox/fruitbox-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_Fruitbox",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・果物類の整理・保管に向く箱型の収納建造物。\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体／ロック設定：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 323,
@@ -6158,7 +6270,8 @@
           "enOriginal": "Store your books here.",
           "notes": "アセット: CustomStructures/DecoProps/Furniture/Books/BookCaseEmpty/PrimalItemStructure_Furniture_BookCaseEmpty.uasset。 アイコン: CustomStructures/DecoProps/Furniture/Books/BookCaseEmpty/emptybookcase-removebg-preview.uasset。 日本語名は意訳。説明はファイル内の英語説明を自然な日本語に訳したのみ（効果・数値の創作なし）。",
           "assetName": "PrimalItemStructure_Furniture_BookCaseEmpty",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【収納・使い方】\n・本などのアイテムを整理して保管できる本棚型の収納家具\n・インベントリを開く：Fキー（コントローラー：□ / X）\n・回収／解体：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 325,
@@ -7310,7 +7423,8 @@
           "enOriginal": "A rare rune, used by former wizards in the island, after they disapperead. Can only be bought at shopping tent.",
           "notes": "mod独自。入手はファイルどおり購入のみ。原文 typo「disapperead」は disappeared と解釈して訳した（英語原文列はファイルどおり）。",
           "assetName": "",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【入手・用途】\n・ショッピングテント（Shopping Tent）でのみ購入できる希少なルーン\n・MuchStuffPack 内の高度なアイテムやエングラム関連の素材・交換品として利用する"
         },
         {
           "index": 389,
@@ -14200,7 +14314,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Brazier1/PrimalItemStructure_FloorBrazier.uasset",
           "assetName": "PrimalItemStructure_FloorBrazier",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 283,
@@ -14218,7 +14333,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Brazier2/PrimalItemStructure_FloorBrazier2.uasset",
           "assetName": "PrimalItemStructure_FloorBrazier2",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 284,
@@ -14236,7 +14352,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CeilingLamps/CeilingL1/PrimalItemStructure_WAF_CeilingLamp2.uasset",
           "assetName": "PrimalItemStructure_WAF_CeilingLamp2",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 285,
@@ -14254,7 +14371,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CeilingLamps/CeilingL2/PrimalItemStructure_WAF_CeilingLamp3.uasset",
           "assetName": "PrimalItemStructure_WAF_CeilingLamp3",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 286,
@@ -14272,7 +14390,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CeilingLamps/CeilingL3/PrimalItemStructure_WAF_CeilingLamp4.uasset",
           "assetName": "PrimalItemStructure_WAF_CeilingLamp4",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 287,
@@ -14290,7 +14409,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CeilingLamps/CeilingL4/PrimalItemStructure_WAF_CeilingLamp5.uasset",
           "assetName": "PrimalItemStructure_WAF_CeilingLamp5",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 288,
@@ -14308,7 +14428,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CeilingLamps/CeilingL5/PrimalItemStructure_WAF_CeilingLamp6.uasset",
           "assetName": "PrimalItemStructure_WAF_CeilingLamp6",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 289,
@@ -14326,7 +14447,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CeilingLamps/CeilingL6/PrimalItemStructure_WAF_CeilingLamp8.uasset",
           "assetName": "PrimalItemStructure_WAF_CeilingLamp8",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 290,
@@ -14344,7 +14466,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Chandeliers/Candles/MedievalChandelier/PrimalItemStructure_MedievalChandelier.uasset",
           "assetName": "PrimalItemStructure_MedievalChandelier",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 291,
@@ -14362,7 +14485,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Chandeliers/Candles/RomanticChandelier/PrimalItemStructure_RomanticChandelier.uasset",
           "assetName": "PrimalItemStructure_RomanticChandelier",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 292,
@@ -14380,7 +14504,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Chandeliers/Candles/SimpleChandelier/PrimalItemStructure_SimpleChandelier.uasset",
           "assetName": "PrimalItemStructure_SimpleChandelier",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 293,
@@ -14398,7 +14523,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Chandeliers/Chain/PrimalItemStructure_Chain.uasset",
           "assetName": "PrimalItemStructure_Chain",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 294,
@@ -14416,7 +14542,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Chandeliers/Emissive/Light1/PrimalItemStructure_Chandelier1.uasset",
           "assetName": "PrimalItemStructure_Chandelier1",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 295,
@@ -14434,7 +14561,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Chandeliers/Emissive/Light2/PrimalItemStructure_Chandelier5rings.uasset",
           "assetName": "PrimalItemStructure_Chandelier5rings",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 296,
@@ -14452,7 +14580,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Chandeliers/Emissive/Light3/PrimalItemStructure_Chandelier1.uasset",
           "assetName": "PrimalItemStructure_Chandelier1",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 297,
@@ -14470,7 +14599,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CreatureHoldingAlight/AcroStomp/PrimalItemStructure_AcroStomp_Lamp.uasset",
           "assetName": "PrimalItemStructure_AcroStomp_Lamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 298,
@@ -14488,7 +14618,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CreatureHoldingAlight/Bigfoot/PrimalItemStructure_BigfootLamp.uasset",
           "assetName": "PrimalItemStructure_BigfootLamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 299,
@@ -14506,7 +14637,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CreatureHoldingAlight/Bulbdog/PrimalItemStructure_LanternPugLamp.uasset",
           "assetName": "PrimalItemStructure_LanternPugLamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 300,
@@ -14524,7 +14656,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CreatureHoldingAlight/Cnideria/PrimalItemStructure_CnideriaLamp.uasset",
           "assetName": "PrimalItemStructure_CnideriaLamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 301,
@@ -14542,7 +14675,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CreatureHoldingAlight/Featherlight/PrimalItemStructure_LanternBirdLamp.uasset",
           "assetName": "PrimalItemStructure_LanternBirdLamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 302,
@@ -14560,7 +14694,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CreatureHoldingAlight/Glowtail/PrimalItemStructure_LanternLizard.uasset",
           "assetName": "PrimalItemStructure_LanternLizard",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 303,
@@ -14578,7 +14713,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CreatureHoldingAlight/Otter/PrimalItemStructure_OtterLamp.uasset",
           "assetName": "PrimalItemStructure_OtterLamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 304,
@@ -14596,7 +14732,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CreatureHoldingAlight/Pego/PrimalItemStructure_PegoLamp.uasset",
           "assetName": "PrimalItemStructure_PegoLamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 305,
@@ -14614,7 +14751,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CreatureHoldingAlight/Penguin/PrimalItemStructure_PenguinLamp.uasset",
           "assetName": "PrimalItemStructure_PenguinLamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 306,
@@ -14632,7 +14770,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CreatureHoldingAlight/PrimalItemStructure_MultiLamp.uasset",
           "assetName": "PrimalItemStructure_MultiLamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 307,
@@ -14650,7 +14789,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CreatureHoldingAlight/RexSkull/PrimalItemStructure_RexLamp.uasset",
           "assetName": "PrimalItemStructure_RexLamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 308,
@@ -14668,7 +14808,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/CreatureHoldingAlight/Shinehorn/PrimalItemStructure_LanternGoat.uasset",
           "assetName": "PrimalItemStructure_LanternGoat",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 309,
@@ -14686,7 +14827,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/FireBowl/Base1/PrimalItemStructure_FireBowl_Base1.uasset",
           "assetName": "PrimalItemStructure_FireBowl_Base1",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 310,
@@ -14704,7 +14846,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/FireBowl/Bowl/PrimalItemStructure_FireBowl.uasset",
           "assetName": "PrimalItemStructure_FireBowl",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 311,
@@ -14722,7 +14865,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/FireBowl/CauldronBowl/PrimalItemStructure_CenterBowl.uasset",
           "assetName": "PrimalItemStructure_CenterBowl",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 312,
@@ -14740,7 +14884,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Fireplace/PrimalItemStructure_Fireplace.uasset",
           "assetName": "PrimalItemStructure_Fireplace",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 313,
@@ -14758,7 +14903,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Fireplace1/PrimalItemStructure_Fireplace_ManCave.uasset",
           "assetName": "PrimalItemStructure_Fireplace_ManCave",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 314,
@@ -14776,7 +14922,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/FloorLamp/Nr1/PrimalItemStructure_FL_1.uasset",
           "assetName": "PrimalItemStructure_FL_1",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 315,
@@ -14794,7 +14941,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/FloorLamp/Nr2/PrimalItemStructure_FL_2.uasset",
           "assetName": "PrimalItemStructure_FL_2",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 316,
@@ -14812,7 +14960,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/LEDLights/CircleLED/PrimalItemStructure_CILED.uasset",
           "assetName": "PrimalItemStructure_CILED",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 317,
@@ -14830,7 +14979,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/LEDLights/CircleLEDSmall/PrimalItemStructure_CILED_Small.uasset",
           "assetName": "PrimalItemStructure_CILED_Small",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 318,
@@ -14848,7 +14998,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/LEDLights/DinoLamps/Anglerfish/PrimalItemStructure_DinoAnglerLED.uasset",
           "assetName": "PrimalItemStructure_DinoAnglerLED",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 319,
@@ -14866,7 +15017,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/LEDLights/DinoLamps/Otter/PrimalItemStructure_DinoOtterLED.uasset",
           "assetName": "PrimalItemStructure_DinoOtterLED",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 320,
@@ -14884,7 +15036,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/LEDLights/DinoLamps/Trike/PrimalItemStructure_DinoTrikeLED.uasset",
           "assetName": "PrimalItemStructure_DinoTrikeLED",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 321,
@@ -14902,7 +15055,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/LEDLights/HexagonLED/PrimalItemStructure_HXLED.uasset",
           "assetName": "PrimalItemStructure_HXLED",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 322,
@@ -14920,7 +15074,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/LEDLights/HexagonLEDSmall/PrimalItemStructure_HXLED_Small.uasset",
           "assetName": "PrimalItemStructure_HXLED_Small",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 323,
@@ -14938,7 +15093,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/LEDLights/SquareLED/PrimalItemStructure_SQLED.uasset",
           "assetName": "PrimalItemStructure_SQLED",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 324,
@@ -14956,7 +15112,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/LEDLights/SquareLEDSmall/PrimalItemStructure_SQLED_Small.uasset",
           "assetName": "PrimalItemStructure_SQLED_Small",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 325,
@@ -14974,7 +15131,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/LEDLights/TriangleLED/PrimalItemStructure_TRILED.uasset",
           "assetName": "PrimalItemStructure_TRILED",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 326,
@@ -14992,7 +15150,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/LEDLights/TriangleLEDSmall/PrimalItemStructure_TRILED_Small.uasset",
           "assetName": "PrimalItemStructure_TRILED_Small",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 327,
@@ -15010,7 +15169,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Multilights/PrimalItemStructure_MultiLamp.uasset",
           "assetName": "PrimalItemStructure_MultiLamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 328,
@@ -15028,7 +15188,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Stringlight/PrimalItemStructure_WAF_Strings.uasset",
           "assetName": "PrimalItemStructure_WAF_Strings",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 329,
@@ -15046,7 +15207,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/TableL/Cat/PrimalItemStructe_CatLamp.uasset",
           "assetName": "PrimalItemStructe_CatLamp",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 330,
@@ -15064,7 +15226,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Torch/PrimalItemStructure_Torch1.uasset",
           "assetName": "PrimalItemStructure_Torch1",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 331,
@@ -15082,7 +15245,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Torch2/PrimalItemStructure_StandingTorch.uasset",
           "assetName": "PrimalItemStructure_StandingTorch",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 332,
@@ -15100,7 +15264,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Torch3/PrimalItemStructure_StandingTorch3.uasset",
           "assetName": "PrimalItemStructure_StandingTorch3",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 333,
@@ -15118,7 +15283,8 @@
           "enOriginal": "",
           "notes": "アセット: FloorDecor/Furnitures/Light/Torch4/PrimalItemStructure_StandingTorch4.uasset",
           "assetName": "PrimalItemStructure_StandingTorch4",
-          "usageType": "実用（機能あり）"
+          "usageType": "実用（機能あり）",
+          "specialAbility": "【照明機能・使い方】\n・拠点の床・壁・天井などに設置して周囲を照らせる照明器具（Wall'n'Floor Decor 追加ライト）\n・点灯／消灯や回収・設定変更：Eキー長押し（コントローラー：△ / Y 長押し）"
         },
         {
           "index": 334,
@@ -27154,7 +27320,7 @@
           "foodAmount": "トロフィー：1個（決闘テイム） ／ 【育成】生肉（食料値+50）・霜降り肉（食料値+37.5）",
           "habitat": "マップ上空・山岳など（リニオグナタ置換設定時は沼地等）",
           "saddleRide": "騎乗可能（通常サドル / プラットフォームサドル / 制空サドル）",
-          "specialAbility": "【騎乗中の操作】\n・左クリック：くちばし攻撃（くちばしで掴んでいる小型生物［ドラッグウェイト150以下］や、残り体力10%以下の対象には即死級の処刑攻撃［Execution］が発動）\n・右クリック：叩きつけ攻撃（Slam）／飛行中に他の飛行生物や中〜大型生物（ドラッグウェイト550以下）をくちばしで掴んで運搬可能\n・Cキー：威圧咆哮（Imposing Roar）— 周囲の敵生物に威圧デバフ（弱体化効果）を与える\n・滑空ダイブ：グリフォンのように高所から急降下して超高速飛行ができる\n【Eキー長押しメニュー】\n・Sit Down（お座り）：座らせると防御耐性バフが付与され、座ったまま咆哮もできる\n・Switch Jetpack Fuel Type：制空サドル装着時にジェットパック燃料（ガソリン / エレメント等）を切替\n【パッシブ・特徴・用途】\n・通常サドル・プラットフォームサドル（背中に移動拠点建築可）・制空サドル（ジェットパック超高速飛行）の3種に対応した最強クラスの主力大型飛行マウント"
+          "specialAbility": "【騎乗中の操作】\n・左クリック：くちばし攻撃（くちばしで掴んでいる小型生物［ドラッグウェイト150以下］や、残り体力10%以下の対象には即死級の処刑攻撃［Execution］が発動）\n・右クリック：叩きつけ攻撃（Slam）／飛行中に他の飛行生物や中〜大型生物（ドラッグウェイト550以下）をくちばしで掴んで運搬可能\n・Cキー：威圧咆哮（Imposing Roar）— 周囲の敵生物に威圧デバフ（弱体化効果）を与える\n・滑空ダイブ：グリフォンのように高所から急降下して超高速飛行ができる\n【Eキー長押し（コントローラー：△ / Y 長押し）メニュー】\n・Sit Down（お座り）：座らせると防御耐性バフが付与され、座ったまま咆哮もできる\n・Switch Jetpack Fuel Type：制空サドル装着時にジェットパック燃料（ガソリン / エレメント等）を切替\n【パッシブ・特徴・用途】\n・通常サドル・プラットフォームサドル（背中に移動拠点建築可）・制空サドル（ジェットパック超高速飛行）の3種に対応した最強クラスの主力大型飛行マウント"
         },
         {
           "index": 2,
@@ -27178,7 +27344,7 @@
           "foodAmount": "トロフィー：1個（決闘テイム） ／ 【育成】キチン（食料値+75 ※変種は生肉類を食べずキチンを消費）",
           "habitat": "アベレーション系バイオーム",
           "saddleRide": "騎乗可能（ハツェゴプテリクス各種サドル対応）",
-          "specialAbility": "【騎乗中の操作・Eキー長押し】\n・通常種ハツェゴプテリクスと同様（左クリック：くちばし＆処刑攻撃 / 右クリック：叩きつけ＆飛行中掴み運搬 / Cキー：敵を弱体化させる威圧咆哮 / 滑空ダイブ / お座り防御バフ / ジェットパック燃料切替）\n【変種固有の特殊能力・用途】\n・放射能耐性あり（アベレーション等の汚染エリアでもダメージを受けない）\n・対虫怒りバフ（Bug Rage）：虫（昆虫系生物）を倒すと攻撃性能が大幅に強化される\n・専用アイテム加工：アルファ・カルキノスの爪（Alpha Karkinos Claw）をインベントリに入れて割ることで、強力なバフ食料「割れたアルファカルキノスの爪」を作成できる（※食料がキチン専用である点のみ注意）"
+          "specialAbility": "【騎乗中の操作・Eキー長押し（コントローラー：△ / Y 長押し）】\n・通常種ハツェゴプテリクスと同様（左クリック：くちばし＆処刑攻撃 / 右クリック：叩きつけ＆飛行中掴み運搬 / Cキー：敵を弱体化させる威圧咆哮 / 滑空ダイブ / お座り防御バフ / ジェットパック燃料切替）\n【変種固有の特殊能力・用途】\n・放射能耐性あり（アベレーション等の汚染エリアでもダメージを受けない）\n・対虫怒りバフ（Bug Rage）：虫（昆虫系生物）を倒すと攻撃性能が大幅に強化される\n・専用アイテム加工：アルファ・カルキノスの爪（Alpha Karkinos Claw）をインベントリに入れて割ることで、強力なバフ食料「割れたアルファカルキノスの爪」を作成できる（※食料がキチン専用である点のみ注意）"
         },
         {
           "index": 3,
@@ -27202,7 +27368,7 @@
           "foodAmount": "トロフィー：1個（決闘テイム） ／ 【育成】生肉（食料値+50）・霜降り肉（食料値+37.5）",
           "habitat": "希少出現",
           "saddleRide": "騎乗可能（ハツェゴプテリクス各種サドル対応）",
-          "specialAbility": "【騎乗中の操作・Eキー長押し】\n・通常種ハツェゴプテリクスと同様（左クリック：くちばし＆処刑攻撃 / 右クリック：叩きつけ＆飛行中掴み運搬 / Cキー：敵を弱体化させる威圧咆哮 / 滑空ダイブ / お座り防御バフ / 3種のサドル対応）\n【特徴・用途】\n・神聖な外観を持つ特殊バリアント。空中戦・長距離高速移動・大型生物の運搬・移動拠点として幅広く活躍する"
+          "specialAbility": "【騎乗中の操作・Eキー長押し（コントローラー：△ / Y 長押し）】\n・通常種ハツェゴプテリクスと同様（左クリック：くちばし＆処刑攻撃 / 右クリック：叩きつけ＆飛行中掴み運搬 / Cキー：敵を弱体化させる威圧咆哮 / 滑空ダイブ / お座り防御バフ / 3種のサドル対応）\n【特徴・用途】\n・神聖な外観を持つ特殊バリアント。空中戦・長距離高速移動・大型生物の運搬・移動拠点として幅広く活躍する"
         },
         {
           "index": 4,
@@ -27226,7 +27392,7 @@
           "foodAmount": "トロフィー：1個（決闘テイム） ／ 【育成】生肉（食料値+50）・霜降り肉（食料値+37.5）",
           "habitat": "希少出現",
           "saddleRide": "騎乗可能（ハツェゴプテリクス各種サドル対応）",
-          "specialAbility": "【騎乗中の操作・Eキー長押し】\n・通常種ハツェゴプテリクスと同様（左クリック：くちばし＆処刑攻撃 / 右クリック：叩きつけ＆飛行中掴み運搬 / Cキー：敵を弱体化させる威圧咆哮 / 滑空ダイブ / お座り防御バフ / 3種のサドル対応）\n【特徴・用途】\n・禍々しい外観を持つ特殊バリアント。空中戦・生物運搬・高速滑空＆ジェットパック移動の主力マウントとして活躍する"
+          "specialAbility": "【騎乗中の操作・Eキー長押し（コントローラー：△ / Y 長押し）】\n・通常種ハツェゴプテリクスと同様（左クリック：くちばし＆処刑攻撃 / 右クリック：叩きつけ＆飛行中掴み運搬 / Cキー：敵を弱体化させる威圧咆哮 / 滑空ダイブ / お座り防御バフ / 3種のサドル対応）\n【特徴・用途】\n・禍々しい外観を持つ特殊バリアント。空中戦・生物運搬・高速滑空＆ジェットパック移動の主力マウントとして活躍する"
         },
         {
           "index": 5,
@@ -27286,7 +27452,7 @@
           "assetName": "PrimalItemArmor_HatzSaddle_Battle",
           "usageType": "実用（機能あり）",
           "saddleRide": "ハツェゴプテリクスに装着して騎乗",
-          "specialAbility": "【解放レベル・入手方法】Lv98エングラム解放（30EP）または伝説OSD報酬\n【作る場所】TEKレプリケーター(Tek Replicator)\n【必要素材】エレメント×50、金属のインゴット×600、水晶×350、黒真珠×140、ポリマー×450\n【効果・用途】エレメントやガソリンを燃料にしてジェットパック超高速飛行が可能になる戦闘用サドル（Eキー長押しメニューから燃料タイプを切替可能 ※ジェットパック飛行中は生物の掴み運搬は不可）"
+          "specialAbility": "【解放レベル・入手方法】Lv98エングラム解放（30EP）または伝説OSD報酬\n【作る場所】TEKレプリケーター(Tek Replicator)\n【必要素材】エレメント×50、金属のインゴット×600、水晶×350、黒真珠×140、ポリマー×450\n【効果・用途】エレメントやガソリンを燃料にしてジェットパック超高速飛行が可能になる戦闘用サドル（Eキー長押し（コントローラー：△ / Y 長押し）メニューから燃料タイプを切替可能 ※ジェットパック飛行中は生物の掴み運搬は不可）"
         },
         {
           "index": 8,
@@ -27376,7 +27542,7 @@
           "foodAmount": "専用エサ(Primal Slop)：1個＋なでる/伏せる約14回 ／ 【育成】生肉（食料値+50）・魚肉（食料値+25）",
           "habitat": "レッドウッド・ジャングル・雪原バイオーム",
           "saddleRide": "肩（背中）乗せ可能・ヘルメット装備可（騎乗不可）",
-          "specialAbility": "【Eキー長押しメニュー】\n・Sit Down（お座り・睡眠）：寝かせると周囲に癒やしオーラ（Sleep Aura）を発生させ、近くにいる赤ちゃん恐竜の成長速度を促進する\n【パッシブ・特徴・用途】\n・背中（肩）乗せ時（Backpack Buddy）：極端な寒さ・暑さに対する温度耐性（防寒・防暑）が大幅にアップする\n・アイテム自動転送（Auto-Transfer）：背中に乗せている間、プレイヤーとレッサーパンダのインベントリ間でアイテムを自動整理・転送してくれる\n・人間用のヘルメットを装備可能（防御力アップ＆見た目カスタム）。ブリーディング拠点の育児役にも探索のお供にも大活躍する万能ペット"
+          "specialAbility": "【Eキー長押し（コントローラー：△ / Y 長押し）メニュー】\n・Sit Down（お座り・睡眠）：寝かせると周囲に癒やしオーラ（Sleep Aura）を発生させ、近くにいる赤ちゃん恐竜の成長速度を促進する\n【パッシブ・特徴・用途】\n・背中（肩）乗せ時（Backpack Buddy）：極端な寒さ・暑さに対する温度耐性（防寒・防暑）が大幅にアップする\n・アイテム自動転送（Auto-Transfer）：背中に乗せている間、プレイヤーとレッサーパンダのインベントリ間でアイテムを自動整理・転送してくれる\n・人間用のヘルメットを装備可能（防御力アップ＆見た目カスタム）。ブリーディング拠点の育児役にも探索のお供にも大活躍する万能ペット"
         },
         {
           "index": 2,
@@ -27400,7 +27566,7 @@
           "foodAmount": "専用エサ(Primal Slop)：1個＋なでる/伏せる約14回 ／ 【育成】生肉（食料値+50）・魚肉（食料値+25）",
           "habitat": "雪原バイオーム",
           "saddleRide": "肩（背中）乗せ可能・ヘルメット装備可（騎乗不可）",
-          "specialAbility": "【Eキー長押しメニュー】\n・Sit Down（お座り・睡眠：周囲の赤ちゃん恐竜の成長速度を促進するSleep Auraを発動）\n【パッシブ・特徴・用途】\n・白い毛並みの雪原バリアント。能力は通常種と同様（背中乗せで防寒・防暑アップ／インベントリ自動転送／ヘルメット装備可）"
+          "specialAbility": "【Eキー長押し（コントローラー：△ / Y 長押し）メニュー】\n・Sit Down（お座り・睡眠：周囲の赤ちゃん恐竜の成長速度を促進するSleep Auraを発動）\n【パッシブ・特徴・用途】\n・白い毛並みの雪原バリアント。能力は通常種と同様（背中乗せで防寒・防暑アップ／インベントリ自動転送／ヘルメット装備可）"
         },
         {
           "index": 3,
@@ -27424,7 +27590,7 @@
           "foodAmount": "専用エサ(Primal Slop)：1個＋なでる/伏せる約14回 ／ 【育成】生肉（食料値+50）・魚肉（食料値+25）",
           "habitat": "ジャングルバイオーム",
           "saddleRide": "肩（背中）乗せ可能・ヘルメット装備可（騎乗不可）",
-          "specialAbility": "【Eキー長押しメニュー】\n・Sit Down（お座り・睡眠：周囲の赤ちゃん恐竜の成長速度を促進するSleep Auraを発動）\n【パッシブ・特徴・用途】\n・緑がかった迷彩毛並みのジャングルバリアント。能力は通常種と同様（背中乗せで防寒・防暑アップ／インベントリ自動転送／ヘルメット装備可）"
+          "specialAbility": "【Eキー長押し（コントローラー：△ / Y 長押し）メニュー】\n・Sit Down（お座り・睡眠：周囲の赤ちゃん恐竜の成長速度を促進するSleep Auraを発動）\n【パッシブ・特徴・用途】\n・緑がかった迷彩毛並みのジャングルバリアント。能力は通常種と同様（背中乗せで防寒・防暑アップ／インベントリ自動転送／ヘルメット装備可）"
         },
         {
           "index": 4,
@@ -27515,7 +27681,7 @@
           "foodAmount": "基本キブル：26個・羊肉：55個・霜降り肉：69個 ／ 生肉：205個",
           "habitat": "全マップの雪原バイオーム（1%の確率でアルファ個体が出現）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "【Eキー長押しメニュー】\n・Pet It（なでる）：周囲の味方恐竜に獲得経験値+20%バフを付与する\n・Enable / Disable Treasure Hunter（お宝探知のON/OFF）：肩乗せ中に周囲のレア回収物などを探知する機能をON/OFF\n・Treasure Hunt Tracking Types（探知対象の切替）：補給物資ビーコン（Supply Drops）や洞窟クレート（Cave Loot）など、探知したい対象を個別にON/OFFできる\n・Treasure Hunt Distance（探知距離の切替）：探知範囲を3段階（近・中・遠）から切替\n【パッシブ・特徴・用途】\n・肩乗せ時（Thick Fur）：防寒（低体温耐性）バフを付与。キツネの近接攻撃力を上げるほど防寒性能が伸びるほか、クレート探知や拠点ペットのレベル上げ補助にも重宝する"
+          "specialAbility": "【Eキー長押し（コントローラー：△ / Y 長押し）メニュー】\n・Pet It（なでる）：周囲の味方恐竜に獲得経験値+20%バフを付与する\n・Enable / Disable Treasure Hunter（お宝探知のON/OFF）：肩乗せ中に周囲のレア回収物などを探知する機能をON/OFF\n・Treasure Hunt Tracking Types（探知対象の切替）：補給物資ビーコン（Supply Drops）や洞窟クレート（Cave Loot）など、探知したい対象を個別にON/OFFできる\n・Treasure Hunt Distance（探知距離の切替）：探知範囲を3段階（近・中・遠）から切替\n【パッシブ・特徴・用途】\n・肩乗せ時（Thick Fur）：防寒（低体温耐性）バフを付与。キツネの近接攻撃力を上げるほど防寒性能が伸びるほか、クレート探知や拠点ペットのレベル上げ補助にも重宝する"
         },
         {
           "index": 2,
@@ -27539,7 +27705,7 @@
           "foodAmount": "要求された肉：68個（4種すべて同一上昇値・手渡しごとに要求が切り替わる）",
           "habitat": "全マップの雪原バイオーム（5%の確率でアルファ個体が出現）",
           "saddleRide": "サドルなし騎乗可能（専用サドル「グレーターホッキョクギツネ用サドル」装着で防御力アップ：Lv5解放・0EP／インベントリで皮×30、繊維×50から作成、または黒化アルファ個体討伐ドロップ）",
-          "specialAbility": "【騎乗中の操作】\n・左クリック：噛みつき攻撃\n・右クリック：吠える（Bark）— 効果：周囲の小型害獣（ペゴマスタクス・イクチオルニス・ミクロラプトル・トロオドン・コンピー・アリ・メガネウラ・小型ホッキョクギツネ）を威嚇して追い払う\n・Cキー（しゃがみ）：穴掘り（Digging）— 効果：地面を掘って石・火打石・金属鉱石・砂・毛皮・キチン・キノコ・ハチミツ・石ツールや金属ツール（ピッケル・斧・剣）などを発掘できる\n【Eキー長押しメニュー】\n・Sit Down（お座り）：座らせると体力やスタミナの自然回復速度が上がる\n【パッシブ・特徴・用途】\n・サドルなしで騎乗可能（専用サドルを装着すると防御力アップ）\n・騎乗中は騎乗者に防寒バフ（Thick Fur：キツネの近接攻撃力に応じて効果上昇）が付与される、寒冷地探索＆序盤からの資源発掘マウント"
+          "specialAbility": "【騎乗中の操作】\n・左クリック：噛みつき攻撃\n・右クリック：吠える（Bark）— 効果：周囲の小型害獣（ペゴマスタクス・イクチオルニス・ミクロラプトル・トロオドン・コンピー・アリ・メガネウラ・小型ホッキョクギツネ）を威嚇して追い払う\n・Cキー（しゃがみ）：穴掘り（Digging）— 効果：地面を掘って石・火打石・金属鉱石・砂・毛皮・キチン・キノコ・ハチミツ・石ツールや金属ツール（ピッケル・斧・剣）などを発掘できる\n【Eキー長押し（コントローラー：△ / Y 長押し）メニュー】\n・Sit Down（お座り）：座らせると体力やスタミナの自然回復速度が上がる\n【パッシブ・特徴・用途】\n・サドルなしで騎乗可能（専用サドルを装着すると防御力アップ）\n・騎乗中は騎乗者に防寒バフ（Thick Fur：キツネの近接攻撃力に応じて効果上昇）が付与される、寒冷地探索＆序盤からの資源発掘マウント"
         },
         {
           "index": 3,
@@ -27563,7 +27729,7 @@
           "foodAmount": "要求された肉：68個（4種すべて同一上昇値・手渡しごとに要求が切り替わる）",
           "habitat": "森林・雪原周辺",
           "saddleRide": "サドルなし騎乗可能（専用サドル「グレーターホッキョクギツネ用サドル」装着で防御力アップ：Lv5解放・0EP／インベントリで皮×30、繊維×50から作成）",
-          "specialAbility": "【騎乗中の操作】\n・左クリック：噛みつき攻撃\n・右クリック：吠える（Bark：ペゴマスタクス・イクチオルニス・ミクロラプトル・トロオドン等の小型害獣を威嚇して追い払う）\n・Cキー（しゃがみ）：穴掘り（Digging：石・火打石・金属鉱石・毛皮・ハチミツ・金属ツールなどを地面から発掘）\n【Eキー長押しメニュー】\n・Sit Down（お座り：体力・スタミナの自然回復速度アップ）\n【パッシブ・特徴・用途】\n・サドルなしで騎乗可能（専用サドル対応）＆騎乗中は防寒バフ（Thick Fur）が付与される万能探索マウント"
+          "specialAbility": "【騎乗中の操作】\n・左クリック：噛みつき攻撃\n・右クリック：吠える（Bark：ペゴマスタクス・イクチオルニス・ミクロラプトル・トロオドン等の小型害獣を威嚇して追い払う）\n・Cキー（しゃがみ）：穴掘り（Digging：石・火打石・金属鉱石・毛皮・ハチミツ・金属ツールなどを地面から発掘）\n【Eキー長押し（コントローラー：△ / Y 長押し）メニュー】\n・Sit Down（お座り：体力・スタミナの自然回復速度アップ）\n【パッシブ・特徴・用途】\n・サドルなしで騎乗可能（専用サドル対応）＆騎乗中は防寒バフ（Thick Fur）が付与される万能探索マウント"
         },
         {
           "index": 4,
@@ -27683,7 +27849,7 @@
           "foodAmount": "餌不要（0個）",
           "habitat": "海洋バイオーム",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "【Eキー長押しメニュー】\n・Grab Bubblefish：野生個体をエサ不要で即テイム＆肩乗せする（テイム後も抱えて肩に乗せられる）\n【パッシブ・特徴・用途】\n・水中探検の必須お供：肩に乗せている間、水中でプレイヤーに「酸素を自動供給」し、「水中でのスタミナ回復」が可能になり、さらに「水中の視界がクリアになる」3大効果を付与する\n・成体は食料消費が0（無限食料設定）のため餌やりの手間がかからない\n・野生個体を討伐・剥ぎ取りすると「有機ポリマー」を入手できる"
+          "specialAbility": "【Eキー長押し（コントローラー：△ / Y 長押し）メニュー】\n・Grab Bubblefish：野生個体をエサ不要で即テイム＆肩乗せする（テイム後も抱えて肩に乗せられる）\n【パッシブ・特徴・用途】\n・水中探検の必須お供：肩に乗せている間、水中でプレイヤーに「酸素を自動供給」し、「水中でのスタミナ回復」が可能になり、さらに「水中の視界がクリアになる」3大効果を付与する\n・成体は食料消費が0（無限食料設定）のため餌やりの手間がかからない\n・野生個体を討伐・剥ぎ取りすると「有機ポリマー」を入手できる"
         },
         {
           "index": 2,
@@ -27731,7 +27897,7 @@
           "foodAmount": "通常キブル：63個 ／ メジョベリー：834個（他ベリー類：1,250個）",
           "habitat": "海洋バイオーム",
           "saddleRide": "騎乗可能（メディケロン用サドル：Lv26解放・3EP／インベントリ作成／必要素材：皮×200、繊維×300）",
-          "specialAbility": "【騎乗中の操作】（専用サドルはLv26で解放）\n・左クリック：強力な噛みつき（水中の金属鉱石・石・火打石・原油岩をアンキロサウルスのように効率よく採取できる）\n・特殊アビリティ発動：Eキー長押しメニューで選択したインベントリ内アイテムを消費して多彩なバフ／デバフを発動\n【Eキー長押しメニュー】\n・Select Healing Ability（消費アイテムごとの効果切替）：全7種類から選択可能！\n　①バイオトキシン：メディケロン自身の体力を回復\n　②ヒルの血液：周囲の味方恐竜の体力を範囲回復（ヒーラー役として活躍）\n　③ハチミツ / アンコウのジェル / アンモナイトの胆汁：各種回復・支援バフを発動\n　④原油：周囲の敵の体力回復を封じる阻害デバフ\n　⑤有機ポリマー / 樹液：周囲に毒ガス雲（範囲スリップダメージ）を発生させる\n【パッシブ・特徴・用途】\n・海底の鉱石・原油採取役と、水中戦・ボス戦の範囲ヒーラー兼デバッファーを1体でこなす万能ウミガメ"
+          "specialAbility": "【騎乗中の操作】（専用サドルはLv26で解放）\n・左クリック：強力な噛みつき（水中の金属鉱石・石・火打石・原油岩をアンキロサウルスのように効率よく採取できる）\n・特殊アビリティ発動：Eキー長押し（コントローラー：△ / Y 長押し）メニューで選択したインベントリ内アイテムを消費して多彩なバフ／デバフを発動\n【Eキー長押し（コントローラー：△ / Y 長押し）メニュー】\n・Select Healing Ability（消費アイテムごとの効果切替）：全7種類から選択可能！\n　①バイオトキシン：メディケロン自身の体力を回復\n　②ヒルの血液：周囲の味方恐竜の体力を範囲回復（ヒーラー役として活躍）\n　③ハチミツ / アンコウのジェル / アンモナイトの胆汁：各種回復・支援バフを発動\n　④原油：周囲の敵の体力回復を封じる阻害デバフ\n　⑤有機ポリマー / 樹液：周囲に毒ガス雲（範囲スリップダメージ）を発生させる\n【パッシブ・特徴・用途】\n・海底の鉱石・原油採取役と、水中戦・ボス戦の範囲ヒーラー兼デバッファーを1体でこなす万能ウミガメ"
         },
         {
           "index": 4,
@@ -28976,7 +29142,7 @@
           "foodAmount": "通常キブル：10個 ／ 大トロ：61個（こんがり大トロ：121個・魚肉：182個 ※バニラ準拠）",
           "habitat": "海岸・砂浜・海沿いの上空（バニラのイクチオルニスと同一スポーンを自動置換）",
           "saddleRide": "肩乗せ可能（騎乗不可）",
-          "specialAbility": "【MODによる主な変更点】\n・野生の性格を「攻撃的」から「中立（Passive unless attacked）」へ変更（攻撃しない限り襲ってこない）\n・プレイヤーの武器を叩き落とす能力、およびヘルメットを剥がす能力を削除\n・※攻撃して怒らせた場合、アイテム強奪や小型恐竜の掴み攻撃は発生する（無視するか素早く倒す）\n【テイム後の使い方・肩乗せ機能（バニラ共通）】\n・Eキーで肩に乗せられる（降ろすときはFキー2回押し／騎乗中はRキー2回押し）\n・Eキー長押しメニューの「狩りをして回収（Hunt and Retrieve）」で魚や小型生物を狩らせると、倒した対象が金色に光り、解体時に「大トロ」「霜降り肉」を高効率で採取できる"
+          "specialAbility": "【MODによる主な変更点】\n・野生の性格を「攻撃的」から「中立（Passive unless attacked）」へ変更（攻撃しない限り襲ってこない）\n・プレイヤーの武器を叩き落とす能力、およびヘルメットを剥がす能力を削除\n・※攻撃して怒らせた場合、アイテム強奪や小型恐竜の掴み攻撃は発生する（無視するか素早く倒す）\n【テイム後の使い方・肩乗せ機能（バニラ共通）】\n・Eキーで肩に乗せられる（降ろすときはFキー2回押し／騎乗中はRキー2回押し）\n・Eキー長押し（コントローラー：△ / Y 長押し）メニューの「狩りをして回収（Hunt and Retrieve）」で魚や小型生物を狩らせると、倒した対象が金色に光り、解体時に「大トロ」「霜降り肉」を高効率で採取できる"
         }
       ]
     },
