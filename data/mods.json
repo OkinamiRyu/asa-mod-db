@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T14:07:39.882Z",
+  "updatedAt": "2026-11-28T02:01:21.176Z",
   "installedMods": [
     {
       "name": "Super Spyglass Plus",
@@ -189,6 +189,13 @@
       "curseForgeId": "930404",
       "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/death-recovery-mod",
       "notes": "ゲーム内表示名は .uplugin の FriendlyName による。v1.29.2 / 作者: Mannalo。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/death-recovery-mod\nフォルダ: 930404_9417674"
+    },
+    {
+      "name": "Randis Ichthyornis Mod",
+      "description": "バニラのイクチオルニスを「こちらから攻撃しない限り襲ってこない中立（Passive unless attacked）」へ置き換えるQoL生物MODです。\nさらに武器を叩き落とす／ヘルメットを剥がす能力も削除されており、海岸沿いでの不意なアイテム被害を大幅に軽減できます（※攻撃して敵対させるとアイテム強奪・小型ペット掴みは発生）。",
+      "curseForgeId": "1303816",
+      "curseForgeUrl": "https://www.curseforge.com/ark-survival-ascended/mods/randis-ichthyornis-mod",
+      "notes": "ゲーム内表示名は .uplugin の FriendlyName による。v1.0 / 作者: Randi_Beers。\n見た目・ゲーム内表示名はバニラと同一（行動仕様のみ変更）。導入後の新規スポーンから置換（既存個体は DestroyWildDinos で入替）。\nCurseForge: https://www.curseforge.com/ark-survival-ascended/mods/randis-ichthyornis-mod\nフォルダ: 1303816_9461131"
     }
   ],
   "modSheets": [
@@ -31700,6 +31707,38 @@
           "notes": "アセット: Content/PrimalItemStructure_Personal_Grave.uasset",
           "assetName": "PrimalItemStructure_Personal_Grave",
           "usageType": "実用（機能あり）"
+        }
+      ]
+    },
+    {
+      "id": "Randis Ichthyornis Mod",
+      "name": "Randis Ichthyornis Mod",
+      "sheetType": "creature",
+      "itemCount": 1,
+      "items": [
+        {
+          "index": 1,
+          "image": "",
+          "enName": "Ichthyornis",
+          "jaName": "イクチオルニス（おとなしいMOD版）(Ichthyornis)",
+          "description": "こちらから攻撃しない限り襲ってこない「中立」仕様へ変更されたイクチオルニス（トリケラトプスと同様の反応）。武器を叩き落とす・ヘルメットを剥がす能力も削除されている。見た目とゲーム内表示名はバニラのイクチオルニスと同一で、導入後の新規スポーンが自動的に本MOD版へ置き換わる。",
+          "category": "生物",
+          "obtainMethod": "",
+          "dinoName": "",
+          "craftStation": "",
+          "toolUsed": "",
+          "harvestSource": "",
+          "materials": "",
+          "enOriginal": "A calmer Ichthyornis. This mod replaces the original with an Ichthyornis that is passive unless attacked. Similar to a Trike. Removed its ability to knock your weapon out of your hand or remove your helmet.",
+          "notes": "アセット: RandisIchthyornis/RandisIchthyornis_Character_BP.uasset / 受精卵: RandisIchthyornis/PrimalItemConsumable_Egg_RandisIchthyornis_Fertilized.uasset",
+          "assetName": "RandisIchthyornis_Character_BP",
+          "usageType": "生物・繁殖",
+          "tamingMethod": "昏睡テイム（バニラのイクチオルニスと同方式：ボーラで足止めして気絶させ、インベントリに餌を入れる ※HPが非常に低いため麻酔弾や弱い弓等で慎重に狙う）\n【ボーラ】ボーラ有効（小型鳥類）\n【野生の性格】中立（普段はおとなしい ※攻撃すると反撃し、アイテム強奪・小型ペット掴みを行う）\n【繁殖・ブリーディング】繁殖可（卵生・受精卵孵化温度 29〜32℃／幼体の育成餌：魚肉、大トロ）",
+          "favoriteFood": "通常キブル、大トロ、こんがり大トロ、魚肉 ／ 【育成】魚肉、大トロ",
+          "foodAmount": "通常キブル：10個 ／ 大トロ：61個（こんがり大トロ：121個・魚肉：182個 ※バニラ準拠）",
+          "habitat": "海岸・砂浜・海沿いの上空（バニラのイクチオルニスと同一スポーンを自動置換）",
+          "saddleRide": "肩乗せ可能（騎乗不可）",
+          "specialAbility": "【MODによる主な変更点】\n・野生の性格を「攻撃的」から「中立（Passive unless attacked）」へ変更（攻撃しない限り襲ってこない）\n・プレイヤーの武器を叩き落とす能力、およびヘルメットを剥がす能力を削除\n・※攻撃して怒らせた場合、アイテム強奪や小型恐竜の掴み攻撃は発生する（無視するか素早く倒す）\n【テイム後の使い方・肩乗せ機能（バニラ共通）】\n・Eキーで肩に乗せられる（降ろすときはFキー2回押し／騎乗中はRキー2回押し）\n・Eキー長押しメニューの「狩りをして回収（Hunt and Retrieve）」で魚や小型生物を狩らせると、倒した対象が金色に光り、解体時に「大トロ」「霜降り肉」を高効率で採取できる"
         }
       ]
     }

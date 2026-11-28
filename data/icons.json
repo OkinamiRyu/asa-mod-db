@@ -1562,5 +1562,9 @@
     "z_spottedotter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_SpottedOtter_Character_BP_ASA.png",
     "z_ferretotter_character_bp_asa": "icons/Z-Variants Otter Additions (Crossplay)/Z_FerretOtter_Character_BP_ASA.png",
     "_default": "icons/Z-Variants Otter Additions (Crossplay)/Z_PandaOtter_Character_BP.png"
+  },
+  "Randis Ichthyornis Mod": {
+    "randisichthyornis_character_bp": "icons/Randis Ichthyornis Mod/RandisIchthyornis_Character_BP.png",
+    "_default": "icons/Randis Ichthyornis Mod/RandisIchthyornis_Character_BP.png"
   }
 }
